@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.gestalttheory.unitytools": {
+      "version": "file:D:/Projects/Unity/Packages/Git/com.gestalttheory.unitytools/Packages/com.gestalttheory.unitytools",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.2d.animation": {
       "version": "7.0.4",
       "depth": 1,
@@ -161,6 +167,15 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.recorder": {
+      "version": "3.0.3",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.timeline": "1.0.0"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.core": {

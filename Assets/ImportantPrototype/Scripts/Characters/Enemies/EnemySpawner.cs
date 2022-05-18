@@ -1,5 +1,6 @@
-﻿using ImportantPrototype.Spawners;
-using Sirenix.OdinInspector;
+﻿using System;
+using ImportantPrototype.Spawners;
+using UniRx;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,7 +10,10 @@ namespace ImportantPrototype.Characters.Enemies
     public class EnemySpawner : Spawner2D<Transform>
     {
         [SerializeField]
-        private Player _player;
+        private float _spawnInterval;
+        
+        [SerializeField]
+        private PlayerReactiveVariable _player;
         
         private BoxCollider2D _area;
 
@@ -18,20 +22,19 @@ namespace ImportantPrototype.Characters.Enemies
             _area = GetComponent<BoxCollider2D>();
         }
 
+        protected override void OnStart()
+        {
+            Observable.Interval(TimeSpan.FromSeconds(_spawnInterval))
+                .Subscribe(_ => Spawn())
+                .AddTo(this);
+        }
+        
         private void Update()
         {
-            UpdatePosition();
+            // Update the spawner rect position based on player position.
+            _area.offset = _player.Property.Value.Position;
         }
 
-        /// <summary>
-        /// Refresh the spawner position based on current player position.
-        /// </summary>
-        private void UpdatePosition()
-        {
-            _area.offset = _player.Position;
-        }
-
-        [Button]
         protected override void Spawn()
         {
             var position = GetRandomPointOnRect(_area.offset, _area.size);

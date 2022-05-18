@@ -17,15 +17,7 @@ namespace ImportantPrototype.Spawners
             _area = GetComponent<BoxCollider2D>();
         }
 
-        private void Start()
-        {
-            if (_spawnOnStart)
-            {
-                SpawnAll();
-            }
-        }
-
-        private void SpawnAll()
+        protected override void Spawn()
         {
             var areaSize = _area.size;
             var count = Mathf.RoundToInt(areaSize.x * areaSize.y * _density);

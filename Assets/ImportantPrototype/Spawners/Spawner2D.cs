@@ -10,14 +10,18 @@ namespace ImportantPrototype.Spawners
         [SerializeField]
         protected bool _spawnOnStart = true;
         
-        private void Start()
+        protected virtual void Start()
         {
+            OnStart();
+            
             if (_spawnOnStart)
             {
                 Spawn();
             }
         }
-        
+
+        protected virtual void OnStart() { }
+
         protected void SpawnSingle(Vector2 position)
         {
             var instance = Instantiate(_prefab, transform);
