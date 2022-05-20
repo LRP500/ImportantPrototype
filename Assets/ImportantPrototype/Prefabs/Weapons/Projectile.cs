@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using ImportantPrototype.Characters;
+﻿using ImportantPrototype.Characters;
 using ImportantPrototype.Interfaces;
 using UnityEngine;
 
@@ -25,6 +24,7 @@ namespace ImportantPrototype.Weapons
         
         private void OnTriggerEnter2D(Collider2D other)
         {
+            if (other.CompareTag("Player")) return;
             Hit(other);
             Destroy(gameObject);
         }
