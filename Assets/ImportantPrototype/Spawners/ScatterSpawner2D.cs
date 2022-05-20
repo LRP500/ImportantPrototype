@@ -9,7 +9,7 @@ namespace ImportantPrototype.Spawners
         [Range(0, 1)]
         [SerializeField]
         private float _density = 1;
-        
+
         private BoxCollider2D _area;
 
         private void Awake()

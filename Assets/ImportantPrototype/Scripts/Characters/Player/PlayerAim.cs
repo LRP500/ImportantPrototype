@@ -15,6 +15,8 @@ namespace ImportantPrototype.Characters
         private WeaponHolder _weaponHolder;
 
         private Player _player;
+        
+        public Vector2 Direction { get; private set; }
 
         private void Awake()
         {
@@ -28,6 +30,7 @@ namespace ImportantPrototype.Characters
             var aimDir = (target - origin).normalized;
             var aimAngle = Mathf.Atan2(aimDir.x, aimDir.y) * Mathf.Rad2Deg;
             _weaponHolder.SetRotation(aimAngle - 90);
+            Direction = aimDir;
         }
     }
 }

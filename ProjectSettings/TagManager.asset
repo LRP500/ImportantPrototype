@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Character
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -15,22 +17,22 @@ TagManager:
   - 
   - 
   - 
+  - Damageable
+  - 
+  - 
+  - Damager
+  - 
+  - 
+  - 
+  - 
+  - Character
   - 
   - 
   - 
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - View Bounds
   - 
   - 
   - 
@@ -43,4 +45,7 @@ TagManager:
     locked: 0
   - name: Character
     uniqueID: 1552082471
+    locked: 0
+  - name: Projectile
+    uniqueID: 2061377579
     locked: 0

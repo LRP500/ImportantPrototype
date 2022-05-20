@@ -7,9 +7,14 @@ namespace ImportantPrototype.Characters.Enemies
     {
         public EnemyAI AI { get; private set; }
 
-        private void Awake()
+        protected override void OnInitialize()
         {
             AI = GetComponent<EnemyAI>();
+        }
+
+        public override void OnDeath()
+        {
+            Destroy(gameObject);
         }
     }
 }

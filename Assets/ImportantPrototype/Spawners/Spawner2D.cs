@@ -1,14 +1,18 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace ImportantPrototype.Spawners
 {
-    public abstract class Spawner2D<T> : MonoBehaviour where T : Transform
+    public abstract class Spawner2D<T> : MonoBehaviour where T : Component
     {
         [SerializeField]
         private T _prefab;
 
         [SerializeField]
         protected bool _spawnOnStart = true;
+        
+        [SerializeField]
+        private bool _destroyAfterSpawn;
         
         protected virtual void Start()
         {
@@ -18,6 +22,11 @@ namespace ImportantPrototype.Spawners
             {
                 Spawn();
             }
+            
+            if (_destroyAfterSpawn)
+            {
+                Destroy(gameObject);
+            }
         }
 
         protected virtual void OnStart() { }
@@ -26,8 +35,10 @@ namespace ImportantPrototype.Spawners
         {
             var instance = Instantiate(_prefab, transform);
             instance.transform.position = position;
+            OnSpawn(instance);
         }
         
         protected virtual void Spawn() { }
+        protected virtual void OnSpawn(T entity) { }
     }
 }

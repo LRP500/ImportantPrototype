@@ -7,13 +7,19 @@ using Random = UnityEngine.Random;
 namespace ImportantPrototype.Characters.Enemies
 {
     [RequireComponent(typeof(BoxCollider2D))]
-    public class EnemySpawner : Spawner2D<Transform>
+    public class EnemySpawner : Spawner2D<Enemy>
     {
         [SerializeField]
         private float _spawnInterval;
         
         [SerializeField]
+        private int _maxSimultaneous;
+
+        [SerializeField]
         private PlayerReactiveVariable _player;
+
+        [SerializeField]
+        private EnemyReactiveList _enemies;
         
         private BoxCollider2D _area;
 
@@ -25,11 +31,12 @@ namespace ImportantPrototype.Characters.Enemies
         protected override void OnStart()
         {
             Observable.Interval(TimeSpan.FromSeconds(_spawnInterval))
+                .Where(_ => _enemies.Count < _maxSimultaneous)
                 .Subscribe(_ => Spawn())
                 .AddTo(this);
         }
         
-        private void Update()
+        private void LateUpdate()
         {
             // Update the spawner rect position based on player position.
             _area.offset = _player.Property.Value.Position;

@@ -20,8 +20,7 @@ namespace ImportantPrototype.Characters
         
         public void Move(Vector2 direction)
         {
-            var speed = _speed * 100 * Time.deltaTime;
-            Rigidbody.velocity = direction * speed;
+            Rigidbody.velocity = direction * _speed;
         }
     }
 }
