@@ -739,7 +739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefab: {fileID: 4710865012963088165, guid: 8353c5e06e4897046985cb6acb2e0966, type: 3}
   _spawnOnStart: 1
-  _destroyAfterSpawn: 1
+  _destroyAfterSpawn: 0
   _density: 0.01
 --- !u!61 &1064868431
 BoxCollider2D:
