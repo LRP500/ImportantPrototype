@@ -15,8 +15,10 @@ namespace ImportantPrototype.Characters
         private WeaponHolder _weaponHolder;
 
         private Player _player;
-        
-        public Vector2 Direction { get; private set; }
+
+        public WeaponHolder WeaponHolder => _weaponHolder;
+        public Vector2 AimDirection { get; private set; }
+        public float AimAngle { get; private set; }
 
         private void Awake()
         {
@@ -28,9 +30,10 @@ namespace ImportantPrototype.Characters
             Vector3 origin = _player.Position;
             var target =  _cameraVariable.Value.ScreenToWorldPoint(PlayerInput.MousePosition);
             var aimDir = (target - origin).normalized;
-            var aimAngle = Mathf.Atan2(aimDir.x, aimDir.y) * Mathf.Rad2Deg;
-            _weaponHolder.SetRotation(aimAngle - 90);
-            Direction = aimDir;
+
+            AimDirection = aimDir;
+            AimAngle = Mathf.Atan2(aimDir.x, aimDir.y) * Mathf.Rad2Deg - 90;
+            _weaponHolder.SetRotation(AimAngle);
         }
     }
 }

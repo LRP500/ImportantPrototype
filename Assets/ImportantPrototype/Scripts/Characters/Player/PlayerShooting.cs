@@ -1,5 +1,4 @@
 using ImportantPrototype.Input;
-using ImportantPrototype.Weapons;
 using UnityEngine;
 
 namespace ImportantPrototype.Characters
@@ -7,9 +6,6 @@ namespace ImportantPrototype.Characters
     [RequireComponent(typeof(PlayerAim))]
     public class PlayerShooting : MonoBehaviour
     {
-        [SerializeField]
-        private Weapon _currentWeapon;
-
         private PlayerAim _aim;
 
         private void Awake()
@@ -19,10 +15,9 @@ namespace ImportantPrototype.Characters
 
         private void Update()
         {
-            if (PlayerInput.Fire)
-            {
-                _currentWeapon.Fire(_aim.Direction);
-            }
+            if (!PlayerInput.Fire) return;
+            var weapon = _aim.WeaponHolder.Weapon; 
+            weapon.Fire(_aim.AimDirection);
         }
     }
 }

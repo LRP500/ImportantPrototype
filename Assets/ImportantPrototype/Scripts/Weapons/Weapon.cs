@@ -6,6 +6,9 @@ namespace ImportantPrototype.Weapons
     public class Weapon : MonoBehaviour
     {
         [SerializeField]
+        private SpriteRenderer _renderer;
+        
+        [SerializeField]
         private Transform _muzzle;
 
         [SerializeField]
@@ -13,6 +16,8 @@ namespace ImportantPrototype.Weapons
 
         [SerializeField]
         private GameObjectVariable _projectileHolder;
+
+        public SpriteRenderer Renderer => _renderer;
         
         public void Fire(Vector2 direction)
         {

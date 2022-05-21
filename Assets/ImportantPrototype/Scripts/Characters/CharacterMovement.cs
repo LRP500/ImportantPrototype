@@ -9,18 +9,19 @@ namespace ImportantPrototype.Characters
         [SerializeField]
         private float _speed;
 
-        private Rigidbody2D Rigidbody { get; set; }
+        private Rigidbody2D _rigidbody;
 
-        private Vector2 _velocity;
+        public Vector2 Velocity { get; private set; }
         
         private void Awake()
         {
-            Rigidbody = GetComponent<Rigidbody2D>();
+            _rigidbody = GetComponent<Rigidbody2D>();
         }
         
         public void Move(Vector2 direction)
         {
-            Rigidbody.velocity = direction * _speed;
+            Velocity = direction * _speed;
+            _rigidbody.velocity = Velocity;
         }
     }
 }
