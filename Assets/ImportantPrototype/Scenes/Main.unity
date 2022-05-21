@@ -583,7 +583,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 33825815
+    m_Bits: 33862679
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -697,7 +697,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 0000000027e6825c2b20de7a334a81fe
+  m_ApplyToSortingLayers: 00000000334a81fe27e6825c2b20de7a930c342a
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1075,6 +1075,10 @@ PrefabInstance:
     - target: {fileID: 3217103946096295960, guid: 963da2f774ad5514085f3ee62ebc3e6f, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217103946096295960, guid: 963da2f774ad5514085f3ee62ebc3e6f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3217103946096295967, guid: 963da2f774ad5514085f3ee62ebc3e6f, type: 3}
       propertyPath: m_RootOrder

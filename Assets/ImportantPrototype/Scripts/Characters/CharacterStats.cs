@@ -10,7 +10,7 @@ namespace ImportantPrototype.Characters
 
         private void Awake()
         {
-            MaxHealth = new ModifiableStat(100);
+            MaxHealth = new ModifiableStat(3);
             Health = new ModifiableStat(MaxHealth.Value.Value);
         }
     }

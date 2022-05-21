@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3798150867696686787
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1779392988356022743, guid: c5c4ac6a51dea654f8c7323ca9153941, type: 3}
+      propertyPath: m_Name
+      value: PickableItem_XP
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343438671653973580, guid: c5c4ac6a51dea654f8c7323ca9153941, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343438671653973580, guid: c5c4ac6a51dea654f8c7323ca9153941, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343438671653973580, guid: c5c4ac6a51dea654f8c7323ca9153941, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343438671653973580, guid: c5c4ac6a51dea654f8c7323ca9153941, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934566366071193721, guid: c5c4ac6a51dea654f8c7323ca9153941, type: 3}
+      propertyPath: _name
+      value: DNA
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c5c4ac6a51dea654f8c7323ca9153941, type: 3}
