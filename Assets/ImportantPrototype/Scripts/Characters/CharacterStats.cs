@@ -5,11 +5,13 @@ namespace ImportantPrototype.Characters
 {
     public class CharacterStats : MonoBehaviour
     {
+        public ModifiableStat MaxHealth { get; private set; }
         public ModifiableStat Health { get; private set; }
 
         private void Awake()
         {
-            Health = new ModifiableStat("Health", 100);
+            MaxHealth = new ModifiableStat(100);
+            Health = new ModifiableStat(MaxHealth.Value.Value);
         }
     }
 }

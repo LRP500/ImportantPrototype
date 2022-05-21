@@ -8,11 +8,6 @@ namespace ImportantPrototype.Stats
     public class Stat
     {
         /// <summary>
-        /// The stat's identifying name.
-        /// </summary>
-        private string Name { get; }
-        
-        /// <summary>
         /// The stat's current value.
         /// </summary>
         private readonly FloatReactiveProperty _value = new ();
@@ -20,9 +15,8 @@ namespace ImportantPrototype.Stats
         /// <inheritdoc cref="_value"/>
         public virtual IReadOnlyReactiveProperty<float> Value => _value;
 
-        protected Stat(string name, float value)
+        protected Stat(float value)
         {
-            Name = name;
             _value.Value = value;
         }
     }
