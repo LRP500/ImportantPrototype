@@ -304,7 +304,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1076,10 +1076,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3217103946096295960, guid: 963da2f774ad5514085f3ee62ebc3e6f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3217103946096295967, guid: 963da2f774ad5514085f3ee62ebc3e6f, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1550,10 +1546,6 @@ PrefabInstance:
     - target: {fileID: 570626583923827064, guid: 09a5f6731ca049d4f95c244cfbafa7f6, type: 3}
       propertyPath: m_Name
       value: HUD
-      objectReference: {fileID: 0}
-    - target: {fileID: 570626583923827064, guid: 09a5f6731ca049d4f95c244cfbafa7f6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 570626583923827071, guid: 09a5f6731ca049d4f95c244cfbafa7f6, type: 3}
       propertyPath: m_Pivot.x

@@ -5,13 +5,19 @@ namespace ImportantPrototype.Characters
 {
     public class CharacterStats : MonoBehaviour
     {
+        [SerializeField]
+        private StatCollectionData _collectionData;
+        
+        private StatCollection _stats;
+
         public ModifiableStat MaxHealth { get; private set; }
         public ModifiableStat Health { get; private set; }
-
+        
         private void Awake()
         {
-            MaxHealth = new ModifiableStat(3);
-            Health = new ModifiableStat(MaxHealth.Value.Value);
+            _stats = new StatCollection(_collectionData);
+            Health = _stats.GetStat("health");
+            MaxHealth = _stats.GetStat("max_health");
         }
     }
 }

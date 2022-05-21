@@ -9,11 +9,11 @@ namespace ImportantPrototype.Stats
         public IReadOnlyReactiveProperty<float> BaseValue => base.Value;
         public override IReadOnlyReactiveProperty<float> Value => _modifiedValue;
         
-        public ModifiableStat(float value) : base(value)
+        public ModifiableStat(StatType type, float value) : base(type, value)
         {
             _modifiedValue.Value = value;
         }
-
+        
         public void Add(float increment)
         {
             _modifiedValue.Value += increment;
