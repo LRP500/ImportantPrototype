@@ -14,7 +14,7 @@ namespace ImportantPrototype.Characters
             OnInitialize();
         }
         
-        private void LateUpdate()
+        private void Update()
         {
             UpdateFacingDirection();
         }

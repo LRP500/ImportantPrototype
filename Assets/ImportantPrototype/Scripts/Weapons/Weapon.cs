@@ -25,6 +25,13 @@ namespace ImportantPrototype.Weapons
             projectile.Shoot(direction);
         }
 
+        public void Fire(Vector2 direction, string excludedTag)
+        {
+            var projectile = CreateProjectile();
+            projectile.Damager.Exclude(excludedTag);
+            projectile.Shoot(direction);
+        }
+        
         private Projectile CreateProjectile()
         {
             var projectile = Instantiate(_projectile, _muzzle.position, transform.rotation);

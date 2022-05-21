@@ -65,6 +65,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3770484069704902321, guid: af16d9fe5cdd02247b41b21547000324, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3770484069704902326, guid: af16d9fe5cdd02247b41b21547000324, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -219,6 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9650f58930a2a6419582619d3bc4ada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _projectileTag: Player
 --- !u!114 &4783239669583063857
 MonoBehaviour:
   m_ObjectHideFlags: 0
