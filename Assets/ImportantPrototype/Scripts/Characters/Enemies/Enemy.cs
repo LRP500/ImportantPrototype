@@ -1,4 +1,4 @@
-using ImportantPrototype.Pickable;
+using ImportantPrototype.Items.Pickups;
 using UnityEngine;
 
 namespace ImportantPrototype.Characters.Enemies
@@ -7,7 +7,7 @@ namespace ImportantPrototype.Characters.Enemies
     public class Enemy : Character
     {
         [SerializeField]
-        private PickableItem _drop;
+        private PickupItem _drop;
         
         public EnemyAI AI { get; private set; }
 

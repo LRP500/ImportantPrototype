@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf2ee3ba142fd4a498087969eb2004d2, type: 3}
-  m_Name: StatType_Health
+  m_Name: DNA
   m_EditorClassIdentifier: 
-  _id: health
-  _name: Health
+  _id: dna
+  _name: DNA
   _description: 

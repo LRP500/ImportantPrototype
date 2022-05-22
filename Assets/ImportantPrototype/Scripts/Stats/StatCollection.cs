@@ -4,8 +4,7 @@ namespace ImportantPrototype.Stats
 {
     public class StatCollection
     {
-        private readonly ReactiveCollection<ModifiableStat> _stats = new ();
-        public IReadOnlyReactiveCollection<ModifiableStat> Stats => _stats;
+        private readonly ReactiveDictionary<StatType, ModifiableStat> _stats = new ();
 
         public StatCollection(StatCollectionData data)
         {
@@ -14,19 +13,25 @@ namespace ImportantPrototype.Stats
         
         private void Initialize(StatCollectionData data)
         {
-            foreach (var stat in data.Stats)
+            foreach (var entry in data.Stats)
             {
-                _stats.Add(new ModifiableStat(stat.type, stat.value));
+                var stat = new ModifiableStat(entry.Stat, entry.Value);
+                _stats.Add(entry.Stat, stat);
             }
         }
 
+        public ModifiableStat GetStat(StatType type)
+        {
+            return GetStat(type.Id);
+        }
+        
         public ModifiableStat GetStat(string id)
         {
-            for (int i = 0, len = _stats.Count; i < len; ++i)
+            foreach (var (key, value) in _stats)
             {
-                if (_stats[i].Type.Id.Equals(id))
+                if (key.Id.Equals(id))
                 {
-                    return _stats[i];
+                    return value;
                 }
             }
 

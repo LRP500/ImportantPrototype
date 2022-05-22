@@ -1,5 +1,4 @@
 ﻿using System;
-using ImportantPrototype.Stats;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,24 +13,25 @@ namespace ImportantPrototype.UI.HUD
 
         private IDisposable _disposable;
         
-        protected abstract ModifiableStat Health { get; }
-        protected abstract ModifiableStat MaxHealth { get; }
+        protected abstract IObservable<float> Current { get; }
+        protected abstract IObservable<float> Max { get; }
         
         protected override void OnShow()
         {
-            _disposable = Health.Value
-                .Concat(MaxHealth.Value)
-                .Subscribe(SetFill);
+            _disposable = Current
+                .CombineLatest(Max, (current, max) => (current, max))
+                .Subscribe(OnValueChanged);
+        }
+
+        private void OnValueChanged((float current, float max) value)
+        {
+            var (current, max) = value;
+            _fill.fillAmount = current / max;
         }
 
         protected override void OnHide()
         {
             _disposable.Dispose();
-        }
-
-        private void SetFill(float health)
-        {
-            _fill.fillAmount = Health.Value.Value / MaxHealth.Value.Value;
         }
 
         public override void Dispose()

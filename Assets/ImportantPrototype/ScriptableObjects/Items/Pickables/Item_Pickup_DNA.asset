@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf2ee3ba142fd4a498087969eb2004d2, type: 3}
-  m_Name: StatType_Experience
+  m_Script: {fileID: 11500000, guid: d961a10303791bc478e3ca9e30c93824, type: 3}
+  m_Name: Item_Pickup_DNA
   m_EditorClassIdentifier: 
-  _id: dna
   _name: DNA
   _description: 
+  _onPick: {fileID: 11400000, guid: cfe3a8388be7e364b8ba457de88f2655, type: 2}

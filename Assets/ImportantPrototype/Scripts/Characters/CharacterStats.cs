@@ -8,16 +8,20 @@ namespace ImportantPrototype.Characters
         [SerializeField]
         private StatCollectionData _collectionData;
         
-        private StatCollection _stats;
-
+        private StatCollection Collection { get; set; }
         public ModifiableStat MaxHealth { get; private set; }
         public ModifiableStat Health { get; private set; }
         
         private void Awake()
         {
-            _stats = new StatCollection(_collectionData);
-            Health = _stats.GetStat("health");
-            MaxHealth = _stats.GetStat("max_health");
+            Collection = new StatCollection(_collectionData);
+            Health = Collection.GetStat("health");
+            MaxHealth = Collection.GetStat("max_health");
+        }
+
+        public ModifiableStat Get(StatType type)
+        {
+            return Collection.GetStat(type);
         }
     }
 }

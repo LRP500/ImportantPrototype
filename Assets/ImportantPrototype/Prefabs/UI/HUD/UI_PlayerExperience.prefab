@@ -164,9 +164,9 @@ GameObject:
   - component: {fileID: 7275042996216659594}
   - component: {fileID: 790524999476957391}
   - component: {fileID: 1511505806829450166}
-  - component: {fileID: 9159373921491957485}
+  - component: {fileID: 538633548796495403}
   m_Layer: 5
-  m_Name: UI_PlayerHealth
+  m_Name: UI_PlayerExperience
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -192,7 +192,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 50}
+  m_SizeDelta: {x: 500, y: 64}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &7275042996216659594
 CanvasRenderer:
@@ -229,7 +229,7 @@ MonoBehaviour:
   _displayMode: 2
   _canvas: {fileID: 0}
   _canvasGroup: {fileID: 790524999476957391}
---- !u!114 &9159373921491957485
+--- !u!114 &538633548796495403
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -238,10 +238,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8983712688850297150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cc6ffdbdacd7ab45b733d24e9e3f5fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 33b05a73e3444b47b18aaf8aed21af5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _initializeOnAwake: 0
   _showOnStart: 1
   _fill: {fileID: 8444588901157704789}
   _player: {fileID: 11400000, guid: 35f933c98b6bd184699369384bf7d54e, type: 2}
+  _statType: {fileID: 11400000, guid: 38b28e7eeba8933469ca00f5dfcc1f0f, type: 2}

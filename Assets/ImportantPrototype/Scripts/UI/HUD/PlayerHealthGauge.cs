@@ -1,5 +1,5 @@
+using System;
 using ImportantPrototype.Characters;
-using ImportantPrototype.Stats;
 using UnityEngine;
 
 namespace ImportantPrototype.UI.HUD
@@ -10,7 +10,7 @@ namespace ImportantPrototype.UI.HUD
         private PlayerReactiveVariable _player;
 
         private Player Player => _player.Property.Value;
-        protected override ModifiableStat Health => Player.Stats.Health;
-        protected override ModifiableStat MaxHealth => Player.Stats.MaxHealth;
+        protected override IObservable<float> Current => Player.Stats.Health.Value;
+        protected override IObservable<float> Max => Player.Stats.MaxHealth.Value;
     }
 }

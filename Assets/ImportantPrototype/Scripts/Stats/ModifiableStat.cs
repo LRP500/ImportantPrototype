@@ -13,6 +13,11 @@ namespace ImportantPrototype.Stats
         {
             _modifiedValue.Value = value;
         }
+
+        public void SetValue(float value)
+        {
+            _modifiedValue.Value = value;
+        }
         
         public void Add(float increment)
         {

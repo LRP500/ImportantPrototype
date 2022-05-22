@@ -9,7 +9,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1779392988356022743, guid: c5c4ac6a51dea654f8c7323ca9153941, type: 3}
       propertyPath: m_Name
-      value: PickableItem_XP
+      value: PickupItem_DNA
+      objectReference: {fileID: 0}
+    - target: {fileID: 3965766707264427193, guid: c5c4ac6a51dea654f8c7323ca9153941, type: 3}
+      propertyPath: m_Radius
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322868275711137396, guid: c5c4ac6a51dea654f8c7323ca9153941, type: 3}
+      propertyPath: m_Size.x
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322868275711137396, guid: c5c4ac6a51dea654f8c7323ca9153941, type: 3}
+      propertyPath: m_Size.y
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322868275711137396, guid: c5c4ac6a51dea654f8c7323ca9153941, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1714a893188182144ba41a7e3ff9ee21, type: 3}
+    - target: {fileID: 4322868275711137396, guid: c5c4ac6a51dea654f8c7323ca9153941, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6343438671653973580, guid: c5c4ac6a51dea654f8c7323ca9153941, type: 3}
       propertyPath: m_RootOrder
@@ -27,6 +47,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7934566366071193721, guid: c5c4ac6a51dea654f8c7323ca9153941, type: 3}
+      propertyPath: _item
+      value: 
+      objectReference: {fileID: 11400000, guid: 0963a29049a34b8449800de119bf5444, type: 2}
     - target: {fileID: 7934566366071193721, guid: c5c4ac6a51dea654f8c7323ca9153941, type: 3}
       propertyPath: _name
       value: DNA
