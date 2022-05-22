@@ -11,19 +11,17 @@ namespace ImportantPrototype.Stats
         /// The stat's type info.
         /// </summary>
         public StatType Type { get; }
-        
+
+
         /// <summary>
         /// The stat's current value.
         /// </summary>
-        private readonly FloatReactiveProperty _value = new ();
-
-        /// <inheritdoc cref="_value"/>
-        public virtual IReadOnlyReactiveProperty<float> Value => _value;
-
+        public virtual float Value { get; }
+        
         protected Stat(StatType type, float value)
         {
             Type = type;
-            _value.Value = value;
+            Value = value;
         }
     }
 }

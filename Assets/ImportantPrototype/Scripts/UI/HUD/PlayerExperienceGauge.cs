@@ -15,7 +15,7 @@ namespace ImportantPrototype.UI.HUD
         private StatType _statType;
         
         private Player Player => _player.Property.Value;
-        protected override IObservable<float> Current => Player.Stats.Get(_statType).Value;
+        protected override IObservable<float> Current => Player.Stats.Get(_statType).Property;
         protected override IObservable<float> Max => Observable.Return(100f);
     }
 }

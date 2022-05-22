@@ -27,9 +27,8 @@ namespace ImportantPrototype.Actions
         
         protected override bool ExecuteBehaviour()
         {
-            _playerStat ??= _player.Property.Value.Stats.Get(_stat);
-            var newValue = _playerStat.Value.Value.Modify(_operator, _value);
-            _playerStat.SetValue(newValue);
+            _playerStat ??= _player.Value.Stats.Get(_stat);
+            _playerStat.Modify(_operator, _value);
             return true;
         }
     }

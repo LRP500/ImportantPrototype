@@ -20,7 +20,7 @@ namespace ImportantPrototype.Characters
         {
             Health.Remove(damager.Damage);
             
-            if (Health.Value.Value <= 0)
+            if (Health.Value <= 0)
             {
                 _character.OnDeath();
             }
