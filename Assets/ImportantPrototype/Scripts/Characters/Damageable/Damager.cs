@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using ImportantPrototype.Interfaces;
 using UniRx;
 using UnityEngine;
@@ -10,10 +11,21 @@ namespace ImportantPrototype.Characters
         [SerializeField]
         private float _damage;
 
+        [SerializeField]
+        private bool _excludeSelf;
+        
         private readonly List<string> _excludedTags = new ();
         
         public float Damage => _damage;
         public readonly ISubject<Unit> OnHit = new Subject<Unit>();
+
+        private void Awake()
+        {
+            if (_excludeSelf)
+            {
+                _excludedTags.Add(tag);
+            }
+        }
 
         private void OnTriggerEnter2D(Collider2D other)
         {

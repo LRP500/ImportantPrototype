@@ -116,3 +116,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _item: {fileID: 0}
   _moveSpeed: 7
+  _minDistance: 0.5

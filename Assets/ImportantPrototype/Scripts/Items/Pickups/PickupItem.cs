@@ -13,6 +13,9 @@ namespace ImportantPrototype.Items.Pickups
         [SerializeField]
         private float _moveSpeed = 5;
 
+        [SerializeField]
+        private float _minDistance = 1f;
+        
         private IDisposable _pickUpDisposable;
         
         public void OnTriggerEnter2D(Collider2D other)
@@ -25,7 +28,7 @@ namespace ImportantPrototype.Items.Pickups
         {
             this.UpdateAsObservable()
                 .Select(_ => RemainingDistance(other.position))
-                .TakeWhile(distance => distance > 1)
+                .TakeWhile(distance => distance > _minDistance)
                 .Subscribe(_ => MoveTowards(other.transform.position), PickUp)
                 .AddTo(gameObject);
         }
