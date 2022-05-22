@@ -2,6 +2,7 @@ using System;
 using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace ImportantPrototype.Items.Pickups
 {
@@ -11,13 +12,24 @@ namespace ImportantPrototype.Items.Pickups
         private PickupItemData _item;
 
         [SerializeField]
+        private bool _randomRotation;
+        
+        [SerializeField]
         private float _moveSpeed = 5;
 
         [SerializeField]
         private float _minDistance = 1f;
         
         private IDisposable _pickUpDisposable;
-        
+
+        private void Awake()
+        {
+            if (_randomRotation)
+            {
+                transform.rotation = Quaternion.Euler(0f, 0f, Random.Range(0f, 360f));
+            }
+        }
+
         public void OnTriggerEnter2D(Collider2D other)
         {
             // PickUp();
