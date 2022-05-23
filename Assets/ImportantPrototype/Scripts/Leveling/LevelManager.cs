@@ -23,7 +23,7 @@ namespace ImportantPrototype.Leveling
         {
             Level = _player.Value.Stats.Get("level");
             Experience = _player.Value.Stats.Get("xp");
-
+            
             Experience.Property
                 .Subscribe(OnPlayerGainedXP)
                 .AddTo(Context.DisposableTarget);
@@ -53,8 +53,7 @@ namespace ImportantPrototype.Leveling
             var level = GetLevelFromXp(Experience.Value);
             var levelXP = GetRequiredXP(level + 1) - GetRequiredXP(level);
             var currentLevelXp = Experience.Value - GetRequiredXP(level);
-            var ratio = currentLevelXp / levelXP; 
-            return ratio;
+            return currentLevelXp / levelXP;
         }
     }
 }

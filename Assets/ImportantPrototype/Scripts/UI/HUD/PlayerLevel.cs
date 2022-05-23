@@ -17,7 +17,8 @@ namespace ImportantPrototype.UI.HUD
 
         public override void Initialize()
         {
-            _player.Value.Stats.Get("level").Property
+            _player.Value.Stats
+                .ObserveValueChanged("level")
                 .Subscribe(Refresh)
                 .AddToDisable(this);
         }

@@ -1,3 +1,4 @@
+using System;
 using ImportantPrototype.Stats;
 using UnityEngine;
 
@@ -27,6 +28,11 @@ namespace ImportantPrototype.Characters
         public ModifiableStat Get(StatType type)
         {
             return Get(type.Id);
+        }
+
+        public IObservable<float> ObserveValueChanged(string id)
+        {
+            return Get(id).Property;
         }
     }
 }

@@ -17,7 +17,12 @@ namespace ImportantPrototype.Characters
         {
             _rigidbody = GetComponent<Rigidbody2D>();
         }
-        
+
+        private void OnDisable()
+        {
+            _rigidbody.velocity = Vector2.zero;
+        }
+
         public void Move(Vector2 direction)
         {
             Velocity = direction * _speed;

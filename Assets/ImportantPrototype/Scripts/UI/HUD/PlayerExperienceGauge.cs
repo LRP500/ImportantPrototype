@@ -3,6 +3,7 @@ using ImportantPrototype.Characters;
 using ImportantPrototype.Leveling;
 using UniRx;
 using UnityEngine;
+using UnityTools.Runtime.Extensions;
 
 namespace ImportantPrototype.UI.HUD
 {
@@ -16,8 +17,9 @@ namespace ImportantPrototype.UI.HUD
 
         protected override IObservable<(float, float)> ObserveValueChanged()
         {
-            return _player.Value.Stats.Get("xp").Property
-                .SkipLatestValueOnSubscribe()
+            return _player.Value.Stats
+                .ObserveValueChanged("xp")
+                .SkipFirst()
                 .Select(_ => (_levelManager.GetCurrentLevelRatio(), 1f))
                 .StartWith(() => (0, 1));
         }

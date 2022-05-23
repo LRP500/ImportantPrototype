@@ -6,7 +6,7 @@ using UnityTools.Runtime.Variables;
 namespace ImportantPrototype.Characters
 {
     [RequireComponent(typeof(Player))]
-    public class PlayerAim : MonoBehaviour
+    public class PlayerAiming : MonoBehaviour
     {
         [SerializeField]
         private CameraVariable _cameraVariable;

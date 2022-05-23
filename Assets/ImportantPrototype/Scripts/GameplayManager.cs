@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using ImportantPrototype.Characters;
+using UniRx;
+using UnityEngine;
 
 namespace ImportantPrototype.Scripts
 {
@@ -7,6 +9,9 @@ namespace ImportantPrototype.Scripts
         [SerializeField]
         private GameplayContext _context;
 
+        [SerializeField]
+        private PlayerReactiveVariable _player;
+        
         public void Start()
         {
             Initialize();
@@ -15,11 +20,20 @@ namespace ImportantPrototype.Scripts
         private void Initialize()
         {
             _context.Initialize();
+            _player.Value.Stats
+                .ObserveValueChanged("health")
+                .Where(value => value <= 0)
+                .Subscribe(_ => GameOver());
         }
 
         private void FixedUpdate()
         {
             _context.FixedUpdate();
+        }
+
+        private void GameOver()
+        {
+            _player.Value.Freeze();
         }
     }
 }
