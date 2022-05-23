@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace ImportantPrototype.UI.HUD
 {
-    public class PlayerHealthGauge : Gauge
+    public class PlayerHealthUI : Gauge
     {
         [SerializeField]
         private PlayerReactiveVariable _player;

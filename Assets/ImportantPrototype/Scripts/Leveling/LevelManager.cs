@@ -1,5 +1,5 @@
 using ImportantPrototype.Characters;
-using ImportantPrototype.Scripts.Managers;
+using ImportantPrototype.Managers;
 using ImportantPrototype.Stats;
 using ImportantPrototype.System;
 using UniRx;

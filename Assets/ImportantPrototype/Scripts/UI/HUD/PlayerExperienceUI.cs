@@ -7,7 +7,7 @@ using UnityTools.Runtime.Extensions;
 
 namespace ImportantPrototype.UI.HUD
 {
-    public class PlayerExperienceGauge : Gauge
+    public class PlayerExperienceUI : Gauge
     {
         [SerializeField]
         private PlayerReactiveVariable _player;

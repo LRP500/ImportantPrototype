@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ImportantPrototype.Scripts.Managers
+namespace ImportantPrototype.Managers
 {
     public abstract class ScriptableManager : ScriptableObject
     {

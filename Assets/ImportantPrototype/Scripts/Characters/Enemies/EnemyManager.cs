@@ -1,4 +1,4 @@
-﻿using ImportantPrototype.Scripts.Managers;
+﻿using ImportantPrototype.Managers;
 using ImportantPrototype.System;
 using UnityEngine;
 

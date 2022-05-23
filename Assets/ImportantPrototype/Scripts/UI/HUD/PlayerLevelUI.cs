@@ -7,7 +7,7 @@ using UnityTools.Runtime.UI;
 
 namespace ImportantPrototype.UI.HUD
 {
-    public class PlayerLevel : Element
+    public class PlayerLevelUI : Element
     {
         [SerializeField]
         private PlayerReactiveVariable _player;

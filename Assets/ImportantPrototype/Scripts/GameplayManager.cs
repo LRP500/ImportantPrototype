@@ -1,8 +1,9 @@
 ﻿using ImportantPrototype.Characters;
 using UniRx;
 using UnityEngine;
+using UnityTools.Runtime.ECA.Events;
 
-namespace ImportantPrototype.Scripts
+namespace ImportantPrototype
 {
     public class GameplayManager : MonoBehaviour
     {
@@ -11,7 +12,10 @@ namespace ImportantPrototype.Scripts
 
         [SerializeField]
         private PlayerReactiveVariable _player;
-        
+
+        [SerializeField]
+        private ScriptableEvent _gameOverEvent;
+
         public void Start()
         {
             Initialize();
@@ -34,6 +38,7 @@ namespace ImportantPrototype.Scripts
         private void GameOver()
         {
             _player.Value.Freeze();
+            _gameOverEvent.Raise();
         }
     }
 }

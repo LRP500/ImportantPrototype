@@ -4,7 +4,7 @@ using ImportantPrototype.System;
 using UnityEngine;
 using UnityTools.Runtime.Variables;
 
-namespace ImportantPrototype.Scripts
+namespace ImportantPrototype
 {
     [CreateAssetMenu(menuName = ContextMenuPath.Root + "Gameplay Context")]
     public class GameplayContext : ScriptableObject
