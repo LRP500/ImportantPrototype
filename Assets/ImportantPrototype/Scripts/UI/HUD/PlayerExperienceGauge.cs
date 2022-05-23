@@ -1,6 +1,6 @@
 ﻿using System;
 using ImportantPrototype.Characters;
-using ImportantPrototype.Stats;
+using ImportantPrototype.Leveling;
 using UniRx;
 using UnityEngine;
 
@@ -12,10 +12,14 @@ namespace ImportantPrototype.UI.HUD
         private PlayerReactiveVariable _player;
 
         [SerializeField]
-        private StatType _statType;
-        
-        private Player Player => _player.Property.Value;
-        protected override IObservable<float> Current => Player.Stats.Get(_statType).Property;
-        protected override IObservable<float> Max => Observable.Return(100f);
+        private LevelManager _levelManager;
+
+        protected override IObservable<(float, float)> ObserveValueChanged()
+        {
+            return _player.Value.Stats.Get("xp").Property
+                .SkipLatestValueOnSubscribe()
+                .Select(_ => (_levelManager.GetCurrentLevelRatio(), 1f))
+                .StartWith(() => (0, 1));
+        }
     }
 }

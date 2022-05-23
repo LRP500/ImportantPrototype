@@ -13,14 +13,17 @@ namespace ImportantPrototype.UI.HUD
 
         private IDisposable _disposable;
         
-        protected abstract IObservable<float> Current { get; }
-        protected abstract IObservable<float> Max { get; }
+        protected float Current { get; set; }
+        protected float Max { get; set; }
         
         protected override void OnShow()
         {
-            _disposable = Current
-                .CombineLatest(Max, (current, max) => (current, max))
-                .Subscribe(OnValueChanged);
+            _disposable = ObserveValueChanged().Subscribe(OnValueChanged);
+        }
+
+        protected virtual IObservable<(float, float)> ObserveValueChanged()
+        {
+            return Observable.Return((Current, Max));
         }
 
         private void OnValueChanged((float current, float max) value)

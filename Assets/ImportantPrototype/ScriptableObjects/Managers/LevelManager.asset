@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf2ee3ba142fd4a498087969eb2004d2, type: 3}
-  m_Name: DNA
+  m_Script: {fileID: 11500000, guid: 311d995d1135eeb428fb8a47a8f71fed, type: 3}
+  m_Name: LevelManager
   m_EditorClassIdentifier: 
-  _id: xp
-  _name: DNA
-  _description: 
+  _player: {fileID: 11400000, guid: 35f933c98b6bd184699369384bf7d54e, type: 2}
+  _xpConstant: 0.1

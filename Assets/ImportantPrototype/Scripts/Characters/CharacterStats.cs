@@ -18,10 +18,15 @@ namespace ImportantPrototype.Characters
             Health = Collection.GetStat("health");
             MaxHealth = Collection.GetStat("max_health");
         }
+        
+        public ModifiableStat Get(string id)
+        {
+            return Collection.GetStat(id);
+        }
 
         public ModifiableStat Get(StatType type)
         {
-            return Collection.GetStat(type);
+            return Get(type.Id);
         }
     }
 }

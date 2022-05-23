@@ -1,5 +1,4 @@
-﻿using ImportantPrototype.Characters.Enemies;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ImportantPrototype.Scripts
 {
@@ -8,17 +7,19 @@ namespace ImportantPrototype.Scripts
         [SerializeField]
         private GameplayContext _context;
 
-        [SerializeField]
-        private EnemyManager _enemyManager;
-        
         public void Start()
         {
-            _enemyManager.Initialize(_context);
+            Initialize();
         }
-        
+
+        private void Initialize()
+        {
+            _context.Initialize();
+        }
+
         private void FixedUpdate()
         {
-            _enemyManager.FixedUpdate();
+            _context.FixedUpdate();
         }
     }
 }
