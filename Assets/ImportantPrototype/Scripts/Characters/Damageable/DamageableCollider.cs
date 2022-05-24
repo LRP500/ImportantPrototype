@@ -1,3 +1,4 @@
+using UniRx;
 using UnityEngine;
 
 namespace ImportantPrototype.Characters
@@ -9,12 +10,20 @@ namespace ImportantPrototype.Characters
         
         [SerializeField]
         private Damageable _damageable;
-        
+
         public Damageable Damageable => _damageable;
 
         private void Awake()
         {
             SetLayer();
+        }
+
+        private void Start()
+        {
+            Damageable.CanDamage
+                .StartWith(true)
+                .Subscribe(gameObject.SetActive)
+                .AddTo(gameObject);
         }
 
         private void SetLayer()

@@ -1309,7 +1309,7 @@ MonoBehaviour:
   _prefab: {fileID: 5656590754369126626, guid: e5ddae4f5dfba364eb5721b6baec379e, type: 3}
   _spawnOnStart: 0
   _destroyAfterSpawn: 0
-  _spawnInterval: 1
+  _spawnInterval: 0.5
   _maxSimultaneous: 100
   _player: {fileID: 11400000, guid: 35f933c98b6bd184699369384bf7d54e, type: 2}
   _enemies: {fileID: 11400000, guid: 01d3b335ffa3b704e9b2f93b2ad736d1, type: 2}

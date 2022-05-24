@@ -1,4 +1,6 @@
-using ImportantPrototype.Interfaces;
+using Extensions;
+using UniRx;
+using UnityTools.Runtime.Extensions;
 
 namespace ImportantPrototype.Characters
 {
@@ -16,14 +18,11 @@ namespace ImportantPrototype.Characters
             Health = _character.Stats.Health;
         }
 
-        public override void Damage(IDamager damager)
+        private void OnEnable()
         {
-            Health.Remove(damager.Damage);
-            
-            if (Health.Value <= 0)
-            {
-                _character.OnDeath();
-            }
+            OnDeath.TakeFirst()
+                .Subscribe(_ => _character.OnDeath())
+                .AddToDisable(this);
         }
     }
 }
