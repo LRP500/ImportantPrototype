@@ -1,7 +1,9 @@
 ﻿using ImportantPrototype.Characters;
 using UniRx;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityTools.Runtime.ECA.Events;
+using Scene = UnityEditor.SearchService.Scene;
 
 namespace ImportantPrototype
 {
@@ -30,6 +32,12 @@ namespace ImportantPrototype
                 .Subscribe(_ => GameOver());
         }
 
+        public void Restart()
+        {
+            var scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
+        }
+        
         private void FixedUpdate()
         {
             _context.FixedUpdate();
