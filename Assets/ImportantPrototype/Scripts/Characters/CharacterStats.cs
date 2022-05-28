@@ -16,23 +16,28 @@ namespace ImportantPrototype.Characters
         private void Awake()
         {
             Collection = new StatCollection(_collectionData);
-            Health = Collection.GetStat("health");
-            MaxHealth = Collection.GetStat("max_health");
+            Health = Collection.GetStat((int) CharacterStatType.Health);
+            MaxHealth = Collection.GetStat((int) CharacterStatType.MaxHealth);
         }
         
-        public ModifiableStat Get(string id)
+        public ModifiableStat Get(int id)
         {
             return Collection.GetStat(id);
         }
 
-        public ModifiableStat Get(StatType type)
+        public ModifiableStat Get(StatTypeInfo typeInfo)
         {
-            return Get(type.Id);
+            return Get(typeInfo.Id);
         }
 
-        public IObservable<float> ObserveValueChanged(string id)
+        public ModifiableStat Get(CharacterStatType type)
         {
-            return Get(id).Property;
+            return Get((int) type);
+        }
+        
+        public IObservable<float> ObserveValueChanged(CharacterStatType type)
+        {
+            return Get(type).Property;
         }
     }
 }

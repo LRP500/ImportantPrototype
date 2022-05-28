@@ -21,8 +21,8 @@ namespace ImportantPrototype.Leveling
 
         protected override void OnInitialize()
         {
-            Level = _player.Value.Stats.Get("level");
-            Experience = _player.Value.Stats.Get("xp");
+            Level = _player.Value.Stats.Get(CharacterStatType.Level);
+            Experience = _player.Value.Stats.Get(CharacterStatType.Experience);
             
             Experience.Property
                 .Subscribe(OnPlayerGainedXP)

@@ -19,7 +19,7 @@ namespace ImportantPrototype.Characters.Enemies
         {
             var target = _player.Property.Value;
             if (target == null) return;
-            // _self.Motor.Move(GetDirection(target.Position));
+            _self.Motor.Move(GetDirection(target.Position));
         }
 
         private Vector2 GetDirection(Vector2 destination)

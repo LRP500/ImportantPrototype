@@ -26,7 +26,7 @@ namespace ImportantPrototype
         {
             _context.Initialize();
             _player.Value.Stats
-                .ObserveValueChanged("health")
+                .ObserveValueChanged(CharacterStatType.Health)
                 .Where(value => value <= 0)
                 .Subscribe(_ => GameOver());
         }

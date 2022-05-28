@@ -11,7 +11,7 @@ namespace ImportantPrototype.Stats
         public override float Value => _modifiedValue.Value;
         public float BaseValue => base.Value;
  
-        public ModifiableStat(StatType type, float value) : base(type, value)
+        public ModifiableStat(StatTypeInfo typeInfo, float value) : base(typeInfo, value)
         {
             _modifiedValue.Value = value;
         }

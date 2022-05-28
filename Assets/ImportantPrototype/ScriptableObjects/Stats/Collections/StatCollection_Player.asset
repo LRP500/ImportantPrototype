@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: StatCollection_Player
   m_EditorClassIdentifier: 
   _stats:
-  - _stat: {fileID: 11400000, guid: 8003f7b518ae299498a5ccacd9d28abc, type: 2}
-    _value: 20
-  - _stat: {fileID: 11400000, guid: 263e38aba26b37042a8a0e0c7bbeee6f, type: 2}
-    _value: 20
-  - _stat: {fileID: 11400000, guid: 38b28e7eeba8933469ca00f5dfcc1f0f, type: 2}
+  - _stat: {fileID: 11400000, guid: 18db267cfcce59043a9304b924d4aa66, type: 2}
+    _value: 5
+  - _stat: {fileID: 11400000, guid: 1f59ce654590fbd4b9252477d207bbdb, type: 2}
+    _value: 5
+  - _stat: {fileID: 11400000, guid: 30487750829961a4bbf824858b21d085, type: 2}
     _value: 0
-  - _stat: {fileID: 11400000, guid: 6f51fcf7e50b47348a55821a0a84b6b4, type: 2}
+  - _stat: {fileID: 11400000, guid: 50df65d4676f5b24ab804d6157d5c5f5, type: 2}
     _value: 0

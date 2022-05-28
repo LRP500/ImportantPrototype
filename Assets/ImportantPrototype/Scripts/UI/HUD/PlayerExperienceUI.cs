@@ -18,7 +18,7 @@ namespace ImportantPrototype.UI.HUD
         protected override IObservable<(float, float)> ObserveValueChanged()
         {
             return _player.Value.Stats
-                .ObserveValueChanged("xp")
+                .ObserveValueChanged(CharacterStatType.Experience)
                 .SkipFirst()
                 .Select(_ => (_levelManager.GetCurrentLevelRatio(), 1f))
                 .StartWith(() => (0, 1));

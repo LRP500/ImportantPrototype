@@ -4,7 +4,7 @@ namespace ImportantPrototype.Stats
 {
     public class StatCollection
     {
-        private readonly ReactiveDictionary<StatType, ModifiableStat> _stats = new ();
+        private readonly ReactiveDictionary<StatTypeInfo, ModifiableStat> _stats = new ();
 
         public StatCollection(StatCollectionData data)
         {
@@ -20,16 +20,11 @@ namespace ImportantPrototype.Stats
             }
         }
 
-        public ModifiableStat GetStat(StatType type)
-        {
-            return GetStat(type.Id);
-        }
-        
-        public ModifiableStat GetStat(string id)
+        public ModifiableStat GetStat(int id)
         {
             foreach (var (key, value) in _stats)
             {
-                if (key.Id.Equals(id))
+                if (key.Id == id)
                 {
                     return value;
                 }

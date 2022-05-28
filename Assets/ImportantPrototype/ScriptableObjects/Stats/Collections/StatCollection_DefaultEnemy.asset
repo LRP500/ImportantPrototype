@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: StatCollection_DefaultEnemy
   m_EditorClassIdentifier: 
   _stats:
-  - _stat: {fileID: 11400000, guid: 8003f7b518ae299498a5ccacd9d28abc, type: 2}
+  - _stat: {fileID: 11400000, guid: 18db267cfcce59043a9304b924d4aa66, type: 2}
     _value: 2
-  - _stat: {fileID: 11400000, guid: 263e38aba26b37042a8a0e0c7bbeee6f, type: 2}
+  - _stat: {fileID: 11400000, guid: 1f59ce654590fbd4b9252477d207bbdb, type: 2}
     _value: 2

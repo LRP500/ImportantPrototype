@@ -15,7 +15,7 @@ namespace ImportantPrototype.Actions
 
         [Space]
         [SerializeField]
-        private StatType _stat;
+        private StatTypeInfo _stat;
 
         [SerializeField]
         private NumericalOperator _operator;

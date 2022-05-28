@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e8b2c875f684fab87b908e738e181b0, type: 3}
   m_Name: Item_Pickup_DNA_Action
   m_EditorClassIdentifier: 
-  _stat: {fileID: 11400000, guid: 38b28e7eeba8933469ca00f5dfcc1f0f, type: 2}
+  _player: {fileID: 11400000, guid: 35f933c98b6bd184699369384bf7d54e, type: 2}
+  _stat: {fileID: 11400000, guid: 30487750829961a4bbf824858b21d085, type: 2}
   _operator: 0
   _value: 10
-  _player: {fileID: 11400000, guid: 35f933c98b6bd184699369384bf7d54e, type: 2}
