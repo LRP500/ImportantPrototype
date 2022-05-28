@@ -24,7 +24,8 @@ namespace ImportantPrototype.Stats
             }
         }
 
-        private readonly SortedList<int, List<StatModifier>> _modifiers = new ();
+        private readonly SortedList<int, List<StatModifier>> _sortedModifiers = new ();
+        private readonly IList<StatModifier> _modifiers = new List<StatModifier>();
         private bool _isDirty;
         
         public ModifiableStat(StatTypeInfo typeInfo, float value) : base(typeInfo, value)
@@ -52,33 +53,42 @@ namespace ImportantPrototype.Stats
             AddModifier(new StatModifier(value, type));
         }
 
-        public void AddModifier(StatModifier mod)
+        private void AddModifier(StatModifier mod)
         {
-            if (!_modifiers.ContainsKey(mod.Priority))
+            if (!_sortedModifiers.ContainsKey(mod.Priority))
             {
-                _modifiers.Add(mod.Priority, new List<StatModifier> { mod });
+                _sortedModifiers.Add(mod.Priority, new List<StatModifier> { mod });
             }
             else
             {
-                _modifiers[mod.Priority].Add(mod);
+                _sortedModifiers[mod.Priority].Add(mod);
             }
             
+            _modifiers.Add(mod);
             _modifiedValue.Value = Calculate();
             // _isDirty = true;
         }
         
-        public void RemoveModifier()
+        public void RemoveModifier(string id)
         {
-            // TODO: Add opposite value mod ? Identify mod with id ?
+            for (int i = 0, length = _modifiers.Count; i < length; ++i)
+            {
+                var mod = _modifiers[i];
+                if (!mod.Id.Equals(id)) continue;
+                _sortedModifiers[mod.Priority].Remove(mod);
+                _modifiers.Remove(mod);
+                // _isDirty = true;
+                return;
+            }
         }
 
         private float Calculate()
         {
             float finalValue = BaseValue;
 
-            foreach (var (_, value) in _modifiers)
+            foreach (var (_, value) in _sortedModifiers)
             {
-                for (int i = 0, len = value.Count; i < len; ++i)
+                for (int i = 0, length = value.Count; i < length; ++i)
                 {
                     // TODO:
                     // float sum = 0;

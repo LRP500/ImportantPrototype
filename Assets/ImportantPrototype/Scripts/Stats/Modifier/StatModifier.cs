@@ -11,12 +11,21 @@ namespace ImportantPrototype.Stats.Modifiers
             TotalPercentage = 2
         }
 
+        public string Id { get; } = string.Empty;
         private float Value { get; }
         public Type ModType { get; }
         public int Priority { get; }
 
         public StatModifier(float value, Type type)
         {
+            Value = value;
+            ModType = type;
+            Priority = CalculatePriority();
+        }
+        
+        public StatModifier(float value, Type type, string id)
+        {
+            Id = id;
             Value = value;
             ModType = type;
             Priority = CalculatePriority();
