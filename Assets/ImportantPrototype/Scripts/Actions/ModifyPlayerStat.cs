@@ -1,9 +1,9 @@
 ﻿using ImportantPrototype.Characters;
 using ImportantPrototype.Stats;
+using ImportantPrototype.Stats.Modifiers;
 using ImportantPrototype.System;
 using UnityEngine;
 using UnityTools.Runtime.ECA.Actions;
-using UnityTools.Runtime.Math.Operations;
 
 namespace ImportantPrototype.Actions
 {
@@ -15,10 +15,10 @@ namespace ImportantPrototype.Actions
 
         [Space]
         [SerializeField]
-        private StatTypeInfo _stat;
+        private CharacterStatTypeInfo _stat;
 
         [SerializeField]
-        private NumericalOperator _operator;
+        private StatModifier.Type _type;
 
         [SerializeField]
         private float _value;
@@ -28,7 +28,7 @@ namespace ImportantPrototype.Actions
         protected override bool ExecuteBehaviour()
         {
             _playerStat ??= _player.Value.Stats.Get(_stat);
-            _playerStat.Modify(_operator, _value);
+            _playerStat.AddModifier(_value, _type);
             return true;
         }
     }

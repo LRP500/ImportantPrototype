@@ -19,20 +19,15 @@ namespace ImportantPrototype.Characters
             Health = Collection.GetStat((int) CharacterStatType.Health);
             MaxHealth = Collection.GetStat((int) CharacterStatType.MaxHealth);
         }
-        
-        public ModifiableStat Get(int id)
-        {
-            return Collection.GetStat(id);
-        }
 
         public ModifiableStat Get(StatTypeInfo typeInfo)
         {
-            return Get(typeInfo.Id);
+            return Collection.GetStat(typeInfo.Id);
         }
 
         public ModifiableStat Get(CharacterStatType type)
         {
-            return Get((int) type);
+            return Collection.GetStat((int) type);
         }
         
         public IObservable<float> ObserveValueChanged(CharacterStatType type)
