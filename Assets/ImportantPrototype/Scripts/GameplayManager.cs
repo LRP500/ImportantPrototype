@@ -3,7 +3,6 @@ using UniRx;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityTools.Runtime.ECA.Events;
-using Scene = UnityEditor.SearchService.Scene;
 
 namespace ImportantPrototype
 {

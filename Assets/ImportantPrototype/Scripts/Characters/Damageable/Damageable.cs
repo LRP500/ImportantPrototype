@@ -7,6 +7,13 @@ namespace ImportantPrototype.Characters
 {
     public abstract class Damageable : MonoBehaviour, IDamageable
     {
+        // public class HitInfo
+        // {
+        //     public float damage;
+        //     public IDamager damager;
+        //     public Collider2D collider;
+        // }
+        
         public readonly ISubject<Unit> OnDeath = new Subject<Unit>();
         public readonly ISubject<float> OnDamageTaken = new Subject<float>();
 
