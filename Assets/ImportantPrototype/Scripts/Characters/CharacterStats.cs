@@ -1,6 +1,7 @@
 using System;
 using ImportantPrototype.Stats;
 using UnityEngine;
+using Attribute = ImportantPrototype.Stats.Attribute;
 
 namespace ImportantPrototype.Characters
 {
@@ -8,31 +9,29 @@ namespace ImportantPrototype.Characters
     {
         [SerializeField]
         private StatCollectionData _collectionData;
-        
-        private StatCollection Collection { get; set; }
-        public ModifiableStat MaxHealth { get; private set; }
-        public ModifiableStat Health { get; private set; }
+
+        public StatCollection Collection { get; private set; }
+        public Vital Health { get; private set; }
         
         private void Awake()
         {
             Collection = new StatCollection(_collectionData);
-            Health = Collection.GetStat((int) CharacterStatType.Health);
-            MaxHealth = Collection.GetStat((int) CharacterStatType.MaxHealth);
+            Health = Collection.Get<Vital>((int) CharacterStatType.Health);
         }
 
-        public ModifiableStat Get(StatTypeInfo typeInfo)
+        public T Get<T>(CharacterStatType id) where T : Stat
         {
-            return Collection.GetStat(typeInfo.Id);
+            return Collection.Get<T>((int) id);
         }
 
-        public ModifiableStat Get(CharacterStatType type)
+        public IObservable<float> ObserveVital(CharacterStatType type)
         {
-            return Collection.GetStat((int) type);
+            return Collection.Get<Vital>((int) type).Current.Property;
         }
         
-        public IObservable<float> ObserveValueChanged(CharacterStatType type)
+        public IObservable<float> ObserveAttribute(CharacterStatType type)
         {
-            return Get(type).Property;
+            return Collection.Get<Attribute>((int) type).Property;
         }
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ImportantPrototype.Stats
 {
-    public abstract class StatTypeInfo : ScriptableObject
+    public abstract class StatInfo : ScriptableObject
     {
         [SerializeField]
         private string _name;
@@ -15,7 +15,7 @@ namespace ImportantPrototype.Stats
         public abstract int Id { get; }
     }
     
-    public abstract class StatTypeInfo<T> : StatTypeInfo where T : Enum
+    public abstract class StatInfo<T> : StatInfo where T : Enum
     {
         [SerializeField]
         private T _id;
@@ -27,7 +27,7 @@ namespace ImportantPrototype.Stats
             return (int) (object) value;
         }
         
-        public static implicit operator int(StatTypeInfo<T> source)
+        public static implicit operator int(StatInfo<T> source)
         {
             return source.Id;
         }

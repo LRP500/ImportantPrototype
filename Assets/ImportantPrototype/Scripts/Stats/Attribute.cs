@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using ImportantPrototype.Stats.Modifiers;
 using UniRx;
+using UnityEngine;
 
 namespace ImportantPrototype.Stats
 {
-    public class ModifiableStat : Stat
+    /// <summary>
+    /// A stat that can be modified by stacking modifiers.
+    /// </summary>
+    public class Attribute : Stat
     {
         private readonly FloatReactiveProperty _modifiedValue = new ();
         public IReadOnlyReactiveProperty<float> Property => _modifiedValue;
@@ -28,7 +31,7 @@ namespace ImportantPrototype.Stats
         private readonly IList<StatModifier> _modifiers = new List<StatModifier>();
         private bool _isDirty;
         
-        public ModifiableStat(StatTypeInfo typeInfo, float value) : base(typeInfo, value)
+        public Attribute(StatInfo info, float value) : base(info, value)
         {
             _modifiedValue.Value = value;
         }
@@ -84,22 +87,33 @@ namespace ImportantPrototype.Stats
 
         private float Calculate()
         {
-            float finalValue = BaseValue;
+            float modValue = 0;
 
-            foreach (var (_, value) in _sortedModifiers)
+            // We iterate over each group of mod sorted by priority
+            foreach (var (_, group) in _sortedModifiers)
             {
-                for (int i = 0, length = value.Count; i < length; ++i)
+                float sum = 0;
+                float max = 0;
+                
+                // We calculate total mod value for each type of modifier
+                for (int i = 0, length = group.Count; i < length; ++i)
                 {
-                    // TODO:
-                    // float sum = 0;
-                    // float max = 0;
-                    var mod = value[i];
-                    var target = mod.ModType == StatModifier.Type.TotalPercentage ? finalValue : BaseValue;
-                    finalValue += mod.Apply(target);
+                    var mod = group[i];
+                    if (mod.Additive)
+                    {
+                        sum += mod.Value;
+                    }
+                    else if (mod.Value > max)
+                    {
+                        max = mod.Value;
+                    }
                 }
+
+                // We apply mod value to total mod value
+                modValue += group[0].Apply(BaseValue + modValue, Mathf.Max(sum, max));
             }
             
-            return (float) Math.Round(finalValue, 4);
+            return (float) Math.Round(BaseValue + modValue, 4);
         }
     }
 }

@@ -7,15 +7,15 @@ using UnityTools.Runtime.ECA.Actions;
 
 namespace ImportantPrototype.Actions
 {
-    [CreateAssetMenu(menuName = ContextMenuPath.Actions + "Modify Player Stat")]
-    public class ModifyPlayerStat : ScriptableAction
+    [CreateAssetMenu(menuName = ContextMenuPath.Actions + "Modify Player Attribute")]
+    public class ModifyPlayerAttribute : ScriptableAction
     {
         [SerializeField]
         private PlayerReactiveVariable _player;
 
         [Space]
         [SerializeField]
-        private CharacterStatTypeInfo _stat;
+        private CharacterStatInfo _stat;
 
         [SerializeField]
         private StatModifier.Type _type;
@@ -23,11 +23,12 @@ namespace ImportantPrototype.Actions
         [SerializeField]
         private float _value;
 
-        private ModifiableStat _playerStat;
+        private Attribute _playerStat;
         
         protected override bool ExecuteBehaviour()
         {
-            _playerStat ??= _player.Value.Stats.Get(_stat);
+            var stats = _player.Value.Stats.Collection;
+            _playerStat ??= stats.Get<Attribute>(_stat);
             _playerStat.AddModifier(_value, _type);
             return true;
         }

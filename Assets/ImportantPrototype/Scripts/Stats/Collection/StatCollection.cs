@@ -1,10 +1,11 @@
-﻿using UniRx;
+﻿using ImportantPrototype.Stats.Factory;
+using UniRx;
 
 namespace ImportantPrototype.Stats
 {
     public class StatCollection
     {
-        private readonly ReactiveDictionary<StatTypeInfo, ModifiableStat> _stats = new ();
+        private readonly ReactiveDictionary<StatInfo, Stat> _stats = new ();
 
         public StatCollection(StatCollectionData data)
         {
@@ -15,18 +16,17 @@ namespace ImportantPrototype.Stats
         {
             foreach (var entry in data.Stats)
             {
-                var stat = new ModifiableStat(entry.Stat, entry.Value);
-                _stats.Add(entry.Stat, stat);
+                _stats.Add(entry.Info, StatFactory.Create(entry));
             }
         }
 
-        public ModifiableStat GetStat(int id)
+        public T Get<T>(int id) where T : Stat
         {
             foreach (var (key, value) in _stats)
             {
                 if (key.Id == id)
                 {
-                    return value;
+                    return value as T;
                 }
             }
 

@@ -4,6 +4,7 @@ using ImportantPrototype.Leveling;
 using UniRx;
 using UnityEngine;
 using UnityTools.Runtime.Extensions;
+using Attribute = ImportantPrototype.Stats.Attribute;
 
 namespace ImportantPrototype.UI.HUD
 {
@@ -17,8 +18,7 @@ namespace ImportantPrototype.UI.HUD
 
         protected override IObservable<(float, float)> ObserveValueChanged()
         {
-            return _player.Value.Stats
-                .ObserveValueChanged(CharacterStatType.Experience)
+            return _player.Value.Stats.Collection.Get<Attribute>((int) CharacterStatType.Experience).Property
                 .SkipFirst()
                 .Select(_ => (_levelManager.GetCurrentLevelRatio(), 1f))
                 .StartWith(() => (0, 1));

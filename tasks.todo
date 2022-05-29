@@ -1,0 +1,8 @@
+Stat System:
+    https://jkpenner.wordpress.com/category/rpg-stat-system/
+    ☐ Stack or replace option for stat mods
+    ✔ Remove modifier @done(22-05-28 18:32)
+    Allow tagging mods with name and removing them (e.g mod.Id = "some_power_up_lvl_4")
+    ☐ Optimize modified value recalculate
+    IsDirty flag is still there, just need to use it
+

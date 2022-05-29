@@ -14,8 +14,9 @@ namespace ImportantPrototype.UI.HUD
 
         protected override IObservable<(float, float)> ObserveValueChanged()
         {
-            var current = Player.Stats.Health.Property;
-            var max = Player.Stats.MaxHealth.Property;
+            var health = Player.Stats.Health;
+            var max = health.Property;
+            var current = health.Current.Property;
             return current.CombineLatest(max, (x, y) => (x, y));
         }
     }

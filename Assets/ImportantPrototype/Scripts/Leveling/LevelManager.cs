@@ -16,13 +16,14 @@ namespace ImportantPrototype.Leveling
         [SerializeField]
         private float _xpConstant;
 
-        public ModifiableStat Level { get; private set; }
-        public ModifiableStat Experience { get; private set; }
+        public Attribute Level { get; private set; }
+        public Attribute Experience { get; private set; }
 
         protected override void OnInitialize()
         {
-            Level = _player.Value.Stats.Get(CharacterStatType.Level);
-            Experience = _player.Value.Stats.Get(CharacterStatType.Experience);
+            var stats = _player.Value.Stats; 
+            Level = stats.Get<Attribute>(CharacterStatType.Level);
+            Experience = stats.Get<Attribute>(CharacterStatType.Experience);
             
             Experience.Property
                 .Subscribe(OnPlayerGainedXP)

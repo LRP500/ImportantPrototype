@@ -7,12 +7,16 @@ namespace ImportantPrototype.Stats
     public class StatTypeValuePair
     {
         [SerializeField]
-        private StatTypeInfo _stat;
+        private StatType _type;
+        
+        [SerializeField]
+        private StatInfo _stat;
         
         [SerializeField]
         private float _value;
 
-        public StatTypeInfo Stat => _stat;
+        public StatType Type => _type;
+        public StatInfo Info => _stat;
         public float Value => _value;
     }
 }

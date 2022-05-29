@@ -15,7 +15,7 @@ namespace ImportantPrototype.Characters
 
         private void Start()
         {
-            Health = _character.Stats.Health;
+            Health = _character.Stats.Health.Current;
         }
 
         private void OnEnable()

@@ -8,16 +8,16 @@
         /// <summary>
         /// The stat's type info.
         /// </summary>
-        public StatTypeInfo TypeInfo { get; }
+        public StatInfo Info { get; }
 
         /// <summary>
         /// The stat's current value.
         /// </summary>
         public virtual float Value { get; }
-        
-        protected Stat(StatTypeInfo typeInfo, float value)
+
+        public Stat(StatInfo info, float value)
         {
-            TypeInfo = typeInfo;
+            Info = info;
             Value = value;
         }
     }

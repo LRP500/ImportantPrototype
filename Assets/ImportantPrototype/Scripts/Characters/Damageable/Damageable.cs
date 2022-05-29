@@ -20,10 +20,12 @@ namespace ImportantPrototype.Characters
         private readonly ReactiveProperty<bool> _canDamage = new (true);
         public IReadOnlyReactiveProperty<bool> CanDamage => _canDamage;
         
-        public ModifiableStat Health { get; protected set; }
+        public Attribute Health { get; protected set; }
         
         public void Damage(IDamager damager)
         {
+            if (!CanDamage.Value) return;
+            
             Health.Remove(damager.Damage);
             OnDamageTaken.OnNext(damager.Damage);
             
