@@ -27,6 +27,12 @@ namespace ImportantPrototype.Characters
 
         private void Update()
         {
+            if (Time.timeScale == 0) return;
+            UpdateAim();
+        }
+
+        private void UpdateAim()
+        {
             Vector3 origin = _player.Position;
             var target =  _cameraVariable.Value.ScreenToWorldPoint(PlayerInput.MousePosition);
             var aimDir = (target - origin).normalized;

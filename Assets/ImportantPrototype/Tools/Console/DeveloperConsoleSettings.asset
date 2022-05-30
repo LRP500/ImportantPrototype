@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 449d1d85f2163f24fa33df4270b8e25c, type: 3}
+  m_Name: DeveloperConsoleSettings
+  m_EditorClassIdentifier: 
+  _prefix: 
+  _pauseGame: 1
+  _commands:
+  - {fileID: 11400000, guid: 0f28d62156a557c4ba4a0a6b5c7b59eb, type: 2}
