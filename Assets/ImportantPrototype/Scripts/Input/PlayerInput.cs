@@ -1,3 +1,5 @@
+using System;
+using UniRx;
 using UnityEngine;
 
 namespace ImportantPrototype.Input
@@ -9,6 +11,10 @@ namespace ImportantPrototype.Input
         
         public static Vector2 MousePosition => UnityEngine.Input.mousePosition;
         public static Vector2 Move => new (MoveHorizontal, MoveVertical);
-        public static bool Fire => UnityEngine.Input.GetKeyDown(KeyCode.Mouse0);
+        
+        public static IObservable<bool> ObserveFiring()
+        {
+            return Observable.EveryUpdate().Select(_ => UnityEngine.Input.GetKey(KeyCode.Mouse0));
+        }
     }
 }

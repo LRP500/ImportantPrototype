@@ -5,11 +5,8 @@ namespace ImportantPrototype.Weapons
 {
     public class WeaponHolder : MonoBehaviour
     {
-        [SerializeField]
-        private Weapon _weapon;
+        public Weapon EquippedWeapon { get; private set; }
 
-        public Weapon Weapon => _weapon;
-        
         public void SetRotation(float angle)
         {
             transform.rotation = Quaternion.AngleAxis(angle, -Vector3.forward);
@@ -18,7 +15,23 @@ namespace ImportantPrototype.Weapons
 
         private void Flip(bool flipped)
         {
-            Weapon.Renderer.flipY = flipped;
+            EquippedWeapon.Renderer.flipY = flipped;
+        }
+        
+        public void EquipWeapon(WeaponData weaponData)
+        {
+            UnequipWeapon();
+            if (weaponData == null) return;
+            var weapon = Weapon.FromData(weaponData);
+            weapon.transform.SetParent(transform, false);
+            EquippedWeapon = weapon;
+        }
+
+        private void UnequipWeapon()
+        {
+            if (EquippedWeapon == null) return;
+            Destroy(EquippedWeapon.gameObject);
+            EquippedWeapon = null;
         }
     }
 }

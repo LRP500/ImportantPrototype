@@ -11,12 +11,8 @@ namespace ImportantPrototype.Characters
         [SerializeField]
         private CameraVariable _cameraVariable;
 
-        [SerializeField]
-        private WeaponHolder _weaponHolder;
-
         private Player _player;
 
-        public WeaponHolder WeaponHolder => _weaponHolder;
         public Vector2 AimDirection { get; private set; }
         public float AimAngle { get; private set; }
 
@@ -39,7 +35,8 @@ namespace ImportantPrototype.Characters
 
             AimDirection = aimDir;
             AimAngle = Mathf.Atan2(aimDir.x, aimDir.y) * Mathf.Rad2Deg - 90;
-            _weaponHolder.SetRotation(AimAngle);
+            
+            _player.WeaponHolder.SetRotation(AimAngle);
         }
     }
 }

@@ -12,31 +12,27 @@ namespace ImportantPrototype.Weapons
         private Transform _muzzle;
 
         [SerializeField]
-        private Projectile _projectile;
-
-        [SerializeField]
         private GameObjectVariable _projectileHolder;
 
         public SpriteRenderer Renderer => _renderer;
-        
-        public void Fire(Vector2 direction)
+        public WeaponData Data { get; private set; }
+
+        public static Weapon FromData(WeaponData data)
         {
-            var projectile = CreateProjectile();
-            projectile.Shoot(direction);
+            var instance = Instantiate(data.Prefab);
+            instance.Data = data;
+            return instance;
         }
 
-        public void Fire(Vector2 direction, string excludedTag)
+        public void Fire(Vector2 direction, string excludeTag)
         {
-            var projectile = CreateProjectile();
-            projectile.Damager.Exclude(excludedTag);
-            projectile.Shoot(direction);
-        }
-        
-        private Projectile CreateProjectile()
-        {
-            var projectile = Instantiate(_projectile, _muzzle.position, transform.rotation);
-            projectile.transform.SetParent(_projectileHolder.Value.transform, true);
-            return projectile;
+            // TODO: Restore exclude tag system
+            // TODO: Restore projectile holder system
+            // var projectile = CreateProjectile();
+            // projectile.Damager.Exclude(_projectileTag);
+            
+            var origin = _muzzle.position;
+            Data.ShotBehaviour.Fire(Data, origin, direction);
         }
     }
 }
