@@ -102,8 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 6177122596688411777}
   _damager: {fileID: 7749043490235849031}
-  _speed: 15
-  _player: {fileID: 11400000, guid: 35f933c98b6bd184699369384bf7d54e, type: 2}
+  _projectileHolder: {fileID: 11400000, guid: b5b1ef24cd2c2de4b9d9b9f7570ce188, type: 2}
 --- !u!114 &7749043490235849031
 MonoBehaviour:
   m_ObjectHideFlags: 0

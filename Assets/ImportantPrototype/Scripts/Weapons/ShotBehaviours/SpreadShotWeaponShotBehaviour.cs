@@ -17,7 +17,7 @@ namespace ImportantPrototype.Weapons
         [SerializeField]
         private float _forwardCompensation = 0.5f;
 
-        public override void Fire(WeaponData weapon, Vector3 origin, Vector3 direction)
+        public override void Fire(WeaponData weapon, Vector3 origin, Vector3 direction, string tag)
         {
             float angle = -(_spreadAngle / 2); 
             float increment = _spreadAngle / (_projectileCount - 1);
@@ -26,7 +26,7 @@ namespace ImportantPrototype.Weapons
             {
                 var newDir = Quaternion.AngleAxis(angle, Vector3.up) * direction;
                 var newOrigin = origin + (_forwardCompensation * newDir);
-                FireSingle(weapon.Projectile, newOrigin, newDir);
+                FireSingle(weapon.Projectile, newOrigin, newDir, tag);
                 angle += increment;
             }
         }

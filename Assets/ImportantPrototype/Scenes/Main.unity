@@ -1177,10 +1177,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5701515704764971520, guid: 963da2f774ad5514085f3ee62ebc3e6f, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 963da2f774ad5514085f3ee62ebc3e6f, type: 3}
 --- !u!1 &1241264855
@@ -1509,7 +1505,15 @@ CompositeCollider2D:
       - X: 250000000
         Y: -205000000
   m_CompositePaths:
-    m_Paths: []
+    m_Paths:
+    - - {x: 24.999971, y: -20.5}
+      - {x: 24.999971, y: 20.5}
+      - {x: -25, y: 20.499971}
+      - {x: -24.999971, y: -20.5}
+    - - {x: 24, y: -19.499971}
+      - {x: -24, y: -19.499971}
+      - {x: -23.999971, y: 19.5}
+      - {x: 24, y: 19.499971}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &1318857749

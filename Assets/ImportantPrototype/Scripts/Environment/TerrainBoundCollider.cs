@@ -8,6 +8,14 @@ namespace ImportantPrototype.Environment
         [SerializeField]
         private PlayerReactiveVariable _player;
 
+        private CompositeCollider2D _compositeCollider;
+
+        private void Awake()
+        {
+            _compositeCollider = GetComponent<CompositeCollider2D>();
+            _compositeCollider.GenerateGeometry();
+        }
+
         private void LateUpdate()
         {
             transform.position = _player.Property.Value.Position;
