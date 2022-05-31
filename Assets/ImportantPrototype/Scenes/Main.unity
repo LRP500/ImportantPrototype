@@ -874,7 +874,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 810902060}
-  - component: {fileID: 810902061}
+  - component: {fileID: 810902062}
   m_Layer: 0
   m_Name: Projectiles
   m_TagString: Untagged
@@ -897,7 +897,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &810902061
+--- !u!114 &810902062
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -906,11 +906,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 810902059}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017a540c386fc4e498bf23c90052b335, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ed35f9ad80408d459acac688bfcc7e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _mode: 0
-  _runtimeReference: {fileID: 11400000, guid: b5b1ef24cd2c2de4b9d9b9f7570ce188, type: 2}
+  _runtimeReference: {fileID: 11400000, guid: 2382be74a9474a44a86dd2c88db4e8a3, type: 2}
   _runtimeList: {fileID: 0}
   _clearOnDestroy: 0
 --- !u!1 &815654677
@@ -1584,7 +1584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2075644470
 Transform:
   m_ObjectHideFlags: 0

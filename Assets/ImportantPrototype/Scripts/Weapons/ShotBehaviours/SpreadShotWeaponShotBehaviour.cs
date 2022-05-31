@@ -24,7 +24,7 @@ namespace ImportantPrototype.Weapons
 
             for (int i = 0; i < _projectileCount; i++)
             {
-                var newDir = Quaternion.AngleAxis(angle, Vector3.up) * direction;
+                var newDir = Quaternion.AngleAxis(angle, Vector3.forward) * direction;
                 var newOrigin = origin + (_forwardCompensation * newDir);
                 FireSingle(weapon.Projectile, newOrigin, newDir, tag);
                 angle += increment;

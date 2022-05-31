@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7749043490235849031}
   - component: {fileID: 6177122596688411777}
   - component: {fileID: 528937006113192466}
+  - component: {fileID: 1999716488544587218}
   m_Layer: 12
   m_Name: Projectile
   m_TagString: Projectile
@@ -102,7 +103,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 6177122596688411777}
   _damager: {fileID: 7749043490235849031}
-  _projectileHolder: {fileID: 11400000, guid: b5b1ef24cd2c2de4b9d9b9f7570ce188, type: 2}
 --- !u!114 &7749043490235849031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,3 +154,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1999716488544587218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6207745879022384014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d234465d8e1009c4ba01315c6f713b9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parent: {fileID: 11400000, guid: 2382be74a9474a44a86dd2c88db4e8a3, type: 2}
+  _worldPositionStays: 1

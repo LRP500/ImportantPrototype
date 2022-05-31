@@ -1,7 +1,6 @@
 ﻿using ImportantPrototype.Characters;
 using UniRx;
 using UnityEngine;
-using UnityTools.Runtime.Variables;
 
 namespace ImportantPrototype.Weapons
 {
@@ -12,9 +11,6 @@ namespace ImportantPrototype.Weapons
 
         [SerializeField]
         private Damager _damager;
-        
-        [SerializeField]
-        private GameObjectVariable _projectileHolder;
         
         public Rigidbody2D Rigidbody => _rigidbody;
         public Damager Damager => _damager;
@@ -28,6 +24,12 @@ namespace ImportantPrototype.Weapons
             set => transform.position = value;
         }
         
+        public Vector2 Rotation
+        {
+            get => transform.eulerAngles;
+            set => transform.eulerAngles = value;
+        }
+        
         public ProjectileData Data { get; private set; }
 
         public static Projectile FromData(ProjectileData data)
@@ -37,21 +39,24 @@ namespace ImportantPrototype.Weapons
             return instance;
         }
 
-        private void Awake()
-        {
-            _damager.OnHit.First().Subscribe(OnHit);
-            
-            // TODO: set parent component
-            transform.SetParent(_projectileHolder.Value.transform, false);
-        }
-
-        public void Shoot(Vector2 direction, Vector2 origin, string excludeTag)
+        public void Initialize(Vector2 origin, Vector2 direction, Vector2 rotation)
         {
             Origin = origin;
             Position = origin;
+            Rotation = rotation;
             Direction = direction;
-            Damager.Exclude(excludeTag);
-            // Data.Behaviour.Initialize(this);
+            Damager.SetDamage(Data.Damage);
+        }
+
+        public void SetTag(string projectileTag)
+        {
+            Damager.Exclude(projectileTag);
+        }
+        
+        public void Shoot()
+        {
+            _damager.OnHit.First().Subscribe(OnHit);
+            Data.Behaviour.Initialize(this);
         }
 
         private void Update()

@@ -48,5 +48,10 @@ namespace ImportantPrototype.Characters
         {
             _excludedTags.Add(excludedTag);
         }
+
+        public void SetDamage(float damage)
+        {
+            _damage = damage;
+        }
     }
 }
