@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityTools.Runtime.Navigation;
 
 namespace ImportantPrototype
@@ -8,6 +9,9 @@ namespace ImportantPrototype
         [SerializeField]
         private SceneReference _titleMenu;
 
+        [SerializeField]
+        private SceneReference _gameplay;
+        
         private NavigationManager _navigationManager;
         
         private void Awake()
@@ -22,7 +26,20 @@ namespace ImportantPrototype
 
         private void NavigateToTitleMenu()
         {
-            _navigationManager.LoadSceneAndSetActive(_titleMenu.sceneName);
+            _navigationManager.LoadSceneAndSetActive(_titleMenu);
+        }
+
+        public void Quit()
+        {
+            NavigationUtils.Quit();
+        }
+
+        public void LoadGame()
+        {
+            _navigationManager.LoadSceneAndSetActive(_gameplay, null, () =>
+            {
+                SceneManager.UnloadSceneAsync(_titleMenu.sceneName);
+            });
         }
     }
 }

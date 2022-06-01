@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ImportantPrototype.Scripts.System
+namespace ImportantPrototype.System
 {
     public class SceneController : MonoBehaviour
     { }
