@@ -1,33 +1,28 @@
-using UniRx;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityTools.Runtime.Navigation;
 
 namespace ImportantPrototype
 {
     public class GameMaster : MonoBehaviour
     {
-        // TODO: dropdown of all scenes
         [SerializeField]
-        private string _titleMenuScene;
+        private SceneReference _titleMenu;
+
+        private NavigationManager _navigationManager;
         
         private void Awake()
+        {
+            _navigationManager = FindObjectOfType<NavigationManager>();
+        }
+
+        private void Start()
         {
             NavigateToTitleMenu();
         }
 
         private void NavigateToTitleMenu()
         {
-            Observable.NextFrame()
-                .DoOnSubscribe(() =>
-                {
-                    SceneManager.LoadSceneAsync(_titleMenuScene, LoadSceneMode.Additive);
-                })
-                .Subscribe(_ =>
-                {
-                    var scene = SceneManager.GetSceneByName(_titleMenuScene);
-                    SceneManager.SetActiveScene(scene);
-                })
-                .AddTo(gameObject);
+            _navigationManager.LoadSceneAndSetActive(_titleMenu.sceneName);
         }
     }
 }
