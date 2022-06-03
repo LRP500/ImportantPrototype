@@ -1,16 +1,27 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityTools.Runtime.Navigation;
+using UnityTools.Runtime.Time;
 
 namespace ImportantPrototype
 {
     public class GameMaster : MonoBehaviour
     {
         [SerializeField]
+        private TimeManagerVariable _timeManager;
+        
+        [SerializeField]
         private SceneReference _titleMenu;
 
         [SerializeField]
         private SceneReference _gameplay;
+        
+        [SerializeField]
+        private SceneReference _loadingScreen;
+
+        [SerializeField]
+        private List<SceneReference> _persistentScenes;
         
         private NavigationManager _navigationManager;
         
@@ -21,15 +32,25 @@ namespace ImportantPrototype
 
         private void Start()
         {
-            NavigateToTitleMenu();
+            if (_gameplay.IsLoaded)
+                return;
+            
+            NavigateTo(_titleMenu);
         }
 
-        private void NavigateToTitleMenu()
+        private void NavigateTo(SceneReference scene)
         {
-            _navigationManager.LoadSceneAndSetActive(_titleMenu);
+            _navigationManager.LoadSceneAndSetActive(scene);
+            _timeManager.Value.Resume();
         }
-
-        public void Quit()
+        
+        public void QuitToTitle()
+        {
+            SceneManager.UnloadSceneAsync(_gameplay.sceneName);
+            NavigateTo(_titleMenu);
+        }
+        
+        public void QuitToDesktop()
         {
             NavigationUtils.Quit();
         }

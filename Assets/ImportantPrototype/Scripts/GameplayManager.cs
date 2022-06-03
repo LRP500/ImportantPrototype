@@ -16,7 +16,7 @@ namespace ImportantPrototype
 
         [SerializeField]
         private ScriptableEvent _gameOverEvent;
-
+        
         public void Start()
         {
             Initialize();

@@ -415,10 +415,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf0dda7c01446ecb6c34f519c18804e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dontDestroyOnLoad: 0
   _settings: {fileID: 11400000, guid: 4b2161ee4186abf48ad34cb5ab508b63, type: 2}
   _canvas: {fileID: 387189199574439899}
   _inputField: {fileID: 4003854149037594046}
-  _fontSize: 32
 --- !u!1 &6843091046498932043
 GameObject:
   m_ObjectHideFlags: 0

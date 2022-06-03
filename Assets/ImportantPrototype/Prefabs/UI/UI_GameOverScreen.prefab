@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 986950765399883483}
   - component: {fileID: 1241133653}
   m_Layer: 5
-  m_Name: UI_GameOver
+  m_Name: UI_GameOverScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3ad1ed5e00a3f146a509ab2185e07ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initializeOnStart: 0
+  _initializeOnStart: 1
   _hideOnStart: 1
 --- !u!114 &986950765399883483
 MonoBehaviour:
