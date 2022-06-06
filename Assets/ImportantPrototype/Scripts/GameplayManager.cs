@@ -31,12 +31,6 @@ namespace ImportantPrototype
                 .Where(value => value <= 0)
                 .Subscribe(_ => GameOver());
         }
-
-        public void Restart()
-        {
-            var scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name);
-        }
         
         private void FixedUpdate()
         {

@@ -16,11 +16,11 @@ namespace ImportantPrototype
         private LevelManager _levelManager;
         
         [SerializeField]
-        private GameObjectVariable _disposableTarget;
+        private TransformVariable _disposableTarget;
 
         private EnemyManager EnemyManager => _enemyManager;
         private LevelManager LevelManager => _levelManager;
-        public GameObject DisposableTarget => _disposableTarget.Value;
+        public GameObject DisposableTarget => _disposableTarget.Value.gameObject;
 
         public void Initialize()
         {

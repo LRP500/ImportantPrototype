@@ -695,11 +695,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4059037727323073215, guid: d73f9059f92dd714aae6c74b7ee155bd, type: 3}
       propertyPath: m_Name
-      value: UI_Button (Restart)
+      value: UI_Button (Quit)
       objectReference: {fileID: 0}
     - target: {fileID: 6601696814496748593, guid: d73f9059f92dd714aae6c74b7ee155bd, type: 3}
       propertyPath: m_text
-      value: Restart
+      value: Quit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d73f9059f92dd714aae6c74b7ee155bd, type: 3}
@@ -720,7 +720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7dfaf2c216e3224da26c539f26e87c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _event: {fileID: 11400000, guid: 710f42add2c1b5245bed7f457e955303, type: 2}
+  _event: {fileID: 11400000, guid: 14fbe71881f92244f87bb0cbbeb0bd0f, type: 2}
 --- !u!224 &1846155277852059004 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3612797285134672345, guid: d73f9059f92dd714aae6c74b7ee155bd, type: 3}

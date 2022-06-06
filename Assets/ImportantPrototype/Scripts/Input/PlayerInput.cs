@@ -16,7 +16,8 @@ namespace ImportantPrototype.Input
         
         public static IObservable<bool> ObserveFiring()
         {
-            return Observable.EveryUpdate().Select(_ => UnityEngine.Input.GetKey(KeyCode.Mouse0));
+            return Observable.EveryUpdate()
+                .Select(_ => UnityEngine.Input.GetKey(KeyCode.Mouse0));
         }
     }
 }

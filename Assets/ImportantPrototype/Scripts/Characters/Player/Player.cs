@@ -10,15 +10,18 @@ namespace ImportantPrototype.Characters
         [SerializeField]
         private PlayerData _data;
 
+        [SerializeField]
+        private WeaponHolder _weaponHolder;
+
+        public WeaponHolder WeaponHolder => _weaponHolder;
+        
         public PlayerAiming Aiming { get; private set; }
         public PlayerShooting Shooting { get; private set; }
-        public WeaponHolder WeaponHolder { get; private set; }
         
         protected override void OnInitialize()
         {
             Aiming = GetComponent<PlayerAiming>();
             Shooting = GetComponent<PlayerShooting>();
-            WeaponHolder = GetComponentInChildren<WeaponHolder>();
             WeaponHolder.EquipWeapon(_data.Weapon);
         }
 

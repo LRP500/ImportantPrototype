@@ -1,3 +1,4 @@
+using UniRx;
 using UnityEngine;
 using UnityTools.Runtime.Extensions;
 
@@ -5,7 +6,8 @@ namespace ImportantPrototype.Weapons
 {
     public class WeaponHolder : MonoBehaviour
     {
-        public Weapon EquippedWeapon { get; private set; }
+        private readonly ReactiveProperty<Weapon> _equippedWeapon = new ();
+        public IReadOnlyReactiveProperty<Weapon> EquippedWeapon => _equippedWeapon;
 
         public void SetRotation(float angle)
         {
@@ -15,7 +17,7 @@ namespace ImportantPrototype.Weapons
 
         private void Flip(bool flipped)
         {
-            EquippedWeapon.Renderer.flipY = flipped;
+            _equippedWeapon.Value.Renderer.flipY = flipped;
         }
         
         public void EquipWeapon(WeaponData weaponData)
@@ -24,14 +26,14 @@ namespace ImportantPrototype.Weapons
             if (weaponData == null) return;
             var weapon = Weapon.FromData(weaponData);
             weapon.transform.SetParent(transform, false);
-            EquippedWeapon = weapon;
+            _equippedWeapon.Value = weapon;
         }
 
         private void UnequipWeapon()
         {
-            if (EquippedWeapon == null) return;
-            Destroy(EquippedWeapon.gameObject);
-            EquippedWeapon = null;
+            if (_equippedWeapon.Value == null) return;
+            Destroy(_equippedWeapon.Value.gameObject);
+            _equippedWeapon.Value = null;
         }
     }
 }

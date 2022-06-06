@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyManager: {fileID: 11400000, guid: 825e6230345c434449098ef2bdcee02a, type: 2}
   _levelManager: {fileID: 11400000, guid: 613d113966f4f424e90c98fc2ab3619a, type: 2}
-  _disposableTarget: {fileID: 11400000, guid: a5c31b3b312b54245b5fbc5faacaed40, type: 2}
+  _disposableTarget: {fileID: 11400000, guid: 63dc2235bfb234048903b4c098688508, type: 2}

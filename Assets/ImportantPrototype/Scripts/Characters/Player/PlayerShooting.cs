@@ -4,6 +4,7 @@ using ImportantPrototype.Input;
 using ImportantPrototype.Weapons;
 using UniRx;
 using UnityEngine;
+using UnityTools.Runtime.Time;
 
 namespace ImportantPrototype.Characters
 {
@@ -13,7 +14,7 @@ namespace ImportantPrototype.Characters
         [TagField]
         [SerializeField]
         private string _projectileTag;
-        
+
         private Player _self;
 
         private readonly SerialDisposable _firingDisposable = new ();
@@ -21,17 +22,35 @@ namespace ImportantPrototype.Characters
         private void Awake()
         {
             _self = GetComponent<Player>();
+            _firingDisposable.AddTo(gameObject);
         }
 
-        private void OnEnable()
+        private void Start()
         {
-            var weapon = _self.WeaponHolder.EquippedWeapon;
+            _self.WeaponHolder.EquippedWeapon
+                .Subscribe(OnEquippedWeaponChanged)
+                .AddTo(gameObject);
+        }
 
+        private void OnEquippedWeaponChanged(Weapon weapon)
+        {
+            if (weapon == null)
+            {
+                _firingDisposable.Clear();
+            }
+            else
+            {
+               RegisterWeapon(weapon);
+            }
+        }
+        
+        private void RegisterWeapon(Weapon weapon)
+        {
             _firingDisposable.Disposable = weapon.Data.FiringMode
                 .FilterInput(weapon.Data, PlayerInput.ObserveFiring())
                 .Subscribe(_ => OnFireInput(weapon));
         }
-
+        
         private void OnDisable()
         {
             _firingDisposable?.Clear();
@@ -39,6 +58,7 @@ namespace ImportantPrototype.Characters
 
         private void OnFireInput(Weapon weapon)
         {
+            if (TimeManager.Current.GamePaused.Value) return;
             weapon.Fire(_self.Aiming.AimDirection, _projectileTag);
         }
     }

@@ -32,7 +32,7 @@ namespace ImportantPrototype
 
         private void Start()
         {
-            if (_gameplay.IsLoaded)
+            if (SceneManager.sceneCount >= 1)
                 return;
             
             NavigateTo(_titleMenu);
@@ -55,6 +55,12 @@ namespace ImportantPrototype
             NavigationUtils.Quit();
         }
 
+        public void RestartGame()
+        {
+            var scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
+        }
+        
         public void LoadGame()
         {
             _navigationManager.LoadSceneAndSetActive(_gameplay, null, () =>
