@@ -32,7 +32,7 @@ namespace ImportantPrototype
 
         private void Start()
         {
-            if (SceneManager.sceneCount >= 1)
+            if (SceneManager.sceneCount > 1)
                 return;
             
             NavigateTo(_titleMenu);
