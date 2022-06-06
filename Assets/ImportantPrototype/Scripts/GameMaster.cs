@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityTools.Runtime.Navigation;
 using UnityTools.Runtime.Time;
 
@@ -12,7 +13,7 @@ namespace ImportantPrototype
         private TimeManagerVariable _timeManager;
         
         [SerializeField]
-        private SceneReference _titleMenu;
+        private SceneReference _mainMenu;
 
         [SerializeField]
         private SceneReference _gameplay;
@@ -35,7 +36,7 @@ namespace ImportantPrototype
             if (SceneManager.sceneCount > 1)
                 return;
             
-            NavigateTo(_titleMenu);
+            NavigateTo(_mainMenu);
         }
 
         private void NavigateTo(SceneReference scene)
@@ -47,7 +48,7 @@ namespace ImportantPrototype
         public void QuitToTitle()
         {
             SceneManager.UnloadSceneAsync(_gameplay.sceneName);
-            NavigateTo(_titleMenu);
+            NavigateTo(_mainMenu);
         }
         
         public void QuitToDesktop()
@@ -61,11 +62,11 @@ namespace ImportantPrototype
             SceneManager.LoadScene(scene.name);
         }
         
-        public void LoadGame()
+        public void StartGame()
         {
             _navigationManager.LoadSceneAndSetActive(_gameplay, null, () =>
             {
-                SceneManager.UnloadSceneAsync(_titleMenu.sceneName);
+                SceneManager.UnloadSceneAsync(_mainMenu.sceneName);
             });
         }
     }

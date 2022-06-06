@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3458137394680967510}
   - component: {fileID: 3458137394680967511}
-  - component: {fileID: 3458137394680967509}
+  - component: {fileID: 3785841890988898991}
   - component: {fileID: 3458137394680967508}
   - component: {fileID: 3458137394680967507}
   - component: {fileID: 3458137394680967506}
@@ -49,9 +49,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeManager: {fileID: 11400000, guid: a191c541cb7c9694e8363f5bd3c0a2c6, type: 2}
-  _titleMenu:
+  _mainMenu:
     scene: {fileID: 102900000, guid: 8f0a2e332616e434db82c0f8db3669a5, type: 3}
-    sceneName: TitleMenu
+    sceneName: MainMenu
     _sceneIndex: 1
     _sceneEnabled: 1
   _gameplay:
@@ -65,7 +65,7 @@ MonoBehaviour:
     _sceneIndex: -1
     _sceneEnabled: 0
   _persistentScenes: []
---- !u!114 &3458137394680967509
+--- !u!114 &3785841890988898991
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,7 +85,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3458137394680967511}
         m_TargetAssemblyTypeName: ImportantPrototype.GameMaster, Assembly-CSharp
-        m_MethodName: LoadGame
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

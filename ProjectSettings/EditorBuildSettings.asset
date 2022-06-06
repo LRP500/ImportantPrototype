@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/ImportantPrototype/Scenes/Master.unity
     guid: fe8a34cfe0668684fbed4cc2d8ad801f
   - enabled: 1
-    path: Assets/ImportantPrototype/Scenes/TitleMenu.unity
+    path: Assets/ImportantPrototype/Scenes/MainMenu.unity
     guid: 8f0a2e332616e434db82c0f8db3669a5
   - enabled: 1
     path: Assets/ImportantPrototype/Scenes/Gameplay.unity
