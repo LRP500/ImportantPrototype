@@ -11,11 +11,16 @@
         public const string WeaponsFiringModes = Weapons + "Firing Modes/";
         public const string WeaponShotBehaviours = Weapons + "Weapon Shot Behaviours/";
         public const string ProjectileBehaviours = Weapons + "Projectile Behaviours/";
+
+        public const string Content = Root + "Content/";
         
-        public const string ECA = Root + "ECA/";
+        private const string Collections = Root + "Collections/";
+        public const string AssetLists = Collections + "Asset Lists/";
+
+        private const string ECA = Root + "ECA/";
         public const string Actions = ECA + "Actions/";
-            
-        public const string Tools = Root + "Tools/";
+
+        private const string Tools = Root + "Tools/";
         public const string Console = Tools + "Console/";
         public const string ConsoleCommands = Console + "Commands/";
     }

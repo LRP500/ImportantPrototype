@@ -13,6 +13,7 @@ namespace ImportantPrototype.Input
         public static Vector2 Move => new (MoveHorizontal, MoveVertical);
 
         public static bool Pause => UnityEngine.Input.GetKeyDown(KeyCode.Escape);
+        public static bool Back => UnityEngine.Input.GetKeyDown(KeyCode.Escape);
         
         public static IObservable<bool> ObserveFiring()
         {

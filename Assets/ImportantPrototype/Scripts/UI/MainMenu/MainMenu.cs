@@ -16,7 +16,7 @@ namespace ImportantPrototype.UI.MainMenu
             NavigateToTitleMenu();
         }
 
-        private void NavigateToTitleMenu()
+        public void NavigateToTitleMenu()
         {
             _weaponSelection.Hide();
             _title.Show();
