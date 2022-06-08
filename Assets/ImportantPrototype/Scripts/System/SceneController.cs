@@ -4,6 +4,7 @@ using UnityTools.Runtime.Navigation;
 
 namespace ImportantPrototype.System
 {
+    // TODO: Enable audio listener and event system on scene loaded
     public class SceneController : MonoBehaviour
     {
         [SerializeField]

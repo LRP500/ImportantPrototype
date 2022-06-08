@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 802172419b0c19442b0250325bd8bd07, type: 3}
   m_Name: WeaponShotBehaviour_SpreadShot (3x60)
   m_EditorClassIdentifier: 
-  _spreadAngle: 60
+  _spreadAngle: 30
   _projectileCount: 3
   _forwardCompensation: 0.5

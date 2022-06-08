@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using ImportantPrototype.Content;
 using ImportantPrototype.Input;
 using ImportantPrototype.Weapons;
@@ -18,9 +17,12 @@ namespace ImportantPrototype.UI.MainMenu
 
         [SerializeField]
         private GridLayoutGroup _gridLayout;
+
+        [SerializeField]
+        private WeaponDataReactiveVariable _selectedWeapon;
         
         private MainMenu _mainMenu;
-        private List<WeaponSelectionGridItem> _gridItems = new ();
+        private readonly List<WeaponSelectionGridItem> _gridItems = new ();
         
         public override void Initialize()
         {
@@ -39,7 +41,7 @@ namespace ImportantPrototype.UI.MainMenu
 
         private void OnWeaponSelected(WeaponData weapon)
         {
-            Debug.Log($"Weapon selected! ({weapon.Name})");
+            _selectedWeapon.SetValue(weapon);
         }
         
         private WeaponSelectionGridItem CreateItem(WeaponData weapon)

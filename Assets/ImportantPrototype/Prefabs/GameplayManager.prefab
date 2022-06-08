@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _context: {fileID: 11400000, guid: 59dc90ceabd95c643b217fed1c9ed08c, type: 2}
   _player: {fileID: 11400000, guid: 35f933c98b6bd184699369384bf7d54e, type: 2}
+  _selectedWeapon: {fileID: 11400000, guid: ecca5f27c538d914487cb9a1a88bd519, type: 2}
   _gameOverEvent: {fileID: 11400000, guid: bf19fe8a5973f684eaeeb98ad6bc7790, type: 2}
 --- !u!114 &5656446753581911703
 MonoBehaviour:

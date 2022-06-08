@@ -1,4 +1,5 @@
 ﻿using ImportantPrototype.Characters;
+using ImportantPrototype.Weapons;
 using UniRx;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,6 +16,9 @@ namespace ImportantPrototype
         private PlayerReactiveVariable _player;
 
         [SerializeField]
+        private WeaponDataReactiveVariable _selectedWeapon;
+        
+        [SerializeField]
         private ScriptableEvent _gameOverEvent;
         
         public void Start()
@@ -25,6 +29,13 @@ namespace ImportantPrototype
         private void Initialize()
         {
             _context.Initialize();
+            SetupPlayer();
+        }
+
+        private void SetupPlayer()
+        {
+            _player.Value.WeaponHolder
+                .EquipWeapon(_selectedWeapon.Value);
             
             _player.Value.Stats
                 .ObserveVital(CharacterStatType.Health)

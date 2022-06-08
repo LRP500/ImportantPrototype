@@ -22,8 +22,8 @@ namespace ImportantPrototype.Weapons
         
         public void EquipWeapon(WeaponData weaponData)
         {
-            UnequipWeapon();
             if (weaponData == null) return;
+            UnequipWeapon();
             var weapon = Weapon.FromData(weaponData);
             weapon.transform.SetParent(transform, false);
             _equippedWeapon.Value = weapon;
