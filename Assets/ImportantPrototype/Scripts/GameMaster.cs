@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 using UnityTools.Runtime.Navigation;
 using UnityTools.Runtime.Time;
 
@@ -11,7 +10,10 @@ namespace ImportantPrototype
     {
         [SerializeField]
         private TimeManagerVariable _timeManager;
-        
+
+        [SerializeField]
+        private SceneFader _sceneFader;
+
         [SerializeField]
         private SceneReference _mainMenu;
 
@@ -47,8 +49,14 @@ namespace ImportantPrototype
         
         public void QuitToTitle()
         {
-            SceneManager.UnloadSceneAsync(_gameplay.sceneName);
-            NavigateTo(_mainMenu);
+            _sceneFader.FadeOut(() =>
+            {
+                _navigationManager.LoadSceneAndSetActive(_mainMenu, null, () =>
+                {
+                    SceneManager.UnloadSceneAsync(_gameplay.sceneName);
+                    _sceneFader.FadeIn();
+                });
+            });
         }
         
         public void QuitToDesktop()
@@ -64,9 +72,13 @@ namespace ImportantPrototype
         
         public void StartGame()
         {
-            _navigationManager.LoadSceneAndSetActive(_gameplay, null, () =>
+            _sceneFader.FadeOut(() =>
             {
-                SceneManager.UnloadSceneAsync(_mainMenu.sceneName);
+                _navigationManager.LoadSceneAndSetActive(_gameplay, null, () =>
+                {
+                    SceneManager.UnloadSceneAsync(_mainMenu.sceneName);
+                    _sceneFader.FadeIn();
+                });
             });
         }
     }

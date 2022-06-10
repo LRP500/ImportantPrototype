@@ -14,6 +14,6 @@ namespace ImportantPrototype.Content
         [SerializeField]
         private WeaponAssetListVariable _weapons;
 
-        public IReadOnlyList<WeaponData> Weapons => _weapons.Items;
+        public IEnumerable<WeaponData> Weapons => _weapons.Items;
     }
 }

@@ -32,7 +32,7 @@ namespace ImportantPrototype.UI.MainMenu
 
         private void PopulateGrid()
         {
-            foreach (var weapon in GameContent.Current.Weapons)
+            foreach (var weapon in GameContent.Instance.Weapons)
             {
                 var item = CreateItem(weapon);
                 _gridItems.Add(item);
