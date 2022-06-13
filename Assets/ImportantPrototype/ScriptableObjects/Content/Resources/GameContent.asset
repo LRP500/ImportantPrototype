@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &11400000
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 32
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: GameContent
   m_EditorClassIdentifier: 
   _weapons: {fileID: 11400000, guid: be2db34df852aa04a9956c6b3faccdd9, type: 2}
+  _mutations: {fileID: 11400000, guid: 7262ded5292a5fc439eeeeee1fd9f71f, type: 2}

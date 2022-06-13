@@ -28,7 +28,6 @@ namespace ImportantPrototype.Actions
             _player.Value.Stats.Collection
                 .Get<Attribute>(_stat)
                 .AddModifier(_value, _type);
-
             return true;
         }
     }

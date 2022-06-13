@@ -11,6 +11,7 @@
         public const string WeaponsFiringModes = Weapons + "Firing Modes/";
         public const string WeaponShotBehaviours = Weapons + "Weapon Shot Behaviours/";
         public const string ProjectileBehaviours = Weapons + "Projectile Behaviours/";
+        public const string Mutations = Root + "Mutations/";
 
         public const string Content = Root + "Content/";
         
