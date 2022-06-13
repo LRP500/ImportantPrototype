@@ -28,10 +28,10 @@ namespace UnityTools.Runtime.Navigation
         {
             _fadeTween?.Kill();
             _canvasGroup.blocksRaycasts = true;
+            
             _fadeTween = _canvasGroup
                 .DOFade(target, _duration)
                 .SetUpdate(true);
-            _fadeTween.timeScale = 1;
 
             _fadeTween.onComplete += () =>
             {

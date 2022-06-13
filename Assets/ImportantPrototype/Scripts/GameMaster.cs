@@ -54,6 +54,7 @@ namespace ImportantPrototype
                 _navigationManager.LoadSceneAndSetActive(_mainMenu, null, () =>
                 {
                     SceneManager.UnloadSceneAsync(_gameplay.sceneName);
+                    TimeManager.Current.Resume();
                     _sceneFader.FadeIn();
                 });
             });
@@ -77,6 +78,7 @@ namespace ImportantPrototype
                 _navigationManager.LoadSceneAndSetActive(_gameplay, null, () =>
                 {
                     SceneManager.UnloadSceneAsync(_mainMenu.sceneName);
+                    TimeManager.Current.Resume();
                     _sceneFader.FadeIn();
                 });
             });
