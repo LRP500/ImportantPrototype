@@ -2,7 +2,6 @@
 using ImportantPrototype.Weapons;
 using UniRx;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityTools.Runtime.ECA.Events;
 
 namespace ImportantPrototype
@@ -18,17 +17,20 @@ namespace ImportantPrototype
         [SerializeField]
         private WeaponDataReactiveVariable _selectedWeapon;
         
+        [Space]
         [SerializeField]
         private ScriptableEvent _gameOverEvent;
-        
-        public void Start()
-        {
-            Initialize();
-        }
 
-        private void Initialize()
+        [SerializeField]
+        private ScriptableEvent _levelUpEvent;
+
+        public void Awake()
         {
             _context.Initialize();
+        }
+
+        private void Start()
+        {
             SetupPlayer();
         }
 
@@ -36,11 +38,25 @@ namespace ImportantPrototype
         {
             _player.Value.WeaponHolder
                 .EquipWeapon(_selectedWeapon.Value);
-            
+
             _player.Value.Stats
                 .ObserveVital(CharacterStatType.Health)
                 .Where(value => value <= 0)
-                .Subscribe(_ => GameOver());
+                .Subscribe(_ => GameOver())
+                .AddTo(gameObject);
+
+            _player.Value.Stats
+                .ObserveAttribute(CharacterStatType.Level)
+                .Where(value => value > 0)
+                .Subscribe(_ => OnPlayerLevelUp())
+                .AddTo(gameObject);
+        }
+
+        private void OnPlayerLevelUp()
+        {
+            PauseManager.Pause();
+            PauseManager.AllowPausing = false;
+            _levelUpEvent.Raise();
         }
         
         private void FixedUpdate()
@@ -50,8 +66,9 @@ namespace ImportantPrototype
 
         private void GameOver()
         {
-            _player.Value.Freeze();
+            PauseManager.AllowPausing = false;
             _gameOverEvent.Raise();
+            _player.Value.Freeze();
         }
     }
 }

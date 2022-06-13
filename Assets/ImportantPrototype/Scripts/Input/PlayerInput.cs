@@ -12,13 +12,20 @@ namespace ImportantPrototype.Input
         public static Vector2 MousePosition => UnityEngine.Input.mousePosition;
         public static Vector2 Move => new (MoveHorizontal, MoveVertical);
 
-        public static bool Pause => UnityEngine.Input.GetKeyDown(KeyCode.Escape);
         public static bool Back => UnityEngine.Input.GetKeyDown(KeyCode.Escape);
         
         public static IObservable<bool> ObserveFiring()
         {
             return Observable.EveryUpdate()
                 .Select(_ => UnityEngine.Input.GetKey(KeyCode.Mouse0));
+        }
+
+        public static IObservable<Unit> ObservePause()
+        {
+            return Observable
+                .EveryUpdate()
+                .Where(_ => UnityEngine.Input.GetKeyDown(KeyCode.Escape))
+                .AsUnitObservable();
         }
     }
 }

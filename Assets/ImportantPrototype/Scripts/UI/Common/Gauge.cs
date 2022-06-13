@@ -1,4 +1,5 @@
 ﻿using System;
+using Extensions;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,14 +12,20 @@ namespace ImportantPrototype.UI.HUD
         [SerializeField]
         private Image _fill;
 
-        private IDisposable _disposable;
+        private readonly SerialDisposable _disposable = new();
         
         protected float Current { get; set; }
         protected float Max { get; set; }
-        
+
+        public override void Initialize()
+        {
+            _disposable.AddTo(gameObject);
+        }
+
         protected override void OnShow()
         {
-            _disposable = ObserveValueChanged().Subscribe(OnValueChanged);
+            _disposable.Disposable = ObserveValueChanged()
+                .Subscribe(OnValueChanged);
         }
 
         protected virtual IObservable<(float, float)> ObserveValueChanged()
@@ -34,13 +41,7 @@ namespace ImportantPrototype.UI.HUD
 
         protected override void OnHide()
         {
-            _disposable.Dispose();
-        }
-
-        public override void Dispose()
-        {
-            base.Dispose();
-            _disposable.Dispose();
+            _disposable.Clear();
         }
     }
 }

@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 701990664}
   - component: {fileID: 1608103699}
   - component: {fileID: 1608103698}
+  - component: {fileID: 1217058649}
   m_Layer: 5
   m_Name: UI_PauseMenu
   m_TagString: Untagged
@@ -187,6 +188,36 @@ MonoBehaviour:
   _hideOnStart: 1
   _timeManager: {fileID: 11400000, guid: a191c541cb7c9694e8363f5bd3c0a2c6, type: 2}
   _resumeButton: {fileID: 3488872308745452357}
+--- !u!114 &1217058649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695610317791178452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44de5941a674fc2478d83b59b221e64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event: {fileID: 11400000, guid: 1f64eeec328320a478ed307cd668fb1f, type: 2}
+  _conditions: []
+  _actions: []
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1608103698}
+        m_TargetAssemblyTypeName: UnityTools.Runtime.UI.Element, UnityTools.Runtime.UI
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5383734207008108440
 GameObject:
   m_ObjectHideFlags: 0
