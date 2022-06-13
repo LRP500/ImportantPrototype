@@ -24,13 +24,9 @@ namespace ImportantPrototype
         [SerializeField]
         private ScriptableEvent _levelUpEvent;
 
-        public void Awake()
-        {
-            _context.Initialize();
-        }
-
         private void Start()
         {
+            _context.Initialize();
             SetupPlayer();
         }
 

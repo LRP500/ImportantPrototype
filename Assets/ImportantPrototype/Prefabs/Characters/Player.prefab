@@ -250,7 +250,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileTag: Player
-  _gamePaused: {fileID: 11400000, guid: 44b82ffea037072419eefa18a5ce05ed, type: 2}
 --- !u!114 &4783239669583063857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,7 +291,7 @@ MonoBehaviour:
   _mode: 0
   _runtimeReference: {fileID: 11400000, guid: 35f933c98b6bd184699369384bf7d54e, type: 2}
   _runtimeList: {fileID: 0}
-  _clearOnDestroy: 0
+  _clearOnDestroy: 1
 --- !u!114 &7065788244136178174
 MonoBehaviour:
   m_ObjectHideFlags: 0

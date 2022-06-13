@@ -24,7 +24,7 @@ namespace ImportantPrototype.Leveling
             var stats = _player.Value.Stats; 
             Level = stats.Get<Attribute>(CharacterStatType.Level);
             Experience = stats.Get<Attribute>(CharacterStatType.Experience);
-            
+
             Experience.Property
                 .Subscribe(OnPlayerGainedXP)
                 .AddTo(Context.DisposableTarget);

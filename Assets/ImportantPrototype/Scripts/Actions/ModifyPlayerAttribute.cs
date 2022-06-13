@@ -1,9 +1,9 @@
 ﻿using ImportantPrototype.Characters;
-using ImportantPrototype.Stats;
 using ImportantPrototype.Stats.Modifiers;
 using ImportantPrototype.System;
 using UnityEngine;
 using UnityTools.Runtime.ECA.Actions;
+using Attribute = ImportantPrototype.Stats.Attribute;
 
 namespace ImportantPrototype.Actions
 {
@@ -23,13 +23,12 @@ namespace ImportantPrototype.Actions
         [SerializeField]
         private float _value;
 
-        private Attribute _playerStat;
-        
         protected override bool ExecuteBehaviour()
         {
-            var stats = _player.Value.Stats.Collection;
-            _playerStat ??= stats.Get<Attribute>(_stat);
-            _playerStat.AddModifier(_value, _type);
+            _player.Value.Stats.Collection
+                .Get<Attribute>(_stat)
+                .AddModifier(_value, _type);
+
             return true;
         }
     }
