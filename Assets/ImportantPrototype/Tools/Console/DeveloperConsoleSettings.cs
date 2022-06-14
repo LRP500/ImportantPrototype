@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using ImportantPrototype.System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace ImportantPrototype.Tools.Console
@@ -17,6 +18,7 @@ namespace ImportantPrototype.Tools.Console
         private float _fontSize = 24;
         
         [SerializeField]
+        [AssetList(AutoPopulate = true)]
         private ConsoleCommand[] _commands;
 
         public string Prefix => _prefix;

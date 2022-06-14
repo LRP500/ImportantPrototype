@@ -22,6 +22,7 @@ namespace ImportantPrototype.Characters
         {
             Aiming = GetComponent<PlayerAiming>();
             Shooting = GetComponent<PlayerShooting>();
+            
             WeaponHolder.EquipWeapon(_data.Weapon);
         }
 

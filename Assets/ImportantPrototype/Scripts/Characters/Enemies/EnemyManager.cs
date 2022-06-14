@@ -8,7 +8,7 @@ namespace ImportantPrototype.Characters.Enemies
     public class EnemyManager : ScriptableManager
     {
         [SerializeField]
-        private EnemyReactiveList _enemies;
+        private EnemyReactiveListVariable _enemies;
 
         protected override void OnFixedUpdate()
         {

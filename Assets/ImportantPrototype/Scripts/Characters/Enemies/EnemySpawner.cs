@@ -19,7 +19,7 @@ namespace ImportantPrototype.Characters.Enemies
         private PlayerReactiveVariable _player;
 
         [SerializeField]
-        private EnemyReactiveList _enemies;
+        private EnemyReactiveListVariable _enemies;
         
         private BoxCollider2D _area;
 
