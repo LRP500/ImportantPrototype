@@ -5,6 +5,6 @@
         Level,
         Experience,
         Health,
-        MaxHealth
+        PickupRange
     }
 }

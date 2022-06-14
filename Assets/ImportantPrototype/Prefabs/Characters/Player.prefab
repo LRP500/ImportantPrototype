@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1251913534831791216}
   - component: {fileID: 8844274063911366406}
+  - component: {fileID: 5758153484699762721}
   m_Layer: 19
   m_Name: Pickup
   m_TagString: Untagged
@@ -48,6 +49,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2
+--- !u!114 &5758153484699762721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448238066412868838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d421e8394c5a26d4e852d35d12ae0b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _collider: {fileID: 8844274063911366406}
+  _baseRadius: {fileID: 0}
 --- !u!1 &6200172065582666842
 GameObject:
   m_ObjectHideFlags: 0

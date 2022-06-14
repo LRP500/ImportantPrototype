@@ -816,7 +816,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000334a81fe27e6825c2b20de7a930c342a
+  m_ApplyToSortingLayers: 00000000334a81fe27e6825c2b20de7a930c342a59175b5b
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1240,9 +1240,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2805605152655489527, guid: 963da2f774ad5514085f3ee62ebc3e6f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3217103946096295960, guid: 963da2f774ad5514085f3ee62ebc3e6f, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217103946096295960, guid: 963da2f774ad5514085f3ee62ebc3e6f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3217103946096295967, guid: 963da2f774ad5514085f3ee62ebc3e6f, type: 3}
       propertyPath: m_RootOrder
@@ -1287,6 +1295,18 @@ PrefabInstance:
     - target: {fileID: 3217103946096295967, guid: 963da2f774ad5514085f3ee62ebc3e6f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758153484699762721, guid: 963da2f774ad5514085f3ee62ebc3e6f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6200172065582666842, guid: 963da2f774ad5514085f3ee62ebc3e6f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844274063911366406, guid: 963da2f774ad5514085f3ee62ebc3e6f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 963da2f774ad5514085f3ee62ebc3e6f, type: 3}
@@ -1616,15 +1636,7 @@ CompositeCollider2D:
       - X: 250000000
         Y: -205000000
   m_CompositePaths:
-    m_Paths:
-    - - {x: 24.999971, y: -20.5}
-      - {x: 24.999971, y: 20.5}
-      - {x: -25, y: 20.499971}
-      - {x: -24.999971, y: -20.5}
-    - - {x: 24, y: -19.499971}
-      - {x: -24, y: -19.499971}
-      - {x: -23.999971, y: 19.5}
-      - {x: 24, y: 19.499971}
+    m_Paths: []
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &1318857749

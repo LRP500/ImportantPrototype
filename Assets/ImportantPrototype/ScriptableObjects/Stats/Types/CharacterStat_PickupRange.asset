@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d488ef584ec44d0d94d75744888e06ba, type: 3}
-  m_Name: PickupRange
+  m_Script: {fileID: 11500000, guid: b628db32631a41539c1351d5359ed08a, type: 3}
+  m_Name: CharacterStat_PickupRange
   m_EditorClassIdentifier: 
-  _name: Faster Mutation
-  _description: 'Pickup range +30% '
-  _stat: {fileID: 11400000, guid: b6d35ed4b6bba5a49aa63ccc158f2af6, type: 2}
-  _type: 2
-  _value: 30
+  _name: Pickup Range
+  _description: 
+  _id: 3

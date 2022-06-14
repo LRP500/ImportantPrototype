@@ -22,3 +22,6 @@ MonoBehaviour:
   - _type: 1
     _stat: {fileID: 11400000, guid: 50df65d4676f5b24ab804d6157d5c5f5, type: 2}
     _value: 0
+  - _type: 1
+    _stat: {fileID: 11400000, guid: b6d35ed4b6bba5a49aa63ccc158f2af6, type: 2}
+    _value: 2
