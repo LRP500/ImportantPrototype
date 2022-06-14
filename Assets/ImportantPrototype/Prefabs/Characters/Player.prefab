@@ -62,7 +62,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collider: {fileID: 8844274063911366406}
-  _baseRadius: {fileID: 0}
 --- !u!1 &6200172065582666842
 GameObject:
   m_ObjectHideFlags: 0

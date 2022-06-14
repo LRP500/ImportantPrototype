@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyManager: {fileID: 11400000, guid: 825e6230345c434449098ef2bdcee02a, type: 2}
   _levelManager: {fileID: 11400000, guid: 613d113966f4f424e90c98fc2ab3619a, type: 2}
+  _mutationManager: {fileID: 11400000, guid: b195aeee26ac6ef449ef602163ec0ef3, type: 2}
+  _player: {fileID: 11400000, guid: 35f933c98b6bd184699369384bf7d54e, type: 2}
   _disposableTarget: {fileID: 11400000, guid: 63dc2235bfb234048903b4c098688508, type: 2}

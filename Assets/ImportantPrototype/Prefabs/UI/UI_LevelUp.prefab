@@ -352,8 +352,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _initializeOnStart: 1
   _hideOnStart: 1
+  _mutationManager: {fileID: 11400000, guid: b195aeee26ac6ef449ef602163ec0ef3, type: 2}
   _mutationSelection: {fileID: 1804724176411264076}
-  _mutationChoiceCount: {fileID: 11400000, guid: 5a1e2beecb91a2d4696f9f234f245325, type: 2}
 --- !u!114 &6522890679326414209
 MonoBehaviour:
   m_ObjectHideFlags: 0

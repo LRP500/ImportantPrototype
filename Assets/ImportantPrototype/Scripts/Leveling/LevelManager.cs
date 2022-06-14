@@ -11,9 +11,6 @@ namespace ImportantPrototype.Leveling
     public class LevelManager : ScriptableManager
     {
         [SerializeField]
-        private PlayerReactiveVariable _player;
-
-        [SerializeField]
         private float _xpConstant;
 
         public Attribute Level { get; private set; }
@@ -21,7 +18,7 @@ namespace ImportantPrototype.Leveling
 
         protected override void OnInitialize()
         {
-            var stats = _player.Value.Stats; 
+            var stats = Context.Player.Value.Stats; 
             Level = stats.Get<Attribute>(CharacterStatType.Level);
             Experience = stats.Get<Attribute>(CharacterStatType.Experience);
 
