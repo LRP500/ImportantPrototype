@@ -6,9 +6,9 @@ namespace ImportantPrototype.Weapons
     [CreateAssetMenu(menuName = ContextMenuPath.WeaponShotBehaviours + "Single Shot")]
     public class SingleShotWeaponShotBehaviour : WeaponShotBehaviour
     {
-        public override void Fire(WeaponData weapon, Vector3 origin, Vector3 direction, string tag)
+        public override void Fire(Weapon weapon, Vector3 origin, Vector3 direction, string tag)
         {
-            FireSingle(weapon.Projectile, origin, direction, tag);
+            FireSingle(weapon, origin, direction, tag);
         }
     }
 }

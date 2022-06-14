@@ -1,4 +1,6 @@
-﻿using ImportantPrototype.System;
+﻿using System.Collections.Generic;
+using ImportantPrototype.System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace ImportantPrototype.Weapons
@@ -33,6 +35,11 @@ namespace ImportantPrototype.Weapons
         [SerializeField]
         private float _accuracy;
 
+        [SerializeField]
+        // [HideInInspector]
+        [AssetList(AutoPopulate = true)]
+        private List<WeaponStatInfo> _stats;
+        
         public string Name => _name;
         public string Description => _description;
         public WeaponFiringMode FiringMode => _firingMode;
@@ -41,5 +48,6 @@ namespace ImportantPrototype.Weapons
         public Weapon Prefab => _prefab;
         public float FireRate => _fireRate;
         public float Accuracy => _accuracy;
+        public IEnumerable<WeaponStatInfo> Stats => _stats;
     }
 }

@@ -4,11 +4,11 @@ namespace ImportantPrototype.Weapons
 {
     public abstract class WeaponShotBehaviour : ScriptableObject
     {
-        public virtual void Fire(WeaponData weapon, Vector3 origin, Vector3 direction, string tag) { }
+        public virtual void Fire(Weapon weapon, Vector3 origin, Vector3 direction, string tag) { }
 
-        protected static void FireSingle(ProjectileData data, Vector3 origin, Vector3 direction, string tag)
+        protected static void FireSingle(Weapon weapon, Vector3 origin, Vector3 direction, string tag)
         {
-            var instance = Projectile.FromData(data);
+            var instance = Projectile.FromData(weapon.Data.Projectile);
             var rotation = GetRotation(direction);
             instance.Initialize(origin, direction, rotation);
             instance.SetTag(tag);

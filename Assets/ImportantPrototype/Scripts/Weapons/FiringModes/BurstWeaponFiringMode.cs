@@ -11,7 +11,7 @@ namespace ImportantPrototype.Weapons
         [SerializeField]
         private int _burstSize = 3;
         
-        public override IObservable<Unit> FilterInput(WeaponData weapon, IObservable<bool> inputStream)
+        public override IObservable<Unit> FilterInput(Weapon weapon, IObservable<bool> inputStream)
         {
             return Observable.Create<Unit>(observer =>
             {

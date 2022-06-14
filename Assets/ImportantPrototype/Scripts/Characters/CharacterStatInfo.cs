@@ -4,8 +4,7 @@ using UnityEngine;
 
 namespace ImportantPrototype.Characters
 {
-    [CreateAssetMenu(menuName = ContextMenuPath.Stats + "Stat Type")]
+    [CreateAssetMenu(menuName = ContextMenuPath.Stats + "Character Stat")]
     public class CharacterStatInfo : StatInfo<CharacterStatType>
-    {
-    }
+    { }
 }

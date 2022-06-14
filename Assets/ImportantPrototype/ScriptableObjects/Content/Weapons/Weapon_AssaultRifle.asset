@@ -20,3 +20,8 @@ MonoBehaviour:
   _prefab: {fileID: 5685027097703648145, guid: 07a99f6629ef1434781a029093c1821e, type: 3}
   _fireRate: 0.5
   _accuracy: 0
+  _stats:
+  - {fileID: 11400000, guid: d9d1b8bbfc5752549b299ff88c115c71, type: 2}
+  - {fileID: 11400000, guid: 091000d9b955a0547aefaf1ed38bc8bb, type: 2}
+  - {fileID: 11400000, guid: 70f3cf78e58e3084795d1b3aba7a8b32, type: 2}
+  - {fileID: 11400000, guid: 4d51d023c7ac15140a28efaeb2089913, type: 2}

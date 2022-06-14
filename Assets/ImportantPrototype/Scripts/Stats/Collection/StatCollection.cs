@@ -3,11 +3,13 @@ using UniRx;
 
 namespace ImportantPrototype.Stats
 {
-    public class StatCollection
+    public abstract class StatCollection
     {
         private readonly ReactiveDictionary<StatInfo, Stat> _stats = new ();
-
-        public StatCollection(StatCollectionData data)
+        
+        protected StatCollection() { }
+        
+        protected StatCollection(StatCollectionData data)
         {
             Initialize(data);
         }
@@ -20,6 +22,11 @@ namespace ImportantPrototype.Stats
             }
         }
 
+        protected void Add(StatType type, StatInfo info, float value)
+        {
+            _stats.Add(info, StatFactory.Create(type, info, value));
+        }
+        
         public T Get<T>(int id) where T : Stat
         {
             foreach (var (key, value) in _stats)

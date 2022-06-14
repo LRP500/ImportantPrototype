@@ -15,7 +15,7 @@ namespace ImportantPrototype.Characters
         
         private void Awake()
         {
-            Collection = new StatCollection(_collectionData);
+            Collection = new CharacterStatCollection(_collectionData);
             Health = Collection.Get<Vital>((int) CharacterStatType.Health);
         }
 

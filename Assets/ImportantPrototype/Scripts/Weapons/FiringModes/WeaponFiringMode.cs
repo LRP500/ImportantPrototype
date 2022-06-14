@@ -6,6 +6,6 @@ namespace ImportantPrototype.Weapons
 {
     public abstract class WeaponFiringMode : ScriptableObject
     {
-        public abstract IObservable<Unit> FilterInput(WeaponData weapon, IObservable<bool> inputStream);
+        public abstract IObservable<Unit> FilterInput(Weapon weapon, IObservable<bool> inputStream);
     }
 }

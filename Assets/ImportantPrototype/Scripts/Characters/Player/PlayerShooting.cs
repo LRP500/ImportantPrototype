@@ -27,7 +27,7 @@ namespace ImportantPrototype.Characters
 
         private void Start()
         {
-            _self.WeaponHolder.EquippedWeapon
+            _self.WeaponController.EquippedWeapon
                 .Subscribe(OnEquippedWeaponChanged)
                 .AddTo(gameObject);
         }
@@ -47,7 +47,7 @@ namespace ImportantPrototype.Characters
         private void RegisterWeapon(Weapon weapon)
         {
             _firingDisposable.Disposable = weapon.Data.FiringMode
-                .FilterInput(weapon.Data, PlayerInput.ObserveFiring())
+                .FilterInput(weapon, PlayerInput.ObserveFiring())
                 .Subscribe(_ => OnFireInput(weapon));
         }
         

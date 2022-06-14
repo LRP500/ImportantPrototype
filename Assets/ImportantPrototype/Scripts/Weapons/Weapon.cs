@@ -1,3 +1,5 @@
+using ImportantPrototype.Characters;
+using ImportantPrototype.Stats;
 using UnityEngine;
 
 namespace ImportantPrototype.Weapons
@@ -11,18 +13,29 @@ namespace ImportantPrototype.Weapons
         private Transform _muzzle;
 
         public SpriteRenderer Renderer => _renderer;
-        public WeaponData Data { get; private set; }
 
+        private Character Holder { get; set; }
+        public WeaponData Data { get; private set; }
+        public WeaponStatCollection Stats { get; private set; }
+
+        public float FireRate => Stats.Get<Attribute>(WeaponStatType.FireRate).Value;
+        
         public static Weapon FromData(WeaponData data)
         {
             var instance = Instantiate(data.Prefab);
+            instance.Stats = new WeaponStatCollection(data);
             instance.Data = data;
             return instance;
         }
 
+        public void Bind(Character holder)
+        {
+            Holder = holder;
+        }
+        
         public void Fire(Vector2 direction, string excludeTag)
         {
-            Data.ShotBehaviour.Fire(Data, _muzzle.position, direction, excludeTag);
+            Data.ShotBehaviour.Fire(this, _muzzle.position, direction, excludeTag);
         }
     }
 }

@@ -9,7 +9,7 @@ namespace ImportantPrototype.Weapons
     [CreateAssetMenu(menuName = ContextMenuPath.WeaponsFiringModes + "Automatic")]
     public class AutomaticWeaponFiringMode : WeaponFiringMode
     {
-        public override IObservable<Unit> FilterInput(WeaponData weapon, IObservable<bool> inputStream)
+        public override IObservable<Unit> FilterInput(Weapon weapon, IObservable<bool> inputStream)
         {
             return inputStream
                 .WhereTrue()

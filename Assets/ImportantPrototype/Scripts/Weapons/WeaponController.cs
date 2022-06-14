@@ -1,13 +1,22 @@
+using System;
+using ImportantPrototype.Characters;
 using UniRx;
 using UnityEngine;
 using UnityTools.Runtime.Extensions;
 
 namespace ImportantPrototype.Weapons
 {
-    public class WeaponHolder : MonoBehaviour
+    public class WeaponController : MonoBehaviour
     {
         private readonly ReactiveProperty<Weapon> _equippedWeapon = new ();
         public IReadOnlyReactiveProperty<Weapon> EquippedWeapon => _equippedWeapon;
+
+        private Character _holder;
+        
+        private void Awake()
+        {
+            _holder = GetComponentInParent<Character>();
+        }
 
         public void SetRotation(float angle)
         {
@@ -26,6 +35,7 @@ namespace ImportantPrototype.Weapons
             UnequipWeapon();
             var weapon = Weapon.FromData(weaponData);
             weapon.transform.SetParent(transform, false);
+            weapon.Bind(_holder);
             _equippedWeapon.Value = weapon;
         }
 
