@@ -5,6 +5,7 @@
         Damage,
         FireRate,
         Range,
-        ShotSpeed
+        ShotSpeed,
+        ReloadSpeed
     }
 }

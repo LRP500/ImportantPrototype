@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 732a7b89e9734b978b4fac8418e90b3a, type: 3}
+  m_Name: AssaultRifle
+  m_EditorClassIdentifier: 
+  _name: Assault Rifle
+  _description: 
+  _prefab: {fileID: 5685027097703648145, guid: 07a99f6629ef1434781a029093c1821e, type: 3}
+  _projectile: {fileID: 11400000, guid: ccdc44a162d27324c812d2d9cd0cd6ab, type: 2}
+  _firingMode: {fileID: 11400000, guid: 5c76b5765bd497548afed7eaeb095bc2, type: 2}
+  _shotBehaviour: {fileID: 11400000, guid: 256d66eddbfda8840a6e58371b002182, type: 2}
+  _damage: 1
+  _fireRate: 0.5
+  _range: 0
+  _shotSpeed: 10
+  _reloadSpeed: 0

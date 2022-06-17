@@ -1,23 +1,32 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using ImportantPrototype.Scripts.Stats.Manager;
 using ImportantPrototype.Weapons;
 
 namespace ImportantPrototype.Stats
 {
     public class WeaponStatCollection : StatCollection
     {
-        public WeaponStatCollection(WeaponData data)
-        {
-            Add(StatType.Attribute, GetInfo(data, WeaponStatType.FireRate), data.FireRate);
-            Add(StatType.Attribute, GetInfo(data, WeaponStatType.Damage), data.Projectile.Damage);
-            Add(StatType.Attribute, GetInfo(data, WeaponStatType.Range), data.Projectile.Range);
-            Add(StatType.Attribute, GetInfo(data, WeaponStatType.ShotSpeed), data.Projectile.Speed);
-        }
+        private static readonly WeaponStatCollectionFactory _factory = new();
 
-        private static WeaponStatInfo GetInfo(WeaponData data, WeaponStatType type)
+        public static WeaponStatCollection FromWeaponData(WeaponData data)
         {
-            return data.Stats.First(x => x.Id == (int) type);
+            var collection = _factory.Create();
+            collection.Get<Attribute>(WeaponStatType.Damage).SetValue(data.Damage);
+            collection.Get<Attribute>(WeaponStatType.FireRate).SetValue(data.FireRate);
+            collection.Get<Attribute>(WeaponStatType.Range).SetValue(data.Range);
+            collection.Get<Attribute>(WeaponStatType.ShotSpeed).SetValue(data.ShotSpeed);
+            collection.Get<Attribute>(WeaponStatType.ReloadSpeed).SetValue(data.ReloadSpeed);
+            return collection;
         }
         
+        public WeaponStatCollection(IReadOnlyList<StatInfo> stats)
+        {
+            for (int i = 0, length = stats.Count; i < length; i++)
+            {
+                Add(stats[i], 0);
+            }
+        }
+
         public T Get<T>(WeaponStatType type) where T : Stat
         {
             return Get<T>((int) type);

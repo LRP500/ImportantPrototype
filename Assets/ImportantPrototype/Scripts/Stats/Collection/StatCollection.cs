@@ -22,9 +22,9 @@ namespace ImportantPrototype.Stats
             }
         }
 
-        protected void Add(StatType type, StatInfo info, float value)
+        protected void Add(StatInfo info, float value)
         {
-            _stats.Add(info, StatFactory.Create(type, info, value));
+            _stats.Add(info, StatFactory.Create(info, value));
         }
         
         public T Get<T>(int id) where T : Stat

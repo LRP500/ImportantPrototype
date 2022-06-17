@@ -23,7 +23,7 @@ namespace ImportantPrototype.Weapons
         public static Weapon FromData(WeaponData data)
         {
             var instance = Instantiate(data.Prefab);
-            instance.Stats = new WeaponStatCollection(data);
+            instance.Stats = WeaponStatCollection.FromWeaponData(data);
             instance.Data = data;
             return instance;
         }
