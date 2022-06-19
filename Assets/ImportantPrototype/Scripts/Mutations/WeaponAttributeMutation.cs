@@ -2,15 +2,16 @@
 using ImportantPrototype.Stats;
 using ImportantPrototype.Stats.Modifiers;
 using ImportantPrototype.System;
+using ImportantPrototype.Weapons;
 using UnityEngine;
 
 namespace ImportantPrototype.Mutations
 {
-    [CreateAssetMenu(menuName = ContextMenuPath.Mutations + "Attribute")]
-    public class AttributeMutation : Mutation
+    [CreateAssetMenu(menuName = ContextMenuPath.Mutations + "Weapon Attribute")]
+    public class WeaponAttributeMutation : Mutation
     {
         [SerializeField]
-        private CharacterStatInfo _stat;
+        private WeaponStatType _stat;
 
         [SerializeField]
         private StatModifier.Type _type;
@@ -20,8 +21,8 @@ namespace ImportantPrototype.Mutations
 
         public override void OnPick(Player player)
         {
-            player.Stats.Collection
-                .Get<Attribute>(_stat)
+            player.WeaponHolder.Weapon.Value.Stats
+                .Get<Attribute>((int) _stat)
                 .AddModifier(_value, _type);
         }
     }

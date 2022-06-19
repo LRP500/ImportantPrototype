@@ -11,10 +11,23 @@ namespace ImportantPrototype.Weapons
     {
         public override IObservable<Unit> FilterInput(Weapon weapon, IObservable<bool> inputStream)
         {
+            // return inputStream
+            //     .WhereTrue()
+            //     .Zip(inputStream
+            //         .WhereTrue()
+            //         .ThrottleFirst(GetFireRate(weapon))
+            //         .Repeat(), (input, first) => input && first)
+            //     .AsUnitObservable();
+
             return inputStream
                 .WhereTrue()
-                .ThrottleFirst(TimeSpan.FromSeconds(weapon.FireRate))
+                .ThrottleFirst(GetFireRate(weapon))
                 .AsUnitObservable();
+        }
+
+        private static TimeSpan GetFireRate(Weapon weapon)
+        {
+            return TimeSpan.FromSeconds(weapon.FireRate);
         }
     }
 }

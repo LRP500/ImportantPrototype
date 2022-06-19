@@ -36,9 +36,10 @@ namespace ImportantPrototype.Stats
             _modifiedValue.Value = value;
         }
 
-        public void SetValue(float value)
+        public override void SetValue(float value)
         {
-            _modifiedValue.Value = value;
+            base.SetValue(value);
+            ClearModifiers();
         }
         
         public void Add(float increment)
@@ -114,6 +115,12 @@ namespace ImportantPrototype.Stats
             }
             
             return (float) Math.Round(BaseValue + modValue, 4);
+        }
+        
+        private void ClearModifiers()
+        {
+            _modifiers.Clear();
+            _isDirty = true;
         }
     }
 }

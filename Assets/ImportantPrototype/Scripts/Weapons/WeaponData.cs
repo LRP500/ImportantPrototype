@@ -8,15 +8,15 @@ namespace ImportantPrototype.Weapons
     public class WeaponData : ScriptableObject
     {
         [SerializeField]
-        [TitleGroup("General")]
+        [TitleGroup("Info")]
         private string _name;
 
         [Multiline]
         [SerializeField]
         private string _description;
 
-        [Space]
         [SerializeField]
+        [TitleGroup("General")]
         private Weapon _prefab;
 
         [SerializeField]

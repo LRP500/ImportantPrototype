@@ -21,7 +21,6 @@ namespace ImportantPrototype.Weapons
         [SerializeField]
         private ProjectileBehaviour _behaviour;
         
-        public float Damage => _damage;
         public float Speed => _speed;
         public float Range => _range;
         public Projectile Prefab => _prefab;

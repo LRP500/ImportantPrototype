@@ -13,11 +13,10 @@ namespace ImportantPrototype.Weapons
         private Damager _damager;
         
         public Rigidbody2D Rigidbody => _rigidbody;
-        public Damager Damager => _damager;
 
         public Vector2 Origin { get; private set; }
         public Vector2 Direction { get; private set; }
-
+        
         public Vector2 Position
         {
             get => transform.position;
@@ -39,18 +38,17 @@ namespace ImportantPrototype.Weapons
             return instance;
         }
 
-        public void Initialize(Vector2 origin, Vector2 direction, Vector2 rotation)
+        public void Initialize(Vector2 origin, Vector2 direction, Vector3 rotation)
         {
             Origin = origin;
             Position = origin;
             Rotation = rotation;
             Direction = direction;
-            Damager.SetDamage(Data.Damage);
         }
 
         public void SetTag(string projectileTag)
         {
-            Damager.Exclude(projectileTag);
+            _damager.Exclude(projectileTag);
         }
         
         public void Shoot()
@@ -67,6 +65,11 @@ namespace ImportantPrototype.Weapons
         private void OnHit(Unit unit)
         {
             Destroy(gameObject);
+        }
+
+        public void SetDamage(float damage)
+        {
+            _damager.SetDamage(damage);
         }
     }
 }

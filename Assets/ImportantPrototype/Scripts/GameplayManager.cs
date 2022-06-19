@@ -32,7 +32,7 @@ namespace ImportantPrototype
 
         private void SetupPlayer()
         {
-            _player.Value.WeaponController
+            _player.Value.WeaponHolder
                 .EquipWeapon(_selectedWeapon.Value);
 
             _player.Value.Stats

@@ -1,6 +1,5 @@
 using ImportantPrototype.Weapons;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace ImportantPrototype.Characters
 {
@@ -11,11 +10,10 @@ namespace ImportantPrototype.Characters
         [SerializeField]
         private PlayerData _data;
 
-        [FormerlySerializedAs("_weaponHolder")]
         [SerializeField]
-        private WeaponController _weaponController;
+        private WeaponHolder _weaponHolder;
 
-        public WeaponController WeaponController => _weaponController;
+        public WeaponHolder WeaponHolder => _weaponHolder;
         
         public PlayerAiming Aiming { get; private set; }
         public PlayerShooting Shooting { get; private set; }
@@ -24,8 +22,7 @@ namespace ImportantPrototype.Characters
         {
             Aiming = GetComponent<PlayerAiming>();
             Shooting = GetComponent<PlayerShooting>();
-            
-            WeaponController.EquipWeapon(_data.Weapon);
+            WeaponHolder.EquipWeapon(_data.Weapon);
         }
 
         public void Freeze()

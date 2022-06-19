@@ -11,6 +11,7 @@ namespace ImportantPrototype.Weapons
             var instance = Projectile.FromData(weapon.Data.Projectile);
             var rotation = GetRotation(direction);
             instance.Initialize(origin, direction, rotation);
+            instance.SetDamage(weapon.Damage);
             instance.SetTag(tag);
             instance.Shoot();
         }

@@ -13,11 +13,16 @@
         /// <summary>
         /// The stat's current value.
         /// </summary>
-        public virtual float Value { get; }
+        public virtual float Value { get; private set; }
 
         public Stat(StatInfo info, float value)
         {
             Info = info;
+            Value = value;
+        }
+
+        public virtual void SetValue(float value)
+        {
             Value = value;
         }
     }

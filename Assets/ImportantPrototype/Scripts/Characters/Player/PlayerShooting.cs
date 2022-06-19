@@ -27,7 +27,7 @@ namespace ImportantPrototype.Characters
 
         private void Start()
         {
-            _self.WeaponController.EquippedWeapon
+            _self.WeaponHolder.Weapon
                 .Subscribe(OnEquippedWeaponChanged)
                 .AddTo(gameObject);
         }

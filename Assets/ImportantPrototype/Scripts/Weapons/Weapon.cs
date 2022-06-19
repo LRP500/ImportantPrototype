@@ -19,6 +19,7 @@ namespace ImportantPrototype.Weapons
         public WeaponStatCollection Stats { get; private set; }
 
         public float FireRate => Stats.Get<Attribute>(WeaponStatType.FireRate).Value;
+        public float Damage => Stats.Get<Attribute>(WeaponStatType.Damage).Value;
         
         public static Weapon FromData(WeaponData data)
         {

@@ -1,4 +1,3 @@
-using System;
 using ImportantPrototype.Characters;
 using UniRx;
 using UnityEngine;
@@ -6,10 +5,10 @@ using UnityTools.Runtime.Extensions;
 
 namespace ImportantPrototype.Weapons
 {
-    public class WeaponController : MonoBehaviour
+    public class WeaponHolder : MonoBehaviour
     {
-        private readonly ReactiveProperty<Weapon> _equippedWeapon = new ();
-        public IReadOnlyReactiveProperty<Weapon> EquippedWeapon => _equippedWeapon;
+        private readonly ReactiveProperty<Weapon> _weapon = new ();
+        public IReadOnlyReactiveProperty<Weapon> Weapon => _weapon;
 
         private Character _holder;
         
@@ -26,24 +25,24 @@ namespace ImportantPrototype.Weapons
 
         private void Flip(bool flipped)
         {
-            _equippedWeapon.Value.Renderer.flipY = flipped;
+            _weapon.Value.Renderer.flipY = flipped;
         }
         
         public void EquipWeapon(WeaponData weaponData)
         {
             if (weaponData == null) return;
             UnequipWeapon();
-            var weapon = Weapon.FromData(weaponData);
+            var weapon = Weapons.Weapon.FromData(weaponData);
             weapon.transform.SetParent(transform, false);
             weapon.Bind(_holder);
-            _equippedWeapon.Value = weapon;
+            _weapon.Value = weapon;
         }
 
         private void UnequipWeapon()
         {
-            if (_equippedWeapon.Value == null) return;
-            Destroy(_equippedWeapon.Value.gameObject);
-            _equippedWeapon.Value = null;
+            if (_weapon.Value == null) return;
+            Destroy(_weapon.Value.gameObject);
+            _weapon.Value = null;
         }
     }
 }

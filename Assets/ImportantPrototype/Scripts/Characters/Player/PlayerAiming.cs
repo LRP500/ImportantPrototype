@@ -36,7 +36,7 @@ namespace ImportantPrototype.Characters
             AimDirection = aimDir;
             AimAngle = Mathf.Atan2(aimDir.x, aimDir.y) * Mathf.Rad2Deg - 90;
             
-            _player.WeaponController.SetRotation(AimAngle);
+            _player.WeaponHolder.SetRotation(AimAngle);
         }
     }
 }
