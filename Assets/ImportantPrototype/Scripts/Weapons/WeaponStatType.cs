@@ -2,10 +2,11 @@
 {
     public enum WeaponStatType
     {
-        Damage,
-        FireRate,
-        Range,
-        ShotSpeed,
-        ReloadSpeed
+        Damage = 0,
+        FireRate = 1,
+        Range = 2,
+        ShotSpeed = 3,
+        ReloadSpeed = 4,
+        ShotSize = 5
     }
 }

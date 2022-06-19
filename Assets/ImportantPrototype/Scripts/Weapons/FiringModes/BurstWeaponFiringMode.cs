@@ -21,7 +21,7 @@ namespace ImportantPrototype.Weapons
                     .Subscribe(_ =>
                     {
                         Observable
-                            .Timer(TimeSpan.Zero, TimeSpan.FromSeconds(weapon.FireRate))
+                            .Timer(TimeSpan.Zero, GetFireRate(weapon))
                             .Take(_burstSize)
                             .Subscribe(_ => observer.OnNext(Unit.Default));
                     });

@@ -1,4 +1,5 @@
 ﻿using ImportantPrototype.Characters;
+using ImportantPrototype.Stats;
 using UniRx;
 using UnityEngine;
 
@@ -14,22 +15,20 @@ namespace ImportantPrototype.Weapons
         
         public Rigidbody2D Rigidbody => _rigidbody;
 
-        public Vector2 Origin { get; private set; }
+        public float Speed { get; private set; }
         public Vector2 Direction { get; private set; }
-        
-        public Vector2 Position
+
+        private Vector2 Position
         {
-            get => transform.position;
             set => transform.position = value;
         }
-        
-        public Vector2 Rotation
+
+        private Vector2 Rotation
         {
-            get => transform.eulerAngles;
             set => transform.eulerAngles = value;
         }
-        
-        public ProjectileData Data { get; private set; }
+
+        private ProjectileData Data { get; set; }
 
         public static Projectile FromData(ProjectileData data)
         {
@@ -40,7 +39,6 @@ namespace ImportantPrototype.Weapons
 
         public void Initialize(Vector2 origin, Vector2 direction, Vector3 rotation)
         {
-            Origin = origin;
             Position = origin;
             Rotation = rotation;
             Direction = direction;
@@ -66,10 +64,27 @@ namespace ImportantPrototype.Weapons
         {
             Destroy(gameObject);
         }
+        
+        public void SetStats(WeaponStatCollection stats)
+        {
+            SetDamage(stats.Damage);
+            SetSpeed(stats.ShotSpeed);
+            SetSize(stats.ShotSize);
+        }
 
-        public void SetDamage(float damage)
+        private void SetDamage(float damage)
         {
             _damager.SetDamage(damage);
+        }
+
+        private void SetSpeed(float speed)
+        {
+            Speed = speed;
+        }
+
+        private void SetSize(float size)
+        {
+            transform.localScale *= size;
         }
     }
 }

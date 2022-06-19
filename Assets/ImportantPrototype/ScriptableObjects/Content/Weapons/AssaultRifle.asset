@@ -20,6 +20,7 @@ MonoBehaviour:
   _shotBehaviour: {fileID: 11400000, guid: 256d66eddbfda8840a6e58371b002182, type: 2}
   _damage: 1
   _fireRate: 0.5
+  _reloadSpeed: 0
   _range: 0
   _shotSpeed: 10
-  _reloadSpeed: 0
+  _shotSize: 1

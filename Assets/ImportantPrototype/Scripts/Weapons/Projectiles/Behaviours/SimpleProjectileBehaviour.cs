@@ -8,7 +8,7 @@ namespace ImportantPrototype.Weapons
     {
         public override void Initialize(Projectile projectile)
         {
-            projectile.Rigidbody.velocity = projectile.Direction * projectile.Data.Speed;
+            projectile.Rigidbody.velocity = projectile.Direction * projectile.Speed;
         }
     }
 }

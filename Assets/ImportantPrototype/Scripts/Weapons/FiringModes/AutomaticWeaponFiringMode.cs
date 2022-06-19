@@ -24,10 +24,5 @@ namespace ImportantPrototype.Weapons
                 .ThrottleFirst(GetFireRate(weapon))
                 .AsUnitObservable();
         }
-
-        private static TimeSpan GetFireRate(Weapon weapon)
-        {
-            return TimeSpan.FromSeconds(weapon.FireRate);
-        }
     }
 }

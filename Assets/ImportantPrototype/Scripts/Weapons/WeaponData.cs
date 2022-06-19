@@ -37,13 +37,16 @@ namespace ImportantPrototype.Weapons
         private float _fireRate;
 
         [SerializeField]
+        private float _reloadSpeed;
+
+        [SerializeField]
         private float _range;
 
         [SerializeField]
         private float _shotSpeed;
 
         [SerializeField]
-        private float _reloadSpeed;
+        private float _shotSize;
 
         public string Name => _name;
         public string Description => _description;
@@ -54,8 +57,9 @@ namespace ImportantPrototype.Weapons
 
         public float Damage => _damage;
         public float FireRate => _fireRate;
+        public float ReloadSpeed => _reloadSpeed;
         public float Range => _range;
         public float ShotSpeed => _shotSpeed;
-        public float ReloadSpeed => _reloadSpeed;
+        public float ShotSize => _shotSize;
     }
 }

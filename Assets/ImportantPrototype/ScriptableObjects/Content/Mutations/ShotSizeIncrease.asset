@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87c809f610b04f58b9e259fac8e417e1, type: 3}
-  m_Name: DamageIncrease
+  m_Name: ShotSizeIncrease
   m_EditorClassIdentifier: 
-  _name: Stronger
-  _description: Damage +25%
-  _stat: 0
+  _name: Big Shot
+  _description: Shot Size +20%
+  _stat: 5
   _type: 1
-  _value: 25
+  _value: 20
