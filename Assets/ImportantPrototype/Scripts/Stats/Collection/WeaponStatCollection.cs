@@ -8,10 +8,42 @@ namespace ImportantPrototype.Stats
     {
         private static readonly WeaponStatCollectionFactory _factory = new();
 
-        public float FireRate => Get<Attribute>(WeaponStatType.FireRate).Value;
-        public float Damage => Get<Attribute>(WeaponStatType.Damage).Value;
-        public float ShotSize => Get<Attribute>(WeaponStatType.ShotSize).Value;
-        public float ShotSpeed => Get<Attribute>(WeaponStatType.ShotSpeed).Value;
+        #region Fast Accessors
+
+        private Attribute _fireRate;
+        private Attribute _damage;
+        private Attribute _shotSize;
+        private Attribute _shotSpeed;
+        
+        public float Damage {
+            get {
+                _damage ??= Get<Attribute>(WeaponStatType.Damage);
+                return _damage.Value;
+            }
+        }
+        
+        public float FireRate {
+            get {
+                _fireRate ??= Get<Attribute>(WeaponStatType.FireRate);
+                return _fireRate.Value;
+            }
+        }
+        
+        public float ShotSize {
+            get {
+                _shotSize ??= Get<Attribute>(WeaponStatType.ShotSize);
+                return _shotSize.Value;
+            }
+        }
+        
+        public float ShotSpeed {
+            get {
+                _shotSpeed ??= Get<Attribute>(WeaponStatType.ShotSpeed);
+                return _shotSpeed.Value;
+            }
+        }
+        
+        #endregion Fast Accessors
         
         public static WeaponStatCollection FromWeaponData(WeaponData data)
         {
