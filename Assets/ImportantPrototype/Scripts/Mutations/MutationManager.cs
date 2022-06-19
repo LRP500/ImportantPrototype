@@ -25,10 +25,10 @@ namespace ImportantPrototype.Mutations
             return _allMutations.Items.Shuffle().Take(_mutationChoiceCount);
         }
 
-        public void Pick(Mutation mutation)
+        public void Pick(Mutation gene)
         {
-            mutation.OnPick(Context.Player.Value);
-            _activeMutations.Add(mutation);
+            gene.OnPick(Context.Player.Value);
+            _activeMutations.Add(gene);
         }
     }
 }

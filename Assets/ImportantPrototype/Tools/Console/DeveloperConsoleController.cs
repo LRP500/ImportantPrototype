@@ -1,8 +1,5 @@
-﻿using System;
-using Extensions;
-using TMPro;
+﻿using TMPro;
 using UniRx;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace ImportantPrototype.Tools.Console
@@ -19,7 +16,6 @@ namespace ImportantPrototype.Tools.Console
         private TMP_InputField _inputField;
 
         private bool _isOpened;
-        private float _pausedTimeScale;
         private DeveloperConsole _console;
         private readonly SerialDisposable _disposable = new();
         
@@ -43,12 +39,6 @@ namespace ImportantPrototype.Tools.Console
 
         private void Open()
         {
-            if (_settings.PauseGame)
-            {
-                _pausedTimeScale = Time.timeScale;
-                Time.timeScale = 0;
-            }
-
             _inputField.enabled = true;
             _inputField.ActivateInputField();
             _disposable.Disposable = _inputField.onEndEdit
@@ -61,7 +51,6 @@ namespace ImportantPrototype.Tools.Console
 
         private void Close()
         {
-            Time.timeScale = _pausedTimeScale;
             _canvas.enabled = false;
             _inputField.DeactivateInputField();
             _inputField.enabled = false;

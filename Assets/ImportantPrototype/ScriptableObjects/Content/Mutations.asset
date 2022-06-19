@@ -13,7 +13,5 @@ MonoBehaviour:
   m_Name: Mutations
   m_EditorClassIdentifier: 
   _items:
-  - {fileID: 11400000, guid: 1e42cd1d5ebb09549892b46847f6862d, type: 2}
-  - {fileID: 11400000, guid: a0e9e3932220147418adb2c9a6a0b084, type: 2}
-  - {fileID: 11400000, guid: 4f4a9c5db49c2494aaf1335749298650, type: 2}
-  - {fileID: 11400000, guid: e696ce0ad0d12c942abaed418f6d400c, type: 2}
+  - {fileID: 11400000, guid: a342049c55109234f86a3e0c43ff893e, type: 2}
+  - {fileID: 11400000, guid: 0bf27fff6577c054e92968cd8ddf120a, type: 2}

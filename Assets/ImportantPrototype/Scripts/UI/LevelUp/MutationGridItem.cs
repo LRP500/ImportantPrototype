@@ -3,23 +3,24 @@ using ImportantPrototype.Mutations;
 using TMPro;
 using UniRx;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityTools.Runtime.Extensions;
 using UnityTools.Runtime.UI;
 
 namespace ImportantPrototype.UI
 {
-    public class MutationGridItem : Element
+    public class MutationGridItem : Element, IPointerEnterHandler
     {
         [SerializeField]
         private TextMeshProUGUI _name;
 
         [SerializeField]
-        private TextMeshProUGUI _description;
-        
-        [SerializeField]
         private Toggle _toggle;
-        
+
+        [SerializeField]
+        private MutationReactiveVariable _hoveredMutation;
+
         private Mutation _mutation;
 
         public override void Initialize()
@@ -27,9 +28,9 @@ namespace ImportantPrototype.UI
             _toggle.group = GetComponentInParent<ToggleGroup>();
         }
 
-        public void Bind(Mutation mutation)
+        public void Bind(Mutation gene)
         {
-            _mutation = mutation;
+            _mutation = gene;
             Refresh();
         }
 
@@ -41,12 +42,11 @@ namespace ImportantPrototype.UI
         public override void Refresh()
         {
             _name.SetText(_mutation.Name);
-            _description.SetText(_mutation.Description);
         }
 
-        public void Select()
+        public void OnPointerEnter(PointerEventData eventData)
         {
-            _toggle.isOn = true;
+            _hoveredMutation.SetValue(_mutation);
         }
     }
 }

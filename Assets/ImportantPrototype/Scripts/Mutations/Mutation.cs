@@ -1,9 +1,14 @@
+using System.Collections.Generic;
 using ImportantPrototype.Characters;
+using ImportantPrototype.System;
+using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using UnityEngine;
 
 namespace ImportantPrototype.Mutations
 {
-    public abstract class Mutation : ScriptableObject
+    [CreateAssetMenu(menuName = ContextMenuPath.Mutations + "Mutation")]
+    public class Mutation : SerializedScriptableObject
     {
         [SerializeField]
         private string _name;
@@ -12,9 +17,24 @@ namespace ImportantPrototype.Mutations
         [SerializeField]
         private string _description;
 
+        [OdinSerialize]
+        private List<Gene> _genes = new ();
+        
         public string Name => _name;
         public string Description => _description;
-        
-        public abstract void OnPick(Player player);
+        public IReadOnlyList<Gene> Genes => _genes;
+
+        public void OnPick(Player player)
+        {
+            ApplyGenes(player);
+        }
+
+        private void ApplyGenes(Player player)
+        {
+            for (int i = 0; i < _genes.Count; i++)
+            {
+                _genes[i].Apply(player);
+            }
+        }
     }
 }

@@ -41,7 +41,7 @@ namespace ImportantPrototype.Leveling
             return Mathf.FloorToInt(_xpConstant * Mathf.Sqrt(xp));
         }
         
-        private float GetRequiredXP(int level)
+        public float GetRequiredXP(int level)
         {
             return level * level / (_xpConstant * _xpConstant);
         }

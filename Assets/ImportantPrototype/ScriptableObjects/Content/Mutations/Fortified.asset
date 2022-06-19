@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae76784a41ed4c40a5e492b658e1075, type: 3}
+  m_Name: Fortified
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 4c9ea2f969773824f8fbd0b27862f80b, type: 2}
+    - {fileID: 11400000, guid: 995100af95548824f8de190f5b8768c6, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _genes
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[ImportantPrototype.Mutations.Gene,
+        ImportantProject]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 1|ImportantPrototype.Mutations.WeaponAttributeGene, ImportantProject
+    - Name: _stat
+      Entry: 10
+      Data: 0
+    - Name: _type
+      Entry: 3
+      Data: 2
+    - Name: _value
+      Entry: 4
+      Data: 25
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|ImportantPrototype.Mutations.WeaponAttributeGene, ImportantProject
+    - Name: _stat
+      Entry: 10
+      Data: 1
+    - Name: _type
+      Entry: 3
+      Data: 2
+    - Name: _value
+      Entry: 4
+      Data: -15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  _name: Fortified
+  _description: 

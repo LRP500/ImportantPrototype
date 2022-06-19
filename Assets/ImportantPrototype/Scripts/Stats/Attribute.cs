@@ -20,9 +20,7 @@ namespace ImportantPrototype.Stats
         {
             get
             {
-                if (!_isDirty) return _modifiedValue.Value;
-                _modifiedValue.Value = Calculate();
-                _isDirty = false;
+                if (_isDirty) Refresh();
                 return _modifiedValue.Value;
             }
         }
@@ -40,6 +38,7 @@ namespace ImportantPrototype.Stats
         {
             base.SetValue(value);
             ClearModifiers();
+            Refresh();
         }
         
         public void Add(float increment)
@@ -86,6 +85,12 @@ namespace ImportantPrototype.Stats
             }
         }
 
+        private void Refresh()
+        {
+            _modifiedValue.Value = Calculate();
+            _isDirty = false;
+        }
+        
         private float Calculate()
         {
             float modValue = 0;

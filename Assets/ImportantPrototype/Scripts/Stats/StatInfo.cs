@@ -15,6 +15,8 @@ namespace ImportantPrototype.Stats
         [SerializeField]
         private StatType _type;
 
+        public string Name => _name;
+        public string Description => _description;
         public StatType Type => _type;
         
         public abstract int Id { get; }

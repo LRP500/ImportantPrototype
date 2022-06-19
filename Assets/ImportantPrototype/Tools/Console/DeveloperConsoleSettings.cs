@@ -12,9 +12,6 @@ namespace ImportantPrototype.Tools.Console
         private string _prefix;
 
         [SerializeField]
-        private bool _pauseGame = true;
-
-        [SerializeField]
         private float _fontSize = 24;
         
         [SerializeField]
@@ -22,7 +19,6 @@ namespace ImportantPrototype.Tools.Console
         private ConsoleCommand[] _commands;
 
         public string Prefix => _prefix;
-        public bool PauseGame => _pauseGame;
         public float FontSize => _fontSize;
         public IReadOnlyList<ConsoleCommand> Commands => _commands;
     }

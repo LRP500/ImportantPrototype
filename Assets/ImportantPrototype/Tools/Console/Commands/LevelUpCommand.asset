@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87c809f610b04f58b9e259fac8e417e1, type: 3}
-  m_Name: ShotSpeedIncrease
+  m_Script: {fileID: 11500000, guid: dda2eb3580b10ef4eb392ef8298c9ade, type: 3}
+  m_Name: LevelUpCommand
   m_EditorClassIdentifier: 
-  _name: Fast Shot
-  _description: Shot Speed +35%
-  _stat: 3
-  _type: 1
-  _value: 35
+  _name: levelup
+  _levelManager: {fileID: 11400000, guid: 613d113966f4f424e90c98fc2ab3619a, type: 2}
+  _player: {fileID: 11400000, guid: 35f933c98b6bd184699369384bf7d54e, type: 2}

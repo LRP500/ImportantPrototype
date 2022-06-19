@@ -12,21 +12,22 @@ namespace ImportantPrototype.UI
     {
         [SerializeField]
         private MutationGridItem _mutationPrefab;
-        
+
         [SerializeField]
         private GridLayoutGroup _gridLayout;
 
         private Action<Mutation> _callback;
         private readonly List<MutationGridItem> _mutations = new ();
-
-        private void OnMutationSelected(Mutation mutation)
+        
+        private void OnMutationSelected(Mutation gene)
         {
-            _callback.Invoke(mutation);
+            _callback.Invoke(gene);
         }
-
+        
         public void Open(IEnumerable<Mutation> items, Action<Mutation> callback)
         {
             _callback = callback;
+            Clear();
             CreateItems(items);
             Show();
         }
@@ -40,10 +41,10 @@ namespace ImportantPrototype.UI
             } 
         }
         
-        private MutationGridItem CreateItem(Mutation mutation)
+        private MutationGridItem CreateItem(Mutation gene)
         {
             var item = Instantiate(_mutationPrefab, _gridLayout.transform);
-            item.Bind(mutation);
+            item.Bind(gene);
             item.ObserveSelect()
                 .Subscribe(OnMutationSelected)
                 .AddTo(gameObject);

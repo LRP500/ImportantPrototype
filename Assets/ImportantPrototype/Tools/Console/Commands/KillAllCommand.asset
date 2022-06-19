@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d08846eb9224e8fad9e88f8b016ae87, type: 3}
   m_Name: KillAllCommand
   m_EditorClassIdentifier: 
-  _name: kill_all
+  _name: killall
   _enemies: {fileID: 11400000, guid: 01d3b335ffa3b704e9b2f93b2ad736d1, type: 2}
