@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using ImportantPrototype.Mutations;
 using UniRx;
 using UnityEngine;
@@ -16,7 +17,11 @@ namespace ImportantPrototype.UI
         [SerializeField]
         private GridLayoutGroup _gridLayout;
 
+        [SerializeField]
+        private MutationReactiveVariable _hoveredMutation;
+        
         private Action<Mutation> _callback;
+        private List<Mutation> _choices = new ();
         private readonly List<MutationGridItem> _mutations = new ();
         
         private void OnMutationSelected(Mutation gene)
@@ -24,21 +29,29 @@ namespace ImportantPrototype.UI
             _callback.Invoke(gene);
         }
         
-        public void Open(IEnumerable<Mutation> items, Action<Mutation> callback)
+        public void Open(IEnumerable<Mutation> choices, Action<Mutation> callback)
         {
             _callback = callback;
-            Clear();
-            CreateItems(items);
+            _choices = choices.ToList();
+            _hoveredMutation.SetValue(_choices[0]);
+            CreateItems();
             Show();
         }
 
-        private void CreateItems(IEnumerable<Mutation> items)
+        protected override void OnShow()
         {
-            foreach (var mutation in items)
+        }
+
+        private void CreateItems()
+        {
+            Clear();
+
+            for (int i = 0; i < _choices.Count; i++)
             {
+                var mutation = _choices[i];
                 var item = CreateItem(mutation);
                 _mutations.Add(item);
-            } 
+            }
         }
         
         private MutationGridItem CreateItem(Mutation gene)

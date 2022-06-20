@@ -71,6 +71,7 @@ MonoBehaviour:
   _hideOnStart: 0
   _mutationPrefab: {fileID: 5570879482852482199, guid: 5b183594b1519bf4d8018e972eff9d45, type: 3}
   _gridLayout: {fileID: 653015623329427243}
+  _hoveredMutation: {fileID: 11400000, guid: ac157fb13270d944baca1c4141b30c8f, type: 2}
 --- !u!1 &1034258826544303158
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,16 +28,14 @@ namespace ImportantPrototype.UI
 
         private void Refresh(Mutation mutation)
         {
-            Clear();
-
-            if (mutation != null)
-            {
-                SetMutation(mutation);
-            }
+            if (mutation == null) return;
+            SetMutation(mutation);
         }
 
         private void SetMutation(Mutation mutation)
         {
+            Clear();
+
             for (int i = 0; i < mutation.Genes.Count; i++)
             {
                 var gene = mutation.Genes[i];
