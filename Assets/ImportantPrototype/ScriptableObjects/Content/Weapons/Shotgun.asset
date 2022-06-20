@@ -19,7 +19,7 @@ MonoBehaviour:
   _firingMode: {fileID: 11400000, guid: 5c76b5765bd497548afed7eaeb095bc2, type: 2}
   _shotBehaviour: {fileID: 11400000, guid: 9452542b9718cf046881e0e31e2cd4e3, type: 2}
   _damage: 1
-  _fireRate: 1.5
+  _fireRate: 0.5
   _reloadSpeed: 0
   _range: 0
   _shotSpeed: 10

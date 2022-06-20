@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ae76784a41ed4c40a5e492b658e1075, type: 3}
-  m_Name: Trigger Happy
+  m_Name: BigBoy
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 11400000, guid: 995100af95548824f8de190f5b8768c6, type: 2}
-    - {fileID: 11400000, guid: 4c9ea2f969773824f8fbd0b27862f80b, type: 2}
+    - {fileID: 11400000, guid: cd78e0556c721f346990348058e49346, type: 2}
+    - {fileID: 11400000, guid: 6ba5054f8fcc033409f9f0eda4a35a1f, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -56,7 +56,7 @@ MonoBehaviour:
       Data: 2
     - Name: _value
       Entry: 4
-      Data: -15
+      Data: -25
     - Name: 
       Entry: 8
       Data: 
@@ -66,5 +66,5 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  _name: Trigger Happy
+  _name: Big Boy
   _description: 

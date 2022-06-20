@@ -1,4 +1,5 @@
 using System;
+using Extensions;
 using ImportantPrototype.System;
 using UniRx;
 using UnityEngine;
@@ -11,18 +12,32 @@ namespace ImportantPrototype.Weapons
     {
         public override IObservable<Unit> FilterInput(Weapon weapon, IObservable<bool> inputStream)
         {
+            return Observable.Create<Unit>(observer =>
+            {
+                var lastShot = Time.time;
+                var disposable = new SerialDisposable();
+                inputStream
+                    .DistinctUntilChanged()
+                    .SubscribeTwoStates(
+                    () =>
+                    {
+                        disposable.Disposable = inputStream.WhereTrue()
+                            .Subscribe(_ =>
+                            {
+                                var timer = GetFireRate(weapon);
+                                if (!(Time.time - lastShot > timer)) return;
+                                lastShot = Time.time;
+                                observer.OnNext(Unit.Default);
+                            });
+                    },
+                    () => disposable.Clear());
+                return disposable;
+            });
+          
             // return inputStream
             //     .WhereTrue()
-            //     .Zip(inputStream
-            //         .WhereTrue()
-            //         .ThrottleFirst(GetFireRate(weapon))
-            //         .Repeat(), (input, first) => input && first)
+            //     .ThrottleFirst(GetFireRate(weapon))
             //     .AsUnitObservable();
-
-            return inputStream
-                .WhereTrue()
-                .ThrottleFirst(GetFireRate(weapon))
-                .AsUnitObservable();
         }
     }
 }

@@ -6,9 +6,9 @@ namespace ImportantPrototype.Weapons
 {
     public abstract class WeaponFiringMode : ScriptableObject
     {
-        protected static TimeSpan GetFireRate(Weapon weapon)
+        protected static float GetFireRate(Weapon weapon)
         {
-            return TimeSpan.FromSeconds(weapon.Stats.FireRate);
+            return 1f / weapon.Stats.FireRate;
         }
 
         public abstract IObservable<Unit> FilterInput(Weapon weapon, IObservable<bool> inputStream);

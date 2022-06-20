@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using ImportantPrototype.Stats.Modifiers;
 using UniRx;
-using UnityEngine;
 
 namespace ImportantPrototype.Stats
 {
@@ -116,7 +115,8 @@ namespace ImportantPrototype.Stats
                 }
 
                 // We apply mod value to total mod value
-                modValue += group[0].Apply(BaseValue + modValue, Mathf.Max(sum, max));
+                var groupValue = group[0].Additive ? sum : max;
+                modValue += group[0].Apply(BaseValue + modValue, groupValue);
             }
             
             return (float) Math.Round(BaseValue + modValue, 4);
