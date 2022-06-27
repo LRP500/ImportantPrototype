@@ -67,7 +67,6 @@ namespace ImportantPrototype.Weapons
         
         public void SetStats(WeaponStatCollection stats)
         {
-            Debug.Log($"[damage]: {stats.Damage}, [shotSpeed]: {stats.ShotSpeed}");
             SetDamage(stats.Damage);
             SetSpeed(stats.ShotSpeed);
             SetSize(stats.ShotSize);

@@ -30,11 +30,11 @@ namespace ImportantPrototype.Characters
         private void UpdateAim()
         {
             Vector3 origin = _player.Position;
-            var target =  _cameraVariable.Value.ScreenToWorldPoint(PlayerInput.MousePosition);
-            var aimDir = (target - origin).normalized;
+            var mousePos = PlayerInput.MousePosition;
+            var target =  _cameraVariable.Value.ScreenToWorldPoint(mousePos);
 
-            AimDirection = aimDir;
-            AimAngle = Mathf.Atan2(aimDir.x, aimDir.y) * Mathf.Rad2Deg - 90;
+            AimDirection = (target - origin).normalized;
+            AimAngle = Mathf.Atan2(AimDirection.x, AimDirection.y) * Mathf.Rad2Deg - 90;
             
             _player.WeaponHolder.SetRotation(AimAngle);
         }

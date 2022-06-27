@@ -1,4 +1,5 @@
 ﻿using ImportantPrototype.Characters;
+using ImportantPrototype.Level;
 using ImportantPrototype.Weapons;
 using UniRx;
 using UnityEngine;
@@ -13,12 +14,15 @@ namespace ImportantPrototype
 
         [SerializeField]
         private PlayerReactiveVariable _player;
-
+        
         [SerializeField]
         private WeaponDataReactiveVariable _selectedWeapon;
         
-        [Space]
         [SerializeField]
+        private LevelManager _levelManager;
+        
+        [SerializeField]
+        [Header("Events")]
         private ScriptableEvent _gameOverEvent;
 
         [SerializeField]
@@ -26,10 +30,16 @@ namespace ImportantPrototype
 
         private void Start()
         {
+            SetupGame();       
+            _levelManager.StartLevel();
+        }
+
+        private void SetupGame()
+        {
             _context.Initialize();
             SetupPlayer();
         }
-
+        
         private void SetupPlayer()
         {
             _player.Value.WeaponHolder

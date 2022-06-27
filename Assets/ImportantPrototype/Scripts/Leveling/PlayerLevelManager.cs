@@ -7,8 +7,8 @@ using UnityEngine;
 
 namespace ImportantPrototype.Leveling
 {
-    [CreateAssetMenu(menuName = ContextMenuPath.Managers + "Level Manager")]
-    public class LevelManager : ScriptableManager
+    [CreateAssetMenu(menuName = ContextMenuPath.Managers + "Player Level Manager")]
+    public class PlayerLevelManager : ScriptableManager
     {
         [SerializeField]
         private float _xpConstant;

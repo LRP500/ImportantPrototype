@@ -5,6 +5,7 @@ using ImportantPrototype.Mutations;
 using ImportantPrototype.System;
 using UniRx;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityTools.Runtime.Variables;
 
 namespace ImportantPrototype
@@ -15,8 +16,9 @@ namespace ImportantPrototype
         [SerializeField]
         private EnemyManager _enemyManager;
 
+        [FormerlySerializedAs("_levelManager")]
         [SerializeField]
-        private LevelManager _levelManager;
+        private PlayerLevelManager _playerLevelManager;
 
         [SerializeField]
         private MutationManager _mutationManager;
@@ -28,14 +30,14 @@ namespace ImportantPrototype
         private TransformVariable _disposableTarget;
 
         public EnemyManager EnemyManager => _enemyManager;
-        public LevelManager LevelManager => _levelManager;
+        public PlayerLevelManager PlayerLevelManager => _playerLevelManager;
         public IReadOnlyReactiveProperty<Player> Player => _player.Property;
         public GameObject DisposableTarget => _disposableTarget.Value.gameObject;
 
         public void Initialize()
         {
             _enemyManager.Initialize(this);
-            _levelManager.Initialize(this);
+            _playerLevelManager.Initialize(this);
             _mutationManager.Initialize(this);
         }
 

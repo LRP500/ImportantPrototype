@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cc6ffdbdacd7ab45b733d24e9e3f5fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initializeOnStart: 0
-  _showOnStart: 1
+  _initializeOnStart: 1
+  _hideOnStart: 0
   _fill: {fileID: 8444588901157704789}
   _player: {fileID: 11400000, guid: 35f933c98b6bd184699369384bf7d54e, type: 2}
