@@ -23,13 +23,13 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: _genes
+    - Name: _positiveGenes
       Entry: 7
       Data: 0|System.Collections.Generic.List`1[[ImportantPrototype.Mutations.Gene,
         ImportantProject]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
       Data: 1|ImportantPrototype.Mutations.WeaponAttributeGene, ImportantProject
@@ -38,7 +38,7 @@ MonoBehaviour:
       Data: 0
     - Name: _type
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: _value
       Entry: 4
       Data: 25
@@ -46,14 +46,27 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _negativeGenes
       Entry: 7
-      Data: 2|ImportantPrototype.Mutations.WeaponAttributeGene, ImportantProject
+      Data: 2|System.Collections.Generic.List`1[[ImportantPrototype.Mutations.Gene,
+        ImportantProject]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 3|ImportantPrototype.Mutations.WeaponAttributeGene, ImportantProject
     - Name: _stat
       Entry: 10
       Data: 1
     - Name: _type
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: _value
       Entry: 4
       Data: -15
@@ -63,6 +76,15 @@ MonoBehaviour:
     - Name: 
       Entry: 13
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: _genotypeMod
+      Entry: 7
+      Data: 4|ImportantPrototype.Mutations.NegateNegativeGene, ImportantProject
+    - Name: _duration
+      Entry: 3
+      Data: 1
     - Name: 
       Entry: 8
       Data: 

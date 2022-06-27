@@ -5,6 +5,8 @@ using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
 
+// ReSharper disable ConvertToAutoProperty
+
 namespace ImportantPrototype.Mutations
 {
     [CreateAssetMenu(menuName = ContextMenuPath.Mutations + "Mutation")]
@@ -18,12 +20,20 @@ namespace ImportantPrototype.Mutations
         private string _description;
 
         [OdinSerialize]
-        private List<Gene> _genes = new ();
+        private List<Gene> _positiveGenes = new ();
+
+        [OdinSerialize]
+        private List<Gene> _negativeGenes = new ();
+        
+        [OdinSerialize]
+        private GenotypeMod _genotypeMod;
         
         public string Name => _name;
         public string Description => _description;
-        public IReadOnlyList<Gene> Genes => _genes;
-
+        public GenotypeMod GenotypeMod => _genotypeMod;
+        public IList<Gene> PositiveGenes => _positiveGenes;
+        public IList<Gene> NegativeGenes => _negativeGenes;
+        
         public void OnPick(Player player)
         {
             ApplyGenes(player);
@@ -31,10 +41,18 @@ namespace ImportantPrototype.Mutations
 
         private void ApplyGenes(Player player)
         {
-            for (int i = 0; i < _genes.Count; i++)
+            var genes = GetAllGenes();
+            for (int i = 0; i < genes.Count; i++)
             {
-                _genes[i].Apply(player);
+                genes[i].Apply(player);
             }
+        }
+
+        public IReadOnlyList<Gene> GetAllGenes()
+        {
+            var genes = new List<Gene>(_positiveGenes);
+            genes.AddRange(_negativeGenes);
+            return genes;
         }
     }
 }

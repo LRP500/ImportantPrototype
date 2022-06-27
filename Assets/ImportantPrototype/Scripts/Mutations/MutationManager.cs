@@ -18,6 +18,7 @@ namespace ImportantPrototype.Mutations
         [SerializeField]
         private IntVariable _mutationChoiceCount;
 
+        private readonly ReactiveCollection<GenotypeMod> _genotypeMods = new ();
         private readonly ReactiveCollection<Mutation> _activeMutations = new ();
 
         public IEnumerable<Mutation> GetNextMutationChoices()
@@ -25,10 +26,27 @@ namespace ImportantPrototype.Mutations
             return _allMutations.Items.Shuffle().Take(_mutationChoiceCount);
         }
 
-        public void Pick(Mutation gene)
+        public void Pick(Mutation mutation)
         {
-            gene.OnPick(Context.Player.Value);
-            _activeMutations.Add(gene);
+            var modifiedMutation = ApplyGenotypeMod(mutation);
+            modifiedMutation.OnPick(Context.Player.Value);
+
+            if (modifiedMutation.GenotypeMod != null)
+            {
+                _genotypeMods.Add(modifiedMutation.GenotypeMod);
+            }
+
+            _activeMutations.Add(modifiedMutation);
+        }
+
+        private Mutation ApplyGenotypeMod(Mutation mutation)
+        {
+            var instance = Instantiate(mutation);
+            foreach (var mod in _genotypeMods)
+            {
+                mod.Apply(ref instance);
+            }
+            return instance;
         }
     }
 }

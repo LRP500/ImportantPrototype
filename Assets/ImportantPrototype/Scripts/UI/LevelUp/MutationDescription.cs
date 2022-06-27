@@ -36,10 +36,10 @@ namespace ImportantPrototype.UI
         {
             Clear();
 
-            for (int i = 0; i < mutation.Genes.Count; i++)
+            var genes = mutation.GetAllGenes();
+            for (int i = 0; i < genes.Count; i++)
             {
-                var gene = mutation.Genes[i];
-                var item = CreateGeneItem(gene);
+                var item = CreateGeneItem(genes[i]);
                 _genes.Add(item);
             }
         }
