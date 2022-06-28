@@ -31,6 +31,11 @@ namespace ImportantPrototype.Mutations
             GetAttribute(player).AddModifier(Value, Type);
         }
         
+        public override void Scale(float multiplier)
+        {
+            _value *= multiplier;
+        }
+        
         public override string ToString()
         {
             var value = ((_value >= 0 ? "+" : "") + _value)

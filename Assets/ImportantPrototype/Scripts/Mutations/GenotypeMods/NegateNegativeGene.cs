@@ -6,7 +6,7 @@ namespace ImportantPrototype.Mutations
     {
         public override string GetDescription()
         {
-            return $"Negate subsequent negative genes ({Duration.ToString()})";
+            return "Negate any negative genes for the next mutation";
         }
 
         protected override void OnApply(ref Mutation mutation)

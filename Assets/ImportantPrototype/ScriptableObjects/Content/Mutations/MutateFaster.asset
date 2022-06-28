@@ -65,10 +65,13 @@ MonoBehaviour:
       Data: 
     - Name: _genotypeMod
       Entry: 7
-      Data: 3|ImportantPrototype.Mutations.DefaultGenotypeMod, ImportantProject
+      Data: 3|ImportantPrototype.Mutations.MultiplyPositiveEffectGenotypeMod, ImportantProject
     - Name: _duration
       Entry: 3
       Data: 1
+    - Name: _multiplier
+      Entry: 3
+      Data: 2
     - Name: 
       Entry: 8
       Data: 

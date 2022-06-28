@@ -81,10 +81,13 @@ MonoBehaviour:
       Data: 
     - Name: _genotypeMod
       Entry: 7
-      Data: 4|ImportantPrototype.Mutations.NegateNegativeGene, ImportantProject
+      Data: 4|ImportantPrototype.Mutations.MultiplyEffectGenotypeMod, ImportantProject
     - Name: _duration
       Entry: 3
       Data: 1
+    - Name: _multiplier
+      Entry: 3
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
