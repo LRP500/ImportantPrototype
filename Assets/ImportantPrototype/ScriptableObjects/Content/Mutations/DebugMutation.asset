@@ -48,7 +48,13 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: _genotypeMod
-      Entry: 6
+      Entry: 7
+      Data: 2|ImportantPrototype.Mutations.DefaultGenotypeMod, ImportantProject
+    - Name: _duration
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
       Data: 
   _name: Debug
   _description: 

@@ -9,10 +9,10 @@ using UnityTools.Runtime.UI;
 
 namespace ImportantPrototype.UI
 {
-    public class MutationSelection : Element
+    public class MutationSelection : CompositeElement
     {
         [SerializeField]
-        private MutationGridItem _mutationPrefab;
+        private MutationItem _mutationPrefab;
 
         [SerializeField]
         private GridLayoutGroup _gridLayout;
@@ -22,7 +22,7 @@ namespace ImportantPrototype.UI
         
         private Action<Mutation> _callback;
         private List<Mutation> _choices = new ();
-        private readonly List<MutationGridItem> _mutations = new ();
+        private readonly List<MutationItem> _mutations = new ();
         
         private void OnMutationSelected(Mutation gene)
         {
@@ -38,10 +38,6 @@ namespace ImportantPrototype.UI
             Show();
         }
 
-        protected override void OnShow()
-        {
-        }
-
         private void CreateItems()
         {
             Clear();
@@ -54,7 +50,7 @@ namespace ImportantPrototype.UI
             }
         }
         
-        private MutationGridItem CreateItem(Mutation gene)
+        private MutationItem CreateItem(Mutation gene)
         {
             var item = Instantiate(_mutationPrefab, _gridLayout.transform);
             item.Bind(gene);

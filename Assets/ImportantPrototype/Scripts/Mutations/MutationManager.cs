@@ -21,22 +21,39 @@ namespace ImportantPrototype.Mutations
         private readonly ReactiveCollection<GenotypeMod> _genotypeMods = new ();
         private readonly ReactiveCollection<Mutation> _activeMutations = new ();
 
+        public IReadOnlyReactiveCollection<GenotypeMod> GenotypeMods => _genotypeMods;
+        public IReadOnlyReactiveCollection<Mutation> ActiveMutations => _activeMutations;
+
         public IEnumerable<Mutation> GetNextMutationChoices()
         {
             return _allMutations.Items.Shuffle().Take(_mutationChoiceCount);
         }
 
         public void Pick(Mutation mutation)
+        { 
+            ApplyMutation(mutation);
+            UpdateGenotypeMods();
+        }
+
+        private void ApplyMutation(Mutation mutation)
         {
             var modifiedMutation = ApplyGenotypeMod(mutation);
             modifiedMutation.OnPick(Context.Player.Value);
 
-            if (modifiedMutation.GenotypeMod != null)
-            {
-                _genotypeMods.Add(modifiedMutation.GenotypeMod);
-            }
-
             _activeMutations.Add(modifiedMutation);
+            _genotypeMods.Add(modifiedMutation.GenotypeMod);
+        }
+        
+        private void UpdateGenotypeMods()
+        {
+            for (int i = _genotypeMods.Count - 1; i >= 0; i--)
+            {
+                var mod = _genotypeMods[i];
+                if (mod.Duration <= 0)
+                {
+                    _genotypeMods.Remove(mod);
+                }
+            }
         }
 
         private Mutation ApplyGenotypeMod(Mutation mutation)

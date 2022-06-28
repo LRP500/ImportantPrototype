@@ -4,7 +4,12 @@ namespace ImportantPrototype.Mutations
 {
     public class NegateNegativeGene : GenotypeMod
     {
-        public override void Apply(ref Mutation mutation)
+        public override string GetDescription()
+        {
+            return $"Negate subsequent negative genes ({Duration.ToString()})";
+        }
+
+        protected override void OnApply(ref Mutation mutation)
         {
             var genes = mutation.NegativeGenes;
             if (genes.IsNullOrEmpty()) return;

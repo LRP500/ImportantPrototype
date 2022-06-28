@@ -10,7 +10,7 @@ using UnityTools.Runtime.UI;
 
 namespace ImportantPrototype.UI
 {
-    public class MutationGridItem : Element, IPointerEnterHandler
+    public class MutationItem : Element, IPointerEnterHandler
     {
         [SerializeField]
         private TextMeshProUGUI _name;

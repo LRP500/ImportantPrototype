@@ -37,7 +37,7 @@ MonoBehaviour:
       Data: 0
     - Name: _type
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: _value
       Entry: 4
       Data: 30
@@ -65,7 +65,7 @@ MonoBehaviour:
       Data: 
     - Name: _genotypeMod
       Entry: 7
-      Data: 3|ImportantPrototype.Mutations.NegateNegativeGene, ImportantProject
+      Data: 3|ImportantPrototype.Mutations.DefaultGenotypeMod, ImportantProject
     - Name: _duration
       Entry: 3
       Data: 1

@@ -12,7 +12,14 @@ namespace ImportantPrototype.Mutations
         private int _duration;
 
         public int Duration => _duration;
-        
-        public abstract void Apply(ref Mutation mutation);
+
+        public void Apply(ref Mutation mutation)
+        {
+            _duration -= 1;
+            OnApply(ref mutation);
+        }
+
+        public abstract string GetDescription();
+        protected abstract void OnApply(ref Mutation mutation);
     }
 }

@@ -26,7 +26,7 @@ namespace ImportantPrototype.Mutations
         private List<Gene> _negativeGenes = new ();
         
         [OdinSerialize]
-        private GenotypeMod _genotypeMod;
+        private GenotypeMod _genotypeMod = new DefaultGenotypeMod();
         
         public string Name => _name;
         public string Description => _description;
