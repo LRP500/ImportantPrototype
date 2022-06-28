@@ -1,4 +1,6 @@
-﻿using ImportantPrototype.Stats.Factory;
+﻿using System.Collections.Generic;
+using System.Linq;
+using ImportantPrototype.Stats.Factory;
 using UniRx;
 
 namespace ImportantPrototype.Stats
@@ -6,7 +8,7 @@ namespace ImportantPrototype.Stats
     public abstract class StatCollection
     {
         private readonly ReactiveDictionary<StatInfo, Stat> _stats = new ();
-        
+
         protected StatCollection() { }
         
         protected StatCollection(StatCollectionData data)
@@ -38,6 +40,11 @@ namespace ImportantPrototype.Stats
             }
 
             return default;
+        }
+        
+        public IEnumerable<T> Get<T>() where T : Stat
+        {
+            return _stats.Values.OfType<T>();
         }
     }
 }

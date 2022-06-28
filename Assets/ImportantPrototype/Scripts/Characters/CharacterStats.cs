@@ -23,7 +23,7 @@ namespace ImportantPrototype.Characters
         {
             return Collection.Get<T>((int) id);
         }
-
+        
         public IObservable<float> ObserveVital(CharacterStatType type)
         {
             return Collection.Get<Vital>((int) type).Current.Property;
