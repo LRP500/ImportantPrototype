@@ -23,6 +23,7 @@ namespace ImportantPrototype.UI
         
         protected override void OnShow()
         {
+            Clear();
             CreateItems(_mutationManager.GenotypeMods);
         }
 
@@ -33,11 +34,6 @@ namespace ImportantPrototype.UI
                 var item = CreateItem(mod);
                 _items.Add(item);
             }
-        }
-        
-        protected override void OnHide()
-        {
-            Clear();
         }
 
         public override void Clear()

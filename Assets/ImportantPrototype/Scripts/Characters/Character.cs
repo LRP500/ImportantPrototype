@@ -1,3 +1,4 @@
+using UniRx;
 using UnityEngine;
 using Attribute = ImportantPrototype.Stats.Attribute;
 
@@ -30,7 +31,7 @@ namespace ImportantPrototype.Characters
 
         private void Initialize()
         {
-            Motor.SetSpeed(Stats.Get<Attribute>(CharacterStatType.MovementSpeed).Value);
+         
             OnInitialize();
         }
         

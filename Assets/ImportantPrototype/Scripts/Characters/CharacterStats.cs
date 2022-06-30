@@ -1,5 +1,6 @@
 using System;
 using ImportantPrototype.Stats;
+using UniRx;
 using UnityEngine;
 using Attribute = ImportantPrototype.Stats.Attribute;
 
@@ -7,14 +8,22 @@ namespace ImportantPrototype.Characters
 {
     public class CharacterStats : MonoBehaviour
     {
+        private Character Character { get; set; }
         public CharacterStatCollection Collection { get; private set; }
-
+        
         private void Awake()
         {
-            var data = GetComponent<Character>()?.Data;
-            Collection = CharacterStatCollection.FromCharacterData(data);
+            Character = GetComponent<Character>();
+            Collection = CharacterStatCollection.FromCharacterData(Character.Data);
         }
 
+        private void Start()
+        {
+            Get<Attribute>(CharacterStatType.MovementSpeed).Property
+                .Subscribe(Character.Motor.SetSpeed)
+                .AddTo(gameObject);
+        }
+        
         public T Get<T>(CharacterStatType id) where T : Stat
         {
             return Collection.Get<T>((int) id);

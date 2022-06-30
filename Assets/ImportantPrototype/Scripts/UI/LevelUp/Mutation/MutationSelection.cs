@@ -34,14 +34,14 @@ namespace ImportantPrototype.UI
             _callback = callback;
             _choices = choices.ToList();
             _hoveredMutation.SetValue(_choices[0]);
+
+            Clear();
             CreateItems();
             Show();
         }
 
         private void CreateItems()
         {
-            Clear();
-
             for (int i = 0; i < _choices.Count; i++)
             {
                 var mutation = _choices[i];
