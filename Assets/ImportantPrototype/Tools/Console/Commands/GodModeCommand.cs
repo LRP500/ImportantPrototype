@@ -12,7 +12,12 @@ namespace ImportantPrototype.Tools.Console.Commands
         
         public override bool Execute(string[] args)
         {
-            if (args.Length != 1) return false;
+            if (args.Length == 0)
+            {
+                _player.Value.Damageable.SetCanDamage(false);
+                return true;
+            }
+            
             if (!GetBool(args[0], out bool enabled)) return false;
             _player.Value.Damageable.SetCanDamage(!enabled);
             return true;
