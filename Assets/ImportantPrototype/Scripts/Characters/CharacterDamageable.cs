@@ -1,4 +1,4 @@
-using Extensions;
+using ImportantPrototype.Stats;
 using UniRx;
 using UnityTools.Runtime.Extensions;
 
@@ -15,12 +15,13 @@ namespace ImportantPrototype.Characters
 
         private void Start()
         {
-            Health = _character.Stats.Health.Current;
+            Health = _character.Stats.Get<Vital>(CharacterStatType.Health).Current;
         }
 
         private void OnEnable()
         {
-            OnDeath.TakeFirst()
+            OnDeath
+                .TakeFirst()
                 .Subscribe(_ => _character.OnDeath())
                 .AddToDisable(this);
         }

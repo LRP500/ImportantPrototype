@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using ImportantPrototype.Scripts.Stats.Manager;
+using ImportantPrototype.Stats.Manager;
 using ImportantPrototype.Weapons;
 
 namespace ImportantPrototype.Stats
@@ -65,7 +65,7 @@ namespace ImportantPrototype.Stats
             }
         }
 
-        public T Get<T>(WeaponStatType type) where T : Stat
+        private T Get<T>(WeaponStatType type) where T : Stat
         {
             return Get<T>((int) type);
         }

@@ -37,6 +37,7 @@ namespace ImportantPrototype.UI.HUD
         {
             _player.Property
                 .WhereNotNull()
+                .Zip(_player.Value.Weapon.WhereNotNull(), (player, _) => player)
                 .TakeFirst()
                 .Subscribe(player =>
                 {
@@ -48,7 +49,7 @@ namespace ImportantPrototype.UI.HUD
 
         private IEnumerable<Attribute> GetAttributes(Player player)
         {
-            var weapon = player.WeaponHolder.Weapon.Value;
+            var weapon = player.Weapon.Value;
             var playerAttributes = _characterStats.Select(x => player.Stats.Collection.Get<Attribute>(x.Id));
             var weaponAttributes = _weaponStats.Select(x => weapon.Stats.Get<Attribute>(x.Id));
             return playerAttributes.Concat(weaponAttributes);

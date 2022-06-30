@@ -1,6 +1,4 @@
-﻿using ImportantPrototype.Stats;
-
-namespace ImportantPrototype.Scripts.Stats.Manager
+﻿namespace ImportantPrototype.Stats.Manager
 {
     public class WeaponStatCollectionFactory : StatCollectionFactory<WeaponStatCollection>
     {

@@ -1,4 +1,5 @@
 using ImportantPrototype.Weapons;
+using UniRx;
 using UnityEngine;
 
 namespace ImportantPrototype.Characters
@@ -8,12 +9,10 @@ namespace ImportantPrototype.Characters
     public class Player : Character
     {
         [SerializeField]
-        private PlayerData _data;
-
-        [SerializeField]
         private WeaponHolder _weaponHolder;
 
         public WeaponHolder WeaponHolder => _weaponHolder;
+        public IReadOnlyReactiveProperty<Weapon> Weapon => _weaponHolder.Weapon;
         
         public PlayerAiming Aiming { get; private set; }
         public PlayerShooting Shooting { get; private set; }
@@ -22,7 +21,7 @@ namespace ImportantPrototype.Characters
         {
             Aiming = GetComponent<PlayerAiming>();
             Shooting = GetComponent<PlayerShooting>();
-            WeaponHolder.EquipWeapon(_data.Weapon);
+            WeaponHolder.EquipWeapon(Data.Weapon);
         }
 
         public void Freeze()

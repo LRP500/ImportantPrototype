@@ -47,6 +47,7 @@ namespace ImportantPrototype
 
             _player.Value.Stats
                 .ObserveVital(CharacterStatType.Health)
+                .Skip(1)
                 .Where(value => value <= 0)
                 .Subscribe(_ => GameOver())
                 .AddTo(gameObject);

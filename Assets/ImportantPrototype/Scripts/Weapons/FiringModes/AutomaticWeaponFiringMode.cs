@@ -1,5 +1,4 @@
 using System;
-using Extensions;
 using ImportantPrototype.System;
 using UniRx;
 using UnityEngine;
@@ -33,11 +32,6 @@ namespace ImportantPrototype.Weapons
                     () => disposable.Clear());
                 return disposable;
             });
-          
-            // return inputStream
-            //     .WhereTrue()
-            //     .ThrottleFirst(GetFireRate(weapon))
-            //     .AsUnitObservable();
         }
     }
 }

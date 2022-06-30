@@ -7,16 +7,12 @@ namespace ImportantPrototype.Characters
 {
     public class CharacterStats : MonoBehaviour
     {
-        [SerializeField]
-        private StatCollectionData _collectionData;
+        public CharacterStatCollection Collection { get; private set; }
 
-        public StatCollection Collection { get; private set; }
-        public Vital Health { get; private set; }
-        
         private void Awake()
         {
-            Collection = new CharacterStatCollection(_collectionData);
-            Health = Collection.Get<Vital>((int) CharacterStatType.Health);
+            var data = GetComponent<Character>()?.Data;
+            Collection = CharacterStatCollection.FromCharacterData(data);
         }
 
         public T Get<T>(CharacterStatType id) where T : Stat

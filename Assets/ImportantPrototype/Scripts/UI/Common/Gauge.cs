@@ -1,8 +1,8 @@
 ﻿using System;
-using Extensions;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityTools.Runtime.Extensions;
 using UnityTools.Runtime.UI;
 
 namespace ImportantPrototype.UI.HUD

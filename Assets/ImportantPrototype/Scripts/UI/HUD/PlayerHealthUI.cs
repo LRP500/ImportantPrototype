@@ -1,5 +1,6 @@
 using System;
 using ImportantPrototype.Characters;
+using ImportantPrototype.Stats;
 using UniRx;
 using UnityEngine;
 
@@ -10,14 +11,13 @@ namespace ImportantPrototype.UI.HUD
         [SerializeField]
         private PlayerReactiveVariable _player;
 
-        private Player Player => _player.Property.Value;
-
         protected override IObservable<(float, float)> ObserveValueChanged()
         {
-            var health = Player.Stats.Health;
-            var max = health.Property;
-            var current = health.Current.Property;
-            return current.CombineLatest(max, (x, y) => (x, y));
+            var player = _player.Property.Value;
+            var health = player.Stats.Get<Vital>(CharacterStatType.Health);
+            var maxHealth = health.Property;
+            var currentHealth = health.Current.Property;
+            return currentHealth.CombineLatest(maxHealth, (x, y) => (x, y));
         }
     }
 }

@@ -12,5 +12,11 @@
         {
             Current = new Attribute(info, value);
         }
+        
+        public override void SetValue(float value)
+        {
+            base.SetValue(value);
+            Current.SetValue(value);
+        }
     }
 }

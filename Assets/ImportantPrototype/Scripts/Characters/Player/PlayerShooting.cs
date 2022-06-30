@@ -1,9 +1,9 @@
 using Cinemachine;
-using Extensions;
 using ImportantPrototype.Input;
 using ImportantPrototype.Weapons;
 using UniRx;
 using UnityEngine;
+using UnityTools.Runtime.Extensions;
 using UnityTools.Runtime.Time;
 
 namespace ImportantPrototype.Characters
@@ -27,7 +27,7 @@ namespace ImportantPrototype.Characters
 
         private void Start()
         {
-            _self.WeaponHolder.Weapon
+            _self.Weapon
                 .Subscribe(OnEquippedWeaponChanged)
                 .AddTo(gameObject);
         }

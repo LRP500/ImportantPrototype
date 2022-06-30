@@ -1,8 +1,8 @@
-using Extensions;
 using ImportantPrototype.Characters;
 using TMPro;
 using UniRx;
 using UnityEngine;
+using UnityTools.Runtime.Extensions;
 using UnityTools.Runtime.UI;
 
 namespace ImportantPrototype.UI.HUD

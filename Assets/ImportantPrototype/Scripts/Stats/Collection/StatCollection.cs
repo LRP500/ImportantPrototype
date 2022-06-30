@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using ImportantPrototype.Stats.Factory;
+﻿using ImportantPrototype.Stats.Factory;
 using UniRx;
 
 namespace ImportantPrototype.Stats
@@ -40,11 +38,6 @@ namespace ImportantPrototype.Stats
             }
 
             return default;
-        }
-        
-        public IEnumerable<T> Get<T>() where T : Stat
-        {
-            return _stats.Values.OfType<T>();
         }
     }
 }

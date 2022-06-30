@@ -1711,6 +1711,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 12007581}
     m_Modifications:
+    - target: {fileID: 89427334633068391, guid: 09a5f6731ca049d4f95c244cfbafa7f6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 89427334633068391, guid: 09a5f6731ca049d4f95c244cfbafa7f6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 89427334633068391, guid: 09a5f6731ca049d4f95c244cfbafa7f6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 325
+      objectReference: {fileID: 0}
+    - target: {fileID: 89427334633068391, guid: 09a5f6731ca049d4f95c244cfbafa7f6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 89427334633068391, guid: 09a5f6731ca049d4f95c244cfbafa7f6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 162.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 89427334633068391, guid: 09a5f6731ca049d4f95c244cfbafa7f6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 570626583923827064, guid: 09a5f6731ca049d4f95c244cfbafa7f6, type: 3}
       propertyPath: m_Name
       value: UI_HUD
@@ -1797,6 +1821,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 570626583923827071, guid: 09a5f6731ca049d4f95c244cfbafa7f6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6141205235994024232, guid: 09a5f6731ca049d4f95c244cfbafa7f6, type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

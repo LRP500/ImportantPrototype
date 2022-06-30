@@ -2,9 +2,10 @@
 {
     public enum CharacterStatType
     {
-        Level,
-        Experience,
-        Health,
-        PickupRange
+        Level = 0,
+        Experience = 1,
+        Health = 2,
+        PickupRange = 3,
+        MovementSpeed = 4,
     }
 }

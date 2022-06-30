@@ -23,6 +23,11 @@ namespace ImportantPrototype.Characters
             _rigidbody.velocity = Vector2.zero;
         }
 
+        public void SetSpeed(float speed)
+        {
+            _speed = speed;
+        }
+        
         public void Move(Vector2 direction)
         {
             Velocity = direction * _speed;

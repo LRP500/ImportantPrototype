@@ -1,4 +1,5 @@
 using UnityEngine;
+using Attribute = ImportantPrototype.Stats.Attribute;
 
 namespace ImportantPrototype.Characters
 {
@@ -6,6 +7,10 @@ namespace ImportantPrototype.Characters
     [RequireComponent(typeof(CharacterDamageable))]
     public class Character : MonoBehaviour
     {
+        [SerializeField]
+        private CharacterData _data;
+
+        public CharacterData Data => _data;
         public CharacterStats Stats { get; private set; }
         public CharacterMovement Motor { get; private set; }
         public CharacterDamageable Damageable { get; private set; }
@@ -16,6 +21,16 @@ namespace ImportantPrototype.Characters
             Stats = GetComponent<CharacterStats>();
             Motor = GetComponent<CharacterMovement>();
             Damageable = GetComponent<CharacterDamageable>();
+        }
+
+        private void Start()
+        {
+            Initialize();
+        }
+
+        private void Initialize()
+        {
+            Motor.SetSpeed(Stats.Get<Attribute>(CharacterStatType.MovementSpeed).Value);
             OnInitialize();
         }
         
