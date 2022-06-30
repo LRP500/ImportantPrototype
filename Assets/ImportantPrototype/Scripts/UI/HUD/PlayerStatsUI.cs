@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using ImportantPrototype.Characters;
 using ImportantPrototype.Stats;
+using ImportantPrototype.Weapons;
 using Sirenix.OdinInspector;
 using UniRx;
 using UnityEngine;
@@ -14,7 +15,7 @@ namespace ImportantPrototype.UI.HUD
     public class PlayerStatsUI : Element
     {
         [SerializeField]
-        private PlayerStatsItemUI _itemPrefab;
+        private AttributeItemUI _itemPrefab;
 
         [SerializeField]
         private Transform _itemContainer;
@@ -24,9 +25,13 @@ namespace ImportantPrototype.UI.HUD
 
         [AssetList]
         [SerializeField]
-        private List<CharacterStatInfo> _stats;
+        private List<CharacterStatInfo> _characterStats;
         
-        private readonly List<PlayerStatsItemUI> _items = new ();
+        [AssetList]
+        [SerializeField]
+        private List<WeaponStatInfo> _weaponStats;
+        
+        private readonly List<AttributeItemUI> _items = new ();
 
         public override void Initialize()
         {
@@ -35,16 +40,18 @@ namespace ImportantPrototype.UI.HUD
                 .TakeFirst()
                 .Subscribe(player =>
                 {
-                    var attributes = GetAttributes(player);
-                    CreateItems(attributes);
+                    CreateItems(GetAttributes(player));
                     LayoutRebuilder.ForceRebuildLayoutImmediate(GetComponent<RectTransform>());
                 })
                 .AddTo(gameObject);
         }
 
-        private IEnumerable<Attribute> GetAttributes(Character player)
+        private IEnumerable<Attribute> GetAttributes(Player player)
         {
-            return _stats.Select(x => player.Stats.Collection.Get<Attribute>(x.Id));
+            var weapon = player.WeaponHolder.Weapon.Value;
+            var playerAttributes = _characterStats.Select(x => player.Stats.Collection.Get<Attribute>(x.Id));
+            var weaponAttributes = _weaponStats.Select(x => weapon.Stats.Get<Attribute>(x.Id));
+            return playerAttributes.Concat(weaponAttributes);
         }
         
         private void CreateItems(IEnumerable<Attribute> stats)
@@ -71,7 +78,7 @@ namespace ImportantPrototype.UI.HUD
             _items.Clear();
         }
 
-        private PlayerStatsItemUI CreateItem(Attribute stat)
+        private AttributeItemUI CreateItem(Attribute stat)
         {
             var instance = Instantiate(_itemPrefab, _itemContainer);
             instance.Bind(stat);

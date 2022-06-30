@@ -7,7 +7,7 @@ using UnityTools.Runtime.UI;
 
 namespace ImportantPrototype.UI.HUD
 {
-    public class PlayerStatsItemUI : Element
+    public class AttributeItemUI : Element
     {
         [SerializeField]
         private TextMeshProUGUI _statName;
