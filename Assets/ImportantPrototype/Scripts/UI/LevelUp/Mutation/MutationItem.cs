@@ -36,7 +36,10 @@ namespace ImportantPrototype.UI
 
         public IObservable<Mutation> ObserveSelect()
         {
-            return _toggle.OnToggleOn().Select(_ => _mutation);
+            return _toggle
+                .OnValueChangedAsObservable()
+                .WhereTrue()
+                .Select(_ => _mutation);
         }
 
         public override void Refresh()

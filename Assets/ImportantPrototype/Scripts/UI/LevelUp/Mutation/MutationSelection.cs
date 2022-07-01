@@ -5,6 +5,7 @@ using ImportantPrototype.Mutations;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityTools.Runtime.Extensions;
 using UnityTools.Runtime.UI;
 
 namespace ImportantPrototype.UI
@@ -34,10 +35,19 @@ namespace ImportantPrototype.UI
             _callback = callback;
             _choices = choices.ToList();
             _hoveredMutation.SetValue(_choices[0]);
-
-            Clear();
-            CreateItems();
             Show();
+        }
+
+        protected override void OnShow()
+        {
+            base.OnShow();
+            CreateItems();
+        }
+
+        protected override void OnHide()
+        {
+            base.OnHide();
+            Clear();
         }
 
         private void CreateItems()

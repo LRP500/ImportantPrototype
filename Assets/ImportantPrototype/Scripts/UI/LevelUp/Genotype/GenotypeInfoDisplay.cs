@@ -26,7 +26,7 @@ namespace ImportantPrototype.UI
             Clear();
             CreateItems(_mutationManager.GenotypeMods);
         }
-
+        
         private void CreateItems(IEnumerable<GenotypeMod> mods)
         {
             foreach (var mod in mods)

@@ -15,7 +15,7 @@ namespace ImportantPrototype.Weapons
             {
                 var lastShot = Time.time;
                 var disposable = new SerialDisposable();
-                inputStream
+                return inputStream
                     .DistinctUntilChanged()
                     .SubscribeTwoStates(
                     () =>
@@ -30,7 +30,6 @@ namespace ImportantPrototype.Weapons
                             });
                     },
                     () => disposable.Clear());
-                return disposable;
             });
         }
     }

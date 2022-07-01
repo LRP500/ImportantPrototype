@@ -26,7 +26,7 @@ namespace ImportantPrototype.UI
         
         protected override void OnHide()
         {
-            _mutationSelection.Clear();
+            base.OnHide();
             PauseManager.Resume();
         }
     }
