@@ -1,4 +1,3 @@
-using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace ImportantPrototype.Spawners
@@ -13,7 +12,10 @@ namespace ImportantPrototype.Spawners
         
         [SerializeField]
         private bool _destroyAfterSpawn;
-        
+
+        [SerializeField]
+        private Transform _container;
+
         protected virtual void Start()
         {
             OnStart();
@@ -31,14 +33,27 @@ namespace ImportantPrototype.Spawners
 
         protected virtual void OnStart() { }
 
+        protected void SetPrefab(T prefab)
+        {
+            _prefab = prefab;
+        }
+        
         protected void SpawnSingle(Vector2 position)
         {
-            var instance = Instantiate(_prefab, transform);
+            var container = _container != null ? _container : transform;
+            var instance = Instantiate(_prefab, container);
             instance.transform.position = position;
             OnSpawn(instance);
         }
         
+        protected void SpawnSingle()
+        {
+            var position = GetPosition();
+            SpawnSingle(position);
+        }
+        
         protected virtual void Spawn() { }
         protected virtual void OnSpawn(T entity) { }
+        protected virtual Vector2 GetPosition() => transform.position;
     }
 }

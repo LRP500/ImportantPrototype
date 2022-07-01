@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using ImportantPrototype.Characters.Enemies;
 using ImportantPrototype.System;
 using UnityEngine;
 
@@ -14,8 +16,8 @@ namespace ImportantPrototype.Level
         private string _description;
 
         [SerializeField]
-        private string _sceneName;
+        private List<EnemyWaveData> _waves;
 
-        public string SceneName => _sceneName;
+        public IReadOnlyList<EnemyWaveData> Waves => _waves;
     }
 }

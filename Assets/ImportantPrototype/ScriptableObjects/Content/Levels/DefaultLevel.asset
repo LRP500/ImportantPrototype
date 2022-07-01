@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca9732147e0ebd4096d21fbbdf129bd, type: 3}
   m_Name: DefaultLevel
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Default
   _description: 
-  _sceneName: LevelDefault
+  _waves:
+  - _enemies:
+    - {fileID: 11400000, guid: 3f09da69c9360f840947ffe0e507a68e, type: 2}
+    _spawnInterval: 1
+    _duration: 120
+  - _enemies:
+    - {fileID: 11400000, guid: 3f09da69c9360f840947ffe0e507a68e, type: 2}
+    - {fileID: 11400000, guid: 955cd0a8f9f284f42946b96777dabcec, type: 2}
+    _spawnInterval: 1
+    _duration: 120

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45cdbb7ab3844864afc55e44c49afed0, type: 3}
-  m_Name: Slime
+  m_Name: SlimeLarge
   m_EditorClassIdentifier: 
   _name: Slime
   _description: 
-  _health: 2
-  _movementSpeed: 1.6
-  _characterSize: 1
+  _health: 5
+  _movementSpeed: 1.2
+  _characterSize: 2
   _pickupRange: 0
   _weapon: {fileID: 0}
-  _prefab: {fileID: 5656590754369126626, guid: e5ddae4f5dfba364eb5721b6baec379e, type: 3}
+  _prefab: {fileID: 5656590754369126626, guid: f7b1634ebb255cb46ae6355a378f71d4, type: 3}

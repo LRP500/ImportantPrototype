@@ -49,7 +49,7 @@ namespace ImportantPrototype.UI.HUD
 
         private void UpdateWave(int wave)
         {
-            _currentWaveText.SetText($"Wave {wave.ToString()}");
+            _currentWaveText.SetText($"Wave {(wave + 1).ToString()}");
         }
 
         private static string FormatTime(float time)

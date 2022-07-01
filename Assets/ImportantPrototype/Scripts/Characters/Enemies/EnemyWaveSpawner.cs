@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 namespace ImportantPrototype.Characters.Enemies
 {
     [RequireComponent(typeof(BoxCollider2D))]
-    public class EnemySpawner : Spawner2D<Enemy>
+    public class EnemyWaveSpawner : Spawner2D<Enemy>
     {
         [SerializeField]
         private float _spawnInterval;
@@ -22,18 +22,44 @@ namespace ImportantPrototype.Characters.Enemies
         private EnemyReactiveListVariable _enemies;
         
         private BoxCollider2D _area;
-
+        private EnemyWaveData _currentWave;
+        private readonly BoolReactiveProperty IsRunning = new ();
+        private readonly SerialDisposable _runDisposable = new ();
+        
         private void Awake()
         {
             _area = GetComponent<BoxCollider2D>();
+            _runDisposable.AddTo(gameObject);
+        }
+        
+        public void SetWave(EnemyWaveData wave)
+        {
+            _currentWave = wave;
+            _spawnInterval = wave.SpawnInterval;
         }
 
-        protected override void OnStart()
+        public void Run()
         {
-            Observable.Interval(TimeSpan.FromSeconds(_spawnInterval))
+            _runDisposable.Disposable = Observable
+                .Interval(TimeSpan.FromSeconds(_spawnInterval))
                 .Where(_ => _enemies.Count < _maxSimultaneous)
-                .Subscribe(_ => Spawn())
-                .AddTo(this);
+                .DoOnSubscribe(() => IsRunning.Value = true)
+                .DoOnCompleted(() => Debug.Log("DONE"))
+                .TakeWhile(_ => IsRunning.Value)
+                .Subscribe(_ => Spawn());
+        }
+
+        public void Stop()
+        {
+            IsRunning.Value = false;
+        }
+        
+        protected override void Spawn()
+        {
+            var rand = Random.Range(0, _currentWave.Enemies.Count);
+            var enemy = _currentWave.Enemies[rand];
+            SetPrefab(enemy.Prefab);
+            SpawnSingle();
         }
         
         private void LateUpdate()
@@ -42,12 +68,11 @@ namespace ImportantPrototype.Characters.Enemies
             _area.offset = _player.Property.Value.Position;
         }
 
-        protected override void Spawn()
+        protected override Vector2 GetPosition()
         {
-            var position = GetRandomPointOnRect(_area.offset, _area.size);
-            SpawnSingle(position);
+            return GetRandomPointOnRect(_area.offset, _area.size);
         }
-
+        
         /// https://stackoverflow.com/a/44418722/7511524
         private static Vector2 GetRandomPointOnRect(Vector2 origin, Vector2 size)
         {
