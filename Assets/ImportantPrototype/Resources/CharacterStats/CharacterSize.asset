@@ -9,13 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a529666c5484110832a0050abf10020, type: 3}
-  m_Name: DefaultPlayer
+  m_Script: {fileID: 11500000, guid: b628db32631a41539c1351d5359ed08a, type: 3}
+  m_Name: CharacterSize
   m_EditorClassIdentifier: 
-  _name: Default
+  _name: Character Size
   _description: 
-  _health: 5
-  _movementSpeed: 3
-  _characterSize: 2
-  _pickupRange: 2
-  _weapon: {fileID: 11400000, guid: 423146d0b888cc141814af3195cf891f, type: 2}
+  _type: 1
+  _id: 5

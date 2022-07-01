@@ -7,5 +7,6 @@
         Health = 2,
         PickupRange = 3,
         MovementSpeed = 4,
+        CharacterSize = 5,
     }
 }

@@ -8,40 +8,12 @@ namespace ImportantPrototype.Stats
     {
         private static readonly CharacterStatCollectionFactory _factory = new();
 
-        #region Fast Accessors
-
-        private Vital _health;
-        private Attribute _movementSpeed;
-        private Attribute _pickupRange;
-        
-        public float Health {
-            get {
-                _movementSpeed ??= Get<Vital>(CharacterStatType.Health);
-                return _movementSpeed.Value;
-            }
-        }
-        
-        public float MovementSpeed {
-            get {
-                _movementSpeed ??= Get<Attribute>(CharacterStatType.MovementSpeed);
-                return _movementSpeed.Value;
-            }
-        }
-        
-        public float PickupRange {
-            get {
-                _pickupRange ??= Get<Attribute>(CharacterStatType.PickupRange);
-                return _pickupRange.Value;
-            }
-        }
-        
-        #endregion Fast Accessors
-        
         public static CharacterStatCollection FromCharacterData(CharacterData data)
         {
             var collection = _factory.Create();
             collection.Get<Vital>(CharacterStatType.Health).SetValue(data.Health);
             collection.Get<Attribute>(CharacterStatType.MovementSpeed).SetValue(data.MovementSpeed);
+            collection.Get<Attribute>(CharacterStatType.CharacterSize).SetValue(data.CharacterSize);
             collection.Get<Attribute>(CharacterStatType.PickupRange).SetValue(data.PickupRange);
             return collection;
         }

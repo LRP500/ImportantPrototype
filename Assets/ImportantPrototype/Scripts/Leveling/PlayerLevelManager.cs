@@ -4,6 +4,7 @@ using ImportantPrototype.Stats;
 using ImportantPrototype.System;
 using UniRx;
 using UnityEngine;
+using UnityTools.Runtime.Extensions;
 
 namespace ImportantPrototype.Leveling
 {
@@ -23,6 +24,7 @@ namespace ImportantPrototype.Leveling
             Experience = stats.Get<Attribute>(CharacterStatType.Experience);
 
             Experience.Property
+                .SkipFirst()
                 .Subscribe(OnPlayerGainedXP)
                 .AddTo(Context.DisposableTarget);
         }

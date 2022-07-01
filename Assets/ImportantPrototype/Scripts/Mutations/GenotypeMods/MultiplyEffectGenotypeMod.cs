@@ -7,7 +7,7 @@ namespace ImportantPrototype.Mutations
     public class MultiplyEffectGenotypeMod : GenotypeMod
     {
         [SerializeField]
-        private int _multiplier; 
+        private float _multiplier; 
         
         public override string GetDescription()
         {

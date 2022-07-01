@@ -17,15 +17,19 @@ namespace ImportantPrototype.Characters
         
         [SerializeField]
         [TitleGroup("Stats")]
-        private int _health;
+        private int _health = 1;
         
         [SerializeField]
         [TitleGroup("Stats")]
-        private float _movementSpeed;
+        private float _movementSpeed = 1;
 
         [SerializeField]
         [TitleGroup("Stats")]
-        private float _pickupRange;
+        private float _characterSize = 1;
+        
+        [SerializeField]
+        [TitleGroup("Stats")]
+        private float _pickupRange = 1;
         
         [Space]
         [SerializeField]
@@ -35,6 +39,7 @@ namespace ImportantPrototype.Characters
         public string Description => _description;
         public int Health => _health;
         public float MovementSpeed => _movementSpeed;
+        public float CharacterSize => _characterSize;
         public float PickupRange => _pickupRange;
         public WeaponData Weapon => _weapon;
     }

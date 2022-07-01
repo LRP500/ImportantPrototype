@@ -247,6 +247,7 @@ MonoBehaviour:
   _characterStats:
   - {fileID: 11400000, guid: 72a23dfc909b059408b4731f0112a3dc, type: 2}
   - {fileID: 11400000, guid: a9190b40a30e00b469256652533d98b0, type: 2}
+  - {fileID: 11400000, guid: c1b31b941b9bd2e499b34d65cddcd18d, type: 2}
   _weaponStats:
   - {fileID: 11400000, guid: 4c9ea2f969773824f8fbd0b27862f80b, type: 2}
   - {fileID: 11400000, guid: 995100af95548824f8de190f5b8768c6, type: 2}

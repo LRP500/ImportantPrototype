@@ -41,6 +41,7 @@ namespace ImportantPrototype.UI
         protected override void OnShow()
         {
             base.OnShow();
+            Clear();
             CreateItems();
         }
 

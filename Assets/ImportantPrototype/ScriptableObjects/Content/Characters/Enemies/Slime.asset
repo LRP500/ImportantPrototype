@@ -15,6 +15,7 @@ MonoBehaviour:
   _name: Slime
   _description: 
   _health: 2
-  _movementSpeed: 2
+  _movementSpeed: 1.6
+  _characterSize: 1
   _pickupRange: 0
   _weapon: {fileID: 0}

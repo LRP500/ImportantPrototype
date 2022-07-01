@@ -7,17 +7,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 36076783966296280, guid: 826ecbf2229873f4ab8ec1886dd27b28, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1729391842809968848, guid: 826ecbf2229873f4ab8ec1886dd27b28, type: 3}
       propertyPath: _projectile
       value: 
       objectReference: {fileID: 424487077712178525, guid: 876c6d0ecbba49d4faef7de99e816aa4, type: 3}
     - target: {fileID: 4743906994211117179, guid: 826ecbf2229873f4ab8ec1886dd27b28, type: 3}
       propertyPath: m_Name
-      value: Weapon_AssaultRifle
+      value: Weapon_Shotgun
       objectReference: {fileID: 0}
     - target: {fileID: 5303947961728783608, guid: 826ecbf2229873f4ab8ec1886dd27b28, type: 3}
       propertyPath: m_Size.x
@@ -34,14 +30,6 @@ PrefabInstance:
     - target: {fileID: 5303947961728783608, guid: 826ecbf2229873f4ab8ec1886dd27b28, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753577137931028558, guid: 826ecbf2229873f4ab8ec1886dd27b28, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6753577137931028558, guid: 826ecbf2229873f4ab8ec1886dd27b28, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 7074790610098373704, guid: 826ecbf2229873f4ab8ec1886dd27b28, type: 3}
       propertyPath: m_RootOrder
