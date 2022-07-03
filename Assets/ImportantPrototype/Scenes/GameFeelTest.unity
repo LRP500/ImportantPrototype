@@ -235,5 +235,82 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraRig
       objectReference: {fileID: 0}
+    - target: {fileID: 5790110808600366512, guid: c90cb546c7a392943b33f5ed7886f5b8, type: 3}
+      propertyPath: orthographic size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790110808719160487, guid: c90cb546c7a392943b33f5ed7886f5b8, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c90cb546c7a392943b33f5ed7886f5b8, type: 3}
+--- !u!1001 &1787273712
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1745063402658008112, guid: e5ddae4f5dfba364eb5721b6baec379e, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745063402658008112, guid: e5ddae4f5dfba364eb5721b6baec379e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745063402658008112, guid: e5ddae4f5dfba364eb5721b6baec379e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745063402658008112, guid: e5ddae4f5dfba364eb5721b6baec379e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745063402658008112, guid: e5ddae4f5dfba364eb5721b6baec379e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745063402658008112, guid: e5ddae4f5dfba364eb5721b6baec379e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745063402658008112, guid: e5ddae4f5dfba364eb5721b6baec379e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745063402658008112, guid: e5ddae4f5dfba364eb5721b6baec379e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745063402658008112, guid: e5ddae4f5dfba364eb5721b6baec379e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745063402658008112, guid: e5ddae4f5dfba364eb5721b6baec379e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745063402658008112, guid: e5ddae4f5dfba364eb5721b6baec379e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745063402658008119, guid: e5ddae4f5dfba364eb5721b6baec379e, type: 3}
+      propertyPath: m_Name
+      value: Slime
+      objectReference: {fileID: 0}
+    - target: {fileID: 3518284455749982704, guid: e5ddae4f5dfba364eb5721b6baec379e, type: 3}
+      propertyPath: managedReferences[3415612039034306561].Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3518284455749982704, guid: e5ddae4f5dfba364eb5721b6baec379e, type: 3}
+      propertyPath: managedReferences[3415612039034306561].PropertyName
+      value: _RendererColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3518284455749982704, guid: e5ddae4f5dfba364eb5721b6baec379e, type: 3}
+      propertyPath: managedReferences[3415612039034306561].FlickerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e5ddae4f5dfba364eb5721b6baec379e, type: 3}

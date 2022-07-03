@@ -337,7 +337,7 @@ MonoBehaviour:
         FlickerOctave: 0.04
         FlickerColor: {r: 1, g: 0, b: 0, a: 1}
         MaterialIndexes: 
-        UseMaterialPropertyBlocks: 0
+        UseMaterialPropertyBlocks: 1
 --- !u!114 &1732595756396102661
 MonoBehaviour:
   m_ObjectHideFlags: 0

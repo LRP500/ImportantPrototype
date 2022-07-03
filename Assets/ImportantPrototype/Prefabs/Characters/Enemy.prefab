@@ -23,6 +23,10 @@ PrefabInstance:
       propertyPath: _collectionData
       value: 
       objectReference: {fileID: 11400000, guid: ed0eaffdba286264cb8859aba46d70cc, type: 2}
+    - target: {fileID: 2069320130687480694, guid: af16d9fe5cdd02247b41b21547000324, type: 3}
+      propertyPath: managedReferences[3415612039034306561].PropertyName
+      value: _Color
+      objectReference: {fileID: 0}
     - target: {fileID: 3770484069704902321, guid: af16d9fe5cdd02247b41b21547000324, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -202,7 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853df747d0547664b99648bb276f528d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _strength: 8
+  _strength: 4
   _rigidbody: {fileID: 5185441078438300948}
 --- !u!114 &7846682617659176560
 MonoBehaviour:
