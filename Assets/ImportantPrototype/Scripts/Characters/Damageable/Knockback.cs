@@ -14,8 +14,8 @@ namespace ImportantPrototype.Characters
         
         private void ApplyKnockback(Transform other)
         {
-            // var direction = (other.position - transform.position).normalized;
-            // _rigidbody.AddForce(direction * _strength, ForceMode2D.Impulse);
+            var direction = -(other.position - transform.position).normalized;
+            _rigidbody.AddForce(direction * _strength, ForceMode2D.Impulse);
         }
 
         private void OnTriggerEnter2D(Collider2D other)

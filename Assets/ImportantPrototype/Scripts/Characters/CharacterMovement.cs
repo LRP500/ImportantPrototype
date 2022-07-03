@@ -31,7 +31,8 @@ namespace ImportantPrototype.Characters
         public void Move(Vector2 direction)
         {
             Velocity = direction * _speed;
-            _rigidbody.velocity = Velocity;
+            _rigidbody.position += Velocity * Time.deltaTime;
+            // _rigidbody.velocity = Velocity;
         }
     }
 }
