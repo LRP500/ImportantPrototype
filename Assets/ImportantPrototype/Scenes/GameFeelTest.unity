@@ -300,17 +300,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
-    - target: {fileID: 3518284455749982704, guid: e5ddae4f5dfba364eb5721b6baec379e, type: 3}
-      propertyPath: managedReferences[3415612039034306561].Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3518284455749982704, guid: e5ddae4f5dfba364eb5721b6baec379e, type: 3}
-      propertyPath: managedReferences[3415612039034306561].PropertyName
-      value: _RendererColor
-      objectReference: {fileID: 0}
-    - target: {fileID: 3518284455749982704, guid: e5ddae4f5dfba364eb5721b6baec379e, type: 3}
-      propertyPath: managedReferences[3415612039034306561].FlickerColor.a
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5ddae4f5dfba364eb5721b6baec379e, type: 3}
