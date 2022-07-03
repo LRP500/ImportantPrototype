@@ -14,7 +14,7 @@ namespace ImportantPrototype.Weapons
 
         public SpriteRenderer Renderer => _renderer;
 
-        private Character Holder { get; set; }
+        public Character Holder { get; private set; }
         public WeaponData Data { get; private set; }
         public WeaponStatCollection Stats { get; private set; }
         

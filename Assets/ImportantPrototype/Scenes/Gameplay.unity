@@ -451,6 +451,7 @@ GameObject:
   m_Component:
   - component: {fileID: 300482919}
   - component: {fileID: 300482920}
+  - component: {fileID: 300482921}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -512,6 +513,29 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 466714047}
+--- !u!114 &300482921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300482918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ApplyAfter: 2
+  m_ChannelMask: 1
+  m_Gain: 1
+  m_Use2DDistance: 1
+  m_UseCameraSpace: 1
+  m_ReactionSettings:
+    m_SecondaryNoise: {fileID: 0}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_Duration: 1
+    m_NoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!4 &372910096 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8128705229077339183, guid: ba7c54f2c633a6f459743b3f9b90ae5a, type: 3}
@@ -1825,6 +1849,10 @@ PrefabInstance:
       propertyPath: _container
       value: 
       objectReference: {fileID: 2075644470}
+    - target: {fileID: 1076794872985961353, guid: 9af83f808929ff44c91e54484b133f83, type: 3}
+      propertyPath: _maxSimultaneous
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9af83f808929ff44c91e54484b133f83, type: 3}
 --- !u!1001 &1695610317108259282

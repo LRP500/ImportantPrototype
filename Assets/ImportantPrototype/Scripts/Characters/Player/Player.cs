@@ -5,7 +5,7 @@ using UnityEngine;
 namespace ImportantPrototype.Characters
 {
     [RequireComponent(typeof(PlayerAiming))]
-    [RequireComponent(typeof(PlayerShooting))]
+    [RequireComponent(typeof(PlayerFiring))]
     public class Player : Character
     {
         [SerializeField]
@@ -15,12 +15,12 @@ namespace ImportantPrototype.Characters
         public IReadOnlyReactiveProperty<Weapon> Weapon => _weaponHolder.Weapon;
         
         public PlayerAiming Aiming { get; private set; }
-        public PlayerShooting Shooting { get; private set; }
+        public PlayerFiring Firing { get; private set; }
         
         protected override void OnInitialize()
         {
             Aiming = GetComponent<PlayerAiming>();
-            Shooting = GetComponent<PlayerShooting>();
+            Firing = GetComponent<PlayerFiring>();
             WeaponHolder.EquipWeapon(Data.Weapon);
         }
 
@@ -28,7 +28,7 @@ namespace ImportantPrototype.Characters
         {
             Motor.enabled = false;
             Aiming.enabled = false;
-            Shooting.enabled = false;
+            Firing.enabled = false;
         }
     }
 }
