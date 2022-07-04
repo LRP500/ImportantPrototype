@@ -56,8 +56,7 @@ namespace ImportantPrototype.Characters.Enemies
         
         protected override void Spawn()
         {
-            var rand = Random.Range(0, _currentWave.Enemies.Count);
-            var enemy = _currentWave.Enemies[rand];
+            var enemy = _currentWave.GetRandomItem();
             SetPrefab(enemy.Prefab);
             SpawnSingle();
         }

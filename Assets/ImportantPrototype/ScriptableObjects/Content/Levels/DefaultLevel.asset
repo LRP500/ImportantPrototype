@@ -15,12 +15,20 @@ MonoBehaviour:
   _name: Default
   _description: 
   _waves:
-  - _enemies:
-    - {fileID: 11400000, guid: 3f09da69c9360f840947ffe0e507a68e, type: 2}
+  - _items:
+    - enemy: {fileID: 11400000, guid: 3f09da69c9360f840947ffe0e507a68e, type: 2}
+      weight: 1
     _spawnInterval: 1
     _duration: 120
-  - _enemies:
-    - {fileID: 11400000, guid: 3f09da69c9360f840947ffe0e507a68e, type: 2}
-    - {fileID: 11400000, guid: 955cd0a8f9f284f42946b96777dabcec, type: 2}
+  - _items:
+    - enemy: {fileID: 11400000, guid: 3f09da69c9360f840947ffe0e507a68e, type: 2}
+      weight: 8
+    - enemy: {fileID: 11400000, guid: 955cd0a8f9f284f42946b96777dabcec, type: 2}
+      weight: 1
+    _spawnInterval: 1
+    _duration: 120
+  - _items:
+    - enemy: {fileID: 11400000, guid: 955cd0a8f9f284f42946b96777dabcec, type: 2}
+      weight: 1
     _spawnInterval: 1
     _duration: 120

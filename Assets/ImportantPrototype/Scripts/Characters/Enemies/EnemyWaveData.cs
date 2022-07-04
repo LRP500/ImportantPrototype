@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace ImportantPrototype.Characters.Enemies
@@ -7,16 +8,30 @@ namespace ImportantPrototype.Characters.Enemies
     [Serializable]
     public class EnemyWaveData
     {
-        [SerializeField]
-        private List<EnemyData> _enemies;
+        [Serializable]
+        public class EnemySpawnInfo
+        {
+            [LabelWidth(50)]
+            [HorizontalGroup(MarginRight = 8)]
+            public EnemyData enemy;
+
+            [LabelWidth(50)]
+            [HorizontalGroup(MaxWidth = 150)]
+            public int weight = 1;
+        }
         
         [SerializeField]
+        private List<EnemySpawnInfo> _items;
+        
+        [SerializeField]
+        [SuffixLabel("seconds", true)]
         private float _spawnInterval;
 
         [SerializeField]
+        [SuffixLabel("seconds", true)]
         private float _duration;
         
-        public IReadOnlyList<EnemyData> Enemies => _enemies;
+        public IReadOnlyList<EnemySpawnInfo> Items => _items;
         public float SpawnInterval => _spawnInterval;
         public float Duration => _duration;
     }
