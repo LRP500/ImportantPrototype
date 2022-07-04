@@ -15,7 +15,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: a9190b40a30e00b469256652533d98b0, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -27,7 +28,22 @@ MonoBehaviour:
         ImportantProject]], mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|ImportantPrototype.Mutations.PlayerAttributeGene, ImportantProject
+    - Name: _stat
+      Entry: 10
       Data: 0
+    - Name: _type
+      Entry: 3
+      Data: 1
+    - Name: _value
+      Entry: 4
+      Data: 50
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -36,7 +52,7 @@ MonoBehaviour:
       Data: 
     - Name: _negativeGenes
       Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[ImportantPrototype.Mutations.Gene,
+      Data: 2|System.Collections.Generic.List`1[[ImportantPrototype.Mutations.Gene,
         ImportantProject]], mscorlib
     - Name: 
       Entry: 12
@@ -49,7 +65,7 @@ MonoBehaviour:
       Data: 
     - Name: _genotypeMod
       Entry: 7
-      Data: 2|ImportantPrototype.Mutations.DefaultGenotypeMod, ImportantProject
+      Data: 3|ImportantPrototype.Mutations.DefaultGenotypeMod, ImportantProject
     - Name: _duration
       Entry: 3
       Data: 1
@@ -58,3 +74,5 @@ MonoBehaviour:
       Data: 
   _name: Debug
   _description: 
+  _modChance: 1
+  _randomizeMod: 0

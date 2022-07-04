@@ -1,38 +1,28 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using ImportantPrototype.Characters;
-using ImportantPrototype.System;
-using Sirenix.OdinInspector;
-using Sirenix.Serialization;
-using UnityEngine;
-
-// ReSharper disable ConvertToAutoProperty
 
 namespace ImportantPrototype.Mutations
 {
-    [CreateAssetMenu(menuName = ContextMenuPath.Mutations + "Mutation")]
-    public class Mutation : SerializedScriptableObject
+    public sealed class Mutation
     {
-        [SerializeField]
-        private string _name;
-
-        [Multiline]
-        [SerializeField]
-        private string _description;
-
-        [OdinSerialize]
-        private List<Gene> _positiveGenes = new ();
-
-        [OdinSerialize]
-        private List<Gene> _negativeGenes = new ();
+        public MutationData Data { get; private set; }
         
-        [OdinSerialize]
-        private GenotypeMod _genotypeMod = new DefaultGenotypeMod();
+        public List<Gene> PositiveGenes { get; private set; }
+        public List<Gene> NegativeGenes  { get; private set; }
+
+        public GenotypeMod GenotypeMod { get; private set; }
         
-        public string Name => _name;
-        public string Description => _description;
-        public GenotypeMod GenotypeMod => _genotypeMod;
-        public IList<Gene> PositiveGenes => _positiveGenes;
-        public IList<Gene> NegativeGenes => _negativeGenes;
+        public static Mutation FromData(MutationData data)
+        {
+            return new Mutation
+            {
+                Data = data,
+                PositiveGenes = data.PositiveGenes,
+                NegativeGenes = data.NegativeGenes,
+                GenotypeMod = data.GenotypeMod
+            };
+        }
         
         public void OnPick(Player player)
         {
@@ -41,18 +31,18 @@ namespace ImportantPrototype.Mutations
 
         private void ApplyGenes(Player player)
         {
-            var genes = GetAllGenes();
+            var genes = new List<Gene>(PositiveGenes);
+            genes.AddRange(NegativeGenes);
+
             for (int i = 0; i < genes.Count; i++)
             {
                 genes[i].Apply(player);
             }
         }
 
-        public IReadOnlyList<Gene> GetAllGenes()
+        public IEnumerable<Gene> GetAllGenes()
         {
-            var genes = new List<Gene>(_positiveGenes);
-            genes.AddRange(_negativeGenes);
-            return genes;
+            return PositiveGenes.Concat(NegativeGenes);
         }
     }
 }

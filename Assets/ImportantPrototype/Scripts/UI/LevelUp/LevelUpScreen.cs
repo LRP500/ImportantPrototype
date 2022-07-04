@@ -12,9 +12,9 @@ namespace ImportantPrototype.UI
         [SerializeField]
         private MutationSelection _mutationSelection;
 
-        private void OnMutationSelected(Mutation gene)
+        private void OnMutationSelected(Mutation mutation)
         {
-            _mutationManager.Pick(gene);
+            _mutationManager.Pick(mutation);
             Hide();
         }
 

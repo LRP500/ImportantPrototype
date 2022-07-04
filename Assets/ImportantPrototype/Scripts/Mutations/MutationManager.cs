@@ -26,7 +26,10 @@ namespace ImportantPrototype.Mutations
 
         public IEnumerable<Mutation> GetNextMutationChoices()
         {
-            return _allMutations.Items.Shuffle().Take(_mutationChoiceCount);
+            return _allMutations.Items
+                .Shuffle()
+                .Take(_mutationChoiceCount)
+                .Select(Mutation.FromData);
         }
 
         public void Pick(Mutation mutation)
@@ -37,11 +40,11 @@ namespace ImportantPrototype.Mutations
 
         private void ApplyMutation(Mutation mutation)
         {
-            var modifiedMutation = ApplyGenotypeMod(mutation);
-            modifiedMutation.OnPick(Context.Player.Value);
+            ApplyGenotypeMod(ref mutation);
+            mutation.OnPick(Context.Player.Value);
 
-            _activeMutations.Add(modifiedMutation);
-            _genotypeMods.Add(modifiedMutation.GenotypeMod);
+            _activeMutations.Add(mutation);
+            _genotypeMods.Add(mutation.GenotypeMod);
         }
         
         private void UpdateGenotypeMods()
@@ -56,14 +59,12 @@ namespace ImportantPrototype.Mutations
             }
         }
 
-        private Mutation ApplyGenotypeMod(Mutation mutation)
+        private void ApplyGenotypeMod(ref Mutation mutation)
         {
-            var instance = Instantiate(mutation);
             foreach (var mod in _genotypeMods)
             {
-                mod.Apply(ref instance);
+                mod.Apply(ref mutation);
             }
-            return instance;
         }
     }
 }

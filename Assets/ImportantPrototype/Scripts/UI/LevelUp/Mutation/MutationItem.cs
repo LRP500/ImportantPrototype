@@ -28,9 +28,9 @@ namespace ImportantPrototype.UI
             _toggle.group = GetComponentInParent<ToggleGroup>();
         }
 
-        public void Bind(Mutation gene)
+        public void Bind(Mutation mutation)
         {
-            _mutation = gene;
+            _mutation = mutation;
             Refresh();
         }
 
@@ -44,7 +44,7 @@ namespace ImportantPrototype.UI
 
         public override void Refresh()
         {
-            _name.SetText(_mutation.Name);
+            _name.SetText(_mutation.Data.Name);
         }
 
         public void OnPointerEnter(PointerEventData eventData)

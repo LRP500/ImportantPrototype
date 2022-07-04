@@ -37,11 +37,11 @@ namespace ImportantPrototype.UI
             SetGenotypeMod(mutation.GenotypeMod);
         }
 
-        private void SetMutation(IReadOnlyList<Gene> genes)
+        private void SetMutation(IEnumerable<Gene> genes)
         {
-            for (int i = 0; i < genes.Count; i++)
+            foreach (var gene in genes)
             {
-                var item = CreateGeneItem(genes[i]);
+                var item = CreateGeneItem(gene);
                 _items.Add(item.gameObject);
             }
         }

@@ -17,6 +17,6 @@ namespace ImportantPrototype.Content
         private MutationAssetListVariable _mutations;
         
         public IEnumerable<WeaponData> Weapons => _weapons.Items;
-        public IEnumerable<Mutation> Mutations => _mutations.Items;
+        public IEnumerable<MutationData> Mutations => _mutations.Items;
     }
 }

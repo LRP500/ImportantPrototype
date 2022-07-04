@@ -5,7 +5,6 @@ using ImportantPrototype.Mutations;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityTools.Runtime.Extensions;
 using UnityTools.Runtime.UI;
 
 namespace ImportantPrototype.UI
@@ -21,18 +20,19 @@ namespace ImportantPrototype.UI
         [SerializeField]
         private MutationReactiveVariable _hoveredMutation;
         
-        private Action<Mutation> _callback;
+        private Action<Mutation> _mutationSelectedCallback;
+
         private List<Mutation> _choices = new ();
         private readonly List<MutationItem> _mutations = new ();
         
         private void OnMutationSelected(Mutation gene)
         {
-            _callback.Invoke(gene);
+            _mutationSelectedCallback.Invoke(gene);
         }
         
         public void Open(IEnumerable<Mutation> choices, Action<Mutation> callback)
         {
-            _callback = callback;
+            _mutationSelectedCallback = callback;
             _choices = choices.ToList();
             _hoveredMutation.SetValue(_choices[0]);
             Show();
