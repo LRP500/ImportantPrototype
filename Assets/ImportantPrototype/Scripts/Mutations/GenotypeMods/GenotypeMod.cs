@@ -1,21 +1,17 @@
-﻿using System;
-using Sirenix.OdinInspector;
-using UnityEngine;
-
-namespace ImportantPrototype.Mutations
+﻿namespace ImportantPrototype.Mutations.Mods
 {
-    [Serializable]
     public abstract class GenotypeMod
     {
-        [MinValue(1)]
-        [SerializeField]
-        private int _duration;
+        public int Duration { get; private set; }
 
-        public int Duration => _duration;
-
+        protected GenotypeMod(int duration)
+        {
+            Duration = duration;
+        }
+        
         public void Apply(ref Mutation mutation)
         {
-            _duration -= 1;
+            Duration -= 1;
             OnApply(ref mutation);
         }
 

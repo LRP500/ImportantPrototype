@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using ImportantPrototype.Mutations.Mods;
 using ImportantPrototype.System;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
@@ -9,9 +10,6 @@ namespace ImportantPrototype.Mutations
     [CreateAssetMenu(menuName = ContextMenuPath.Mutations + "Mutation")]
     public class MutationData : SerializedScriptableObject
     {
-        // [EnumToggleButtons]
-        // public InfoMessageType SomeEnum;
-        
         [SerializeField]
         [TitleGroup("Info")]
         private string _name;
@@ -37,22 +35,15 @@ namespace ImportantPrototype.Mutations
         private float _modChance = 1f;
         
         [SerializeField]
-        [LabelText("Randomize")]
         [ShowIf("@ _modChance != 0")]
         [TitleGroup("Genotype Modifier")]
-        private bool _randomizeMod;
-        
-        [OdinSerialize]
-        [TitleGroup("Genotype Modifier")]
-        [ShowIf("@ _modChance != 0 && !_randomizeMod")]
-        private GenotypeMod _genotypeMod = new DefaultGenotypeMod();
+        private List<GenotypeModData> _genotypeMods = new ();
         
         public string Name => _name;
         public string Description => _description;
-        public List<Gene> PositiveGenes => _positiveGenes;
-        public List<Gene> NegativeGenes => _negativeGenes;
-        public GenotypeMod GenotypeMod => _genotypeMod;
-        public bool RandomizeMod => _randomizeMod;
+        public IEnumerable<Gene> PositiveGenes => _positiveGenes;
+        public IEnumerable<Gene> NegativeGenes => _negativeGenes;
+        public IEnumerable<GenotypeModData> GenotypeMods => _genotypeMods;
         public float ModChance => _modChance;
     }
 }

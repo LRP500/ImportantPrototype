@@ -95,14 +95,19 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: _genotypeMod
+    - Name: _genotypeMods
       Entry: 7
-      Data: 5|ImportantPrototype.Mutations.DefaultGenotypeMod, ImportantProject
-    - Name: _duration
-      Entry: 3
-      Data: 1
+      Data: 5|System.Collections.Generic.List`1[[ImportantPrototype.Mutations.Mods.GenotypeModData,
+        ImportantProject]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
     - Name: 
       Entry: 8
       Data: 
   _name: Size Matters
   _description: 
+  _modChance: 1

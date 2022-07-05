@@ -1,4 +1,4 @@
-﻿using ImportantPrototype.Mutations;
+﻿using ImportantPrototype.Mutations.Mods;
 using TMPro;
 using UnityEngine;
 using UnityTools.Runtime.UI;

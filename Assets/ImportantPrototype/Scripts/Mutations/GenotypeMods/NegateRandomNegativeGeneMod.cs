@@ -1,12 +1,16 @@
 ﻿using Sirenix.Utilities;
 
-namespace ImportantPrototype.Mutations
+namespace ImportantPrototype.Mutations.Mods
 {
-    public class NegateNegativeGene : GenotypeMod
+    public class NegateRandomNegativeGeneMod : GenotypeMod
     {
+        public NegateRandomNegativeGeneMod(int duration)
+            : base(duration)
+        { }
+
         public override string GetDescription()
         {
-            return "Negate any negative genes for the next mutation";
+            return "Negate random negative gene effects";
         }
 
         protected override void OnApply(ref Mutation mutation)

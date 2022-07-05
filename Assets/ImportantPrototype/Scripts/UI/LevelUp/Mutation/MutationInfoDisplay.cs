@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using ImportantPrototype.Mutations;
+using ImportantPrototype.Mutations.Mods;
 using UniRx;
 using UnityEngine;
 using UnityTools.Runtime.UI;
@@ -48,6 +49,7 @@ namespace ImportantPrototype.UI
 
         private void SetGenotypeMod(GenotypeMod mod)
         {
+            if (mod == null) return;
             var item = CreateGenotypeModItem(mod);
             _items.Add(item.gameObject);
         }
