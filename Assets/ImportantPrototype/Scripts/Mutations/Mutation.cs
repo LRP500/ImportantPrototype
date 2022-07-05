@@ -8,25 +8,50 @@ namespace ImportantPrototype.Mutations
 {
     public sealed class Mutation
     {
-        public MutationData Data { get; private set; }
-        
+        public MutationData Data { get; }
+        public GenotypeMod GenotypeMod { get; private set; }
         public List<Gene> PositiveGenes { get; private set; }
         public List<Gene> NegativeGenes  { get; private set; }
-
-        public GenotypeMod GenotypeMod { get; private set; }
         
         public static Mutation FromData(MutationData data)
         {
+            var mutation = new Mutation(data);
+            mutation.Initialize();
+            mutation.Roll();
+            return mutation;
+        }
+
+        private Mutation(MutationData data)
+        {
+            Data = data;
+        }
+
+        /// <summary>
+        /// Resets to its default state.
+        /// </summary>
+        private void Initialize()
+        {
+            PositiveGenes = Data.PositiveGenes.Select(x => x.Clone()).ToList();
+            NegativeGenes = Data.NegativeGenes.Select(x => x.Clone()).ToList();
+        }
+        
+        /// <summary>
+        /// Rerolls all randomizable attributes.
+        /// </summary>
+        private void Roll()
+        {
+            GenotypeMod = RollMod(Data);
+        }
+
+        /// <summary>
+        /// Generates a random genotype mod.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        private static GenotypeMod RollMod(MutationData data)
+        {
             var hasMod = UnityEngine.Random.value <= data.ModChance;
-            var mod = hasMod ? data.GenotypeMods.ToList().Random()?.Create() : null;
-            
-            return new Mutation
-            {
-                Data = data,
-                PositiveGenes = data.PositiveGenes.ToList(),
-                NegativeGenes = data.NegativeGenes.ToList(),
-                GenotypeMod = mod
-            };
+            return hasMod ? data.GenotypeMods.ToList().Random()?.Create() : null;
         }
         
         public void OnPick(Player player)

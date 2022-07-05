@@ -49,5 +49,14 @@ namespace ImportantPrototype.Mutations
                 _ => "Undefined"
             };
         }
+
+        public override Gene Clone()
+        {
+            var clone = (AttributeGene<T>) MemberwiseClone();
+            clone._stat = _stat;
+            clone._type = _type;
+            clone._value = _value;
+            return clone;
+        }
     }
 }

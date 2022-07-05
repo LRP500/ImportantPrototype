@@ -20,10 +20,10 @@ namespace ImportantPrototype.Mutations
         private IntVariable _mutationChoiceCount;
 
         private readonly ReactiveCollection<GenotypeMod> _genotypeMods = new ();
-        private readonly ReactiveCollection<Mutation> _activeMutations = new ();
+        private readonly ReactiveCollection<Mutation> _mutations = new ();
 
-        public IReadOnlyReactiveCollection<GenotypeMod> GenotypeMods => _genotypeMods;
-        public IReadOnlyReactiveCollection<Mutation> ActiveMutations => _activeMutations;
+        public IEnumerable<GenotypeMod> GenotypeMods => _genotypeMods;
+        public IEnumerable<Mutation> Mutations => _mutations;
 
         public IEnumerable<Mutation> GetNextMutationChoices()
         {
@@ -44,7 +44,7 @@ namespace ImportantPrototype.Mutations
             ApplyGenotypeMod(ref mutation);
             mutation.OnPick(Context.Player.Value);
 
-            _activeMutations.Add(mutation);
+            _mutations.Add(mutation);
             _genotypeMods.Add(mutation.GenotypeMod);
         }
         
@@ -66,6 +66,11 @@ namespace ImportantPrototype.Mutations
             {
                 mod.Apply(ref mutation);
             }
+        }
+
+        private void RecalculateGenotype()
+        {
+            // TODO
         }
     }
 }
