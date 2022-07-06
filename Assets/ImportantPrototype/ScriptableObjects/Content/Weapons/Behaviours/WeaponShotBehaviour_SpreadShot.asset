@@ -9,6 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d4ec693c56155d4981eaed4c8008df5, type: 3}
-  m_Name: WeaponShotBehaviour_SingleShot
+  m_Script: {fileID: 11500000, guid: 802172419b0c19442b0250325bd8bd07, type: 3}
+  m_Name: WeaponShotBehaviour_SpreadShot
   m_EditorClassIdentifier: 
+  _spreadAngle: 30
+  _projectileCount: 3
+  _forwardCompensation: 0.5

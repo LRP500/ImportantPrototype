@@ -34,6 +34,11 @@ namespace ImportantPrototype.Mutations
             PositiveGenes = Data.PositiveGenes.Select(x => x.Clone()).ToList();
             NegativeGenes = Data.NegativeGenes.Select(x => x.Clone()).ToList();
         }
+
+        public void Reset()
+        {
+            Initialize();
+        }
         
         /// <summary>
         /// Rerolls all randomizable attributes.

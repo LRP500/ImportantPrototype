@@ -70,7 +70,10 @@ namespace ImportantPrototype.Mutations
 
         private void RecalculateGenotype()
         {
-            // TODO
+            for (int i = 0, length = _mutations.Count; i < length; ++i)
+            {
+                _mutations[i].Reset();
+            }
         }
     }
 }

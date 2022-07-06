@@ -24,3 +24,6 @@ MonoBehaviour:
   _range: 0
   _shotSpeed: 10
   _shotSize: 1
+  _projectiles: 3
+  _spread: 30
+  _accuracy: 1

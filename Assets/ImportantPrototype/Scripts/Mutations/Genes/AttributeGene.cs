@@ -28,7 +28,12 @@ namespace ImportantPrototype.Mutations
         
         public override void Apply(Player player)
         {
-            GetAttribute(player).AddModifier(Value, Type);
+            GetAttribute(player)?.AddModifier(Value, Type, Uid);
+        }
+
+        public override void Rollback(Player player)
+        {
+            GetAttribute(player).RemoveModifier(Uid);
         }
         
         public override void Scale(float multiplier)
@@ -56,7 +61,10 @@ namespace ImportantPrototype.Mutations
             clone._stat = _stat;
             clone._type = _type;
             clone._value = _value;
+            clone.Initialize();
             return clone;
         }
+
+       
     }
 }

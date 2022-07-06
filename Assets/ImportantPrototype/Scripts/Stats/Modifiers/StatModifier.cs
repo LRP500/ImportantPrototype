@@ -25,7 +25,7 @@ namespace ImportantPrototype.Stats.Modifiers
             Priority = CalculatePriority();
         }
 
-        private StatModifier(float value, Type type, string id)
+        public StatModifier(float value, Type type, string id)
             : this(value, type)
         {
             Id = id;

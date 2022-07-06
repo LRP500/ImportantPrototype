@@ -12,6 +12,8 @@ namespace ImportantPrototype.Weapons
         [SerializeField]
         private Transform _muzzle;
 
+        private WeaponShotBehaviour _behaviour;
+        
         public SpriteRenderer Renderer => _renderer;
 
         public Character Holder { get; private set; }
@@ -21,11 +23,17 @@ namespace ImportantPrototype.Weapons
         public static Weapon FromData(WeaponData data)
         {
             var instance = Instantiate(data.Prefab);
-            instance.Stats = WeaponStatCollection.FromWeaponData(data);
-            instance.Data = data;
+            instance.Initialize(data);
             return instance;
         }
 
+        private void Initialize(WeaponData data)
+        {
+            Data = data;
+            Stats = WeaponStatCollection.FromWeaponData(data);
+            _behaviour = Instantiate(data.ShotBehaviour);
+        }
+        
         public void Bind(Character holder)
         {
             Holder = holder;
@@ -33,7 +41,7 @@ namespace ImportantPrototype.Weapons
         
         public void Fire(Vector2 direction, string excludeTag)
         {
-            Data.ShotBehaviour.Fire(this, _muzzle.position, direction, excludeTag);
+            _behaviour.Fire(this, _muzzle.position, direction, excludeTag);
         }
     }
 }

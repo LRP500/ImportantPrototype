@@ -14,6 +14,9 @@ namespace ImportantPrototype.Stats
         private Attribute _damage;
         private Attribute _shotSize;
         private Attribute _shotSpeed;
+        private Attribute _projectiles;
+        private Attribute _spread;
+        private Attribute _accuracy;
         
         public float Damage {
             get {
@@ -43,6 +46,27 @@ namespace ImportantPrototype.Stats
             }
         }
         
+        public float Projectiles {
+            get {
+                _projectiles ??= Get<Attribute>(WeaponStatType.Projectiles);
+                return _projectiles.Value;
+            }
+        }
+        
+        public float Spread {
+            get {
+                _spread ??= Get<Attribute>(WeaponStatType.Spread);
+                return _spread.Value;
+            }
+        }
+        
+        public float Accuracy {
+            get {
+                _accuracy ??= Get<Attribute>(WeaponStatType.Accuracy);
+                return _accuracy.Value;
+            }
+        }
+        
         #endregion Fast Accessors
         
         public static WeaponStatCollection FromWeaponData(WeaponData data)
@@ -54,6 +78,9 @@ namespace ImportantPrototype.Stats
             collection.Get<Attribute>(WeaponStatType.Range).SetValue(data.Range);
             collection.Get<Attribute>(WeaponStatType.ShotSpeed).SetValue(data.ShotSpeed);
             collection.Get<Attribute>(WeaponStatType.ShotSize).SetValue(data.ShotSize);
+            collection.Get<Attribute>(WeaponStatType.Projectiles).SetValue(data.Projectiles);
+            collection.Get<Attribute>(WeaponStatType.Spread).SetValue(data.Spread);
+            collection.Get<Attribute>(WeaponStatType.Accuracy).SetValue(data.Accuracy);
             return collection;
         }
         

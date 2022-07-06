@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using ImportantPrototype.Stats.Modifiers;
 using UniRx;
+using UnityEngine;
 
 namespace ImportantPrototype.Stats
 {
@@ -55,6 +57,11 @@ namespace ImportantPrototype.Stats
             AddModifier(new StatModifier(value, type));
         }
 
+        public void AddModifier(float value, StatModifier.Type type, string id)
+        {
+            AddModifier(new StatModifier(value, type, id));
+        }
+        
         private void AddModifier(StatModifier mod)
         {
             if (!_sortedModifiers.ContainsKey(mod.Priority))
@@ -79,7 +86,10 @@ namespace ImportantPrototype.Stats
                 if (!mod.Id.Equals(id)) continue;
                 _sortedModifiers[mod.Priority].Remove(mod);
                 _modifiers.Remove(mod);
+                
+                _modifiedValue.Value = Calculate();
                 // _isDirty = true;
+                
                 return;
             }
         }
@@ -97,6 +107,9 @@ namespace ImportantPrototype.Stats
             // We iterate over each group of mod sorted by priority
             foreach (var (_, group) in _sortedModifiers)
             {
+                if (group.Count == 0)
+                    continue;
+                
                 float sum = 0;
                 float max = 0;
                 

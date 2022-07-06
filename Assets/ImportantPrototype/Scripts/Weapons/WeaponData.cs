@@ -1,4 +1,5 @@
-﻿using ImportantPrototype.System;
+﻿using System;
+using ImportantPrototype.System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -31,23 +32,35 @@ namespace ImportantPrototype.Weapons
 
         [TitleGroup("Stats")]
         [SerializeField]
-        private float _damage;
+        private float _damage = 1;
 
         [SerializeField]
-        private float _fireRate;
+        private float _fireRate = 0.5f;
 
         [SerializeField]
-        private float _reloadSpeed;
+        private float _reloadSpeed = 1;
 
         [SerializeField]
-        private float _range;
+        private float _range = 20;
 
         [SerializeField]
-        private float _shotSpeed;
+        private float _shotSpeed = 2;
 
         [SerializeField]
-        private float _shotSize;
+        private float _shotSize = 1;
 
+        [MinValue(1)]
+        [SerializeField]
+        private int _projectiles = 1;
+        
+        [Range(1, 360)]
+        [SerializeField]
+        [ShowIf("@ _projectiles > 1")]
+        private float _spread;
+        
+        [SerializeField]
+        private float _accuracy = 1;
+        
         public string Name => _name;
         public string Description => _description;
         public WeaponFiringMode FiringMode => _firingMode;
@@ -61,5 +74,8 @@ namespace ImportantPrototype.Weapons
         public float Range => _range;
         public float ShotSpeed => _shotSpeed;
         public float ShotSize => _shotSize;
+        public float Spread => _spread;
+        public float Accuracy => _accuracy;
+        public int Projectiles => _projectiles;
     }
 }
