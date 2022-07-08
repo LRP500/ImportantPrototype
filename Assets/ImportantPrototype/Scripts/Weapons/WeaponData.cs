@@ -1,5 +1,4 @@
-﻿using System;
-using ImportantPrototype.System;
+﻿using ImportantPrototype.System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
