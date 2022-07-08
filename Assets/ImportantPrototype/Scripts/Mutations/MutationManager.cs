@@ -45,7 +45,11 @@ namespace ImportantPrototype.Mutations
             mutation.OnPick(Context.Player.Value);
 
             _mutations.Add(mutation);
-            _genotypeMods.Add(mutation.GenotypeMod);
+
+            if (mutation.GenotypeMod != null)
+            {
+                _genotypeMods.Add(mutation.GenotypeMod);
+            }
         }
         
         private void UpdateGenotypeMods()

@@ -79,19 +79,11 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: _genotypeMods
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[ImportantPrototype.Mutations.Mods.GenotypeModData,
-        ImportantProject]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
   _name: Fortified
   _description: 
-  _modChance: 1
+  _modChance: 0.5
+  _genotypeMods:
+  - {fileID: 11400000, guid: 161ed099d7b807b408ed48367fd8d7bc, type: 2}
+  - {fileID: 11400000, guid: 4e16eda84f262c443862b9410c28c847, type: 2}
+  - {fileID: 11400000, guid: e62623847a37e5d458f1f092c28b5cad, type: 2}
+  - {fileID: 11400000, guid: a4a163b92b37d4848a6a824fb0141ff9, type: 2}

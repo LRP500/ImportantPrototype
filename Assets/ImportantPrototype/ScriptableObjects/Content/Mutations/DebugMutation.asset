@@ -65,9 +65,9 @@ MonoBehaviour:
       Data: 
   _name: Debug
   _description: 
-  _modChance: 1
+  _modChance: 0.5
   _genotypeMods:
-  - {fileID: 11400000, guid: 4e16eda84f262c443862b9410c28c847, type: 2}
+  - {fileID: 11400000, guid: 161ed099d7b807b408ed48367fd8d7bc, type: 2}
   - {fileID: 11400000, guid: 4e16eda84f262c443862b9410c28c847, type: 2}
   - {fileID: 11400000, guid: e62623847a37e5d458f1f092c28b5cad, type: 2}
-  - {fileID: 11400000, guid: 161ed099d7b807b408ed48367fd8d7bc, type: 2}
+  - {fileID: 11400000, guid: a4a163b92b37d4848a6a824fb0141ff9, type: 2}

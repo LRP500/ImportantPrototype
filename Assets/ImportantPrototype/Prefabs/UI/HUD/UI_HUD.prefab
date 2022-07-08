@@ -557,6 +557,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 162.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4928069628739310682, guid: 25adfbd956e0b734c935e40b5ee29163, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8822068102180356589, guid: 25adfbd956e0b734c935e40b5ee29163, type: 3}
       propertyPath: m_Name
       value: UI_PlayerStats

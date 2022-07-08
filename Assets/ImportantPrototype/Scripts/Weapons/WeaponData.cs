@@ -77,5 +77,10 @@ namespace ImportantPrototype.Weapons
         public float Spread => _spread;
         public float Accuracy => _accuracy;
         public int Projectiles => _projectiles;
+
+        private void OnValidate()
+        {
+            _spread = _projectiles < 2 ? 0 : _spread;
+        }
     }
 }
