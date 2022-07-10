@@ -153,7 +153,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7195264648865753801}
   - component: {fileID: 653015623329427243}
-  - component: {fileID: 7816107737040313259}
   - component: {fileID: 3192214820137258143}
   - component: {fileID: 8701645536983396720}
   - component: {fileID: 6297916558324003570}
@@ -208,19 +207,6 @@ MonoBehaviour:
   m_Spacing: {x: 32, y: 32}
   m_Constraint: 1
   m_ConstraintCount: 3
---- !u!114 &7816107737040313259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4310140772872893467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fafe2cfe61f6974895a912c3755e8f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AllowSwitchOff: 0
 --- !u!222 &3192214820137258143
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -33,6 +33,7 @@ namespace ImportantPrototype.Mutations
         {
             PositiveGenes = Data.PositiveGenes.Select(x => x.Clone()).ToList();
             NegativeGenes = Data.NegativeGenes.Select(x => x.Clone()).ToList();
+            GenotypeMod?.Reset();
         }
 
         public void Reset()
@@ -64,6 +65,17 @@ namespace ImportantPrototype.Mutations
             ApplyGenes(player);
         }
 
+        public void Rollback(Player player)
+        {
+            var genes = new List<Gene>(PositiveGenes);
+            genes.AddRange(NegativeGenes);
+
+            for (int i = 0; i < genes.Count; i++)
+            {
+                genes[i].Rollback(player);
+            }
+        }
+        
         private void ApplyGenes(Player player)
         {
             var genes = new List<Gene>(PositiveGenes);

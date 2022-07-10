@@ -33,7 +33,7 @@ namespace ImportantPrototype.UI
         private void Refresh(Mutation mutation)
         {
             if (mutation == null) return;
-            Clear();
+            ClearViews();
             SetMutation(mutation.GetAllGenes());
             SetGenotypeMod(mutation.GenotypeMod);
         }
@@ -68,7 +68,7 @@ namespace ImportantPrototype.UI
             return item;
         }
         
-        public override void Clear()
+        public override void ClearViews()
         {
             for (int i = 0; i < _items.Count; i++)
             {

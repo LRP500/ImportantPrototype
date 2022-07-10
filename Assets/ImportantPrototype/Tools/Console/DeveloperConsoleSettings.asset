@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: DeveloperConsoleSettings
   m_EditorClassIdentifier: 
   _prefix: 
-  _pauseGame: 1
   _fontSize: 24
   _commands:
   - {fileID: 11400000, guid: 0f28d62156a557c4ba4a0a6b5c7b59eb, type: 2}
   - {fileID: 11400000, guid: 36877fbee47ddf8468c8e563351fa4f6, type: 2}
   - {fileID: 11400000, guid: ed929d0a0b021dd4391dffc63626cd13, type: 2}
   - {fileID: 11400000, guid: bfa1d36332c73714692491cb4822a9b8, type: 2}
+  - {fileID: 11400000, guid: 5da5f16cebc0aa64680700e3239e53b0, type: 2}

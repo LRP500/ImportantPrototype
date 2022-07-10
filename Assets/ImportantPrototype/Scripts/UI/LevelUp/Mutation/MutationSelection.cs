@@ -41,14 +41,14 @@ namespace ImportantPrototype.UI
         protected override void OnShow()
         {
             base.OnShow();
-            Clear();
+            ClearViews();
             CreateItems();
         }
 
         protected override void OnHide()
         {
             base.OnHide();
-            Clear();
+            ClearViews();
         }
 
         private void CreateItems()
@@ -71,7 +71,7 @@ namespace ImportantPrototype.UI
             return item;
         }
         
-        public override void Clear()
+        public override void ClearViews()
         {
             foreach (var mutation in _mutations)
             {

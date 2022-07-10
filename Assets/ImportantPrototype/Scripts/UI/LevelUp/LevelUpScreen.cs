@@ -8,6 +8,9 @@ namespace ImportantPrototype.UI
     {
         [SerializeField]
         private MutationManager _mutationManager;
+
+        [SerializeField]
+        private MutationReactiveListVariable _mutationChoices;
         
         [SerializeField]
         private MutationSelection _mutationSelection;
@@ -17,16 +20,15 @@ namespace ImportantPrototype.UI
             _mutationManager.Pick(mutation);
             Hide();
         }
-
+        
         protected override void OnShow()
         {
-            var choices = _mutationManager.GetNextMutationChoices();
+            var choices = _mutationChoices.Values;
             _mutationSelection.Open(choices, OnMutationSelected);
         }
-        
+
         protected override void OnHide()
         {
-            base.OnHide();
             PauseManager.Resume();
         }
     }

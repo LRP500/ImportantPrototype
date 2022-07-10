@@ -38,5 +38,11 @@ namespace ImportantPrototype.Characters
         {
             return Collection.Get<Attribute>((int) type).Property;
         }
+        
+        public bool IsFullHealth()
+        {
+            var health = Get<Vital>(CharacterStatType.Health);
+            return health.Current.Value < health.Value;
+        }
     }
 }

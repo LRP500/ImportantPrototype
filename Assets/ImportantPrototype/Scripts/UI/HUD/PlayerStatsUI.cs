@@ -66,10 +66,10 @@ namespace ImportantPrototype.UI.HUD
         
         protected override void OnHide()
         {
-            Clear();
+            ClearViews();
         }
 
-        public override void Clear()
+        public override void ClearViews()
         {
             for (int i = 0; i < _items.Count; i++)
             {

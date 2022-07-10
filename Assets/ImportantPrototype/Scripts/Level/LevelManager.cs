@@ -26,7 +26,11 @@ namespace ImportantPrototype.Level
         {
             _gameStartTime.SetValue(Time.time);
             _currentWaveCount.SetValue(0);
-            StartWave(GetWave(0));
+
+            if (_level != null)
+            {
+                StartWave(GetWave(0));
+            }
         }
 
         private void OnLevelEnd() { }

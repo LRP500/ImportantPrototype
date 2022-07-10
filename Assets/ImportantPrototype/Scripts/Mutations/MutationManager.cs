@@ -72,11 +72,20 @@ namespace ImportantPrototype.Mutations
             }
         }
 
-        private void RecalculateGenotype()
+        public void RecalculateGenotype()
         {
-            for (int i = 0, length = _mutations.Count; i < length; ++i)
+            var player = Context.Player.Value;
+            var mutations = new List<Mutation>(_mutations);
+
+            _mutations.Clear();
+            _genotypeMods.Clear();
+
+            for (int i = 0, length = mutations.Count; i < length; ++i)
             {
-                _mutations[i].Reset();
+                var mutation = mutations[i];
+                mutation.Rollback(player);
+                mutation.Reset();
+                Pick(mutation);
             }
         }
     }

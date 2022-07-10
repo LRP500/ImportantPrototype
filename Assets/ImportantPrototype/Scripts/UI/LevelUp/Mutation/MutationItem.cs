@@ -23,11 +23,6 @@ namespace ImportantPrototype.UI
 
         private Mutation _mutation;
 
-        public override void Initialize()
-        {
-            _toggle.group = GetComponentInParent<ToggleGroup>();
-        }
-
         public void Bind(Mutation mutation)
         {
             _mutation = mutation;

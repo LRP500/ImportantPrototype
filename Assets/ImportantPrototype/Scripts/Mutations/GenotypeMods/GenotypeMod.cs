@@ -2,10 +2,12 @@
 {
     public abstract class GenotypeMod
     {
+        public int InitialDuration { get; }
         public int Duration { get; private set; }
 
         protected GenotypeMod(int duration)
         {
+            InitialDuration = duration;
             Duration = duration;
         }
         
@@ -15,6 +17,11 @@
             OnApply(ref mutation);
         }
 
+        public void Reset()
+        {
+            Duration = InitialDuration;
+        }
+        
         public abstract string GetDescription();
         protected abstract void OnApply(ref Mutation mutation);
     }

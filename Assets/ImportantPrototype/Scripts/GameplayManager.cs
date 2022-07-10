@@ -22,11 +22,7 @@ namespace ImportantPrototype
         private LevelManager _levelManager;
         
         [SerializeField]
-        [Header("Events")]
         private ScriptableEvent _gameOverEvent;
-
-        [SerializeField]
-        private ScriptableEvent _levelUpEvent;
 
         private void Start()
         {
@@ -51,21 +47,8 @@ namespace ImportantPrototype
                 .Where(value => value <= 0)
                 .Subscribe(_ => GameOver())
                 .AddTo(gameObject);
-
-            _player.Value.Stats
-                .ObserveAttribute(CharacterStatType.Level)
-                .Where(value => value > 0)
-                .Subscribe(_ => OnPlayerLevelUp())
-                .AddTo(gameObject);
         }
 
-        private void OnPlayerLevelUp()
-        {
-            PauseManager.Pause();
-            PauseManager.AllowPausing = false;
-            _levelUpEvent.Raise();
-        }
-        
         private void FixedUpdate()
         {
             _context.FixedUpdate();

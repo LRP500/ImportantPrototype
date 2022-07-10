@@ -21,6 +21,7 @@
 
         private const string ECA = Root + "ECA/";
         public const string Actions = ECA + "Actions/";
+        public const string LevelUpActions = Actions + "Level Up/";
 
         private const string Tools = Root + "Tools/";
         public const string Console = Tools + "Console/";

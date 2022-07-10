@@ -1,6 +1,4 @@
-using UniRx;
 using UnityEngine;
-using Attribute = ImportantPrototype.Stats.Attribute;
 
 namespace ImportantPrototype.Characters
 {
