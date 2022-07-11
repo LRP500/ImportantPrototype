@@ -184,7 +184,6 @@ MonoBehaviour:
   _children:
   - {fileID: 1804724176411264076}
   _mutationManager: {fileID: 11400000, guid: b195aeee26ac6ef449ef602163ec0ef3, type: 2}
-  _mutationChoices: {fileID: 11400000, guid: 807f4559fbc094f458963663baf6938d, type: 2}
   _mutationSelection: {fileID: 1804724176411264076}
 --- !u!114 &3777855816487858762
 MonoBehaviour:
@@ -862,6 +861,10 @@ PrefabInstance:
     - target: {fileID: 7195264648865753801, guid: a8078af44cfdb4e4f9ad3a482c302d7f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210759803085490472, guid: a8078af44cfdb4e4f9ad3a482c302d7f, type: 3}
+      propertyPath: _hideOnStart
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8078af44cfdb4e4f9ad3a482c302d7f, type: 3}

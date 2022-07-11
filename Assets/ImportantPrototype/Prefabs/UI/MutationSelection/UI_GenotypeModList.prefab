@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4805501032307992860}
   - component: {fileID: 9092783703372747526}
   m_Layer: 5
-  m_Name: UI_GenotypeInfo
+  m_Name: UI_GenotypeModList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,7 +84,6 @@ MonoBehaviour:
   _hideOnStart: 1
   _itemPrefab: {fileID: 7169474805765555689, guid: fb7b2d1132b1065419b6344a6fed747b, type: 3}
   _itemContainer: {fileID: 6776652911159511239}
-  _mutationManager: {fileID: 11400000, guid: b195aeee26ac6ef449ef602163ec0ef3, type: 2}
 --- !u!114 &9092783703372747526
 MonoBehaviour:
   m_ObjectHideFlags: 0

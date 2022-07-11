@@ -22,8 +22,8 @@ namespace ImportantPrototype.Mutations
         private readonly ReactiveCollection<GenotypeMod> _genotypeMods = new ();
         private readonly ReactiveCollection<Mutation> _mutations = new ();
 
-        public IEnumerable<GenotypeMod> GenotypeMods => _genotypeMods;
-        public IEnumerable<Mutation> Mutations => _mutations;
+        public IReadOnlyReactiveCollection<GenotypeMod> GenotypeMods => _genotypeMods;
+        public IReadOnlyReactiveCollection<Mutation> Mutations => _mutations;
 
         public IEnumerable<Mutation> GetNextMutationChoices()
         {

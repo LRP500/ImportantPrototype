@@ -1,0 +1,20 @@
+{
+    "name": "ImportantPrototype.Console",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6c1d832eec6c5994798bbb21a0ffe4bd",
+        "GUID:f589edd8e391bae4f8d260514e54b697",
+        "GUID:44381728f195eb940a220ba4d32f5c61",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:560b04d1a97f54a4e82edc0cbbb69285"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

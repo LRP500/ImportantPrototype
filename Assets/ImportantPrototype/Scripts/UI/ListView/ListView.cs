@@ -15,8 +15,6 @@ namespace ImportantPrototype.Tools.UI
         private IReadOnlyReactiveCollection<T> _data;
         private readonly ReactiveCollection<ListItemView> _views = new ();
 
-        private readonly CompositeDisposable _disposables = new ();
-        
         public void Bind(IReadOnlyReactiveCollection<T> collection)
         {
             _data = collection;
@@ -30,7 +28,6 @@ namespace ImportantPrototype.Tools.UI
         protected override void OnHide()
         {
             ClearViews();
-            _disposables.Clear();
         }
 
         private void CreateViews()
@@ -55,7 +52,7 @@ namespace ImportantPrototype.Tools.UI
         private ListItemView CreateView(T mod)
         {
             var instance = Instantiate(_itemPrefab, _itemContainer);
-            instance.BindData(mod);
+            instance.Bind(mod);
             return instance;
         }
     }

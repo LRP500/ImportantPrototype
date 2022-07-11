@@ -18,7 +18,16 @@ namespace ImportantPrototype.UI
         private GridLayoutGroup _gridLayout;
 
         [SerializeField]
+        private MutationManager _mutationManager;
+        
+        [SerializeField]
+        private MutationReactiveListVariable _mutationChoices;
+        
+        [SerializeField]
         private MutationReactiveVariable _hoveredMutation;
+
+        [SerializeField]
+        private GenotypeModListView _genotypeModList;
         
         private Action<Mutation> _mutationSelectedCallback;
 
@@ -30,10 +39,11 @@ namespace ImportantPrototype.UI
             _mutationSelectedCallback.Invoke(gene);
         }
         
-        public void Open(IEnumerable<Mutation> choices, Action<Mutation> callback)
+        public void Open(Action<Mutation> callback)
         {
             _mutationSelectedCallback = callback;
-            _choices = choices.ToList();
+            _choices = _mutationChoices.Values.ToList();
+            _genotypeModList.Bind(_mutationManager.GenotypeMods);
             _hoveredMutation.SetValue(_choices[0]);
             Show();
         }

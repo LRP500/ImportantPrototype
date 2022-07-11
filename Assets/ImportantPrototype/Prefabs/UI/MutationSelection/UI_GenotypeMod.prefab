@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9057302182369309882}
   - component: {fileID: 7169474805765555689}
   m_Layer: 5
-  m_Name: UI_GenotypeModItem
+  m_Name: UI_GenotypeMod
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

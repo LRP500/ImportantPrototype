@@ -142,7 +142,10 @@ MonoBehaviour:
   - {fileID: 6438504413711767899}
   _mutationPrefab: {fileID: 5570879482852482199, guid: 5b183594b1519bf4d8018e972eff9d45, type: 3}
   _gridLayout: {fileID: 653015623329427243}
+  _mutationManager: {fileID: 11400000, guid: b195aeee26ac6ef449ef602163ec0ef3, type: 2}
+  _mutationChoices: {fileID: 11400000, guid: 807f4559fbc094f458963663baf6938d, type: 2}
   _hoveredMutation: {fileID: 11400000, guid: ac157fb13270d944baca1c4141b30c8f, type: 2}
+  _genotypeModList: {fileID: 6438504413711767899}
 --- !u!1 &4310140772872893467
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +277,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 114695155509901553, guid: a88e6c5509278fc4582f1fb35ca43a86, type: 3}
       propertyPath: m_Name
-      value: UI_GenotypeInfo
+      value: UI_GenotypeModList
       objectReference: {fileID: 0}
     - target: {fileID: 2295934823922740429, guid: a88e6c5509278fc4582f1fb35ca43a86, type: 3}
       propertyPath: m_Pivot.x

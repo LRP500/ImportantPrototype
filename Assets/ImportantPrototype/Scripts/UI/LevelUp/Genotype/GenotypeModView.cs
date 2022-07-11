@@ -1,21 +1,21 @@
 ﻿using ImportantPrototype.Mutations.Mods;
+using ImportantPrototype.Tools.UI;
 using TMPro;
 using UnityEngine;
-using UnityTools.Runtime.UI;
 
 namespace ImportantPrototype.UI
 {
     /// <summary>
     /// Displays a single genotype modifier.
     /// </summary>
-    public class GenotypeModItem : Element
+    public class GenotypeModView : ListItemView<GenotypeMod>
     {
         [SerializeField]
         private TextMeshProUGUI _description;
         
-        public void Bind(GenotypeMod mod)
+        public override void Bind(GenotypeMod data)
         {
-            _description.SetText(mod.GetDescription());
+            _description.SetText(data.GetDescription());
         }
     }
 }

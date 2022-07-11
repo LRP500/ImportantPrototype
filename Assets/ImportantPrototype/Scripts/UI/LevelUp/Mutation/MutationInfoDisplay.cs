@@ -13,7 +13,7 @@ namespace ImportantPrototype.UI
         private GeneItem _genePrefab;
 
         [SerializeField]
-        private GenotypeModItem _genotypeModPrefab;
+        private GenotypeModView _genotypeModPrefab;
         
         [SerializeField]
         private Transform _itemContainer;
@@ -61,7 +61,7 @@ namespace ImportantPrototype.UI
             return item;
         }
 
-        private GenotypeModItem CreateGenotypeModItem(GenotypeMod mod)
+        private GenotypeModView CreateGenotypeModItem(GenotypeMod mod)
         {
             var item = Instantiate(_genotypeModPrefab, _itemContainer);
             item.Bind(mod);
