@@ -7,13 +7,13 @@ namespace ImportantPrototype.Tools.UI
     public abstract class ListView<T> : Element
     {
         [SerializeField]
-        private ListItemView<T> _itemPrefab;
+        private ListItemView<T> _itemViewPrefab;
 
         [SerializeField]
-        private Transform _itemContainer;
+        private Transform _itemViewContainer;
 
         private IReadOnlyReactiveCollection<T> _data;
-        private readonly ReactiveCollection<ListItemView> _views = new ();
+        private readonly ReactiveCollection<ListItemView> _itemViews = new ();
 
         public void Bind(IReadOnlyReactiveCollection<T> collection)
         {
@@ -35,23 +35,23 @@ namespace ImportantPrototype.Tools.UI
             foreach (var item in _data)
             {
                 var view = CreateView(item);
-                _views.Add(view);
+                _itemViews.Add(view);
             }
         }
 
         public override void ClearViews()
         {
-            for (int i = 0; i < _views.Count; i++)
+            for (int i = 0; i < _itemViews.Count; i++)
             {
-                Destroy(_views[i].gameObject);
+                Destroy(_itemViews[i].gameObject);
             }
             
-            _views.Clear();
+            _itemViews.Clear();
         }
 
         private ListItemView CreateView(T mod)
         {
-            var instance = Instantiate(_itemPrefab, _itemContainer);
+            var instance = Instantiate(_itemViewPrefab, _itemViewContainer);
             instance.Bind(mod);
             return instance;
         }

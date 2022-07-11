@@ -1,3 +1,4 @@
+using ImportantPrototype.Input;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,11 +22,21 @@ namespace ImportantPrototype.UI
                 .Subscribe(_ => Resume())
                 .AddTo(gameObject);
         }
-
+        
         private void Resume()
         {
             Hide();
             _timeManager.Value.Resume();
+        }
+        
+        protected override void OnShow()
+        {
+            PlayerInput.Map = PlayerInput.InputMap.Menu;
+        }
+
+        protected override void OnHide()
+        {
+            PlayerInput.Map = PlayerInput.InputMap.Gameplay;
         }
     }
 }

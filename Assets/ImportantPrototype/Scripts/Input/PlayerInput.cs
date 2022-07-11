@@ -6,6 +6,14 @@ namespace ImportantPrototype.Input
 {
     public static class PlayerInput
     {
+        public enum InputMap
+        {
+            Gameplay = 0,
+            Menu = 1
+        }
+
+        public static InputMap Map { get; set; } = InputMap.Gameplay; 
+        
         private static float MoveHorizontal => UnityEngine.Input.GetAxisRaw("Horizontal");
         private static float MoveVertical => UnityEngine.Input.GetAxisRaw("Vertical");
         
@@ -25,6 +33,15 @@ namespace ImportantPrototype.Input
             return Observable
                 .EveryUpdate()
                 .Where(_ => UnityEngine.Input.GetKeyDown(KeyCode.Escape))
+                .AsUnitObservable();
+        }
+
+        public static IObservable<Unit> ObserveTab()
+        {
+            return Observable
+                .EveryUpdate()
+                .Where(_ => UnityEngine.Input.GetKeyDown(KeyCode.Tab))
+                .Where(_ => Map == InputMap.Gameplay)
                 .AsUnitObservable();
         }
     }

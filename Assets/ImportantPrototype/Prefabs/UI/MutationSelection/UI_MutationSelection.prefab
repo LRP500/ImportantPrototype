@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _initializeOnStart: 1
-  _hideOnStart: 0
+  _hideOnStart: 1
   _children:
   - {fileID: 7127834801427576696}
   - {fileID: 6438504413711767899}

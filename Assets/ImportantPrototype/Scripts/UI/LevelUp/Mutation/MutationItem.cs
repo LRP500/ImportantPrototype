@@ -1,16 +1,16 @@
 ﻿using System;
 using ImportantPrototype.Mutations;
+using ImportantPrototype.Tools.UI;
 using TMPro;
 using UniRx;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityTools.Runtime.Extensions;
-using UnityTools.Runtime.UI;
 
 namespace ImportantPrototype.UI
 {
-    public class MutationItem : Element, IPointerEnterHandler
+    public class MutationItem : ListItemView<Mutation>, IPointerEnterHandler
     {
         [SerializeField]
         private TextMeshProUGUI _name;
@@ -23,7 +23,7 @@ namespace ImportantPrototype.UI
 
         private Mutation _mutation;
 
-        public void Bind(Mutation mutation)
+        public override void Bind(Mutation mutation)
         {
             _mutation = mutation;
             Refresh();

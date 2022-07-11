@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5570879482852482199}
   - component: {fileID: 7934244355755435078}
   m_Layer: 5
-  m_Name: UI_MutationItem
+  m_Name: UI_Mutation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

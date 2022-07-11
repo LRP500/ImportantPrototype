@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameStartTime: {fileID: 11400000, guid: 7ef5fb8449e01e14fb68ac078bebd275, type: 2}
-  _level: {fileID: 11400000, guid: 845d9f02852e3354da53b8aac2890bb5, type: 2}
+  _level: {fileID: 0}
   _currentWaveCount: {fileID: 11400000, guid: 3e8fcd7c077f678479dba34834c1002c, type: 2}
   _spawner: {fileID: 1076794872985961353}
 --- !u!1 &1076794872985961355
