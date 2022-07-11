@@ -25,11 +25,13 @@ namespace ImportantPrototype.UI.Genotype
 
         protected override void OnShow()
         {
+            base.OnShow();
             PauseManager.Pause();
         }
 
         protected override void OnHide()
         {
+            base.OnHide();
             PauseManager.Resume();
         }
     }
