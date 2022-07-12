@@ -1,4 +1,3 @@
-
 # Created by https://www.gitignore.io/api/unity
 # Edit at https://www.gitignore.io/?templates=unity
 
@@ -59,3 +58,35 @@ sysinfo.txt
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # End of https://www.gitignore.io/api/unity
+
+## ---------------- ##
+##       WWise      ##
+## ---------------- ##
+
+# Wwise project
+WWiseProject/.cache/
+WWiseProject/*.prof
+WwiseProject/*_WwiseProject.*.validationcache
+WwiseProject/*_WwiseProject.*.wsettings
+WwiseProject/**/*.akd
+
+# WWise Picker (editor)
+# from https://www.audiokinetic.com/library/edge/?source=Unity&id=unity__troubleshooting.html
+# >> Do not keep AkWwiseProjectData.asset under version control! 
+# >> This is a temporary cache file for the Wwise project data, 
+# >> so as to avoid having the Wwise Picker continuously parse the Work Unit files.
+Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset*
+
+# notes:
+# 1) if any other files go in Assets/Wwise/Editor/ProjectData/ besides AkWwiseProjectData.asset*,
+#    then don't ignore Assets/Wwise/Editor/ProjectData.meta. If AkWwiseProjectData.asset is the only item in there,
+#    then, it's OK to ignore this file.
+# 
+ Assets/Wwise/Editor/ProjectData.meta
+
+# temp install files
+WwiseUnityIntegration_*_Src.zip
+
+## ---------------- ##
+##     End WWise    ##
+## ---------------- ##
