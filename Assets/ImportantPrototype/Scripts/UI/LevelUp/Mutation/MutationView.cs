@@ -10,7 +10,7 @@ using UnityTools.Runtime.Extensions;
 
 namespace ImportantPrototype.UI
 {
-    public class MutationItem : ListItemView<Mutation>, IPointerEnterHandler
+    public class MutationView : ListItemView<Mutation>, IPointerEnterHandler, IPointerClickHandler
     {
         [SerializeField]
         private TextMeshProUGUI _name;
@@ -21,6 +21,9 @@ namespace ImportantPrototype.UI
         [SerializeField]
         private MutationReactiveVariable _hoveredMutation;
 
+        [SerializeField]
+        private MutationReactiveVariable _selectedMutation;
+        
         private Mutation _mutation;
 
         public override void Bind(Mutation mutation)
@@ -45,6 +48,11 @@ namespace ImportantPrototype.UI
         public void OnPointerEnter(PointerEventData eventData)
         {
             _hoveredMutation.SetValue(_mutation);
+        }
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            _selectedMutation.SetValue(_mutation);
         }
     }
 }

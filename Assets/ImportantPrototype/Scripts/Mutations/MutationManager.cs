@@ -88,5 +88,11 @@ namespace ImportantPrototype.Mutations
                 Pick(mutation);
             }
         }
+
+        public void RerollModifier(Mutation mutation)
+        {
+            mutation.Roll();
+            RecalculateGenotype();
+        }
     }
 }

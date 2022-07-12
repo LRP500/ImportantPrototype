@@ -44,7 +44,7 @@ namespace ImportantPrototype.Mutations
         /// <summary>
         /// Rerolls all randomizable attributes.
         /// </summary>
-        private void Roll()
+        public void Roll()
         {
             GenotypeMod = RollMod(Data);
         }

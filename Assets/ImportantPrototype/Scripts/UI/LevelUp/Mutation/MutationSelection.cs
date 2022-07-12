@@ -12,7 +12,7 @@ namespace ImportantPrototype.UI
     public class MutationSelection : CompositeElement
     {
         [SerializeField]
-        private MutationItem _mutationPrefab;
+        private MutationView _mutationPrefab;
 
         [SerializeField]
         private GridLayoutGroup _gridLayout;
@@ -32,7 +32,7 @@ namespace ImportantPrototype.UI
         private Action<Mutation> _mutationSelectedCallback;
 
         private List<Mutation> _choices = new ();
-        private readonly List<MutationItem> _mutations = new ();
+        private readonly List<MutationView> _mutations = new ();
         
         private void OnMutationSelected(Mutation gene)
         {
@@ -71,7 +71,7 @@ namespace ImportantPrototype.UI
             }
         }
         
-        private MutationItem CreateItem(Mutation gene)
+        private MutationView CreateItem(Mutation gene)
         {
             var item = Instantiate(_mutationPrefab, _gridLayout.transform);
             item.Bind(gene);
