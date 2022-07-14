@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 215738120684374158}
   - component: {fileID: 8210759803085490472}
   m_Layer: 5
-  m_Name: UI_MutationSelection
+  m_Name: UI_LevelUp_MutationSelection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +35,7 @@ RectTransform:
   m_Children:
   - {fileID: 7195264648865753801}
   - {fileID: 7493327634933802971}
-  - {fileID: 303558197073124490}
+  - {fileID: 9092612569958487298}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -146,6 +146,64 @@ MonoBehaviour:
   _mutationChoices: {fileID: 11400000, guid: 807f4559fbc094f458963663baf6938d, type: 2}
   _hoveredMutation: {fileID: 11400000, guid: ac157fb13270d944baca1c4141b30c8f, type: 2}
   _genotypeModList: {fileID: 6438504413711767899}
+--- !u!1 &1138791776982453007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9092612569958487298}
+  - component: {fileID: 8538371014191806530}
+  m_Layer: 5
+  m_Name: CurrentGenotypeMods
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &9092612569958487298
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138791776982453007}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 303558197073124490}
+  m_Father: {fileID: 2296790906504618767}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8538371014191806530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138791776982453007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: 172
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: 0
+  m_LayoutPriority: 1
 --- !u!1 &4310140772872893467
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,7 +218,7 @@ GameObject:
   - component: {fileID: 8701645536983396720}
   - component: {fileID: 6297916558324003570}
   m_Layer: 5
-  m_Name: Choices
+  m_Name: Mutations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -281,7 +339,7 @@ GameObject:
   - component: {fileID: 8909820982178819321}
   - component: {fileID: 233057651086196544}
   m_Layer: 5
-  m_Name: MutationInfo
+  m_Name: HoveredMutationInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -371,7 +429,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2296790906504618767}
+    m_TransformParent: {fileID: 9092612569958487298}
     m_Modifications:
     - target: {fileID: 114695155509901553, guid: a88e6c5509278fc4582f1fb35ca43a86, type: 3}
       propertyPath: m_Name
@@ -387,15 +445,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2295934823922740429, guid: a88e6c5509278fc4582f1fb35ca43a86, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2295934823922740429, guid: a88e6c5509278fc4582f1fb35ca43a86, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2295934823922740429, guid: a88e6c5509278fc4582f1fb35ca43a86, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2295934823922740429, guid: a88e6c5509278fc4582f1fb35ca43a86, type: 3}
       propertyPath: m_AnchorMin.x

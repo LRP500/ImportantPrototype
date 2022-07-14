@@ -15,6 +15,9 @@ namespace ImportantPrototype.Mutations
     {
         [SerializeField]
         private MutationAssetListVariable _allMutations;
+
+        [SerializeField]
+        private MutationReactiveListVariable _mutationChoices;
         
         [SerializeField]
         private IntVariable _mutationChoiceCount;
@@ -25,12 +28,13 @@ namespace ImportantPrototype.Mutations
         public IReadOnlyReactiveCollection<GenotypeMod> GenotypeMods => _genotypeMods;
         public IReadOnlyReactiveCollection<Mutation> Mutations => _mutations;
 
-        public IEnumerable<Mutation> GetNextMutationChoices()
+        public void SetMutationChoices()
         {
-            return _allMutations.Items
+            var mutations = _allMutations.Items
                 .Shuffle()
                 .Take(_mutationChoiceCount)
                 .Select(Mutation.FromData);
+            _mutationChoices.SetValues(mutations);
         }
 
         public void Pick(Mutation mutation)

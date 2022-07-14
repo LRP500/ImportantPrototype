@@ -1,4 +1,5 @@
 ﻿using ImportantPrototype.Characters;
+using ImportantPrototype.Input;
 using ImportantPrototype.Mutations;
 using ImportantPrototype.Stats;
 using Sirenix.OdinInspector;
@@ -15,6 +16,9 @@ namespace ImportantPrototype.Leveling
 
         [SerializeField]
         private MutationManager _mutationManager;
+
+        [SerializeField]
+        private MutationReactiveVariable _selectedMutation;
         
         [SerializeField]
         [InlineEditor(InlineEditorObjectFieldModes.Foldout)]
@@ -30,9 +34,6 @@ namespace ImportantPrototype.Leveling
 
         [SerializeField]
         private ElementReactiveVariable _levelUpScreen;
-
-        [SerializeField]
-        private MutationReactiveListVariable _mutationChoices;
 
         private void Start()
         {
@@ -52,43 +53,46 @@ namespace ImportantPrototype.Leveling
         {
             PauseManager.Pause();
             PauseManager.AllowPausing = false;
+            PlayerInput.Map = PlayerInput.InputMap.Menu;
 
-            SetMutationChoices();
+            _mutationManager.SetMutationChoices();
             _levelUpScreen.Value.Show();
         }
 
+        public void OnMutationSelected(Mutation mutation)
+        {
+            _mutationManager.Pick(mutation);
+            Resume();
+        }
+        
         public void OnHealSelected()
         {
             _player.Value.Stats
                 .Get<Vital>(CharacterStatType.Health).Current
                 .Add(_healAmount);
-            OnActionTaken();
+            Resume();
         }
 
         public void OnRerollMutationsSelected()
         {
-            SetMutationChoices();
-            _levelUpScreen.Value.Show();
+            _mutationManager.SetMutationChoices();
+            _levelUpScreen.Value.Refresh();
         }
 
-        private void SetMutationChoices()
+        public void OnRerollModSelected()
         {
-            var choices = _mutationManager.GetNextMutationChoices();
-            _mutationChoices.SetValues(choices);
-        }
-
-        public void OnRerollModSelected(Mutation mutation)
-        {
-            _mutationManager.RerollModifier(mutation);
+            if (_selectedMutation.Value == null) return;
+            _mutationManager.RerollModifier(_selectedMutation.Value);
+            Resume();
         }
 
         public void OnSwapMutationsSelected()
-        {
-        }
+        { }
 
-        private void OnActionTaken()
+        private void Resume()
         {
             _levelUpScreen.Value.Hide();
+            PlayerInput.Map = PlayerInput.InputMap.Gameplay;
             PauseManager.Resume();
         }
     }

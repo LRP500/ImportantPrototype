@@ -42,17 +42,23 @@ namespace ImportantPrototype.UI
         public void Open(Action<Mutation> callback)
         {
             _mutationSelectedCallback = callback;
-            _choices = _mutationChoices.Values.ToList();
             _genotypeModList.Bind(_mutationManager.GenotypeMods);
-            _hoveredMutation.SetValue(_choices[0]);
             Show();
+        }
+
+        public override void Refresh()
+        {
+            _choices = _mutationChoices.Values.ToList();
+            _hoveredMutation.SetValue(_choices[0]);
+            ClearViews();
+            CreateItems();
+            base.Refresh();
         }
 
         protected override void OnShow()
         {
             base.OnShow();
-            ClearViews();
-            CreateItems();
+            Refresh();
         }
 
         protected override void OnHide()

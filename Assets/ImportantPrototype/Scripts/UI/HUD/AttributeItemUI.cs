@@ -1,9 +1,10 @@
-﻿using System.Globalization;
-using ImportantPrototype.Stats;
+﻿using System;
+using System.Globalization;
 using TMPro;
 using UniRx;
 using UnityEngine;
 using UnityTools.Runtime.UI;
+using Attribute = ImportantPrototype.Stats.Attribute;
 
 namespace ImportantPrototype.UI.HUD
 {
@@ -29,7 +30,7 @@ namespace ImportantPrototype.UI.HUD
 
         private void Refresh(float value)
         {
-            _statValue.SetText(value.ToString(CultureInfo.InvariantCulture));
+            _statValue.SetText($"{value:0.#}");
         }
     }
 }

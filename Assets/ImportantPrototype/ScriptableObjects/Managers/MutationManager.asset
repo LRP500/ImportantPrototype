@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: MutationManager
   m_EditorClassIdentifier: 
   _allMutations: {fileID: 11400000, guid: 7262ded5292a5fc439eeeeee1fd9f71f, type: 2}
+  _mutationChoices: {fileID: 11400000, guid: 807f4559fbc094f458963663baf6938d, type: 2}
   _mutationChoiceCount: {fileID: 11400000, guid: 5a1e2beecb91a2d4696f9f234f245325, type: 2}

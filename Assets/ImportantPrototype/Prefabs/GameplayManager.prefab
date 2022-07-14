@@ -124,8 +124,8 @@ GameObject:
   - component: {fileID: 4027278747565472703}
   - component: {fileID: 1514370435402547672}
   - component: {fileID: 2773781909824177966}
-  - component: {fileID: 2980348647406666054}
   - component: {fileID: 3760467313317153361}
+  - component: {fileID: 2980348647406666054}
   - component: {fileID: 5128448369817508027}
   m_Layer: 0
   m_Name: LevelUpManager
@@ -163,11 +163,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 11400000, guid: 35f933c98b6bd184699369384bf7d54e, type: 2}
   _mutationManager: {fileID: 11400000, guid: b195aeee26ac6ef449ef602163ec0ef3, type: 2}
+  _selectedMutation: {fileID: 11400000, guid: 1278b9c1da614fc419290e3adf358464, type: 2}
   _healAmount: {fileID: 11400000, guid: e2f2b61cad717d148b840c77a892b5a6, type: 2}
   _rerollCount: {fileID: 11400000, guid: efb58937515625d45b4283b12551bc00, type: 2}
   _mutationChoiceCount: {fileID: 11400000, guid: 5a1e2beecb91a2d4696f9f234f245325, type: 2}
   _levelUpScreen: {fileID: 11400000, guid: e87c7410c7e56be429cd47be9a7e9a01, type: 2}
-  _mutationChoices: {fileID: 11400000, guid: 807f4559fbc094f458963663baf6938d, type: 2}
 --- !u!114 &2773781909824177966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,36 +198,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2980348647406666054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7853150985457972533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44de5941a674fc2478d83b59b221e64e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _event: {fileID: 11400000, guid: 9845c985d1f1b7d48845eb657e82ba17, type: 2}
-  _conditions: []
-  _actions: []
-  _response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1514370435402547672}
-        m_TargetAssemblyTypeName: ImportantPrototype.Leveling.LevelUpManager, ImportantProject
-        m_MethodName: OnRerollModSelected
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &3760467313317153361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,6 +219,36 @@ MonoBehaviour:
       - m_Target: {fileID: 1514370435402547672}
         m_TargetAssemblyTypeName: ImportantPrototype.Leveling.LevelUpManager, ImportantProject
         m_MethodName: OnRerollMutationsSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2980348647406666054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7853150985457972533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44de5941a674fc2478d83b59b221e64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event: {fileID: 11400000, guid: 9845c985d1f1b7d48845eb657e82ba17, type: 2}
+  _conditions: []
+  _actions: []
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1514370435402547672}
+        m_TargetAssemblyTypeName: ImportantPrototype.Leveling.LevelUpManager, ImportantProject
+        m_MethodName: OnRerollModSelected
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
