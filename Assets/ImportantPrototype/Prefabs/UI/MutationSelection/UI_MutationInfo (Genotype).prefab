@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1540364233850173827, guid: 3930debcff5f2994ba2dc9da8b918e6a, type: 3}
+      propertyPath: _hideOnStart
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7795630728626441199, guid: 3930debcff5f2994ba2dc9da8b918e6a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -93,7 +97,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8777852179641172685, guid: 3930debcff5f2994ba2dc9da8b918e6a, type: 3}
       propertyPath: m_Name
-      value: UI_MutationInfo
+      value: UI_MutationInfo (Genotype)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3930debcff5f2994ba2dc9da8b918e6a, type: 3}

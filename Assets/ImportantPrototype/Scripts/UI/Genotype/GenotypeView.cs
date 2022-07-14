@@ -2,8 +2,6 @@ using ImportantPrototype.Input;
 using ImportantPrototype.Mutations;
 using UniRx;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityTools.Runtime.Extensions;
 using UnityTools.Runtime.UI;
 
 namespace ImportantPrototype.UI.Genotype
@@ -19,23 +17,16 @@ namespace ImportantPrototype.UI.Genotype
         [SerializeField]
         private MutationListView _mutationList;
 
-        [SerializeField]
-        private Button _rerollModifierButton;
-        
         public override void Initialize()
         {
             _mutationList.Bind(_mutationManager.Mutations);
             
-            _rerollModifierButton
-                .OnClickAsObservable()
-                .Select(_ => _selectedMutation.Value)
-                .WhereNotNull()
-                .Subscribe(OnRerollModifierButtonClicked)
-                .AddTo(gameObject);
-
-            PlayerInput.ObserveTab()
-                .Subscribe(_ => Toggle())
-                .AddTo(gameObject);
+            // _rerollModifierButton
+            //     .OnClickAsObservable()
+            //     .Select(_ => _selectedMutation.Value)
+            //     .WhereNotNull()
+            //     .Subscribe(OnRerollModifierButtonClicked)
+            //     .AddTo(gameObject);
         }
 
         protected override void OnShow()
@@ -50,9 +41,10 @@ namespace ImportantPrototype.UI.Genotype
             PauseManager.Resume();
         }
 
-        private void OnRerollModifierButtonClicked(Mutation mutation)
-        {
-            _mutationManager.RerollModifier(mutation);
-        }
+        // private void OnRerollModifierButtonClicked(Mutation mutation)
+        // {
+        //     _mutationManager.RerollModifier(mutation);
+        //     _mutationList.Refresh();
+        // }
     }
 }

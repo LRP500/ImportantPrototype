@@ -20,6 +20,12 @@ namespace ImportantPrototype.Tools.UI
             _data = collection;
         }
         
+        public override void Refresh()
+        {
+            ClearViews();
+            CreateViews();
+        }
+        
         protected override void OnShow()
         {
             CreateViews();
@@ -29,7 +35,7 @@ namespace ImportantPrototype.Tools.UI
         {
             ClearViews();
         }
-
+        
         private void CreateViews()
         {
             foreach (var item in _data)

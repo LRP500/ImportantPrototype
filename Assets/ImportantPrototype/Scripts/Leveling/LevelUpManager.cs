@@ -77,8 +77,9 @@ namespace ImportantPrototype.Leveling
             _mutationChoices.SetValues(choices);
         }
 
-        public void OnRerollModSelected()
+        public void OnRerollModSelected(Mutation mutation)
         {
+            _mutationManager.RerollModifier(mutation);
         }
 
         public void OnSwapMutationsSelected()
