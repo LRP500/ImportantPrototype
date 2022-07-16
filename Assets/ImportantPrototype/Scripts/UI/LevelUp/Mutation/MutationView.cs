@@ -4,20 +4,19 @@ using ImportantPrototype.Tools.UI;
 using TMPro;
 using UniRx;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using UnityTools.Runtime.Extensions;
 
 namespace ImportantPrototype.UI
 {
-    public class MutationView : ListItemView<Mutation>
+    public class MutationView : ListItemView<Mutation>, IPointerClickHandler
     {
         [SerializeField]
         private TextMeshProUGUI _name;
 
-        [SerializeField]
-        private Toggle _toggle;
-
         public Mutation Mutation { get; private set; }
+
+        private readonly ISubject<Mutation> OnSelect = new Subject<Mutation>();
 
         public override void Bind(Mutation mutation)
         {
@@ -25,17 +24,19 @@ namespace ImportantPrototype.UI
             Refresh();
         }
 
-        public IObservable<Mutation> ObserveSelect()
-        {
-            return _toggle
-                .OnValueChangedAsObservable()
-                .WhereTrue()
-                .Select(_ => Mutation);
-        }
-
         public override void Refresh()
         {
             _name.SetText(Mutation.Data.Name);
+        }
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            OnSelect.OnNext(Mutation);
+        }
+        
+        public IObservable<Mutation> ObserveSelect()
+        {
+            return OnSelect.WhereNotNull();
         }
     }
 }

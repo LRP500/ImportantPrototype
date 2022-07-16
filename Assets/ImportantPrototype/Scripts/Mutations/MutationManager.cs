@@ -98,5 +98,11 @@ namespace ImportantPrototype.Mutations
             mutation.Roll();
             RecalculateGenotype();
         }
+
+        public void Swap(Mutation first, Mutation second)
+        {
+            _mutations.Swap(_mutations.IndexOf(first), _mutations.IndexOf(second));
+            RecalculateGenotype();
+        }
     }
 }

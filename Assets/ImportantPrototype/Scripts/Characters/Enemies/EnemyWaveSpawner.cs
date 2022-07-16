@@ -42,9 +42,8 @@ namespace ImportantPrototype.Characters.Enemies
         {
             _runDisposable.Disposable = Observable
                 .Interval(TimeSpan.FromSeconds(_spawnInterval))
-                .Where(_ => _enemies.Count < _maxSimultaneous)
+                .Where(_ => _enemies.Values.Count < _maxSimultaneous)
                 .DoOnSubscribe(() => IsRunning.Value = true)
-                .DoOnCompleted(() => Debug.Log("DONE"))
                 .TakeWhile(_ => IsRunning.Value)
                 .Subscribe(_ => Spawn());
         }

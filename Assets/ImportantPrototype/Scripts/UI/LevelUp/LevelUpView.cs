@@ -6,7 +6,7 @@ using UnityTools.Runtime.UI;
 
 namespace ImportantPrototype.UI
 {
-    public class LevelUpScreen : CompositeElement
+    public class LevelUpView : CompositeElement
     {
         [SerializeField]
         private MutationManager _mutationManager;

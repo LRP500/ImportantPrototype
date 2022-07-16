@@ -140,7 +140,7 @@ MonoBehaviour:
   _children:
   - {fileID: 8682790867631474508}
   - {fileID: 6438504413711767899}
-  _mutationPrefab: {fileID: 5570879482852482199, guid: 5b183594b1519bf4d8018e972eff9d45, type: 3}
+  _mutationPrefab: {fileID: 4317213183421801196, guid: 17d2087244ae2434daf3597322e44f33, type: 3}
   _gridLayout: {fileID: 653015623329427243}
   _mutationManager: {fileID: 11400000, guid: b195aeee26ac6ef449ef602163ec0ef3, type: 2}
   _mutationChoices: {fileID: 11400000, guid: 807f4559fbc094f458963663baf6938d, type: 2}

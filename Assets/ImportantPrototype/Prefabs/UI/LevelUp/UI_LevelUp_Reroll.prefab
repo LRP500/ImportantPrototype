@@ -320,6 +320,7 @@ MonoBehaviour:
   _hideOnStart: 1
   _children:
   - {fileID: 2505465318477049291}
+  _selectedMutation: {fileID: 11400000, guid: 1278b9c1da614fc419290e3adf358464, type: 2}
 --- !u!1001 &2086850393305144500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -442,7 +443,7 @@ PrefabInstance:
     - target: {fileID: 4593671838586731243, guid: 590e79620c4b93a42bb7ab99d737f92f, type: 3}
       propertyPath: _itemViewPrefab
       value: 
-      objectReference: {fileID: 8679420010624560285, guid: 632a156a0bc146d4b8e4baa89d7a9628, type: 3}
+      objectReference: {fileID: 4317213183421801196, guid: 17d2087244ae2434daf3597322e44f33, type: 3}
     - target: {fileID: 5922269125882538711, guid: 590e79620c4b93a42bb7ab99d737f92f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
