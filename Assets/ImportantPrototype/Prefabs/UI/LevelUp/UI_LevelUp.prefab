@@ -174,8 +174,8 @@ MonoBehaviour:
   - {fileID: 1804724176411264076}
   _mutationManager: {fileID: 11400000, guid: b195aeee26ac6ef449ef602163ec0ef3, type: 2}
   _mutationSelection: {fileID: 1804724176411264076}
-  _rerollModView: {fileID: 0}
-  _swapMutationsView: {fileID: 0}
+  _rerollModView: {fileID: 3668560406983090247}
+  _swapMutationsView: {fileID: 769212413749158557}
 --- !u!114 &3777855816487858762
 MonoBehaviour:
   m_ObjectHideFlags: 0
