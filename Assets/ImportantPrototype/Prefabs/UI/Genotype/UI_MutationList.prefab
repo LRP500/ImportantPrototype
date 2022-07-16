@@ -189,7 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _initializeOnStart: 1
   _hideOnStart: 1
-  _itemViewPrefab: {fileID: 2924686102778282932, guid: 344e0ff0f7fa4384395b5c34cd97e15d, type: 3}
+  _itemViewPrefab: {fileID: 5570879482852482199, guid: 5b183594b1519bf4d8018e972eff9d45, type: 3}
   _itemViewContainer: {fileID: 372298329981224398}
 --- !u!1 &8470494483566065163
 GameObject:

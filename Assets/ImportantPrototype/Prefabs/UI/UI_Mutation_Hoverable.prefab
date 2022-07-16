@@ -127,7 +127,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ede67f34ff34c719880f9412eb3f344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetGraphic: {fileID: 3988722644700993874, guid: 5b183594b1519bf4d8018e972eff9d45, type: 3}
+  _targetGraphic: {fileID: 2023743889552301075}
   _normal: {r: 1, g: 1, b: 1, a: 0}
   _hovered: {r: 1, g: 1, b: 1, a: 1}
   _selected: {r: 1, g: 0.5, b: 0, a: 1}
+--- !u!114 &2023743889552301075 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3988722644700993874, guid: 5b183594b1519bf4d8018e972eff9d45, type: 3}
+  m_PrefabInstance: {fileID: 3120715561593750849}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

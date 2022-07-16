@@ -329,7 +329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7286762715489183861, guid: b1c1ec3729db58649a5a34755ce50324, type: 3}
       propertyPath: m_Name
-      value: UI_GameOverScreen
+      value: UI_GameOver
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1c1ec3729db58649a5a34755ce50324, type: 3}
@@ -2503,7 +2503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6479044096473352279, guid: c29f37e493c64a04f89fe8ba3f7bcc4a, type: 3}
       propertyPath: m_Name
-      value: UI_GenotypeInfoScreen
+      value: UI_GenotypeInfo
       objectReference: {fileID: 0}
     - target: {fileID: 7511582523146597649, guid: c29f37e493c64a04f89fe8ba3f7bcc4a, type: 3}
       propertyPath: m_AnchorMax.y
