@@ -1,18 +1,16 @@
 ﻿using UniRx;
 using UnityEngine;
-using UnityTools.Runtime.Extensions;
 
 namespace ImportantPrototype.Gameplay
 {
     [RequireComponent(typeof(IDamageable))]
     public abstract class DamageTakenEffect : MonoBehaviour
     {
-        private void OnEnable()
+        protected virtual void Awake()
         {
             GetComponent<IDamageable>().OnDamageTaken
-                .TakeFirst()
                 .Subscribe(_ => Trigger())
-                .AddToDisable(this);
+                .AddTo(this);
         }
 
         protected abstract void Trigger();
