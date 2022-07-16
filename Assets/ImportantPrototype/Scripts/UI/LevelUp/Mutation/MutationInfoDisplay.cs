@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel;
 using ImportantPrototype.Mutations;
 using ImportantPrototype.Mutations.Mods;
 using UniRx;
@@ -27,16 +26,25 @@ namespace ImportantPrototype.UI
         public override void Initialize()
         {
             _hoveredMutation.Property
-                .Subscribe(Refresh)
+                .Subscribe(_ => Refresh())
                 .AddTo(this);
         }
 
-        private void Refresh(Mutation mutation)
+        public override void Refresh()
         {
-            if (mutation == null) return;
             ClearViews();
+
+            var mutation = _hoveredMutation.Property.Value;
+            if (mutation == null) return;
+            
             SetMutation(mutation.GetAllGenes());
             SetGenotypeMod(mutation.GenotypeMod);
+        }
+
+        protected override void OnShow()
+        {
+            base.OnShow();
+            Refresh();
         }
 
         private void SetMutation(IEnumerable<Gene> genes)

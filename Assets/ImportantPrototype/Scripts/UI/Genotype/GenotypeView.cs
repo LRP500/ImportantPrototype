@@ -28,7 +28,12 @@ namespace ImportantPrototype.UI.Genotype
 
         private void SelectFirst()
         {
-            if (_mutationManager.Mutations.Count == 0) return;
+            if (_mutationManager.Mutations.Count == 0)
+            {
+                _hoveredMutation.Clear();
+                return;
+            }
+
             _hoveredMutation.SetValue(_mutationManager.Mutations[0]);
         }
     }
