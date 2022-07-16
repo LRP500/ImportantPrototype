@@ -1,7 +1,7 @@
 using UniRx;
 using UnityEngine;
 
-namespace ImportantPrototype.Characters
+namespace ImportantPrototype.Gameplay
 {
     public class DamageableCollider : MonoBehaviour
     {

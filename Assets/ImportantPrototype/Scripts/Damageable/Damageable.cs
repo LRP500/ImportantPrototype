@@ -3,7 +3,7 @@ using ImportantPrototype.Stats;
 using UniRx;
 using UnityEngine;
 
-namespace ImportantPrototype.Characters
+namespace ImportantPrototype.Gameplay
 {
     public abstract class Damageable : MonoBehaviour, IDamageable
     {
@@ -14,8 +14,8 @@ namespace ImportantPrototype.Characters
         //     public Collider2D collider;
         // }
         
-        public readonly ISubject<Unit> OnDeath = new Subject<Unit>();
-        public readonly ISubject<float> OnDamageTaken = new Subject<float>();
+        public ISubject<Unit> OnDeath { get; } = new Subject<Unit>();
+        public ISubject<float> OnDamageTaken { get; } = new Subject<float>();
 
         private readonly ReactiveProperty<bool> _canDamage = new (true);
         public IReadOnlyReactiveProperty<bool> CanDamage => _canDamage;
