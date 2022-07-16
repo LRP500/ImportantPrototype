@@ -671,7 +671,7 @@ PrefabInstance:
     - target: {fileID: 4593671838586731243, guid: 590e79620c4b93a42bb7ab99d737f92f, type: 3}
       propertyPath: _itemViewPrefab
       value: 
-      objectReference: {fileID: 4317213183421801196, guid: 17d2087244ae2434daf3597322e44f33, type: 3}
+      objectReference: {fileID: 2973932497625466642, guid: de55a9e7f736f224194e272072b0a8f0, type: 3}
     - target: {fileID: 5922269125882538711, guid: 590e79620c4b93a42bb7ab99d737f92f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

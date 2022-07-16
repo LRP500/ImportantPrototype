@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 8643944933432277161}
   - component: {fileID: 8053598828033346351}
   m_Layer: 5
-  m_Name: UI_Genotype_ActionButton
+  m_Name: UI_Genotype_Action
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

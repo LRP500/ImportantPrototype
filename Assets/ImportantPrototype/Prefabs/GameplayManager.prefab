@@ -165,8 +165,8 @@ MonoBehaviour:
   _mutationManager: {fileID: 11400000, guid: b195aeee26ac6ef449ef602163ec0ef3, type: 2}
   _selectedMutation: {fileID: 11400000, guid: 1278b9c1da614fc419290e3adf358464, type: 2}
   _healAmount: {fileID: 11400000, guid: e2f2b61cad717d148b840c77a892b5a6, type: 2}
-  _rerollCount: {fileID: 11400000, guid: efb58937515625d45b4283b12551bc00, type: 2}
-  _mutationChoiceCount: {fileID: 11400000, guid: 5a1e2beecb91a2d4696f9f234f245325, type: 2}
+  _initialRerollCount: {fileID: 11400000, guid: 35ffab50f8425d74084589631d8101f3, type: 2}
+  _currentRerollCount: {fileID: 11400000, guid: bd3770d26ba6dda4eacc4333501e5a6a, type: 2}
   _levelUpScreen: {fileID: 11400000, guid: e87c7410c7e56be429cd47be9a7e9a01, type: 2}
 --- !u!114 &2773781909824177966
 MonoBehaviour:

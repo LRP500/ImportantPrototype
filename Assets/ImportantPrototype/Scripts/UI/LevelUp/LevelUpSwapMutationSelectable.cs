@@ -19,11 +19,15 @@ namespace ImportantPrototype.Scripts.UI.LevelUp
         
         public void OnPointerClick(PointerEventData eventData)
         {
-            _selectedMutations.Values.Add(_view.Mutation);
+            var selected = _selectedMutations.Values;
+            
+            if (selected.Contains(_view.Mutation)) return;
+            
+            selected.Add(_view.Mutation);
 
-            if (_selectedMutations.Values.Count >= 2)
+            if (selected.Count > 2)
             {
-                _selectedMutations.Values.RemoveAt(0);
+                selected.RemoveAt(0);
             }
         }
     }

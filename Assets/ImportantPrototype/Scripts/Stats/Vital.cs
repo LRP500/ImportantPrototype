@@ -1,4 +1,7 @@
-﻿namespace ImportantPrototype.Stats
+﻿using System;
+using UniRx;
+
+namespace ImportantPrototype.Stats
 {
     /// <summary>
     /// An attribute fluctuating between min and max.
@@ -17,6 +20,11 @@
         {
             base.SetValue(value);
             Current.SetValue(value);
+        }
+
+        public IObservable<bool> ObserveFull()
+        {
+            return Current.Property.Select(current => current >= Value);
         }
     }
 }

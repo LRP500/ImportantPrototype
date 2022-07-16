@@ -10,7 +10,7 @@ namespace ImportantPrototype.UI
         [SerializeField]
         private MutationReactiveVariable _selectedMutation;
         
-        private void OnEnable()
+        protected virtual void OnEnable()
         {
             _selectedMutation.Property
                 .Subscribe(_ => Refresh())

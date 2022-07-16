@@ -26,12 +26,12 @@ namespace ImportantPrototype.Leveling
 
         [SerializeField]
         [InlineEditor(InlineEditorObjectFieldModes.Foldout)]
-        private IntVariable _rerollCount;
+        private IntVariable _initialRerollCount;
         
         [SerializeField]
         [InlineEditor(InlineEditorObjectFieldModes.Foldout)]
-        private IntVariable _mutationChoiceCount;
-
+        private IntReactiveVariable _currentRerollCount;
+        
         [SerializeField]
         private ElementReactiveVariable _levelUpScreen;
 
@@ -55,14 +55,15 @@ namespace ImportantPrototype.Leveling
             PauseManager.AllowPausing = false;
             PlayerInput.Map = PlayerInput.InputMap.Menu;
 
+            ResetRerollCount();
+            
             _mutationManager.SetMutationChoices();
             _levelUpScreen.Value.Show();
         }
 
-        public void OnMutationSelected(Mutation mutation)
+        private void ResetRerollCount()
         {
-            _mutationManager.Pick(mutation);
-            Resume();
+            _currentRerollCount.SetValue(_initialRerollCount);
         }
         
         public void OnHealSelected()
@@ -85,9 +86,6 @@ namespace ImportantPrototype.Leveling
             _mutationManager.RerollModifier(_selectedMutation.Value);
             Resume();
         }
-
-        public void OnSwapMutationsSelected()
-        { }
 
         private void Resume()
         {
