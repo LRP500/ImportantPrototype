@@ -9,6 +9,7 @@ namespace ImportantPrototype.Tools.Console
         private string _name;
 
         public string Name => _name;
+        
         public abstract bool Execute(string[] args);
 
         protected static bool GetBool(string arg, out bool result)

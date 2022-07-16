@@ -1,10 +1,11 @@
 ﻿using TMPro;
 using UniRx;
 using UnityEngine;
+using UnityTools.Runtime;
 
 namespace ImportantPrototype.Tools.Console
 {
-    public class DeveloperConsoleController : UnityTools.Runtime.Singleton<DeveloperConsoleController>
+    public class DeveloperConsoleController : Singleton<DeveloperConsoleController>
     {
         [SerializeField]
         private DeveloperConsoleSettings _settings;
@@ -15,10 +16,12 @@ namespace ImportantPrototype.Tools.Console
         [SerializeField]
         private TMP_InputField _inputField;
 
-        private bool _isOpened;
         private DeveloperConsole _console;
+        private readonly BoolReactiveProperty _isOpen = new (false);
         private readonly SerialDisposable _disposable = new();
-        
+
+        public IReadOnlyReactiveProperty<bool> IsOpen => _isOpen;
+
         protected override void Awake()
         {
             base.Awake();
@@ -28,8 +31,8 @@ namespace ImportantPrototype.Tools.Console
         private void Initialize()
         {
             _canvas.enabled = false;
-            _console ??= new DeveloperConsole(_settings.Prefix, _settings.Commands);
             _inputField.textComponent.fontSize = _settings.FontSize;
+            _console ??= new DeveloperConsole(_settings.Prefix, _settings.Commands);
         }
 
         private void OnDestroy()
@@ -46,7 +49,7 @@ namespace ImportantPrototype.Tools.Console
                 .Subscribe(ProcessCommand);
 
             _canvas.enabled = true;
-            _isOpened = true;
+            _isOpen.Value = true;
         }
 
         private void Close()
@@ -54,7 +57,7 @@ namespace ImportantPrototype.Tools.Console
             _canvas.enabled = false;
             _inputField.DeactivateInputField();
             _inputField.enabled = false;
-            _isOpened = false;
+            _isOpen.Value = false;
         }
         
         private void OnDisable()
@@ -72,11 +75,11 @@ namespace ImportantPrototype.Tools.Console
 
         private void Toggle()
         {
-            if (_isOpened) Close();
+            if (_isOpen.Value) Close();
             else Open();
         }
 
-        private void ProcessCommand(string input)
+        public void ProcessCommand(string input)
         {
             _console.ProcessInput(input);
             _inputField.SetTextWithoutNotify(string.Empty);
