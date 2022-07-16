@@ -1,12 +1,11 @@
 ﻿using ImportantPrototype.Interfaces;
-using ImportantPrototype.Stats;
 using UniRx;
 
 namespace ImportantPrototype.Gameplay
 {
     public interface IDamageable
     {
-        Attribute Health { get; }
+        double Health { get; }
         void Damage(IDamager damager);
         
         public ISubject<Unit> OnDeath { get; }

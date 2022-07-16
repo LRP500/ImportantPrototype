@@ -11,10 +11,5 @@ namespace ImportantPrototype.Characters.Enemies
         {
             AI = GetComponent<EnemyAI>();
         }
-
-        public override void OnDeath()
-        {
-            Destroy(gameObject);
-        }
     }
 }

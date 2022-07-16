@@ -1,38 +1,40 @@
 ﻿using ImportantPrototype.Interfaces;
-using ImportantPrototype.Stats;
+using Sirenix.OdinInspector;
 using UniRx;
 using UnityEngine;
 
 namespace ImportantPrototype.Gameplay
 {
-    public abstract class Damageable : MonoBehaviour, IDamageable
+    public class Damageable : MonoBehaviour, IDamageable
     {
-        // public class HitInfo
-        // {
-        //     public float damage;
-        //     public IDamager damager;
-        //     public Collider2D collider;
-        // }
+        [MinValue(0)]
+        [SerializeField]
+        private double _health;
         
+        private readonly ReactiveProperty<bool> _canDamage = new (true);
+        public IReadOnlyReactiveProperty<bool> CanDamage => _canDamage;
+
         public ISubject<Unit> OnDeath { get; } = new Subject<Unit>();
         public ISubject<float> OnDamageTaken { get; } = new Subject<float>();
 
-        private readonly ReactiveProperty<bool> _canDamage = new (true);
-        public IReadOnlyReactiveProperty<bool> CanDamage => _canDamage;
-        
-        public Attribute Health { get; protected set; }
-        
+        public virtual double Health => _health;
+
         public void Damage(IDamager damager)
         {
             if (!CanDamage.Value) return;
-            
-            Health.Remove(damager.Damage);
+         
+            ApplyDamage(damager.Damage);
             OnDamageTaken.OnNext(damager.Damage);
             
-            if (Health.Value <= 0)
+            if (Health <= 0)
             {
                 OnDeath.OnNext(Unit.Default);
             }
+        }
+
+        protected virtual void ApplyDamage(float damage)
+        {
+            _health -= damage;
         }
         
         public void SetCanDamage(bool canDamage)
@@ -41,3 +43,10 @@ namespace ImportantPrototype.Gameplay
         }
     }
 }
+
+// public class HitInfo
+// {
+//     public float damage;
+//     public IDamager damager;
+//     public Collider2D collider;
+// }
