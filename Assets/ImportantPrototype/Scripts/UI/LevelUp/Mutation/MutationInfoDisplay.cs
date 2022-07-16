@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using ImportantPrototype.Mutations;
 using ImportantPrototype.Mutations.Mods;
 using UniRx;
@@ -10,7 +11,7 @@ namespace ImportantPrototype.UI
     public class MutationInfoDisplay : Element
     {
         [SerializeField]
-        private GeneItem _genePrefab;
+        private GeneView _genePrefab;
 
         [SerializeField]
         private GenotypeModView _genotypeModPrefab;
@@ -54,7 +55,7 @@ namespace ImportantPrototype.UI
             _items.Add(item.gameObject);
         }
         
-        private GeneItem CreateGeneItem(Gene gene)
+        private GeneView CreateGeneItem(Gene gene)
         {
             var item = Instantiate(_genePrefab, _itemContainer);
             item.Initialize(gene);

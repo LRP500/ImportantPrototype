@@ -5,7 +5,7 @@ using UnityTools.Runtime.UI;
 
 namespace ImportantPrototype.UI
 {
-    public class GeneItem : Element
+    public class GeneView : Element
     {
         [SerializeField]
         private TextMeshProUGUI _description;

@@ -12,9 +12,24 @@ namespace ImportantPrototype.UI.Genotype
         [SerializeField]
         private MutationListView _mutationList;
 
+        [SerializeField]
+        private MutationReactiveVariable _hoveredMutation;
+        
         public override void Initialize()
         {
             _mutationList.Bind(_mutationManager.Mutations);
+        }
+
+        protected override void OnShow()
+        {
+            base.OnShow();
+            SelectFirst();
+        }
+
+        private void SelectFirst()
+        {
+            if (_mutationManager.Mutations.Count == 0) return;
+            _hoveredMutation.SetValue(_mutationManager.Mutations[0]);
         }
     }
 }

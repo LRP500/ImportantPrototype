@@ -195,8 +195,8 @@ MonoBehaviour:
   - {fileID: 4593671838586731243}
   - {fileID: 8088650823183045416}
   _mutationManager: {fileID: 11400000, guid: b195aeee26ac6ef449ef602163ec0ef3, type: 2}
-  _selectedMutation: {fileID: 11400000, guid: 1278b9c1da614fc419290e3adf358464, type: 2}
   _mutationList: {fileID: 4593671838586731243}
+  _hoveredMutation: {fileID: 11400000, guid: ac157fb13270d944baca1c4141b30c8f, type: 2}
 --- !u!114 &2767642911558565628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -599,6 +599,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_MutationList
       objectReference: {fileID: 0}
+    - target: {fileID: 5924786152633869331, guid: 6980019c5f9107c468f62f80738a2da5, type: 3}
+      propertyPath: _itemViewPrefab
+      value: 
+      objectReference: {fileID: 5570879482852482199, guid: 5b183594b1519bf4d8018e972eff9d45, type: 3}
     - target: {fileID: 8933952365068101764, guid: 6980019c5f9107c468f62f80738a2da5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

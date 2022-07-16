@@ -4,13 +4,12 @@ using ImportantPrototype.Tools.UI;
 using TMPro;
 using UniRx;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityTools.Runtime.Extensions;
 
 namespace ImportantPrototype.UI
 {
-    public class MutationView : ListItemView<Mutation>, IPointerEnterHandler, IPointerClickHandler
+    public class MutationView : ListItemView<Mutation>
     {
         [SerializeField]
         private TextMeshProUGUI _name;
@@ -18,17 +17,11 @@ namespace ImportantPrototype.UI
         [SerializeField]
         private Toggle _toggle;
 
-        [SerializeField]
-        private MutationReactiveVariable _hoveredMutation;
-
-        [SerializeField]
-        private MutationReactiveVariable _selectedMutation;
-        
-        private Mutation _mutation;
+        public Mutation Mutation { get; private set; }
 
         public override void Bind(Mutation mutation)
         {
-            _mutation = mutation;
+            Mutation = mutation;
             Refresh();
         }
 
@@ -37,22 +30,12 @@ namespace ImportantPrototype.UI
             return _toggle
                 .OnValueChangedAsObservable()
                 .WhereTrue()
-                .Select(_ => _mutation);
+                .Select(_ => Mutation);
         }
 
         public override void Refresh()
         {
-            _name.SetText(_mutation.Data.Name);
-        }
-
-        public void OnPointerEnter(PointerEventData eventData)
-        {
-            _hoveredMutation.SetValue(_mutation);
-        }
-
-        public void OnPointerClick(PointerEventData eventData)
-        {
-            _selectedMutation.SetValue(_mutation);
+            _name.SetText(Mutation.Data.Name);
         }
     }
 }
