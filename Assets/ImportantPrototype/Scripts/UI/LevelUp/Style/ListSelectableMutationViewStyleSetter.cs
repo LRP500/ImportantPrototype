@@ -22,7 +22,7 @@ namespace ImportantPrototype.UI
         private void OnEnable()
         {
             _selectedMutations.Values
-                .ObserveAdd()
+                .ObserveCountChanged()
                 .Subscribe(_ => Refresh())
                 .AddToDisable(this);
         }
