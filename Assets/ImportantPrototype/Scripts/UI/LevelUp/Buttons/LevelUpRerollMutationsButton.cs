@@ -1,7 +1,9 @@
 using System;
 using TMPro;
 using UniRx;
+using UniRx.Diagnostics;
 using UnityEngine;
+using UnityTools.Runtime.Extensions;
 using UnityTools.Runtime.Variables;
 
 namespace ImportantPrototype.UI
@@ -18,7 +20,10 @@ namespace ImportantPrototype.UI
 
         protected void OnEnable()
         {
-            RefreshText();
+            _mutationRerollCount.Property
+                .SkipLatestValueOnSubscribe()
+                .Subscribe(_ => RefreshText())
+                .AddToDisable(this);
         }
 
         private void RefreshText()
@@ -34,7 +39,7 @@ namespace ImportantPrototype.UI
 
         protected override IObservable<bool> ObserveCanInteract()
         {
-            return _mutationRerollCount.Property.Select(x => x >= 1);
+            return _mutationRerollCount.Property.Select(x => x > 0);
         }
     }
 }

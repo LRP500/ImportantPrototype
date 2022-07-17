@@ -19,9 +19,9 @@ namespace ImportantPrototype.UI
         protected virtual void Start()
         {
             ObserveCanInteract()
-                .Distinct()
+                .DistinctUntilChanged()
                 .Subscribe(SetInteractable)
-                .AddTo(this);
+                .AddTo(gameObject);
         }
 
         protected virtual void SetInteractable(bool interactable)

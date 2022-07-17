@@ -77,6 +77,7 @@ namespace ImportantPrototype.Leveling
         public void OnRerollMutationsSelected()
         {
             _mutationManager.SetMutationChoices();
+            _currentRerollCount.Decrement();
             _levelUpScreen.Value.Refresh();
         }
 
