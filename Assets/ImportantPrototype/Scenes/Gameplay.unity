@@ -458,11 +458,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7be2fb5fefde4d0aa3553ea181e3a1fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 2217062048160521360, guid: 527cca6ac6433a74189b3603b612881d, type: 3}
+  _prefab: {fileID: 5463529308173472395, guid: ee47055968644b1478a7699194e31944, type: 3}
   _spawnOnStart: 1
   _destroyAfterSpawn: 1
   _container: {fileID: 1750765775}
-  _density: 0.01
+  _density: 0.005
 --- !u!61 &761944039
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -728,87 +728,10 @@ Transform:
   m_Children:
   - {fileID: 1318857742}
   - {fileID: 372910096}
-  - {fileID: 1424478527}
   - {fileID: 1750765775}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1064868428
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1064868429}
-  - component: {fileID: 1064868431}
-  - component: {fileID: 1064868430}
-  m_Layer: 0
-  m_Name: Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1064868429
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1064868428}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1424478527}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1064868430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1064868428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be2fb5fefde4d0aa3553ea181e3a1fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _prefab: {fileID: 4710865012963088165, guid: 8353c5e06e4897046985cb6acb2e0966, type: 3}
-  _spawnOnStart: 1
-  _destroyAfterSpawn: 0
-  _container: {fileID: 0}
-  _density: 0.01
---- !u!61 &1064868431
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1064868428}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 100, y: 100}
-  m_EdgeRadius: 0
 --- !u!1001 &1210559020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1109,38 +1032,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6479044096473352276, guid: c29f37e493c64a04f89fe8ba3f7bcc4a, type: 3}
   m_PrefabInstance: {fileID: 6479044097274152006}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1424478526
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1424478527}
-  m_Layer: 0
-  m_Name: Rocks
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1424478527
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1424478526}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1064868429}
-  m_Father: {fileID: 1022381085}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1750765774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,12 +1042,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1750765775}
   m_Layer: 0
-  m_Name: Destructibles
+  m_Name: Barrels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1750765775
 Transform:
   m_ObjectHideFlags: 0
@@ -1171,7 +1062,7 @@ Transform:
   m_Children:
   - {fileID: 761944037}
   m_Father: {fileID: 1022381085}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2074774679
 GameObject:

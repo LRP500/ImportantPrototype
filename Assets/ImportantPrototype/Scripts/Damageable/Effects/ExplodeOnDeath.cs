@@ -3,14 +3,15 @@ using UnityEngine;
 
 namespace ImportantPrototype.Scripts.Damageable.Effects
 {
-    public class DestroyOnDeath : DeathEffect
+    public class ExplodeOnDeath : DeathEffect
     {
         [SerializeField]
-        private GameObject _root;
+        private Explosion _explosionPrefab;
         
         protected override void Trigger()
         {
-            Destroy(_root);
+            var instance = Instantiate(_explosionPrefab);
+            instance.transform.position = transform.position;
         }
     }
 }

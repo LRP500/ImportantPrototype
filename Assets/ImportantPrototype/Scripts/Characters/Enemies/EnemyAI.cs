@@ -15,8 +15,12 @@ namespace ImportantPrototype.Characters.Enemies
             _self = GetComponent<Enemy>();
         }
 
+        /// Empty OnEnable method to force checkbox visibility in editor 
+        private void OnEnable() { }
+
         public void Refresh()
         {
+            if (!enabled) return;
             var target = _player.Property.Value;
             if (target == null) return;
             _self.Motor.Move(GetDirection(target.Position));
