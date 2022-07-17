@@ -43,5 +43,11 @@ namespace ImportantPrototype.UI.HUD
         {
             _disposable.Clear();
         }
+
+        public override void Dispose()
+        {
+            base.Dispose();
+            _disposable?.Dispose();
+        }
     }
 }

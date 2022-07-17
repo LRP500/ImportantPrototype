@@ -28,6 +28,13 @@ namespace ImportantPrototype.Mutations
         public IReadOnlyReactiveCollection<GenotypeMod> GenotypeMods => _genotypeMods;
         public IReadOnlyReactiveCollection<Mutation> Mutations => _mutations;
 
+        protected override void OnInitialize()
+        {
+            _mutations.Clear();
+            _genotypeMods.Clear();
+            _mutationChoices.Values.Clear();
+        }
+
         public void SetMutationChoices()
         {
             var mutations = _allMutations.Items

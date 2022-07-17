@@ -6,7 +6,7 @@ using UnityTools.Runtime.Variables;
 
 namespace ImportantPrototype.Level
 {
-    public class LevelManager : MonoBehaviour
+    public class LevelManager : MonoBehaviour, IDisposable
     {
         [SerializeField]
         private FloatVariable _gameStartTime;
@@ -64,6 +64,11 @@ namespace ImportantPrototype.Level
         private EnemyWaveData GetWave(int index)
         {
             return _level.Waves[index];
+        }
+
+        public void Dispose()
+        {
+            _waveDisposable?.Dispose();
         }
     }
 }

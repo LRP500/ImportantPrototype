@@ -10,7 +10,7 @@ namespace ImportantPrototype.Gameplay
         {
             GetComponent<IDamageable>().OnDamageTaken
                 .Subscribe(_ => Trigger())
-                .AddTo(this);
+                .AddTo(gameObject);
         }
 
         protected abstract void Trigger();

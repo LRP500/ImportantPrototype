@@ -1,3 +1,4 @@
+using System;
 using Cinemachine;
 using ImportantPrototype.Input;
 using ImportantPrototype.Weapons;
@@ -9,7 +10,7 @@ using UnityTools.Runtime.Time;
 namespace ImportantPrototype.Characters
 {
     [RequireComponent(typeof(Player))]
-    public class PlayerFiring : MonoBehaviour
+    public class PlayerFiring : MonoBehaviour, IDisposable
     {
         public readonly ISubject<Unit> OnFire = new Subject<Unit>();
 
@@ -63,6 +64,11 @@ namespace ImportantPrototype.Characters
             if (TimeManager.Current.GamePaused.Value) return;
             weapon.Fire(_self.Aiming.AimDirection, _projectileTag);
             OnFire.OnNext(Unit.Default);
+        }
+
+        public void Dispose()
+        {
+            _firingDisposable?.Dispose();
         }
     }
 }

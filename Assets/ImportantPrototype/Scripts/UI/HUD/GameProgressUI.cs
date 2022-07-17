@@ -58,5 +58,12 @@ namespace ImportantPrototype.UI.HUD
             int seconds = (int) time - 60 * minutes;
             return $"{minutes:00}:{seconds:00}";
         }
+
+        public override void Dispose()
+        {
+            base.Dispose();
+            _timeDisposable?.Dispose();
+            _waveDisposable?.Dispose();
+        }
     }
 }

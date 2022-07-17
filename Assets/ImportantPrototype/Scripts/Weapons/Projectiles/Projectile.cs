@@ -51,8 +51,11 @@ namespace ImportantPrototype.Weapons
         
         public void Shoot()
         {
-            _damager.OnHit.First().Subscribe(OnHit);
             Data.Behaviour.Initialize(this);
+
+            _damager.OnHit.First()
+                .Subscribe(OnHit)
+                .AddTo(gameObject);
         }
 
         private void Update()

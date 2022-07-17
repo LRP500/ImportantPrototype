@@ -10,6 +10,11 @@ namespace ImportantPrototype.Characters.Enemies
         [SerializeField]
         private EnemyReactiveListVariable _enemies;
 
+        protected override void OnInitialize()
+        {
+            _enemies.Values.Clear();
+        }
+
         protected override void OnFixedUpdate()
         {
             for (int i = 0, len = _enemies.Values.Count; i < len; ++i)

@@ -24,8 +24,7 @@ namespace ImportantPrototype.Characters
 
         private void OnEnable()
         {
-            OnDeath
-                .TakeFirst()
+            OnDeath.TakeFirst()
                 .Subscribe(_ => _character.OnDeath())
                 .AddToDisable(this);
         }

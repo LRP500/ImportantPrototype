@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 namespace ImportantPrototype.Characters.Enemies
 {
     [RequireComponent(typeof(BoxCollider2D))]
-    public class EnemyWaveSpawner : Spawner2D<Enemy>
+    public class EnemyWaveSpawner : Spawner2D<Enemy>, IDisposable
     {
         [SerializeField]
         private float _spawnInterval;
@@ -78,6 +78,11 @@ namespace ImportantPrototype.Characters.Enemies
             var posX = Mathf.Min(1, Mathf.Max(0f, Mathf.Abs((rand * 4f - .5f) % 4 - 2) - .5f));
             var posY = Mathf.Min(1, Mathf.Max(0f, Mathf.Abs((rand * 4f + .5f) % 4 - 2) - .5f));
             return new Vector2(posX, posY) * size - size / 2 + origin;
+        }
+
+        public void Dispose()
+        {
+            _runDisposable?.Dispose();
         }
     }
 }
