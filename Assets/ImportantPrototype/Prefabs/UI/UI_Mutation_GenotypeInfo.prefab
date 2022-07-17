@@ -131,7 +131,7 @@ MonoBehaviour:
   _normal: {r: 1, g: 1, b: 1, a: 0}
   _hovered: {r: 1, g: 1, b: 1, a: 1}
   _selected: {r: 1, g: 0.5, b: 0, a: 1}
-  _selectedMutation: {fileID: 11400000, guid: 1278b9c1da614fc419290e3adf358464, type: 2}
+  _selectedMutation: {fileID: 0}
 --- !u!114 &2023743889552301075 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3988722644700993874, guid: 5b183594b1519bf4d8018e972eff9d45, type: 3}

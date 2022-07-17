@@ -29,7 +29,7 @@ namespace ImportantPrototype.UI
 
         protected override void Refresh()
         {
-            if (View.Mutation == null)
+            if (View.Mutation == null || _selectedMutation == null)
             {
                 SetNormal();
             }
