@@ -1,19 +1,28 @@
 ﻿using ImportantPrototype.Mutations;
+using ImportantPrototype.UI.Common.Style;
 using UniRx;
 using UnityEngine;
 using UnityTools.Runtime.Extensions;
 
 namespace ImportantPrototype.UI
 {
-    public class ListSelectableMutationViewStyleSetter : MutationViewStyleSetter
+    [RequireComponent(typeof(MutationView))]
+    public class MutationViewStyleSetter : SelectableStyleSetter
     {
         [SerializeField]
-        private MutationReactiveListVariable _selectedMutations;
+        private MutationReactiveVariable _selectedMutation;
+        
+        protected MutationView View { get; private set; }
+
+        protected override void Awake()
+        {
+            View = GetComponent<MutationView>();
+            base.Awake();
+        }
         
         private void OnEnable()
         {
-            _selectedMutations.Values
-                .ObserveAdd()
+            _selectedMutation.Property
                 .Subscribe(_ => Refresh())
                 .AddToDisable(this);
         }
@@ -24,7 +33,7 @@ namespace ImportantPrototype.UI
             {
                 SetNormal();
             }
-            else if (_selectedMutations.Values.Contains(View.Mutation))
+            else if (_selectedMutation.Value == View.Mutation)
             {
                 SetSelected();
             }

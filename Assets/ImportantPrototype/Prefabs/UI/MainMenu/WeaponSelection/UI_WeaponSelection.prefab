@@ -206,8 +206,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _initializeOnStart: 1
   _hideOnStart: 1
-  _gridItem: {fileID: 2786401381804298485, guid: 5b5bb83c6940fdf48917c9f0b467e908, type: 3}
+  _itemView: {fileID: 2786401381804298485, guid: 5b5bb83c6940fdf48917c9f0b467e908, type: 3}
   _gridLayout: {fileID: 5006922861341198058}
+  _selectedWeapon: {fileID: 11400000, guid: ecca5f27c538d914487cb9a1a88bd519, type: 2}
 --- !u!114 &8064887178976028447
 MonoBehaviour:
   m_ObjectHideFlags: 0

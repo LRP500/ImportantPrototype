@@ -1,9 +1,9 @@
 using System.Collections.Generic;
+using System.Linq;
 using ImportantPrototype.Content;
 using ImportantPrototype.Input;
 using ImportantPrototype.Weapons;
 using Sirenix.Utilities;
-using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityTools.Runtime.UI;
@@ -13,7 +13,7 @@ namespace ImportantPrototype.UI.MainMenu
     public class WeaponSelectionMenu : Element
     {
         [SerializeField]
-        private WeaponSelectionGridItem _gridItem;
+        private WeaponSelectionItemView _itemView;
 
         [SerializeField]
         private GridLayoutGroup _gridLayout;
@@ -22,35 +22,37 @@ namespace ImportantPrototype.UI.MainMenu
         private WeaponDataReactiveVariable _selectedWeapon;
         
         private MainMenu _mainMenu;
-        private readonly List<WeaponSelectionGridItem> _gridItems = new ();
+        private IEnumerable<WeaponData> _weapons;
+        private readonly List<WeaponSelectionItemView> _gridItems = new ();
         
         public override void Initialize()
         {
             _mainMenu = GetComponentInParent<MainMenu>();
+            _weapons = GameContent.Instance.Weapons;
+            _selectedWeapon.Clear();
             PopulateGrid();
+            SelectFirst();
+        }
+
+        private void SelectFirst()
+        {
+            var firstWeapon = _weapons.ElementAt(0);
+            _selectedWeapon.SetValue(firstWeapon);
         }
 
         private void PopulateGrid()
         {
-            foreach (var weapon in GameContent.Instance.Weapons)
+            foreach (var weapon in _weapons)
             {
                 var item = CreateItem(weapon);
                 _gridItems.Add(item);
             }
         }
 
-        private void OnWeaponSelected(WeaponData weapon)
+        private WeaponSelectionItemView CreateItem(WeaponData weapon)
         {
-            _selectedWeapon.SetValue(weapon);
-        }
-        
-        private WeaponSelectionGridItem CreateItem(WeaponData weapon)
-        {
-            var item = Instantiate(_gridItem, _gridLayout.transform);
+            var item = Instantiate(_itemView, _gridLayout.transform);
             item.Bind(weapon);
-            item.ObserveSelect()
-                .Subscribe(OnWeaponSelected)
-                .AddTo(gameObject);
             return item;
         }
 

@@ -2,10 +2,9 @@
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace ImportantPrototype.UI
+namespace ImportantPrototype.UI.Common.Style
 {
-    [RequireComponent(typeof(MutationView))]
-    public class MutationViewStyleSetter : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+    public abstract class SelectableStyleSetter : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField]
         private Image _targetGraphic;
@@ -19,11 +18,8 @@ namespace ImportantPrototype.UI
         [SerializeField]
         private Color _selected;
         
-        protected MutationView View { get; private set; }
-
         protected virtual void Awake()
         {
-            View = GetComponent<MutationView>();
             SetNormal();
         }
 
