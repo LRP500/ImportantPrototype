@@ -70,10 +70,14 @@ namespace ImportantPrototype.Scripts.Damageable.Effects
             UpdateProperties();
         }
         
+#if UNITY_EDITOR
+        
         private void OnDrawGizmosSelected()
         {
             Handles.color = Color.red;
             Handles.DrawWireDisc(transform.position, Vector3.forward, _radius, .1f);
         }
+        
+#endif // UNITY_EDITOR
     }
 }

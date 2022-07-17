@@ -20,13 +20,13 @@ namespace ImportantPrototype.Characters.Enemies
             public int weight = 1;
         }
 
-        #region UNITY_EDITOR
+#if UNITY_EDITOR
 
         [Multiline(2)]
         [SerializeField]
         private string _description;
 
-        #endregion UNITY_EDITOR
+#endif // UNITY_EDITOR
         
         [SerializeField]
         private List<EnemySpawnInfo> _items;

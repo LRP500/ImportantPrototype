@@ -267,7 +267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6334836131649543337, guid: af16d9fe5cdd02247b41b21547000324, type: 3}
       propertyPath: m_Radius
-      value: 0.4
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6334836131649543337, guid: af16d9fe5cdd02247b41b21547000324, type: 3}
       propertyPath: m_Offset.x
@@ -275,7 +275,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6334836131649543337, guid: af16d9fe5cdd02247b41b21547000324, type: 3}
       propertyPath: m_Offset.y
-      value: 0.05
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 7166625977788660642, guid: af16d9fe5cdd02247b41b21547000324, type: 3}
       propertyPath: m_RootOrder
@@ -288,6 +288,14 @@ PrefabInstance:
     - target: {fileID: 7166625977788660642, guid: af16d9fe5cdd02247b41b21547000324, type: 3}
       propertyPath: m_LocalScale.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166625977788660642, guid: af16d9fe5cdd02247b41b21547000324, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 7166625977788660642, guid: af16d9fe5cdd02247b41b21547000324, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7487034012507078576, guid: af16d9fe5cdd02247b41b21547000324, type: 3}
       propertyPath: m_Size.x
@@ -329,6 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _character: {fileID: 8918093727697388139}
+  _animator: {fileID: 0}
 --- !u!1 &3217103946096295960 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3770484069704902321, guid: af16d9fe5cdd02247b41b21547000324, type: 3}
