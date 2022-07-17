@@ -22,6 +22,8 @@ namespace ImportantPrototype.UI
         
         private void OnEnable()
         {
+            if (_selectedMutation == null) return;
+            
             _selectedMutation.Property
                 .Subscribe(_ => Refresh())
                 .AddToDisable(this);
@@ -29,7 +31,7 @@ namespace ImportantPrototype.UI
 
         protected override void Refresh()
         {
-            if (View.Mutation == null || _selectedMutation == null)
+            if (_selectedMutation == null || View.Mutation == null)
             {
                 SetNormal();
             }
