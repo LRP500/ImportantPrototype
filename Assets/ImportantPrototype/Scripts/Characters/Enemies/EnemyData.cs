@@ -9,6 +9,10 @@ namespace ImportantPrototype.Characters.Enemies
         [SerializeField]
         private Enemy _prefab;
 
+        [SerializeField]
+        private RuntimeAnimatorController _animation;
+        
         public Enemy Prefab => _prefab;
+        public RuntimeAnimatorController Animation => _animation;
     }
 }

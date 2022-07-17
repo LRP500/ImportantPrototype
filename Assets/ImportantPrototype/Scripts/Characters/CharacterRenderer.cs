@@ -7,11 +7,15 @@ namespace ImportantPrototype.Characters
         [SerializeField]
         private Character _character;
 
-        public Character Character => _character;
+        [SerializeField]
+        private Animator _animator;
+
+        protected Character Character => _character;
+        protected Animator Animator => _animator;
         
         private void Awake()
         {
-            OnInitialize();
+            Initialize();
         }
         
         private void Update()
@@ -19,7 +23,7 @@ namespace ImportantPrototype.Characters
             UpdateFacingDirection();
         }
 
-        protected virtual void OnInitialize() { }
+        protected virtual void Initialize() { }
         protected virtual void UpdateFacingDirection() { }
     }
 }

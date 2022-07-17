@@ -6,9 +6,16 @@ namespace ImportantPrototype.Characters.Enemies
     {
         private CharacterMovement _movement;
 
-        protected override void OnInitialize()
+        protected override void Initialize()
         {
             _movement = Character.GetComponent<CharacterMovement>();
+            SetAnimation();
+        }
+
+        private void SetAnimation()
+        {
+            var enemyData = (EnemyData) Character.Data;
+            Animator.runtimeAnimatorController = enemyData.Animation;
         }
         
         protected override void UpdateFacingDirection()

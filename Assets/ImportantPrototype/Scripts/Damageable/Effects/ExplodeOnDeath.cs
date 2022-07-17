@@ -12,6 +12,7 @@ namespace ImportantPrototype.Scripts.Damageable.Effects
         {
             var instance = Instantiate(_explosionPrefab);
             instance.transform.position = transform.position;
+            instance.Trigger();
         }
     }
 }

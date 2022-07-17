@@ -7,7 +7,7 @@ namespace ImportantPrototype.Characters
     {
         private PlayerAiming _aiming;
 
-        protected override void OnInitialize()
+        protected override void Initialize()
         {
             _aiming = Character.GetComponent<PlayerAiming>();
         }

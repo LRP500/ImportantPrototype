@@ -19,9 +19,6 @@ namespace ImportantPrototype.Scripts.Damageable.Effects
         private float _fadeDuration = 1f;
         
         [SerializeField]
-        private bool _explodeOnStart = true;
-        
-        [SerializeField]
         private CircleCollider2D _collider;
 
         [SerializeField]
@@ -34,14 +31,6 @@ namespace ImportantPrototype.Scripts.Damageable.Effects
         {
             _collider.enabled = false;
             _renderer.enabled = false;
-        }
-
-        private void Start()
-        {
-            if (_explodeOnStart)
-            {
-                Trigger();
-            }
         }
 
         public void Trigger()

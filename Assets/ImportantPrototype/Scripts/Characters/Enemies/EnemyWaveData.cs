@@ -19,6 +19,14 @@ namespace ImportantPrototype.Characters.Enemies
             [HorizontalGroup(MaxWidth = 150)]
             public int weight = 1;
         }
+
+        #region UNITY_EDITOR
+
+        [Multiline(2)]
+        [SerializeField]
+        private string _description;
+
+        #endregion UNITY_EDITOR
         
         [SerializeField]
         private List<EnemySpawnInfo> _items;
