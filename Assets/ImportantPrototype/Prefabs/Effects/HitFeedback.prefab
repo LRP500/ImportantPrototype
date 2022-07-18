@@ -172,7 +172,7 @@ MonoBehaviour:
   TimescaleMode: 0
   RepeatCount: 0
   Phases:
-  - PhaseDuration: 0.05
+  - PhaseDuration: 0.075
     OffDuration: 0
     OnDuration: 1
     OffLerpDuration: 0

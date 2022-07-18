@@ -195,8 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _radius: 1
-  _fadeDuration: 0.5
-  _explodeOnStart: 1
+  _fadeDuration: 0.4
   _collider: {fileID: 1445192331871740224}
   _renderer: {fileID: 4314495783342353175}
   _impulseSource: {fileID: 3937173489056157559}
