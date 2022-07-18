@@ -3,10 +3,10 @@
 namespace ImportantPrototype.Gameplay
 {
     [RequireComponent(typeof(IDamageable))]
-    public class SpawnOnDeathEffect : DeathEffect
+    public class SpawnOnDeath : DeathEffect
     {
         [SerializeField]
-        private GameObject _drop;
+        private GameObject _toSpawn;
         
         protected override void Trigger()
         {
@@ -15,7 +15,7 @@ namespace ImportantPrototype.Gameplay
         
         private void DropItem()
         {
-            Instantiate(_drop, transform.position, Quaternion.identity);
+            Instantiate(_toSpawn, transform.position, Quaternion.identity);
         }
     }
 }
