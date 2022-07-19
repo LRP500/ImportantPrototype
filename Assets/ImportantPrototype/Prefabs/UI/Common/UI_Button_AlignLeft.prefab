@@ -93,7 +93,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4059037727323073215, guid: d73f9059f92dd714aae6c74b7ee155bd, type: 3}
       propertyPath: m_Name
-      value: UI_Button_Title
+      value: UI_Button_AlignLeft
       objectReference: {fileID: 0}
     - target: {fileID: 6125137046972697874, guid: d73f9059f92dd714aae6c74b7ee155bd, type: 3}
       propertyPath: m_Controller

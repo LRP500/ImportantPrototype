@@ -637,6 +637,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Quit
       objectReference: {fileID: 0}
+    - target: {fileID: 8286100252262417425, guid: d6680d236e4f50f48bea7ba4e33eef64, type: 3}
+      propertyPath: _event.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1c6dad28e344aab4582847e6678f6313, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6680d236e4f50f48bea7ba4e33eef64, type: 3}
 --- !u!224 &1183473370549310858 stripped
@@ -761,6 +765,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Play
       objectReference: {fileID: 0}
+    - target: {fileID: 8286100252262417425, guid: d6680d236e4f50f48bea7ba4e33eef64, type: 3}
+      propertyPath: _event.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1c6dad28e344aab4582847e6678f6313, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6680d236e4f50f48bea7ba4e33eef64, type: 3}
 --- !u!224 &1183473371966590171 stripped
@@ -886,6 +894,10 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 8286100252262417425, guid: d6680d236e4f50f48bea7ba4e33eef64, type: 3}
+      propertyPath: _event.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1c6dad28e344aab4582847e6678f6313, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6680d236e4f50f48bea7ba4e33eef64, type: 3}
 --- !u!224 &1183473372125648328 stripped

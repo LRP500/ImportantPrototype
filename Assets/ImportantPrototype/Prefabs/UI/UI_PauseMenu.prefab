@@ -643,6 +643,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_Button_PauseMenu (Quit)
       objectReference: {fileID: 0}
+    - target: {fileID: 5339667324584357124, guid: af7bdbb4d20f09449b9b2fc233e171c6, type: 3}
+      propertyPath: _selectEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: f15093bcd3a41ba48b268e9ce3080029, type: 2}
     - target: {fileID: 5597518230031778012, guid: af7bdbb4d20f09449b9b2fc233e171c6, type: 3}
       propertyPath: m_text
       value: Quit

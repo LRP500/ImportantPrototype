@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 1283694827891387751}
   - component: {fileID: 3878592434895431931}
   - component: {fileID: 6125137046972697874}
+  - component: {fileID: 6641083555590257129}
   m_Layer: 5
   m_Name: UI_Button
   m_TagString: Untagged
@@ -278,3 +279,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6641083555590257129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4059037727323073215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fa25fcd5db44ab0a007d3828b1a3a55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _highlightEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 195e609a082fdeb40bf966b44209634b, type: 2}
+  _selectEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 01139b002d7331a4cbc8154b394f6bb8, type: 2}

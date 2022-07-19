@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3228818173	UI_Selected			\Default Work Unit\UI_Selected	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	881978566	SFX_UI_Selected_06	D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\.cache\Mac\SFX\SFX_UI_Selected_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_UI_Selected_06		13824
+

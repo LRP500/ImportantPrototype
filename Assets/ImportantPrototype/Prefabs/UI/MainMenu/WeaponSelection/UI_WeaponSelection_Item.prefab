@@ -223,6 +223,8 @@ GameObject:
   - component: {fileID: 5587417438076754617}
   - component: {fileID: 2786401381804298485}
   - component: {fileID: 6731671433313183317}
+  - component: {fileID: 1983652499518925601}
+  - component: {fileID: 315963177670831071}
   m_Layer: 5
   m_Name: UI_WeaponSelection_Item
   m_TagString: Untagged
@@ -301,6 +303,38 @@ MonoBehaviour:
   _hovered: {r: 1, g: 1, b: 1, a: 1}
   _selected: {r: 1, g: 0.5, b: 0, a: 1}
   _selectedWeapon: {fileID: 11400000, guid: ecca5f27c538d914487cb9a1a88bd519, type: 2}
+--- !u!114 &1983652499518925601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2441448009006131187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b4abe6fa550de147b96de87700a5cb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 195e609a082fdeb40bf966b44209634b, type: 2}
+--- !u!114 &315963177670831071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2441448009006131187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d34b5b2499f242045883341dbdf42804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 01139b002d7331a4cbc8154b394f6bb8, type: 2}
 --- !u!1 &7710120273621206506
 GameObject:
   m_ObjectHideFlags: 0

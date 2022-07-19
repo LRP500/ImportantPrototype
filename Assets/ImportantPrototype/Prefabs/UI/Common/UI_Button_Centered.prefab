@@ -93,15 +93,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4059037727323073215, guid: d73f9059f92dd714aae6c74b7ee155bd, type: 3}
       propertyPath: m_Name
-      value: UI_Button_PauseMenu
+      value: UI_Button_Centered
       objectReference: {fileID: 0}
     - target: {fileID: 6125137046972697874, guid: d73f9059f92dd714aae6c74b7ee155bd, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 6928a7fcd3bb269438c4555c73a383a7, type: 2}
-    - target: {fileID: 6601696814496748593, guid: d73f9059f92dd714aae6c74b7ee155bd, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d73f9059f92dd714aae6c74b7ee155bd, type: 3}

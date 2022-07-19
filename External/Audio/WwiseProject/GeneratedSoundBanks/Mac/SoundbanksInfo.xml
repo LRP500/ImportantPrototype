@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>D:\Projects\Unity\Projects\Git\ImportantPrototype\WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\Projects\Unity\Projects\Git\ImportantPrototype\WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Projects\Unity\Projects\Git\ImportantPrototype\WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Projects\Unity\Projects\Git\ImportantPrototype\WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,10 +16,20 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="3659513767">
+		<SoundBank Id="2228651116" Language="SFX" Hash="1000568967">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank</ObjectPath>
 			<ShortName>Main_SoundBank</ShortName>
 			<Path>Main_SoundBank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3228818173" Name="UI_Selected" ObjectPath="\Events\Default Work Unit\UI_Selected" DurationType="OneShot" DurationMin="0.078005" DurationMax="0.078005">
+					<IncludedMemoryFiles>
+						<File Id="881978566" Language="SFX">
+							<ShortName>SFX_UI_Selected_06.wav</ShortName>
+							<Path>SFX\SFX_UI_Selected_06_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
