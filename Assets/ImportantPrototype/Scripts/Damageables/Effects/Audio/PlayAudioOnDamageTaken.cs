@@ -1,5 +1,4 @@
-﻿using ImportantPrototype.Gameplay;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ImportantPrototype.Damageables.Effects.Audio
 {

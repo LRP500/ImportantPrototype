@@ -1,7 +1,6 @@
-﻿using ImportantPrototype.Gameplay;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace ImportantPrototype.Scripts.Damageable.Effects
+namespace ImportantPrototype.Damageables.Effects
 {
     public class ExplodeOnDeath : DeathEffect
     {

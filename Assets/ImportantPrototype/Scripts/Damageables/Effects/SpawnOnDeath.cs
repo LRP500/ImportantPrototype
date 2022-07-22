@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using ImportantPrototype.Gameplay;
+using UnityEngine;
 
-namespace ImportantPrototype.Gameplay
+namespace ImportantPrototype.Damageables.Effects
 {
     [RequireComponent(typeof(IDamageable))]
     public class SpawnOnDeath : DeathEffect

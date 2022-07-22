@@ -1,7 +1,8 @@
-﻿using UniRx;
+﻿using ImportantPrototype.Gameplay;
+using UniRx;
 using UnityEngine;
 
-namespace ImportantPrototype.Gameplay
+namespace ImportantPrototype.Damageables.Effects
 {
     [RequireComponent(typeof(IDamageable))]
     public abstract class DeathEffect : MonoBehaviour

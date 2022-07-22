@@ -1,8 +1,7 @@
-﻿using ImportantPrototype.Gameplay;
-using MoreMountains.Feedbacks;
+﻿using MoreMountains.Feedbacks;
 using UnityEngine;
 
-namespace ImportantPrototype.Scripts.Damageable.Effects
+namespace ImportantPrototype.Damageables.Effects
 {
     public class FeedbackOnDamageTaken : DamageTakenEffect
     {

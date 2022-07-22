@@ -7,7 +7,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityTools.Runtime.Extensions;
 
-namespace ImportantPrototype.Scripts.Damageable.Effects
+namespace ImportantPrototype.Damageables.Effects
 {
     public class Explosion : MonoBehaviour
     {
