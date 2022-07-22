@@ -16,11 +16,19 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="3884683491">
+		<SoundBank Id="2228651116" Language="SFX" Hash="827813218">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank</ObjectPath>
 			<ShortName>Main_SoundBank</ShortName>
 			<Path>Main_SoundBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2720979472" Name="Play_SFX_Misc_Hit" ObjectPath="\Events\Misc\Play_SFX_Misc_Hit" DurationType="OneShot" DurationMin="0.052676" DurationMax="0.052676">
+					<IncludedMemoryFiles>
+						<File Id="431187026" Language="SFX">
+							<ShortName>SFX_Misc_Hit_01.wav</ShortName>
+							<Path>SFX\SFX_Misc_Hit_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1117141914" Name="Play_SFX_UI_Back" ObjectPath="\Events\UI\Play_SFX_UI_Back" DurationType="OneShot" DurationMin="0.214512" DurationMax="0.214512">
 					<IncludedMemoryFiles>
 						<File Id="113144389" Language="SFX">
@@ -55,9 +63,9 @@
 				</Event>
 				<Event Id="2820342956" Name="Play_SFX_Weapon_Blaster" ObjectPath="\Events\Weapons\Play_SFX_Weapon_Blaster" DurationType="OneShot" DurationMin="0.260249" DurationMax="0.260249">
 					<IncludedMemoryFiles>
-						<File Id="743298584" Language="SFX">
-							<ShortName>SFX_Weapon_Blaster_01.wav</ShortName>
-							<Path>SFX\SFX_Weapon_Blaster_01_10C4C929.wem</Path>
+						<File Id="14679485" Language="SFX">
+							<ShortName>SFX_Weapon_Blaster_02.wav</ShortName>
+							<Path>SFX\SFX_Weapon_Blaster_02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

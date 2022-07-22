@@ -12,7 +12,7 @@ namespace ImportantPrototype.Gameplay
 
         private void Start()
         {
-            Damageable.CanDamage
+            Damageable.IsDamageable
                 .StartWith(true)
                 .Subscribe(gameObject.SetActive)
                 .AddTo(gameObject);

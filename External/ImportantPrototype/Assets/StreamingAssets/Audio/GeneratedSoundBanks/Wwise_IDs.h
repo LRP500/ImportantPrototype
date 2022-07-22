@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_SFX_MISC_HIT = 2720979472U;
         static const AkUniqueID PLAY_SFX_UI_BACK = 1117141914U;
         static const AkUniqueID PLAY_SFX_UI_HOVER = 708671363U;
         static const AkUniqueID PLAY_SFX_UI_SELECT = 2484137795U;

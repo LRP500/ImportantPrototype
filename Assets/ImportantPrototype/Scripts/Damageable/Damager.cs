@@ -14,6 +14,7 @@ namespace ImportantPrototype.Gameplay
         private bool _excludeSelf;
         
         private readonly List<string> _excludedTags = new ();
+        private readonly BoolReactiveProperty _canDamage = new (true);
         
         public float Damage => _damage;
         public readonly ISubject<Unit> OnHit = new Subject<Unit>();
@@ -29,6 +30,9 @@ namespace ImportantPrototype.Gameplay
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (_excludedTags.Contains(other.tag)) return;
+            if (!_canDamage.Value) return;
+
+            _canDamage.Value = false;
             OnHit.OnNext(Unit.Default);
             ApplyDamage(other);
         }

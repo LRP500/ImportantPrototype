@@ -8,6 +8,7 @@
 						<ObjectRef Name="Play_SFX_Weapon_Blaster" ID="{D6AA709F-0464-412A-9B87-501BA8424101}" WorkUnitID="{73D9DB95-2699-4AAD-A3D6-070BE76B021A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_SFX_UI_Select" ID="{A0C143F8-7BCE-44A9-93D3-CB3016D285B2}" WorkUnitID="{F629B6B0-3A1E-4773-AFA0-940ECE02BFA8}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_SFX_UI_Back" ID="{2B617F5C-5A60-465B-A9F1-E6CBCE276D49}" WorkUnitID="{F629B6B0-3A1E-4773-AFA0-940ECE02BFA8}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_SFX_Misc_Hit" ID="{834D277D-2C28-49F5-809F-961EB949B8DD}" WorkUnitID="{F4821CAD-7E34-475A-9005-DCB70E8F34E5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_SFX_UI_Hover" ID="{AD398ECF-3013-4A42-98BF-5A969F53DF25}" WorkUnitID="{F629B6B0-3A1E-4773-AFA0-940ECE02BFA8}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_SFX_UI_Validate" ID="{B09CE609-BAF3-4D11-8463-86979C5ACAAA}" WorkUnitID="{F629B6B0-3A1E-4773-AFA0-940ECE02BFA8}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>

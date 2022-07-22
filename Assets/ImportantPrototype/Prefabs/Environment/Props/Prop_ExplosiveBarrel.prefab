@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6363584799231707715}
   - component: {fileID: 6193382558713909465}
   - component: {fileID: 2036513817526388279}
+  - component: {fileID: 896786215598211626}
   m_Layer: 0
   m_Name: Damageable
   m_TagString: Untagged
@@ -88,6 +89,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _feedback: {fileID: 9001327983318746122}
+--- !u!114 &896786215598211626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6722549838067693852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8bde4e182a544b68f803f85f81434b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 22649a4e1bfd42e48870adb15c6d0632, type: 2}
 --- !u!1 &7781829074472939351
 GameObject:
   m_ObjectHideFlags: 0

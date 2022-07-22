@@ -14,12 +14,12 @@ namespace ImportantPrototype.Tools.Console.Commands
         {
             if (args.Length == 0)
             {
-                _player.Value.Damageable.SetCanDamage(false);
+                _player.Value.Damageable.SetDamageable(false);
                 return true;
             }
             
             if (!GetBool(args[0], out bool enabled)) return false;
-            _player.Value.Damageable.SetCanDamage(!enabled);
+            _player.Value.Damageable.SetDamageable(!enabled);
             return true;
         }
     }

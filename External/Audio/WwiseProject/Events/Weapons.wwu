@@ -5,10 +5,10 @@
 			<ChildrenList>
 				<Event Name="Play_SFX_Weapon_Blaster" ID="{D6AA709F-0464-412A-9B87-501BA8424101}">
 					<ChildrenList>
-						<Action Name="" ID="{5BBD7D59-8330-4AB2-919C-6DB8E2905735}" ShortID="587798031">
+						<Action Name="" ID="{A9EF0E24-FC0A-48F9-8F09-39783BDD7106}" ShortID="349383140">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SFX_Weapon_Blaster_01" ID="{8799EC3E-D9E7-4398-B285-B41C7888E586}" WorkUnitID="{94C4BE1F-11C5-44CA-9C00-E00AC0AB45A9}"/>
+									<ObjectRef Name="SFX_Weapon_Blaster_01" ID="{71890C42-12E2-4F45-8AC5-8BFF3D7C5829}" WorkUnitID="{94C4BE1F-11C5-44CA-9C00-E00AC0AB45A9}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

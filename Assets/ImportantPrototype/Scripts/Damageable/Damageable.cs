@@ -11,8 +11,8 @@ namespace ImportantPrototype.Gameplay
         [SerializeField]
         private double _health;
         
-        private readonly ReactiveProperty<bool> _canDamage = new (true);
-        public IReadOnlyReactiveProperty<bool> CanDamage => _canDamage;
+        private readonly ReactiveProperty<bool> _isDamageable = new (true);
+        public IReadOnlyReactiveProperty<bool> IsDamageable => _isDamageable;
 
         public ISubject<Unit> OnDeath { get; } = new Subject<Unit>();
         public ISubject<float> OnDamageTaken { get; } = new Subject<float>();
@@ -21,7 +21,7 @@ namespace ImportantPrototype.Gameplay
 
         public void Damage(IDamager damager)
         {
-            if (!CanDamage.Value) return;
+            if (!IsDamageable.Value) return;
          
             ApplyDamage(damager.Damage);
             OnDamageTaken.OnNext(damager.Damage);
@@ -37,9 +37,9 @@ namespace ImportantPrototype.Gameplay
             _health -= damage;
         }
         
-        public void SetCanDamage(bool canDamage)
+        public void SetDamageable(bool canDamage)
         {
-            _canDamage.Value = canDamage;
+            _isDamageable.Value = canDamage;
         }
     }
 }

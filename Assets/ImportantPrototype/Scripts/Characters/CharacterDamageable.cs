@@ -1,11 +1,10 @@
-using ImportantPrototype.Gameplay;
 using ImportantPrototype.Stats;
 using UniRx;
 using UnityTools.Runtime.Extensions;
 
 namespace ImportantPrototype.Characters
 {
-    public class CharacterDamageable : Damageable
+    public class CharacterDamageable : Gameplay.Damageable
     {
         private Character _character;
         private Attribute _characterHealth;
