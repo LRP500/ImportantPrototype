@@ -18,6 +18,10 @@ MonoBehaviour:
   _projectile: {fileID: 11400000, guid: ccdc44a162d27324c812d2d9cd0cd6ab, type: 2}
   _firingMode: {fileID: 11400000, guid: 5c76b5765bd497548afed7eaeb095bc2, type: 2}
   _shotBehaviour: {fileID: 11400000, guid: 9452542b9718cf046881e0e31e2cd4e3, type: 2}
+  _fireEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 07689d4b4738cff45b2e48da4014a41d, type: 2}
   _damage: 1
   _fireRate: 1.5
   _reloadSpeed: 0

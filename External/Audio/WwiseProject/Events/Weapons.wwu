@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{73D9DB95-2699-4AAD-A3D6-070BE76B021A}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Weapons" ID="{73D9DB95-2699-4AAD-A3D6-070BE76B021A}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_SFX_Weapon_Blaster" ID="{D6AA709F-0464-412A-9B87-501BA8424101}">
+					<ChildrenList>
+						<Action Name="" ID="{5BBD7D59-8330-4AB2-919C-6DB8E2905735}" ShortID="587798031">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Weapon_Blaster_01" ID="{8799EC3E-D9E7-4398-B285-B41C7888E586}" WorkUnitID="{94C4BE1F-11C5-44CA-9C00-E00AC0AB45A9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

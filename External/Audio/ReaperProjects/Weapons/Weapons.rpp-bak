@@ -1,0 +1,310 @@
+<REAPER_PROJECT 0.1 "6.63/win64" 1658491005
+  <NOTES 0 2
+  >
+  RIPPLE 0
+  GROUPOVERRIDE 0 0 0
+  AUTOXFADE 129
+  ENVATTACH 3
+  POOLEDENVATTACH 0
+  MIXERUIFLAGS 11 48
+  PEAKGAIN 1
+  FEEDBACK 0
+  PANLAW 1
+  PROJOFFS 0 0 0
+  MAXPROJLEN 0 600
+  GRID 3455 8 1 8 1 0 0 0
+  TIMEMODE 1 5 -1 30 0 0 -1
+  VIDEO_CONFIG 0 0 256
+  PANMODE 3
+  CURSOR 0.23230980907134
+  ZOOM 5957.5616093550516 0 0
+  VZOOMEX 12 0
+  USE_REC_CFG 0
+  RECMODE 1
+  SMPTESYNC 0 30 100 40 1000 300 0 0 1 0 0
+  LOOP 0
+  LOOPGRAN 0 4
+  RECORD_PATH "" ""
+  <RECORD_CFG
+    ZXZhdxgAAA==
+  >
+  <APPLYFX_CFG
+  >
+  RENDER_FILE "D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\Exports\Weapons\SFX_Weapon_Blaster_02.wav"
+  RENDER_FMT 0 2 44100
+  RENDER_1X 0
+  RENDER_RANGE 5 0 0 18 1000
+  RENDER_RESAMPLE 3 0 1
+  RENDER_ADDTOPROJ 0
+  RENDER_STEMS 8
+  RENDER_DITHER 0
+  TIMELOCKMODE 1
+  TEMPOENVLOCKMODE 1
+  ITEMMIX 1
+  DEFPITCHMODE 589824 0
+  TAKELANE 1
+  SAMPLERATE 44100 0 0
+  <RENDER_CFG
+    ZXZhdxgAAA==
+  >
+  LOCK 1
+  <METRONOME 6 2
+    VOL 0.25 0.125
+    FREQ 800 1600 1
+    BEATLEN 4
+    SAMPLES "" ""
+    PATTERN 2863311530 2863311529
+    MULT 1
+  >
+  GLOBAL_AUTO -1
+  TEMPO 120 4 4
+  PLAYRATE 1 0 0.25 4
+  SELECTION 0.26024829847686 0
+  SELECTION2 0.26024829847686 0
+  MASTERAUTOMODE 0
+  MASTERTRACKHEIGHT 0 0
+  MASTERPEAKCOL 16576
+  MASTERMUTESOLO 0
+  MASTERTRACKVIEW 0 0.6667 0.5 0.5 0 -1 0 0 0 0 0 0 0
+  MASTERHWOUT 0 0 1 0 0 0 0 -1
+  MASTER_NCH 2 2
+  MASTER_VOLUME 1 0 -1 -1 1
+  MASTER_PANMODE 3
+  MASTER_FX 1
+  MASTER_SEL 0
+  <MASTERPLAYSPEEDENV
+    EGUID {9A4B7383-1AE4-444B-A2D2-D3DA50A0E738}
+    ACT 0 -1
+    VIS 0 1 1
+    LANEHEIGHT 0 0
+    ARM 0
+    DEFSHAPE 0 -1 -1
+  >
+  <TEMPOENVEX
+    EGUID {F3D63625-45CB-47CA-80DE-F10806063EA4}
+    ACT 0 -1
+    VIS 1 0 1
+    LANEHEIGHT 0 0
+    ARM 0
+    DEFSHAPE 1 -1 -1
+    PT 0.000000000000 120.0000000000 1
+  >
+  MARKER 1 0 "" 13 0 1 R {43478FAA-5F57-4E70-B31B-F899DA4D8F70}
+  MARKER 1 0.26024829847686 "" 13 0 1 R
+  <PROJBAY
+  >
+  <TRACK {C585A923-1578-46F7-AE03-B50239B5F2FC}
+    NAME "FLARE GUN - close"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 0.4059241760314 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 -1 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {C585A923-1578-46F7-AE03-B50239B5F2FC}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 0.14271295689553
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.000997 0 1 0 0 0
+      FADEOUT 1 0.083058 0 1 0 0 0
+      MUTE 0 0
+      MIXFLAG 1
+      BEAT 2
+      SEL 0
+      IGUID {4C8AE7F8-F7E9-43FC-B781-E2DB13DEB36A}
+      IID 86
+      NAME "FLARE GUN - close.wav"
+      VOLPAN 1 0 1 -1
+      SOFFS 9.66013993747674
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {138F226D-E66D-43CE-9AB1-850FB6DF463C}
+      <SOURCE WAVE
+        FILE "D:\Production\Sound Banks\Fx\Soundmorph\SoundMorph - Intervention\2. Gun Shots Source - 4 Layers\FLARE GUN - close.wav"
+      >
+    >
+  >
+  <TRACK {BB753D3C-F766-4CA0-AC7D-27E09244520A}
+    NAME M&P9_BASE_A_close
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 0.36508838063238 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 -1 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {BB753D3C-F766-4CA0-AC7D-27E09244520A}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 0.14670431584418
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.041984 0 1 0 0 0
+      FADEOUT 1 0.085438 0 1 0 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {9C689273-0555-41C4-82C1-C25EB8DA2863}
+      IID 7
+      NAME M&P9_BASE_A_close.wav
+      VOLPAN 1 0 1 -1
+      SOFFS 0.42496095923501
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {6C80410F-EE76-4798-A60D-CAAA4D67D571}
+      <SOURCE WAVE
+        FILE "D:\Production\Sound Banks\Fx\Soundmorph\SoundMorph - Intervention\2. Gun Shots Source - 4 Layers\M&P9_BASE_A_close.wav"
+      >
+    >
+  >
+  <TRACK {69EB0C4D-4569-405F-A885-FB1BB23550A9}
+    NAME "Future Weapons 2 - Source - blaster_impulse_long"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 0.01605168111672 -0.184 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 -1 0
+    SEL 1
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {69EB0C4D-4569-405F-A885-FB1BB23550A9}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <FXCHAIN
+      WNDRECT 1045 213 951 339
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS pitch/pitchdown ""
+        0 3 0 100 1 0 -120 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      >
+      FLOATPOS 0 0 0 0
+      FXID {A4AF677B-2451-4014-A533-E7C4C6C23278}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 0.19410797674216
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.001825 0 1 0 0 0
+      FADEOUT 1 0.125951 0 1 0 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {74213121-E4C7-46A8-A5CC-7D49AACE4FFC}
+      IID 100
+      NAME "Future Weapons 2 - Source - blaster_impulse_long.wav"
+      VOLPAN 1 0 1 -1
+      SOFFS 0.04017052889754
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {9B369FCF-B3FF-447D-895B-8C4E726FD687}
+      <SOURCE WAVE
+        FILE "D:\Production\Sound Banks\Fx\Soundmorph\SoundMorph - Future Weapons 2\1. SoundMorph - Future Weapons 2\Source Recordings\Blaster Layers\Future Weapons 2 - Source - blaster_impulse_long.wav"
+      >
+    >
+  >
+  <TRACK {55B96CD1-9002-4071-A0C7-3222334DFED1}
+    NAME "Future Weapons 2 - Source - blaster_impulse_long"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 0.02933614208929 0.352 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 -1 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {55B96CD1-9002-4071-A0C7-3222334DFED1}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <FXCHAIN
+      WNDRECT 1045 213 1030 491
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS pitch/pitchdown ""
+        1 3 0 100 1 0 -120 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      >
+      FLOATPOS 0 0 0 0
+      FXID {DED4B4AD-EEB7-4E5F-A639-369ACDCD642A}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 0.01927313244248
+      SNAPOFFS 0
+      LENGTH 0.11517991054913
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.029369 0 1 0 0 0
+      FADEOUT 1 0.042217 0 1 0 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {9B0F0717-6D49-40E7-A7C1-3F4D4920101A}
+      IID 100
+      NAME "Future Weapons 2 - Source - blaster_impulse_long.wav"
+      VOLPAN 1 0 1 -1
+      SOFFS 0.05944366134002
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {4BFE7B67-EB01-4104-B955-EC4BA197A359}
+      <SOURCE WAVE
+        FILE "D:\Production\Sound Banks\Fx\Soundmorph\SoundMorph - Future Weapons 2\1. SoundMorph - Future Weapons 2\Source Recordings\Blaster Layers\Future Weapons 2 - Source - blaster_impulse_long.wav"
+      >
+    >
+  >
+  <EXTENSIONS
+  >
+>

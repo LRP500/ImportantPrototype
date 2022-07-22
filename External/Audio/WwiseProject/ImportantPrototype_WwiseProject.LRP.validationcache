@@ -32,7 +32,7 @@
 	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\Switches\Default Work Unit.wwu" DateLow="1657667981" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\States\Default Work Unit.wwu" DateLow="1657667981" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1657667981" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1658251772" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1658254163" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\Queries\Factory Queries.wwu" DateLow="1657667981" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\Queries\Default Work Unit.wwu" DateLow="1657667981" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\Presets\Factory Spatial Audio.wwu" DateLow="1657667981" DateHigh="0"/>
@@ -43,9 +43,9 @@
 	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1657667981" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1657667981" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\ImportantPrototype_WwiseProject.wproj" DateLow="1657667981" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\ImportantPrototype_WwiseProject.LRP.wsettings" DateLow="1658179064" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\ImportantPrototype_WwiseProject.LRP.wsettings" DateLow="1658429543" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1657667981" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\Events\Default Work Unit.wwu" DateLow="1658251761" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\Events\Default Work Unit.wwu" DateLow="1658488105" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\Effects\Factory Effects.wwu" DateLow="1657667981" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\Effects\Default Work Unit.wwu" DateLow="1657667981" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1657667981" DateHigh="0"/>
@@ -54,5 +54,7 @@
 	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="1657667981" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="1657667981" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1657667981" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1658251729" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\Actor-Mixer Hierarchy\Weapons.wwu" DateLow="1658488113" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\Actor-Mixer Hierarchy\UI.wwu" DateLow="1658487990" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1658487990" DateHigh="0"/>
 </ValidationCache>

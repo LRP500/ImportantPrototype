@@ -29,6 +29,10 @@ namespace ImportantPrototype.Weapons
         [SerializeField]
         private WeaponShotBehaviour _shotBehaviour;
 
+        [SerializeField]
+        [TitleGroup("Audio")]
+        private AK.Wwise.Event _fireEvent;
+
         [TitleGroup("Stats")]
         [SerializeField]
         private float _damage = 1;
@@ -59,7 +63,7 @@ namespace ImportantPrototype.Weapons
         
         [SerializeField]
         private float _accuracy = 1;
-        
+
         public string Name => _name;
         public string Description => _description;
         public WeaponFiringMode FiringMode => _firingMode;
@@ -67,6 +71,8 @@ namespace ImportantPrototype.Weapons
         public ProjectileData Projectile => _projectile;
         public Weapon Prefab => _prefab;
 
+        public AK.Wwise.Event FireEvent => _fireEvent;        
+        
         public float Damage => _damage;
         public float FireRate => _fireRate;
         public float ReloadSpeed => _reloadSpeed;

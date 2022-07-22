@@ -17,6 +17,7 @@ namespace AK
         static const AkUniqueID PLAY_SFX_UI_HOVER = 708671363U;
         static const AkUniqueID PLAY_SFX_UI_SELECT = 2484137795U;
         static const AkUniqueID PLAY_SFX_UI_VALIDATE = 4047140117U;
+        static const AkUniqueID PLAY_SFX_WEAPON_BLASTER = 2820342956U;
     } // namespace EVENTS
 
     namespace BANKS

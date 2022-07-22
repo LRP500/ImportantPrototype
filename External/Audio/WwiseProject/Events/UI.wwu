@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F629B6B0-3A1E-4773-AFA0-940ECE02BFA8}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="UI" ID="{F629B6B0-3A1E-4773-AFA0-940ECE02BFA8}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_SFX_UI_Hover" ID="{AD398ECF-3013-4A42-98BF-5A969F53DF25}">
+					<ChildrenList>
+						<Action Name="" ID="{0BA9A913-BA24-43F0-8093-EDA776C4D7F0}" ShortID="930063416">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_UI_Select_05" ID="{4B926DB4-F530-4911-913C-F930D0901FA6}" WorkUnitID="{6A7AEF2B-58CC-4CF6-B9BA-26829EFD6795}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SFX_UI_Back" ID="{2B617F5C-5A60-465B-A9F1-E6CBCE276D49}">
+					<ChildrenList>
+						<Action Name="" ID="{FDA25F9B-9B2A-408F-8AE5-8F4E27FFF658}" ShortID="683658513">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_UI_Select_03" ID="{6EBFA158-2B30-4CEA-8FA1-A618F7CEBA84}" WorkUnitID="{6A7AEF2B-58CC-4CF6-B9BA-26829EFD6795}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SFX_UI_Select" ID="{A0C143F8-7BCE-44A9-93D3-CB3016D285B2}">
+					<ChildrenList>
+						<Action Name="" ID="{20C7B7F2-1220-4204-8650-126544FCEA22}" ShortID="936709724">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_UI_Select_06" ID="{28EB1B77-3A74-454B-A667-E939A9BECE50}" WorkUnitID="{6A7AEF2B-58CC-4CF6-B9BA-26829EFD6795}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SFX_UI_Validate" ID="{B09CE609-BAF3-4D11-8463-86979C5ACAAA}">
+					<ChildrenList>
+						<Action Name="" ID="{75C8702F-9513-4BBB-A98A-C5363DDB22BD}" ShortID="93201287">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_UI_Select_04" ID="{0E42B5BA-A768-4B25-9261-4C6520761363}" WorkUnitID="{6A7AEF2B-58CC-4CF6-B9BA-26829EFD6795}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

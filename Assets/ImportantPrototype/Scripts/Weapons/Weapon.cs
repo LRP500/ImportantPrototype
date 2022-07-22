@@ -41,7 +41,14 @@ namespace ImportantPrototype.Weapons
         
         public void Fire(Vector2 direction, string excludeTag)
         {
-            _behaviour.Fire(this, _muzzle.position, direction, excludeTag);
+            var origin = _muzzle.position;
+            _behaviour.Fire(this, origin, direction, excludeTag);
+            OnFire();
+        }
+
+        private void OnFire()
+        {
+            Data.FireEvent.Post(gameObject);
         }
     }
 }

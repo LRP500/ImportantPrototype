@@ -16,16 +16,40 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="1000568967">
+		<SoundBank Id="2228651116" Language="SFX" Hash="3575973772">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank</ObjectPath>
 			<ShortName>Main_SoundBank</ShortName>
 			<Path>Main_SoundBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3228818173" Name="UI_Selected" ObjectPath="\Events\Default Work Unit\UI_Selected" DurationType="OneShot" DurationMin="0.078005" DurationMax="0.078005">
+				<Event Id="1117141914" Name="Play_SFX_UI_Back" ObjectPath="\Events\Default Work Unit\Play_SFX_UI_Back" DurationType="OneShot" DurationMin="0.214512" DurationMax="0.214512">
+					<IncludedMemoryFiles>
+						<File Id="113144389" Language="SFX">
+							<ShortName>SFX_UI_Selected_03.wav</ShortName>
+							<Path>SFX\SFX_UI_Selected_03_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="708671363" Name="Play_SFX_UI_Hover" ObjectPath="\Events\Default Work Unit\Play_SFX_UI_Hover" DurationType="OneShot" DurationMin="0.038889" DurationMax="0.038889">
+					<IncludedMemoryFiles>
+						<File Id="505783154" Language="SFX">
+							<ShortName>SFX_UI_Select_05.wav</ShortName>
+							<Path>SFX\SFX_UI_Select_05_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2484137795" Name="Play_SFX_UI_Select" ObjectPath="\Events\Default Work Unit\Play_SFX_UI_Select" DurationType="OneShot" DurationMin="0.078005" DurationMax="0.078005">
 					<IncludedMemoryFiles>
 						<File Id="881978566" Language="SFX">
 							<ShortName>SFX_UI_Selected_06.wav</ShortName>
 							<Path>SFX\SFX_UI_Selected_06_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4047140117" Name="Play_SFX_UI_Validate" ObjectPath="\Events\Default Work Unit\Play_SFX_UI_Validate" DurationType="OneShot" DurationMin="0.25551" DurationMax="0.25551">
+					<IncludedMemoryFiles>
+						<File Id="1053557941" Language="SFX">
+							<ShortName>SFX_UI_Selected_04.wav</ShortName>
+							<Path>SFX\SFX_UI_Selected_04_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

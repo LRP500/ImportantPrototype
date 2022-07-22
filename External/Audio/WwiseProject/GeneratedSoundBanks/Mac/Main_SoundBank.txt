@@ -1,6 +1,12 @@
 Event	ID	Name			Wwise Object Path	Notes
-	3228818173	UI_Selected			\Default Work Unit\UI_Selected	
+	708671363	Play_SFX_UI_Hover			\Default Work Unit\Play_SFX_UI_Hover	
+	1117141914	Play_SFX_UI_Back			\Default Work Unit\Play_SFX_UI_Back	
+	2484137795	Play_SFX_UI_Select			\Default Work Unit\Play_SFX_UI_Select	
+	4047140117	Play_SFX_UI_Validate			\Default Work Unit\Play_SFX_UI_Validate	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	881978566	SFX_UI_Selected_06	D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\.cache\Mac\SFX\SFX_UI_Selected_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX_UI_Selected_06		13824
+	113144389	SFX_UI_Select_03	D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\.cache\Mac\SFX\SFX_UI_Selected_03_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SFX_UI_Select_03		37904
+	505783154	SFX_UI_Select_05	D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\.cache\Mac\SFX\SFX_UI_Select_05_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SFX_UI_Select_05		6924
+	881978566	SFX_UI_Select_06	D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\.cache\Mac\SFX\SFX_UI_Selected_06_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SFX_UI_Select_06		13824
+	1053557941	SFX_UI_Select_04	D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\.cache\Mac\SFX\SFX_UI_Selected_04_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SFX_UI_Select_04		45136
 
