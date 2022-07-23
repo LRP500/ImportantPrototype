@@ -1,16 +1,20 @@
 Event	ID	Name			Wwise Object Path	Notes
 	708671363	Play_SFX_UI_Hover			\UI\Play_SFX_UI_Hover	
 	1117141914	Play_SFX_UI_Back			\UI\Play_SFX_UI_Back	
+	1566693136	Play_Music_MainMenu			\Music\Play_Music_MainMenu	
 	2484137795	Play_SFX_UI_Select			\UI\Play_SFX_UI_Select	
-	2720979472	Play_SFX_Misc_Hit			\Misc\Play_SFX_Misc_Hit	
-	2820342956	Play_SFX_Weapon_Blaster			\Weapons\Play_SFX_Weapon_Blaster	
+	2720979472	Play_SFX_Misc_Hit			\Weapons\Hits\Play_SFX_Misc_Hit	
+	2820342956	Play_SFX_Weapon_Blaster			\Weapons\Blaster\Play_SFX_Weapon_Blaster	
+	2926957234	Play_SFX_Explosion_Barrel			\Weapons\Explosions\Play_SFX_Explosion_Barrel	
 	4047140117	Play_SFX_UI_Validate			\UI\Play_SFX_UI_Validate	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	14679485	SFX_Weapon_Blaster_01	D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\.cache\Windows\SFX\SFX_Weapon_Blaster_02_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\SFX_Weapon_Blaster_01		45972
+	14679485	SFX_Weapon_Blaster_01	D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\.cache\Windows\SFX\SFX_Weapon_Blaster_02_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Blaster\SFX_Weapon_Blaster_01		45972
 	113144389	SFX_UI_Select_03	D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\.cache\Windows\SFX\SFX_UI_Selected_03_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SFX_UI_Select_03		37904
-	431187026	SFX_Misc_Hit_01	D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\.cache\Windows\SFX\SFX_Misc_Hit_01_10C4C929.wem		\Actor-Mixer Hierarchy\Misc\SFX_Misc_Hit_01		4710
+	431187026	SFX_Misc_Hit_01	D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\.cache\Windows\SFX\SFX_Misc_Hit_01_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Hits\SFX_Misc_Hit_01		4710
 	505783154	SFX_UI_Select_05	D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\.cache\Windows\SFX\SFX_UI_Select_05_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SFX_UI_Select_05		6924
+	559298567	SFX_Explosion_01	D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\.cache\Windows\SFX\SFX_Explosion_01_10C4C929.wem		\Actor-Mixer Hierarchy\Weapons\Explosions\SFX_Explosion_01		264664
 	881978566	SFX_UI_Select_06	D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\.cache\Windows\SFX\SFX_UI_Selected_06_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SFX_UI_Select_06		13824
 	1053557941	SFX_UI_Select_04	D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\.cache\Windows\SFX\SFX_UI_Selected_04_10C4C929.wem		\Actor-Mixer Hierarchy\UI\SFX_UI_Select_04		45136
+	1068638210	Music_MainMenu	D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\WwiseProject\.cache\Windows\SFX\MateCola02_D79FB2B7.wem		\Actor-Mixer Hierarchy\Music\Music_MainMenu		5376064
 

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bed93207cd241a498eeb395e8eabb40, type: 3}
+  m_Name: 2675CFF5-19E3-4430-A16F-172FB0FC4785
+  m_EditorClassIdentifier: 
+  objectName: Play_SFX_Explosion_Barrel
+  id: 2926957234
+  guid: 2675CFF5-19E3-4430-A16F-172FB0FC4785

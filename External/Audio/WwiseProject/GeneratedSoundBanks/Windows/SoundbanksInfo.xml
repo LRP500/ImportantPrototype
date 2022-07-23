@@ -16,12 +16,28 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="827813218">
+		<SoundBank Id="2228651116" Language="SFX" Hash="747994265">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank</ObjectPath>
 			<ShortName>Main_SoundBank</ShortName>
 			<Path>Main_SoundBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2720979472" Name="Play_SFX_Misc_Hit" ObjectPath="\Events\Misc\Play_SFX_Misc_Hit" DurationType="OneShot" DurationMin="0.052676" DurationMax="0.052676">
+				<Event Id="1566693136" Name="Play_Music_MainMenu" ObjectPath="\Events\Music\Play_Music_MainMenu" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="1068638210" Language="SFX">
+							<ShortName>MateCola02.wav</ShortName>
+							<Path>SFX\MateCola02_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2926957234" Name="Play_SFX_Explosion_Barrel" ObjectPath="\Events\Weapons\Explosions\Play_SFX_Explosion_Barrel" DurationType="OneShot" DurationMin="1.5" DurationMax="1.5">
+					<IncludedMemoryFiles>
+						<File Id="559298567" Language="SFX">
+							<ShortName>SFX_Explosion_01.wav</ShortName>
+							<Path>SFX\SFX_Explosion_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2720979472" Name="Play_SFX_Misc_Hit" ObjectPath="\Events\Weapons\Hits\Play_SFX_Misc_Hit" DurationType="OneShot" DurationMin="0.052676" DurationMax="0.052676">
 					<IncludedMemoryFiles>
 						<File Id="431187026" Language="SFX">
 							<ShortName>SFX_Misc_Hit_01.wav</ShortName>
@@ -61,7 +77,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2820342956" Name="Play_SFX_Weapon_Blaster" ObjectPath="\Events\Weapons\Play_SFX_Weapon_Blaster" DurationType="OneShot" DurationMin="0.260249" DurationMax="0.260249">
+				<Event Id="2820342956" Name="Play_SFX_Weapon_Blaster" ObjectPath="\Events\Weapons\Blaster\Play_SFX_Weapon_Blaster" DurationType="OneShot" DurationMin="0.260249" DurationMax="0.260249">
 					<IncludedMemoryFiles>
 						<File Id="14679485" Language="SFX">
 							<ShortName>SFX_Weapon_Blaster_02.wav</ShortName>

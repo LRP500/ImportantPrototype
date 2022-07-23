@@ -117,6 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 1
   _excludeSelf: 0
+  _singleHit: 1
 --- !u!50 &6177122596688411777
 Rigidbody2D:
   serializedVersion: 4

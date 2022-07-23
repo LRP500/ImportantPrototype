@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F4821CAD-7E34-475A-9005-DCB70E8F34E5}" SchemaVersion="103" RootDocumentID="{73D9DB95-2699-4AAD-A3D6-070BE76B021A}" ParentDocumentID="{73D9DB95-2699-4AAD-A3D6-070BE76B021A}">
+	<Events>
+		<WorkUnit Name="Hits" ID="{F4821CAD-7E34-475A-9005-DCB70E8F34E5}" OwnerID="{73D9DB95-2699-4AAD-A3D6-070BE76B021A}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Play_SFX_Misc_Hit" ID="{834D277D-2C28-49F5-809F-961EB949B8DD}">
+					<ChildrenList>
+						<Action Name="" ID="{6435F8C9-CA99-4226-AE34-0544A44FE8B2}" ShortID="1008195297">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Misc_Hit_01" ID="{9D5249BD-1EA6-4905-903D-21052EDE2CD2}" WorkUnitID="{30347B82-A2DE-459D-8909-5738724DE732}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

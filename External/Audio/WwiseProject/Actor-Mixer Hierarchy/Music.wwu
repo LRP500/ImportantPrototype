@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{46696A26-4FB8-457F-92B3-484B9614B737}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="Music" ID="{46696A26-4FB8-457F-92B3-484B9614B737}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Music_MainMenu" ID="{3733CDA2-8CD1-40E8-B763-E0E8DCF4A6B7}" ShortID="1067313452">
+					<PropertyList>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{572B0AE6-80A6-4BDC-9AE8-BAB3DECAECDF}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1757F0CF-FD52-40F4-926D-BAE17E0AAB7D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="MateCola02" ID="{EE143F62-8684-4DA1-91F1-185D3713636C}">
+							<Language>SFX</Language>
+							<AudioFile>MateCola02.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1068638210"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="MateCola02" ID="{EE143F62-8684-4DA1-91F1-185D3713636C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

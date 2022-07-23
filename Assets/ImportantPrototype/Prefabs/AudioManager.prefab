@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2373696364818791896}
   - component: {fileID: 2373696364818791899}
+  - component: {fileID: 6045693518351869043}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -49,10 +50,35 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: d270f622baf92b34abd9a81b06a3cb1e, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: defd90898d998eb47a4f0eb9e111f6e6, type: 2}
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
   unloadTriggerList: 958ca0ea
   bankNameInternal: 
   valueGuidInternal: 
+--- !u!114 &6045693518351869043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2373696364818791897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c4b56a9085520040b55d4f33b64b1a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationSettings: {fileID: 11400000, guid: e63a525704b43804d849d2fb592aa8bc, type: 2}
+  basePath: 
+  language: 
+  defaultPoolSize: 0
+  lowerPoolSize: 0
+  streamingPoolSize: 0
+  memoryCutoffThreshold: 0
+  monitorPoolSize: 0
+  monitorQueuePoolSize: 0
+  callbackManagerBufferSize: 0
+  spatialAudioPoolSize: 0
+  maxSoundPropagationDepth: 0
+  engineLogging: 0

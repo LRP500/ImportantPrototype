@@ -1,4 +1,4 @@
-<REAPER_PROJECT 0.1 "6.63/win64" 1658491005
+<REAPER_PROJECT 0.1 "6.63/win64" 1658572495
   <NOTES 0 2
   >
   RIPPLE 0
@@ -12,13 +12,13 @@
   PANLAW 1
   PROJOFFS 0 0 0
   MAXPROJLEN 0 600
-  GRID 3455 8 1 8 1 0 0 0
+  GRID 3199 8 0.25 8 1 0 0 0
   TIMEMODE 1 5 -1 30 0 0 -1
   VIDEO_CONFIG 0 0 256
   PANMODE 3
-  CURSOR 0.23230980907134
-  ZOOM 5957.5616093550516 0 0
-  VZOOMEX 12 0
+  CURSOR 1
+  ZOOM 544.27036478031539 0 0
+  VZOOMEX 10 372
   USE_REC_CFG 0
   RECMODE 1
   SMPTESYNC 0 30 100 40 1000 300 0 0 1 0 0
@@ -30,7 +30,7 @@
   >
   <APPLYFX_CFG
   >
-  RENDER_FILE "D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\Exports\Weapons\SFX_Weapon_Blaster_02.wav"
+  RENDER_FILE "D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\Exports\Weapons\SFX_Weapon_Blaster_03.wav"
   RENDER_FMT 0 2 44100
   RENDER_1X 0
   RENDER_RANGE 5 0 0 18 1000
@@ -59,8 +59,8 @@
   GLOBAL_AUTO -1
   TEMPO 120 4 4
   PLAYRATE 1 0 0.25 4
-  SELECTION 0.26024829847686 0
-  SELECTION2 0.26024829847686 0
+  SELECTION 0.5 1.5
+  SELECTION2 0.5 1.5
   MASTERAUTOMODE 0
   MASTERTRACKHEIGHT 0 0
   MASTERPEAKCOL 16576
@@ -68,7 +68,7 @@
   MASTERTRACKVIEW 0 0.6667 0.5 0.5 0 -1 0 0 0 0 0 0 0
   MASTERHWOUT 0 0 1 0 0 0 0 -1
   MASTER_NCH 2 2
-  MASTER_VOLUME 1 0 -1 -1 1
+  MASTER_VOLUME 1.75398021880226 0 -1 -1 1
   MASTER_PANMODE 3
   MASTER_FX 1
   MASTER_SEL 0
@@ -91,10 +91,12 @@
   >
   MARKER 1 0 "" 13 0 1 R {43478FAA-5F57-4E70-B31B-F899DA4D8F70}
   MARKER 1 0.26024829847686 "" 13 0 1 R
+  MARKER 2 0.5 "" 1 0 1 R {D03497A3-D48D-4699-821D-A867C65FAEF1}
+  MARKER 2 1.5 "" 1 0 1 R
   <PROJBAY
   >
   <TRACK {C585A923-1578-46F7-AE03-B50239B5F2FC}
-    NAME "FLARE GUN - close"
+    NAME Blaster_Attack
     PEAKCOL 16576
     BEAT -1
     AUTOMODE 0
@@ -141,12 +143,58 @@
       >
     >
   >
-  <TRACK {BB753D3C-F766-4CA0-AC7D-27E09244520A}
-    NAME M&P9_BASE_A_close
+  <TRACK {81199FEF-671B-4014-8D6C-2FF955C7165A}
+    NAME Blaster_Attack2
     PEAKCOL 16576
     BEAT -1
     AUTOMODE 0
-    VOLPAN 0.36508838063238 0 -1 -1 1
+    VOLPAN 0.98827363418181 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 -1 0
+    SEL 0
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {81199FEF-671B-4014-8D6C-2FF955C7165A}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <ITEM
+      POSITION 0
+      SNAPOFFS 0
+      LENGTH 0.09421647261314
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.001007 0 1 0 0 0
+      FADEOUT 1 0.048097 0 1 0 0 0
+      MUTE 0 0
+      SEL 0
+      IGUID {2AE3EC00-86FD-48BC-9215-2CC623728FAB}
+      IID 104
+      NAME "AWCK SMG Steyr Aug Single Close 03.wav"
+      VOLPAN 1 0 1 -1
+      SOFFS 0.01510812850769
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {6041F9E9-49ED-48DE-8D6F-9A4139E1EF83}
+      <SOURCE WAVE
+        FILE "D:\Production\Sound Banks\Fx\Boom\Cracked\Boom Library - Assault Weapons Bundle\ASSAULT WEAPONS - CONSTRUCTION KIT\AWCK SMG Steyr Aug Single Close 03.wav"
+      >
+    >
+  >
+  <TRACK {BB753D3C-F766-4CA0-AC7D-27E09244520A}
+    NAME Blaster_FollowUp
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 0.39846368025726 0 -1 -1 1
     MUTESOLO 0 0 0
     IPHASE 0
     PLAYOFFS 0 1
@@ -167,11 +215,11 @@
     <ITEM
       POSITION 0
       SNAPOFFS 0
-      LENGTH 0.14670431584418
+      LENGTH 0.12254730004227
       LOOP 1
       ALLTAKES 0
       FADEIN 1 0.041984 0 1 0 0 0
-      FADEOUT 1 0.085438 0 1 0 0 0
+      FADEOUT 1 0.052488 0 1 0 0 0
       MUTE 0 0
       SEL 0
       IGUID {9C689273-0555-41C4-82C1-C25EB8DA2863}
@@ -188,7 +236,7 @@
     >
   >
   <TRACK {69EB0C4D-4569-405F-A885-FB1BB23550A9}
-    NAME "Future Weapons 2 - Source - blaster_impulse_long"
+    NAME Blaster_Sweep
     PEAKCOL 16576
     BEAT -1
     AUTOMODE 0
@@ -199,7 +247,7 @@
     ISBUS 0 0
     BUSCOMP 0 0 0 0 0
     SHOWINMIX 1 0.6667 0.5 1 0.5 0 -1 0
-    SEL 1
+    SEL 0
     REC 0 0 1 0 0 0 0 0
     VU 2
     TRACKHEIGHT 0 0 0 0 0 0
@@ -247,7 +295,7 @@
     >
   >
   <TRACK {55B96CD1-9002-4071-A0C7-3222334DFED1}
-    NAME "Future Weapons 2 - Source - blaster_impulse_long"
+    NAME Blaster_SweepLow
     PEAKCOL 16576
     BEAT -1
     AUTOMODE 0
@@ -302,6 +350,65 @@
       GUID {4BFE7B67-EB01-4104-B955-EC4BA197A359}
       <SOURCE WAVE
         FILE "D:\Production\Sound Banks\Fx\Soundmorph\SoundMorph - Future Weapons 2\1. SoundMorph - Future Weapons 2\Source Recordings\Blaster Layers\Future Weapons 2 - Source - blaster_impulse_long.wav"
+      >
+    >
+  >
+  <TRACK {A0370ADC-2F15-435D-A803-06915E88530C}
+    NAME "Matter Mayhem - Blasts - Thats Your Big Boy_01"
+    PEAKCOL 16576
+    BEAT -1
+    AUTOMODE 0
+    VOLPAN 0.22026044893656 0 -1 -1 1
+    MUTESOLO 0 0 0
+    IPHASE 0
+    PLAYOFFS 0 1
+    ISBUS 0 0
+    BUSCOMP 0 0 0 0 0
+    SHOWINMIX 1 0.6667 0.5 1 0.5 0 -1 0
+    SEL 1
+    REC 0 0 1 0 0 0 0 0
+    VU 2
+    TRACKHEIGHT 0 0 0 0 0 0
+    INQ 0 0 0 0.5 100 0 0 100
+    NCHAN 2
+    FX 1
+    TRACKID {A0370ADC-2F15-435D-A803-06915E88530C}
+    PERF 0
+    MIDIOUT -1
+    MAINSEND 1 0
+    <FXCHAIN
+      WNDRECT 23 51 951 291
+      SHOW 0
+      LASTSEL 0
+      DOCKED 0
+      BYPASS 0 0 0
+      <JS Liteon/simplelp6db ""
+        0 0 100 0 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+      >
+      FLOATPOS 0 0 0 0
+      FXID {7CCDB41F-268F-482C-BDC4-282D96DBBAEA}
+      WAK 0 0
+    >
+    <ITEM
+      POSITION 0.5
+      SNAPOFFS 0
+      LENGTH 1.5
+      LOOP 1
+      ALLTAKES 0
+      FADEIN 1 0.102642 0 1 0 0 0
+      FADEOUT 4 1.334889 0 4 0 -1 -1
+      MUTE 0 0
+      SEL 0
+      IGUID {F5FDE3A5-9787-4250-BF9A-238E565F3675}
+      IID 108
+      NAME "Matter Mayhem - Blasts - Thats Your Big Boy_01.wav"
+      VOLPAN 1 0 1 -1
+      SOFFS 0.02970759798175
+      PLAYRATE 1 1 0 -1 0 0.0025
+      CHANMODE 0
+      GUID {E39C7D7A-F404-40F8-8CCF-857680DCB440}
+      <SOURCE WAVE
+        FILE "D:\Projects\Unity\Projects\Git\ImportantPrototype\External\Audio\Raw\Matter Mayhem - Blasts - Thats Your Big Boy_01.wav"
       >
     >
   >

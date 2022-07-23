@@ -12,6 +12,9 @@ namespace ImportantPrototype.Gameplay
 
         [SerializeField]
         private bool _excludeSelf;
+
+        [SerializeField]
+        private bool _singleHit;
         
         private readonly List<string> _excludedTags = new ();
         private readonly BoolReactiveProperty _canDamage = new (true);
@@ -32,7 +35,7 @@ namespace ImportantPrototype.Gameplay
             if (_excludedTags.Contains(other.tag)) return;
             if (!_canDamage.Value) return;
 
-            _canDamage.Value = false;
+            _canDamage.Value = !_singleHit;
             OnHit.OnNext(Unit.Default);
             ApplyDamage(other);
         }

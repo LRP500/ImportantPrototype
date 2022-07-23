@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{30347B82-A2DE-459D-8909-5738724DE732}" SchemaVersion="103" RootDocumentID="{94C4BE1F-11C5-44CA-9C00-E00AC0AB45A9}" ParentDocumentID="{94C4BE1F-11C5-44CA-9C00-E00AC0AB45A9}">
+	<AudioObjects>
+		<WorkUnit Name="Hits" ID="{30347B82-A2DE-459D-8909-5738724DE732}" OwnerID="{94C4BE1F-11C5-44CA-9C00-E00AC0AB45A9}" PersistMode="Nested">
+			<ChildrenList>
+				<Sound Name="SFX_Misc_Hit_01" ID="{9D5249BD-1EA6-4905-903D-21052EDE2CD2}" ShortID="683102044">
+					<PropertyList>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{572B0AE6-80A6-4BDC-9AE8-BAB3DECAECDF}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1757F0CF-FD52-40F4-926D-BAE17E0AAB7D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SFX_Misc_Hit_01" ID="{7998E7B0-63DC-4276-AD2E-675F223ED043}">
+							<Language>SFX</Language>
+							<AudioFile>SFX_Misc_Hit_01.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="431187026"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="SFX_Misc_Hit_01" ID="{7998E7B0-63DC-4276-AD2E-675F223ED043}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

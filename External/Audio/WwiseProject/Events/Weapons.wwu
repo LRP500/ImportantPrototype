@@ -3,17 +3,9 @@
 	<Events>
 		<WorkUnit Name="Weapons" ID="{73D9DB95-2699-4AAD-A3D6-070BE76B021A}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_SFX_Weapon_Blaster" ID="{D6AA709F-0464-412A-9B87-501BA8424101}">
-					<ChildrenList>
-						<Action Name="" ID="{A9EF0E24-FC0A-48F9-8F09-39783BDD7106}" ShortID="349383140">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="SFX_Weapon_Blaster_01" ID="{71890C42-12E2-4F45-8AC5-8BFF3D7C5829}" WorkUnitID="{94C4BE1F-11C5-44CA-9C00-E00AC0AB45A9}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
+				<WorkUnit Name="Hits" ID="{F4821CAD-7E34-475A-9005-DCB70E8F34E5}" PersistMode="Reference"/>
+				<WorkUnit Name="Blaster" ID="{0F30B7BF-ACA3-4EC6-AF36-493F53700367}" PersistMode="Reference"/>
+				<WorkUnit Name="Explosions" ID="{88B56745-8D98-45B2-87CD-9E956998EF0F}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
