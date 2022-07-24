@@ -17,6 +17,7 @@ namespace ImportantPrototype.Stats
         private Attribute _projectiles;
         private Attribute _spread;
         private Attribute _accuracy;
+        private Attribute _range;
         
         public float Damage {
             get {
@@ -64,6 +65,13 @@ namespace ImportantPrototype.Stats
             get {
                 _accuracy ??= Get<Attribute>(WeaponStatType.Accuracy);
                 return _accuracy.Value;
+            }
+        }
+        
+        public float Range {
+            get {
+                _range ??= Get<Attribute>(WeaponStatType.Range);
+                return _range.Value;
             }
         }
         

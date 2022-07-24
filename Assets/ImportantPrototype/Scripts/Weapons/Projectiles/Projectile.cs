@@ -1,4 +1,5 @@
-﻿using ImportantPrototype.Gameplay;
+﻿using System;
+using ImportantPrototype.Gameplay;
 using ImportantPrototype.Stats;
 using UniRx;
 using UnityEngine;
@@ -12,11 +13,14 @@ namespace ImportantPrototype.Weapons
 
         [SerializeField]
         private Damager _damager;
-        
+
+
         public Rigidbody2D Rigidbody => _rigidbody;
 
+        public float Range { get; private set; }
         public float Speed { get; private set; }
         public Vector2 Direction { get; private set; }
+        private ProjectileData Data { get; set; }
 
         private Vector2 Position
         {
@@ -27,8 +31,6 @@ namespace ImportantPrototype.Weapons
         {
             set => transform.eulerAngles = value;
         }
-
-        private ProjectileData Data { get; set; }
 
         public static Projectile FromData(ProjectileData data)
         {
@@ -56,6 +58,8 @@ namespace ImportantPrototype.Weapons
             _damager.OnHit.First()
                 .Subscribe(OnHit)
                 .AddTo(gameObject);
+
+            Destroy(gameObject, Range / Speed);
         }
 
         private void Update()
@@ -73,6 +77,7 @@ namespace ImportantPrototype.Weapons
             SetDamage(stats.Damage);
             SetSpeed(stats.ShotSpeed);
             SetSize(stats.ShotSize);
+            SetRange(stats.Range);
         }
 
         private void SetDamage(float damage)
@@ -88,6 +93,11 @@ namespace ImportantPrototype.Weapons
         private void SetSize(float size)
         {
             transform.localScale *= size;
+        }
+        
+        private void SetRange(float range)
+        {
+            Range = range;
         }
     }
 }

@@ -25,7 +25,7 @@ MonoBehaviour:
   _damage: 1
   _fireRate: 1.5
   _reloadSpeed: 0
-  _range: 0
+  _range: 100
   _shotSpeed: 10
   _shotSize: 1
   _projectiles: 1
