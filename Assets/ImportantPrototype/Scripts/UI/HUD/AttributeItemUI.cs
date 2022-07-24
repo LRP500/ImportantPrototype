@@ -1,6 +1,4 @@
-﻿using System;
-using System.Globalization;
-using TMPro;
+﻿using TMPro;
 using UniRx;
 using UnityEngine;
 using UnityTools.Runtime.UI;

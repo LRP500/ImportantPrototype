@@ -1,4 +1,3 @@
-using System;
 using Cinemachine;
 using ImportantPrototype.Input;
 using ImportantPrototype.Weapons;
@@ -10,7 +9,7 @@ using UnityTools.Runtime.Time;
 namespace ImportantPrototype.Characters
 {
     [RequireComponent(typeof(Player))]
-    public class PlayerFiring : MonoBehaviour, IDisposable
+    public class PlayerFiring : MonoBehaviour
     {
         public readonly ISubject<Unit> OnFire = new Subject<Unit>();
 
@@ -40,11 +39,10 @@ namespace ImportantPrototype.Characters
             if (weapon == null)
             {
                 _firingDisposable.Clear();
+                return;
             }
-            else
-            {
-               RegisterWeapon(weapon);
-            }
+
+            RegisterWeapon(weapon);
         }
         
         private void RegisterWeapon(Weapon weapon)
@@ -54,21 +52,11 @@ namespace ImportantPrototype.Characters
                 .Subscribe(_ => OnFireInput(weapon));
         }
         
-        private void OnDisable()
-        {
-            _firingDisposable?.Clear();
-        }
-
         private void OnFireInput(Weapon weapon)
         {
             if (TimeManager.Current.GamePaused.Value) return;
             weapon.Fire(_self.Aiming.AimDirection, _projectileTag);
             OnFire.OnNext(Unit.Default);
-        }
-
-        public void Dispose()
-        {
-            _firingDisposable?.Dispose();
         }
     }
 }

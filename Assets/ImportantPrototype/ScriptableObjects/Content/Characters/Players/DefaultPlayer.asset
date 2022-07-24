@@ -15,7 +15,7 @@ MonoBehaviour:
   _name: Default
   _description: 
   _health: 5
-  _movementSpeed: 3
+  _movementSpeed: 4
   _characterSize: 2
   _pickupRange: 3
   _weapon: {fileID: 11400000, guid: 423146d0b888cc141814af3195cf891f, type: 2}
