@@ -111,3 +111,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _explosionPrefab: {fileID: 2127649043072519019, guid: eae6e4322b013c84aa2211c3d3969ab7, type: 3}
+--- !u!114 &2755227308471002191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743988398798374675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc72ba52062b438a92232975ba1a6962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b871379b42959b341b938d4f24402c8c, type: 2}
