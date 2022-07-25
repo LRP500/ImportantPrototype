@@ -12,7 +12,7 @@ namespace ImportantPrototype.Weapons
         public override void Fire(Weapon weapon, Vector3 origin, Vector3 direction, string tag)
         {
             var spread = weapon.Stats.Spread;
-            var projectiles = weapon.Stats.Projectiles;
+            var projectiles = Mathf.FloorToInt(weapon.Stats.Projectiles);
             
             float angle = -(spread / 2);
             float increment = spread / (projectiles - 1);

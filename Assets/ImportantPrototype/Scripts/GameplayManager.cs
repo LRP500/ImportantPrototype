@@ -1,4 +1,5 @@
-﻿using ImportantPrototype.Characters;
+﻿using System;
+using ImportantPrototype.Characters;
 using ImportantPrototype.Level;
 using ImportantPrototype.Weapons;
 using UniRx;
@@ -52,6 +53,11 @@ namespace ImportantPrototype
         private void FixedUpdate()
         {
             _context.FixedUpdate();
+        }
+
+        private void Update()
+        {
+            _context.Update();
         }
 
         private void GameOver()

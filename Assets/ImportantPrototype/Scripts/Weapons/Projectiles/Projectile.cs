@@ -59,7 +59,10 @@ namespace ImportantPrototype.Weapons
                 .Subscribe(OnHit)
                 .AddTo(gameObject);
 
-            Destroy(gameObject, Range / Speed);
+            if (Range > 0)
+            {
+                Destroy(gameObject, Range / Speed);
+            }
         }
 
         private void Update()

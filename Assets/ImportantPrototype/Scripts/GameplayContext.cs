@@ -45,5 +45,10 @@ namespace ImportantPrototype
         {
             _enemyManager.FixedUpdate();
         }
+
+        public void Update()
+        {
+            _enemyManager.Update();
+        }
     }
 }
