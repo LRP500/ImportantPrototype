@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Shotgun
   _description: 
-  _prefab: {fileID: 5685027097703648145, guid: 07a99f6629ef1434781a029093c1821e, type: 3}
+  _prefab: {fileID: 5685027097703648145, guid: 4756ab72180c26c49b1d7213496019f0, type: 3}
   _projectile: {fileID: 11400000, guid: ccdc44a162d27324c812d2d9cd0cd6ab, type: 2}
   _firingMode: {fileID: 11400000, guid: 5c76b5765bd497548afed7eaeb095bc2, type: 2}
   _shotBehaviour: {fileID: 11400000, guid: 9452542b9718cf046881e0e31e2cd4e3, type: 2}

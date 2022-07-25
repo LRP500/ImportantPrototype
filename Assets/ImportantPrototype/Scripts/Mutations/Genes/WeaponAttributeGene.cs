@@ -10,7 +10,7 @@ namespace ImportantPrototype.Mutations
     {
         protected override Attribute GetAttribute(Player player)
         {
-            var weapon = player.Weapon.Value; 
+            var weapon = player.Weapon.Value;
             return weapon.Stats.Get<Attribute>(Stat);
         }
     }
