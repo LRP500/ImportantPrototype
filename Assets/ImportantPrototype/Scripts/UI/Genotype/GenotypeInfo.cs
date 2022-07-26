@@ -20,12 +20,14 @@ namespace ImportantPrototype.UI.Genotype
         {
             base.OnShow();
             PauseManager.Pause();
+            PauseManager.AllowPausing = false;
         }
 
         protected override void OnHide()
         {
             base.OnHide();
             PauseManager.Resume();
+            PauseManager.AllowPausing = true;
         }
     }
 }
