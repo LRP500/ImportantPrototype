@@ -37,10 +37,10 @@ namespace ImportantPrototype.UI.HUD
         {
             _player.Property
                 .WhereNotNull()
-                .Zip(_player.Value.Weapon.WhereNotNull(), (player, _) => player)
-                .TakeFirst()
+                .CombineLatest(_player.Value.Weapon.WhereNotNull(), (player, _) => player)
                 .Subscribe(player =>
                 {
+                    ClearViews();
                     CreateItems(GetAttributes(player));
                     LayoutRebuilder.ForceRebuildLayoutImmediate(GetComponent<RectTransform>());
                 })

@@ -1,3 +1,4 @@
+using System;
 using Cinemachine;
 using ImportantPrototype.Input;
 using ImportantPrototype.Weapons;
@@ -27,11 +28,16 @@ namespace ImportantPrototype.Characters
             _firingDisposable.AddTo(gameObject);
         }
 
-        private void Start()
+        private void OnEnable()
         {
             _self.Weapon
                 .Subscribe(OnEquippedWeaponChanged)
                 .AddTo(gameObject);
+        }
+
+        private void OnDisable()
+        {
+            _firingDisposable.Clear();
         }
 
         private void OnEquippedWeaponChanged(Weapon weapon)

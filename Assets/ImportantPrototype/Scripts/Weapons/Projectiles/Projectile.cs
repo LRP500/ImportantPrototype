@@ -88,7 +88,7 @@ namespace ImportantPrototype.Weapons
             _damager.SetDamage(damage);
         }
 
-        private void SetSpeed(float speed)
+        public void SetSpeed(float speed)
         {
             Speed = speed;
         }

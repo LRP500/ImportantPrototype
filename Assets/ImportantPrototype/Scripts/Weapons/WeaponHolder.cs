@@ -17,6 +17,14 @@ namespace ImportantPrototype.Weapons
             _holder = GetComponentInParent<Character>();
         }
 
+        public void Initialize()
+        {
+            if (_weapon.Value == null)
+            {
+                EquipWeapon(_holder.Data.Weapon);
+            }            
+        }
+        
         public void SetRotation(float angle)
         {
             transform.rotation = Quaternion.AngleAxis(angle, -Vector3.forward);

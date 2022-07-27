@@ -19,7 +19,7 @@ MonoBehaviour:
     _items:
     - enemy: {fileID: 11400000, guid: 3f09da69c9360f840947ffe0e507a68e, type: 2}
       weight: 1
-    _spawnInterval: 1
+    _spawnInterval: 1.5
     _duration: 120
   - _description: Exploding slimes comes in
     _items:
@@ -53,5 +53,5 @@ MonoBehaviour:
       weight: 10
     - enemy: {fileID: 11400000, guid: a139e48cecd3143429f52da72cce945c, type: 2}
       weight: 1
-    _spawnInterval: 1
+    _spawnInterval: 1.5
     _duration: 120

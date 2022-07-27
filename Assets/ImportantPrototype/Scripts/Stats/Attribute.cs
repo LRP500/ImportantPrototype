@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using ImportantPrototype.Stats.Modifiers;
 using UniRx;
-using UnityEngine;
 
 namespace ImportantPrototype.Stats
 {

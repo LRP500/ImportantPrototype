@@ -22,7 +22,7 @@ namespace ImportantPrototype.Characters.Enemies
         {
             if (!enabled) return;
             var target = _player.Property.Value;
-            if (target == null) return;
+            if (target == null || !target.isActiveAndEnabled) return;
             _self.Motor.Move(GetDirection(target.Position));
         }
 

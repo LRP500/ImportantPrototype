@@ -15,7 +15,7 @@ namespace ImportantPrototype.Characters
         public CharacterDamageable Damageable { get; private set; }
         public Vector2 Position => transform.position;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             Stats = GetComponent<CharacterStats>();
             Motor = GetComponent<CharacterMovement>();
@@ -29,7 +29,6 @@ namespace ImportantPrototype.Characters
 
         private void Initialize()
         {
-         
             OnInitialize();
         }
         

@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 1076794872985961352}
   - component: {fileID: 1076794872985961350}
   - component: {fileID: 1076794872985961353}
+  - component: {fileID: 4770668258942343669}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -128,3 +129,34 @@ MonoBehaviour:
   _maxSimultaneous: 1000
   _player: {fileID: 11400000, guid: 35f933c98b6bd184699369384bf7d54e, type: 2}
   _enemies: {fileID: 11400000, guid: 01d3b335ffa3b704e9b2f93b2ad736d1, type: 2}
+--- !u!114 &4770668258942343669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076794872985961355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44de5941a674fc2478d83b59b221e64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event: {fileID: 11400000, guid: bf19fe8a5973f684eaeeb98ad6bc7790, type: 2}
+  _conditions: []
+  _actions: []
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1076794872985961353}
+        m_TargetAssemblyTypeName: ImportantPrototype.Characters.Enemies.EnemyWaveSpawner,
+          ImportantProject
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

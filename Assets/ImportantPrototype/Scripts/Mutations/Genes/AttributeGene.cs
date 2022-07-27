@@ -3,6 +3,7 @@ using System.Globalization;
 using ImportantPrototype.Characters;
 using ImportantPrototype.Stats;
 using ImportantPrototype.Stats.Modifiers;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using Attribute = ImportantPrototype.Stats.Attribute;
 

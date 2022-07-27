@@ -16,12 +16,17 @@ namespace ImportantPrototype.Characters
         
         public PlayerAiming Aiming { get; private set; }
         public PlayerFiring Firing { get; private set; }
-        
-        protected override void OnInitialize()
+
+        protected override void Awake()
         {
+            base.Awake();
             Aiming = GetComponent<PlayerAiming>();
             Firing = GetComponent<PlayerFiring>();
-            WeaponHolder.EquipWeapon(Data.Weapon);
+        }
+
+        protected override void OnInitialize()
+        {
+            WeaponHolder.Initialize();
         }
 
         public void Freeze()
@@ -29,6 +34,11 @@ namespace ImportantPrototype.Characters
             Motor.enabled = false;
             Aiming.enabled = false;
             Firing.enabled = false;
+        }
+
+        public override void OnDeath()
+        {
+            gameObject.SetActive(false);
         }
     }
 }

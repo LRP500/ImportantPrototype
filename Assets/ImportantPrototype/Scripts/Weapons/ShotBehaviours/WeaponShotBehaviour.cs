@@ -15,7 +15,7 @@ namespace ImportantPrototype.Weapons
             instance.SetTag(tag);
             instance.Shoot();
         }
-
+        
         private static Vector2 GetRotation(Vector3 direction)
         {
             var angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
