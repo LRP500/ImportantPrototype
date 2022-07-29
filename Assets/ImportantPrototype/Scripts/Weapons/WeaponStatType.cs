@@ -10,6 +10,7 @@
         ShotSize = 5,
         Projectiles = 6,
         Spread = 7,
-        Accuracy = 8
+        Accuracy = 8,
+        Piercing = 9
     }
 }

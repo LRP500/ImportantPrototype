@@ -1,6 +1,7 @@
 using ImportantPrototype.Input;
 using ImportantPrototype.Mutations;
 using ImportantPrototype.UI.LevelUp;
+using UniRx.Triggers;
 using UnityEngine;
 using UnityTools.Runtime.UI;
 
@@ -36,6 +37,7 @@ namespace ImportantPrototype.UI
 
         protected override void OnHide()
         {
+            base.OnHide();
             PauseManager.Resume();
             PlayerInput.Map = PlayerInput.InputMap.Gameplay;
         }

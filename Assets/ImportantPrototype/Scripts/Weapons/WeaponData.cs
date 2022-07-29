@@ -64,6 +64,10 @@ namespace ImportantPrototype.Weapons
         [SerializeField]
         private float _accuracy = 1;
 
+        [MinValue(0)]
+        [SerializeField]
+        private int _piercing;
+        
         public string Name => _name;
         public string Description => _description;
         public WeaponFiringMode FiringMode => _firingMode;
@@ -82,6 +86,7 @@ namespace ImportantPrototype.Weapons
         public float Spread => _spread;
         public float Accuracy => _accuracy;
         public int Projectiles => _projectiles;
+        public int Piercing => _piercing;
 
         private void OnValidate()
         {

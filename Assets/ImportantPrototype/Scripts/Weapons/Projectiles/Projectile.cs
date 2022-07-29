@@ -1,5 +1,4 @@
-﻿using System;
-using ImportantPrototype.Gameplay;
+﻿using ImportantPrototype.Gameplay;
 using ImportantPrototype.Stats;
 using UniRx;
 using UnityEngine;
@@ -14,11 +13,11 @@ namespace ImportantPrototype.Weapons
         [SerializeField]
         private Damager _damager;
 
-
         public Rigidbody2D Rigidbody => _rigidbody;
 
         public float Range { get; private set; }
         public float Speed { get; private set; }
+        public int Piercing { get; private set; }
         public Vector2 Direction { get; private set; }
         private ProjectileData Data { get; set; }
 
@@ -55,14 +54,15 @@ namespace ImportantPrototype.Weapons
         {
             Data.Behaviour.Initialize(this);
 
-            _damager.OnHit.First()
-                .Subscribe(OnHit)
-                .AddTo(gameObject);
-
             if (Range > 0)
             {
                 Destroy(gameObject, Range / Speed);
             }
+            
+            _damager.OnHit
+                .Skip(Piercing)
+                .Subscribe(OnLastHit)
+                .AddTo(gameObject);
         }
 
         private void Update()
@@ -70,17 +70,19 @@ namespace ImportantPrototype.Weapons
             Data.Behaviour.Refresh(this);
         }
         
-        private void OnHit(Unit unit)
+        private void OnLastHit(Unit unit)
         {
+            _damager.SetCanDamage(false);
             Destroy(gameObject);
         }
         
         public void SetStats(WeaponStatCollection stats)
         {
             SetDamage(stats.Damage);
-            SetSpeed(stats.ShotSpeed);
             SetSize(stats.ShotSize);
-            SetRange(stats.Range);
+            Piercing = (int) stats.Piercing;
+            Speed = stats.ShotSpeed;
+            Range = stats.Range;
         }
 
         private void SetDamage(float damage)
@@ -88,19 +90,9 @@ namespace ImportantPrototype.Weapons
             _damager.SetDamage(damage);
         }
 
-        public void SetSpeed(float speed)
-        {
-            Speed = speed;
-        }
-
         private void SetSize(float size)
         {
             transform.localScale *= size;
-        }
-        
-        private void SetRange(float range)
-        {
-            Range = range;
         }
     }
 }

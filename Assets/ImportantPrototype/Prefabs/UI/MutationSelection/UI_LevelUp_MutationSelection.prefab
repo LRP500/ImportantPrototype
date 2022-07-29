@@ -120,8 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186070f504dd473ebe3974645ad19eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _displayMode: 0
-  _canvas: {fileID: 0}
+  _displayMode: 1
+  _canvas: {fileID: 3399692947735164176}
   _canvasGroup: {fileID: 0}
 --- !u!114 &8210759803085490472
 MonoBehaviour:

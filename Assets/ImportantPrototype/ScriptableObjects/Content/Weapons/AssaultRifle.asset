@@ -31,3 +31,4 @@ MonoBehaviour:
   _projectiles: 1
   _spread: 0
   _accuracy: 1
+  _piercing: 0

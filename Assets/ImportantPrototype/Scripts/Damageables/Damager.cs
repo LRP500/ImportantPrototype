@@ -13,9 +13,6 @@ namespace ImportantPrototype.Gameplay
         [SerializeField]
         private bool _excludeSelf;
 
-        [SerializeField]
-        private bool _singleHit;
-        
         private readonly List<string> _excludedTags = new ();
         private readonly BoolReactiveProperty _canDamage = new (true);
         
@@ -32,10 +29,8 @@ namespace ImportantPrototype.Gameplay
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (_excludedTags.Contains(other.tag)) return;
             if (!_canDamage.Value) return;
-
-            _canDamage.Value = !_singleHit;
+            if (_excludedTags.Contains(other.tag)) return;
             OnHit.OnNext(Unit.Default);
             ApplyDamage(other);
         }
@@ -56,6 +51,11 @@ namespace ImportantPrototype.Gameplay
             _excludedTags.Add(excludedTag);
         }
 
+        public void SetCanDamage(bool canDamage)
+        {
+            _canDamage.Value = canDamage;
+        }
+        
         public void SetDamage(float damage)
         {
             _damage = damage;

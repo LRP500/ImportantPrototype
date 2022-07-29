@@ -18,6 +18,7 @@ namespace ImportantPrototype.Stats
         private Attribute _spread;
         private Attribute _accuracy;
         private Attribute _range;
+        private Attribute _piercing;
         
         public float Damage {
             get {
@@ -75,6 +76,13 @@ namespace ImportantPrototype.Stats
             }
         }
         
+        public float Piercing {
+            get {
+                _piercing ??= Get<Attribute>(WeaponStatType.Piercing);
+                return _piercing.Value;
+            }
+        }
+        
         #endregion Fast Accessors
         
         public static WeaponStatCollection FromWeaponData(WeaponData data)
@@ -89,6 +97,7 @@ namespace ImportantPrototype.Stats
             collection.Get<Attribute>(WeaponStatType.Projectiles).SetValue(data.Projectiles);
             collection.Get<Attribute>(WeaponStatType.Spread).SetValue(data.Spread);
             collection.Get<Attribute>(WeaponStatType.Accuracy).SetValue(data.Accuracy);
+            collection.Get<Attribute>(WeaponStatType.Piercing).SetValue(data.Piercing);
             return collection;
         }
         
