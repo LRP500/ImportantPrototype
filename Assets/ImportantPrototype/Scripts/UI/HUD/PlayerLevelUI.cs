@@ -25,7 +25,7 @@ namespace ImportantPrototype.UI.HUD
         
         private void Refresh(float level)
         {
-            _text.SetText(((int) level + 1).ToString());
+            _text.SetText(((int) level + 1).ToString("00"));
         }
     }
 }
