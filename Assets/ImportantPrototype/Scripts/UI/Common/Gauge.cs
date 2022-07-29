@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,7 +34,7 @@ namespace ImportantPrototype.UI.HUD
             return Observable.Return((Current, Max));
         }
 
-        private void OnValueChanged((float current, float max) value)
+        protected virtual void OnValueChanged((float current, float max) value)
         {
             var (current, max) = value;
             _fill.fillAmount = current / max;

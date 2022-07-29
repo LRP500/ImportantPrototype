@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Large Slime
   _description: Bigger, slower, heavier.
-  _health: 5
+  _health: 8
   _movementSpeed: 1.2
   _characterSize: 2
   _pickupRange: 0
