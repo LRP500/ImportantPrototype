@@ -32,14 +32,18 @@ namespace ImportantPrototype.Characters.Enemies
         private List<EnemySpawnInfo> _items;
         
         [SerializeField]
+        private int _maxSimultaneous = 1000;
+
+        [SerializeField]
         [SuffixLabel("seconds", true)]
         private float _spawnInterval;
-
+        
         [SerializeField]
         [SuffixLabel("seconds", true)]
         private float _duration;
         
         public IReadOnlyList<EnemySpawnInfo> Items => _items;
+        public int MaxSimultaneous => _maxSimultaneous;
         public float SpawnInterval => _spawnInterval;
         public float Duration => _duration;
     }

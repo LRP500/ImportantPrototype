@@ -36,12 +36,14 @@ namespace ImportantPrototype.Characters.Enemies
         {
             _currentWave = wave;
             _spawnInterval = wave.SpawnInterval;
+            _maxSimultaneous = wave.MaxSimultaneous;
         }
 
         public void Run()
         {
             _runDisposable.Disposable = Observable
                 .Interval(TimeSpan.FromSeconds(_spawnInterval))
+                .StartWith(0)
                 .Where(_ => _enemies.Values.Count < _maxSimultaneous)
                 .DoOnSubscribe(() => IsRunning.Value = true)
                 .TakeWhile(_ => IsRunning.Value)

@@ -15,14 +15,17 @@ namespace ImportantPrototype.Weapons
 
         public Rigidbody2D Rigidbody => _rigidbody;
 
+        private ProjectileData Data { get; set; }
+        private ProjectileBehaviour Behaviour { get; set; }
+
         public float Range { get; private set; }
         public float Speed { get; private set; }
         public int Piercing { get; private set; }
-        public Vector2 Direction { get; private set; }
-        private ProjectileData Data { get; set; }
+        public Vector2 Direction { get; set; }
 
-        private Vector2 Position
+        public Vector2 Position
         {
+            get => transform.position;
             set => transform.position = value;
         }
 
@@ -34,6 +37,7 @@ namespace ImportantPrototype.Weapons
         public static Projectile FromData(ProjectileData data)
         {
             var instance = Instantiate(data.Prefab);
+            instance.Behaviour = Instantiate(data.Behaviour);
             instance.Data = data;
             return instance;
         }
@@ -52,7 +56,7 @@ namespace ImportantPrototype.Weapons
         
         public void Shoot()
         {
-            Data.Behaviour.Initialize(this);
+            Behaviour.Initialize(this);
 
             if (Range > 0)
             {
@@ -67,7 +71,7 @@ namespace ImportantPrototype.Weapons
 
         private void Update()
         {
-            Data.Behaviour.Refresh(this);
+            Behaviour.Refresh(this);
         }
         
         private void OnLastHit(Unit unit)
