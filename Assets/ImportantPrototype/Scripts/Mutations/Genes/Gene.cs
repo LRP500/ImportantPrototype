@@ -1,7 +1,6 @@
 ﻿using System;
-using ImportantPrototype.Characters;
 
-namespace ImportantPrototype.Mutations
+namespace ImportantPrototype.Gameplay.Mutations.Genes
 {
     public abstract class Gene
     {
@@ -11,10 +10,17 @@ namespace ImportantPrototype.Mutations
         {
             Uid = Guid.NewGuid().ToString("n");
         }
+
+        public Gene Clone()
+        {
+            var clone = Copy();
+            clone.Initialize();
+            return clone;
+        }
         
-        public abstract Gene Clone();
-        public abstract void Apply(Player player);
-        public abstract void Rollback(Player player);
+        public abstract void Apply(GameplayContext context);
+        public abstract void Rollback(GameplayContext context);
         public abstract void Scale(float multiplier);
+        protected abstract Gene Copy();
     }
 }

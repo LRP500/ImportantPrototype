@@ -2,7 +2,7 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace ImportantPrototype.Mutations.Mods
+namespace ImportantPrototype.Gameplay.Mutations.Mods
 {
     public abstract class MultiplyGeneEffectModData : GenotypeModData
     {

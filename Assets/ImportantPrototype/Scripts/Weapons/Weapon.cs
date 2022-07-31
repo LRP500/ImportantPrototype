@@ -34,7 +34,7 @@ namespace ImportantPrototype.Weapons
             _behaviour = Instantiate(data.ShotBehaviour);
         }
         
-        public void Bind(Character holder)
+        public void Attach(Character holder)
         {
             Holder = holder;
         }

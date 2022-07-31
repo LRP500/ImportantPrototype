@@ -1,5 +1,5 @@
 using System;
-using ImportantPrototype.Mutations;
+using ImportantPrototype.Gameplay.Mutations;
 using UniRx;
 using UnityEngine;
 

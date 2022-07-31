@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using ImportantPrototype.Gameplay.Mutations.Mods;
 using ImportantPrototype.Managers;
-using ImportantPrototype.Mutations.Mods;
 using ImportantPrototype.System;
 using UniRx;
 using UnityEngine;
 using UnityTools.Runtime.Extensions;
 using UnityTools.Runtime.Variables;
 
-namespace ImportantPrototype.Mutations
+namespace ImportantPrototype.Gameplay.Mutations
 {
     [CreateAssetMenu(menuName = ContextMenuPath.Managers + "Mutation Manager")]
     public class MutationManager : ScriptableManager
@@ -53,7 +53,7 @@ namespace ImportantPrototype.Mutations
         private void ApplyMutation(Mutation mutation)
         {
             ApplyGenotypeMod(ref mutation);
-            mutation.OnPick(Context.Player.Value);
+            mutation.OnPick(Context);
 
             _mutations.Add(mutation);
 
@@ -85,7 +85,6 @@ namespace ImportantPrototype.Mutations
 
         public void RecalculateGenotype()
         {
-            var player = Context.Player.Value;
             var mutations = new List<Mutation>(_mutations);
 
             _mutations.Clear();
@@ -94,7 +93,7 @@ namespace ImportantPrototype.Mutations
             for (int i = 0, length = mutations.Count; i < length; ++i)
             {
                 var mutation = mutations[i];
-                mutation.Rollback(player);
+                mutation.Rollback(Context);
                 mutation.Reset();
                 Pick(mutation);
             }

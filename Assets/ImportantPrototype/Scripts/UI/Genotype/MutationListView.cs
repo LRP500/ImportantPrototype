@@ -1,4 +1,4 @@
-﻿using ImportantPrototype.Mutations;
+﻿using ImportantPrototype.Gameplay.Mutations;
 using ImportantPrototype.Tools.UI;
 
 namespace ImportantPrototype.UI.Genotype

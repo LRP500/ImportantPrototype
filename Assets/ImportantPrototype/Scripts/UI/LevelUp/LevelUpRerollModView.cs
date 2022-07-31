@@ -1,4 +1,4 @@
-using ImportantPrototype.Mutations;
+using ImportantPrototype.Gameplay.Mutations;
 using UnityEngine;
 using UnityTools.Runtime.UI;
 

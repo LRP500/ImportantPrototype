@@ -42,7 +42,7 @@ namespace ImportantPrototype.Weapons
             UnequipWeapon();
             var weapon = Weapons.Weapon.FromData(weaponData);
             weapon.transform.SetParent(transform, false);
-            weapon.Bind(_holder);
+            weapon.Attach(_holder);
             _weapon.Value = weapon;
         }
 

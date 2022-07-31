@@ -1,6 +1,6 @@
 ﻿using Sirenix.Utilities;
 
-namespace ImportantPrototype.Mutations.Mods
+namespace ImportantPrototype.Gameplay.Mutations.Mods
 {
     public class NegateRandomNegativeGeneMod : GenotypeMod
     {

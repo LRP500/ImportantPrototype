@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityTools.Runtime.Lists;
 
-namespace ImportantPrototype.Mutations
+namespace ImportantPrototype.Gameplay.Mutations
 {
     [CreateAssetMenu(menuName = ContextMenuPath.AssetLists + "Mutation")]
     public class MutationAssetListVariable : AssetListVariable<MutationData>

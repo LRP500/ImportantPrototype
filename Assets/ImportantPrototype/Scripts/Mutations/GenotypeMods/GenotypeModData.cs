@@ -1,7 +1,7 @@
 ﻿using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace ImportantPrototype.Mutations.Mods
+namespace ImportantPrototype.Gameplay.Mutations.Mods
 {
     public abstract class GenotypeModData : ScriptableObject
     {

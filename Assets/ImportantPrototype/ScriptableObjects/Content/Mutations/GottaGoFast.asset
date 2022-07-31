@@ -24,14 +24,14 @@ MonoBehaviour:
     SerializationNodes:
     - Name: _positiveGenes
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[ImportantPrototype.Mutations.Gene,
+      Data: 0|System.Collections.Generic.List`1[[ImportantPrototype.Gameplay.Mutations.Genes.Gene,
         ImportantProject]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 1|ImportantPrototype.Mutations.PlayerAttributeGene, ImportantProject
+      Data: 1|ImportantPrototype.Gameplay.Mutations.Genes.PlayerAttributeGene, ImportantProject
     - Name: _stat
       Entry: 10
       Data: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
       Data: 
     - Name: _negativeGenes
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[ImportantPrototype.Mutations.Gene,
+      Data: 2|System.Collections.Generic.List`1[[ImportantPrototype.Gameplay.Mutations.Genes.Gene,
         ImportantProject]], mscorlib
     - Name: 
       Entry: 12
@@ -65,7 +65,7 @@ MonoBehaviour:
       Data: 
   _name: Gotta Go Fast
   _description: 
-  _modChance: 0.5
+  _modChance: 0.7
   _genotypeMods:
   - {fileID: 11400000, guid: 161ed099d7b807b408ed48367fd8d7bc, type: 2}
   - {fileID: 11400000, guid: 4e16eda84f262c443862b9410c28c847, type: 2}

@@ -1,4 +1,4 @@
-﻿namespace ImportantPrototype.Mutations.Mods
+﻿namespace ImportantPrototype.Gameplay.Mutations.Mods
 {
     public class MultiplyAllGeneEffectsMod : MultiplyGeneEffectMod
     {

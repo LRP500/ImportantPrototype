@@ -1,11 +1,12 @@
 using System.Collections.Generic;
-using ImportantPrototype.Mutations.Mods;
+using ImportantPrototype.Gameplay.Mutations.Genes;
+using ImportantPrototype.Gameplay.Mutations.Mods;
 using ImportantPrototype.System;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
 
-namespace ImportantPrototype.Mutations
+namespace ImportantPrototype.Gameplay.Mutations
 {
     [CreateAssetMenu(menuName = ContextMenuPath.Mutations + "Mutation")]
     public class MutationData : SerializedScriptableObject

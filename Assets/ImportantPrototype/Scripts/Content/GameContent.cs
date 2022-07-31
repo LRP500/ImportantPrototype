@@ -1,11 +1,12 @@
 using System.Collections.Generic;
-using ImportantPrototype.Mutations;
+using ImportantPrototype.Content;
+using ImportantPrototype.Gameplay.Mutations;
 using ImportantPrototype.Weapons;
 using UnityEngine;
 using UnityTools.Runtime;
 using ContextMenuPath = ImportantPrototype.System.ContextMenuPath;
 
-namespace ImportantPrototype.Content
+namespace ImportantPrototype.Gameplay
 {
     [CreateAssetMenu(menuName = ContextMenuPath.Content + "Game Content")]
     public class GameContent : ScriptableObjectSingleton<GameContent>

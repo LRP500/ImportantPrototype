@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using ImportantPrototype.Characters;
-using ImportantPrototype.Mutations.Mods;
+using ImportantPrototype.Gameplay.Mutations.Genes;
+using ImportantPrototype.Gameplay.Mutations.Mods;
 using UnityTools.Runtime.Extensions;
 
-namespace ImportantPrototype.Mutations
+namespace ImportantPrototype.Gameplay.Mutations
 {
     public sealed class Mutation
     {
@@ -60,30 +60,30 @@ namespace ImportantPrototype.Mutations
             return hasMod ? data.GenotypeMods.ToList().Random()?.Create() : null;
         }
         
-        public void OnPick(Player player)
+        public void OnPick(GameplayContext context)
         {
-            ApplyGenes(player);
+            ApplyGenes(context);
         }
 
-        public void Rollback(Player player)
+        public void Rollback(GameplayContext context)
         {
             var genes = new List<Gene>(PositiveGenes);
             genes.AddRange(NegativeGenes);
 
             for (int i = 0; i < genes.Count; i++)
             {
-                genes[i].Rollback(player);
+                genes[i].Rollback(context);
             }
         }
         
-        private void ApplyGenes(Player player)
+        private void ApplyGenes(GameplayContext context)
         {
             var genes = new List<Gene>(PositiveGenes);
             genes.AddRange(NegativeGenes);
 
             for (int i = 0; i < genes.Count; i++)
             {
-                genes[i].Apply(player);
+                genes[i].Apply(context);
             }
         }
 

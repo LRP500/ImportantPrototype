@@ -2,7 +2,7 @@
 using ImportantPrototype.Characters;
 using Attribute = ImportantPrototype.Stats.Attribute;
 
-namespace ImportantPrototype.Mutations
+namespace ImportantPrototype.Gameplay.Mutations.Genes
 {
     [Serializable]
     public class PlayerAttributeGene : AttributeGene<CharacterStatInfo>

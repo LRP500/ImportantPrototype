@@ -3,11 +3,10 @@ using System.Globalization;
 using ImportantPrototype.Characters;
 using ImportantPrototype.Stats;
 using ImportantPrototype.Stats.Modifiers;
-using Sirenix.OdinInspector;
 using UnityEngine;
 using Attribute = ImportantPrototype.Stats.Attribute;
 
-namespace ImportantPrototype.Mutations
+namespace ImportantPrototype.Gameplay.Mutations.Genes
 {
     [Serializable]
     public abstract class AttributeGene<T> : Gene where T : StatInfo
@@ -27,13 +26,15 @@ namespace ImportantPrototype.Mutations
 
         protected abstract Attribute GetAttribute(Player player);
         
-        public override void Apply(Player player)
+        public override void Apply(GameplayContext context)
         {
+            var player = context.Player.Value;
             GetAttribute(player)?.AddModifier(Value, Type, Uid);
         }
 
-        public override void Rollback(Player player)
+        public override void Rollback(GameplayContext context)
         {
+            var player = context.Player.Value;
             GetAttribute(player).RemoveModifier(Uid);
         }
         
@@ -56,16 +57,11 @@ namespace ImportantPrototype.Mutations
             };
         }
 
-        public override Gene Clone()
+        protected override Gene Copy()
         {
             var clone = (AttributeGene<T>) MemberwiseClone();
             clone._stat = _stat;
-            clone._type = _type;
-            clone._value = _value;
-            clone.Initialize();
             return clone;
         }
-
-       
     }
 }

@@ -1,7 +1,7 @@
 ﻿using ImportantPrototype.System;
 using UnityEngine;
 
-namespace ImportantPrototype.Mutations.Mods
+namespace ImportantPrototype.Gameplay.Mutations.Mods
 {
     [CreateAssetMenu(menuName = ContextMenuPath.GenotypeMods + "Negate Random Negative Gene")]
     public class NegateRandomNegativeGeneModData : GenotypeModData

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using ImportantPrototype.Mutations;
+using ImportantPrototype.Gameplay.Mutations;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;

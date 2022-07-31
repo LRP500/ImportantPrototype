@@ -3,7 +3,7 @@ using ImportantPrototype.Characters;
 using ImportantPrototype.Weapons;
 using Attribute = ImportantPrototype.Stats.Attribute;
 
-namespace ImportantPrototype.Mutations
+namespace ImportantPrototype.Gameplay.Mutations.Genes
 {
     [Serializable]
     public class WeaponAttributeGene : AttributeGene<WeaponStatInfo>

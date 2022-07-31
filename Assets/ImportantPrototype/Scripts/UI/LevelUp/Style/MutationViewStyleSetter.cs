@@ -1,4 +1,4 @@
-﻿using ImportantPrototype.Mutations;
+﻿using ImportantPrototype.Gameplay.Mutations;
 using ImportantPrototype.UI.Common.Style;
 using UniRx;
 using UnityEngine;

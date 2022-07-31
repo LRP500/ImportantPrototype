@@ -16,9 +16,8 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 11400000, guid: c1b31b941b9bd2e499b34d65cddcd18d, type: 2}
-    - {fileID: 11400000, guid: 4c9ea2f969773824f8fbd0b27862f80b, type: 2}
-    - {fileID: 11400000, guid: a9190b40a30e00b469256652533d98b0, type: 2}
+    - {fileID: 11400000, guid: cd78e0556c721f346990348058e49346, type: 2}
+    - {fileID: 11400000, guid: 6ba5054f8fcc033409f9f0eda4a35a1f, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -26,14 +25,14 @@ MonoBehaviour:
     SerializationNodes:
     - Name: _positiveGenes
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[ImportantPrototype.Mutations.Gene,
+      Data: 0|System.Collections.Generic.List`1[[ImportantPrototype.Gameplay.Mutations.Genes.Gene,
         ImportantProject]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
-      Data: 1|ImportantPrototype.Mutations.PlayerAttributeGene, ImportantProject
+      Data: 1|ImportantPrototype.Gameplay.Mutations.Genes.WeaponAttributeGene, ImportantProject
     - Name: _stat
       Entry: 10
       Data: 0
@@ -47,21 +46,6 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
-      Entry: 7
-      Data: 2|ImportantPrototype.Mutations.WeaponAttributeGene, ImportantProject
-    - Name: _stat
-      Entry: 10
-      Data: 1
-    - Name: _type
-      Entry: 3
-      Data: 1
-    - Name: _value
-      Entry: 4
-      Data: 10
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -69,17 +53,17 @@ MonoBehaviour:
       Data: 
     - Name: _negativeGenes
       Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[ImportantPrototype.Mutations.Gene,
+      Data: 2|System.Collections.Generic.List`1[[ImportantPrototype.Gameplay.Mutations.Genes.Gene,
         ImportantProject]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 4|ImportantPrototype.Mutations.PlayerAttributeGene, ImportantProject
+      Data: 3|ImportantPrototype.Gameplay.Mutations.Genes.WeaponAttributeGene, ImportantProject
     - Name: _stat
       Entry: 10
-      Data: 2
+      Data: 1
     - Name: _type
       Entry: 3
       Data: 1
@@ -97,7 +81,7 @@ MonoBehaviour:
       Data: 
   _name: Size Matters
   _description: 
-  _modChance: 0.5
+  _modChance: 0.7
   _genotypeMods:
   - {fileID: 11400000, guid: 161ed099d7b807b408ed48367fd8d7bc, type: 2}
   - {fileID: 11400000, guid: 4e16eda84f262c443862b9410c28c847, type: 2}

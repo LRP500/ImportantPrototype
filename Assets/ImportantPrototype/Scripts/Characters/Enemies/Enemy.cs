@@ -7,8 +7,9 @@ namespace ImportantPrototype.Characters.Enemies
     {
         public EnemyAI AI { get; private set; }
 
-        protected override void OnInitialize()
+        protected override void Awake()
         {
+            base.Awake();
             AI = GetComponent<EnemyAI>();
         }
     }

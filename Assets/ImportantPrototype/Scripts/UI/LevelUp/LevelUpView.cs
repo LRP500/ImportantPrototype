@@ -1,7 +1,6 @@
+using ImportantPrototype.Gameplay.Mutations;
 using ImportantPrototype.Input;
-using ImportantPrototype.Mutations;
 using ImportantPrototype.UI.LevelUp;
-using UniRx.Triggers;
 using UnityEngine;
 using UnityTools.Runtime.UI;
 

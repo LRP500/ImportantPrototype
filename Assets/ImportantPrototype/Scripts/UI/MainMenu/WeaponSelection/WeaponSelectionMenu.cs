@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using ImportantPrototype.Content;
+using ImportantPrototype.Gameplay;
 using ImportantPrototype.Input;
 using ImportantPrototype.Weapons;
 using Sirenix.Utilities;

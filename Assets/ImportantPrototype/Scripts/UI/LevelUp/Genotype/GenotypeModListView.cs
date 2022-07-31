@@ -1,4 +1,4 @@
-﻿using ImportantPrototype.Mutations.Mods;
+﻿using ImportantPrototype.Gameplay.Mutations.Mods;
 using ImportantPrototype.Tools.UI;
 
 namespace ImportantPrototype.UI

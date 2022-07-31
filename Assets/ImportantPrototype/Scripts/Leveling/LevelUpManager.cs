@@ -1,6 +1,6 @@
 ﻿using ImportantPrototype.Characters;
+using ImportantPrototype.Gameplay.Mutations;
 using ImportantPrototype.Input;
-using ImportantPrototype.Mutations;
 using ImportantPrototype.Stats;
 using Sirenix.OdinInspector;
 using UniRx;

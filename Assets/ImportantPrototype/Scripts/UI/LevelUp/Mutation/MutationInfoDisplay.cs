@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
-using ImportantPrototype.Mutations;
-using ImportantPrototype.Mutations.Mods;
+using ImportantPrototype.Gameplay.Mutations;
+using ImportantPrototype.Gameplay.Mutations.Genes;
+using ImportantPrototype.Gameplay.Mutations.Mods;
 using UniRx;
 using UnityEngine;
 using UnityTools.Runtime.UI;
